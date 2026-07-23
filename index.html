@@ -303,7 +303,11 @@ img { display: block; max-width: 100%; }
 
 /* SEARCH */
 .search-bar {
-  margin: 16px; position: relative;
+  padding: 16px; position: sticky; top: 0; z-index: 50;
+  background: #fff; border-bottom: 1px solid var(--color-border);
+}
+.search-bar-inner {
+  position: relative;
 }
 .search-bar input {
   width: 100%; padding: 14px 16px 14px 44px; border-radius: 999px;
@@ -311,8 +315,8 @@ img { display: block; max-width: 100%; }
   background: #fff; outline: none;
 }
 .search-bar input:focus { border-color: var(--color-navy); }
-.search-bar svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--color-text-secondary); }
-.search-count { font-size: 13px; color: var(--color-text-secondary); padding: 0 16px; margin-bottom: 8px; }
+.search-bar-inner svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--color-text-secondary); }
+.search-count { font-size: 13px; color: var(--color-text-secondary); padding: 12px 16px 0; margin-bottom: 8px; }
 
 /* EMPTY STATE */
 .empty-state { text-align: center; padding: 48px 24px; color: var(--color-text-secondary); }
@@ -330,6 +334,7 @@ img { display: block; max-width: 100%; }
 /* RESPONSIVE */
 @media (max-width: 767px) {
   .pin-grid { grid-template-columns: repeat(3, 1fr); }
+  .iso-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 768px) {
   .bottom-nav { display: none; }
@@ -539,12 +544,15 @@ const app = createApp({
     // ISO grouping
     const isoGroups = computed(() => {
       const groups = {};
+      const dayLbl = { '2026-08-14': 'Friday, August 14', '2026-08-15': 'Saturday, August 15', '2026-08-16': 'Sunday, August 16' };
       isoList.value.forEach(item => {
         if (isoFilter.value === 'diso' && (item.priority || 'iso') !== 'diso') return;
         const found = findPin(item.pinId);
         if (!found) return;
-        const key = `${found.set.store}|${found.set.drop_date}`;
-        if (!groups[key]) groups[key] = { store: found.set.store, date: found.set.drop_day_label, items: [] };
+        const pinDate = found.pin.drop_date || found.set.drop_date;
+        const pinDateLabel = dayLbl[pinDate] || found.set.drop_day_label;
+        const key = `${found.set.store}|${pinDate}`;
+        if (!groups[key]) groups[key] = { store: found.set.store, date: pinDateLabel, items: [] };
         groups[key].items.push({ ...item, pin: found.pin, set: found.set });
       });
       return Object.values(groups).sort((a, b) => a.store.localeCompare(b.store) || a.date.localeCompare(b.date));
@@ -566,6 +574,10 @@ const app = createApp({
       return { total, count, sets: setIds.size, hasMystery };
     });
 
+    const disoCount = computed(() => {
+      return isoList.value.filter(i => (i.priority || 'iso') === 'diso').length;
+    });
+
     function copyAsText() {
       let text = '';
       isoGroups.value.forEach(group => {
@@ -584,6 +596,349 @@ const app = createApp({
         copyMsg.value = 'Copied!';
         setTimeout(() => { copyMsg.value = ''; }, 2000);
       });
+    }
+
+    async function exportStory() {
+      const groups = isoGroups.value;
+      if (!groups.length) return;
+
+      const W = 1080, H = 1920;
+      const pages = [];
+      const padX = 40, gap = 16;
+      const cols = 3;
+      const cellW = (W - padX * 2 - gap * (cols - 1)) / cols;
+      const headerH = 70;
+      const cellH = 380;
+
+      // Helper: wrap text into lines
+      function wrapText(ctx, text, maxWidth) {
+        const words = text.split(' ');
+        const lines = [];
+        let line = '';
+        for (const word of words) {
+          const test = line ? line + ' ' + word : word;
+          if (ctx.measureText(test).width > maxWidth) {
+            if (line) lines.push(line);
+            line = word;
+          } else {
+            line = test;
+          }
+        }
+        if (line) lines.push(line);
+        return lines;
+      }
+
+      // Flatten all items with group headers into a layout sequence
+      let layoutItems = []; // { type: 'header'|'pin', ... }
+      groups.forEach(group => {
+        layoutItems.push({ type: 'header', label: `${group.store} — ${group.date}` });
+        group.items.forEach(item => {
+          layoutItems.push({ type: 'pin', item });
+        });
+      });
+
+      // Paginate: figure out how many items fit per page
+      let currentPage = [];
+      let currentY = 180; // start after title
+      let allPages = [];
+
+      for (const li of layoutItems) {
+        if (li.type === 'header') {
+          const needed = headerH;
+          if (currentY + needed > H - 80) {
+            allPages.push(currentPage);
+            currentPage = [];
+            currentY = 180;
+          }
+          currentPage.push({ ...li, y: currentY });
+          currentY += needed;
+        } else {
+          // Check if we need a new row
+          const lastPins = currentPage.filter(p => p.type === 'pin' && p.row === currentPage._currentRow);
+          const colIndex = currentPage.filter(p => p.type === 'pin' && p.y === currentY).length;
+          if (colIndex >= cols) {
+            currentY += cellH + gap;
+          }
+          if (currentY + cellH > H - 80) {
+            allPages.push(currentPage);
+            currentPage = [];
+            currentY = 180;
+          }
+          currentPage.push({ ...li, y: currentY });
+        }
+      }
+      if (currentPage.length) allPages.push(currentPage);
+
+      // Simpler approach: render group by group
+      allPages = [];
+      let canvas, ctx;
+      let yPos = 0;
+
+      function newPage() {
+        canvas = document.createElement('canvas');
+        canvas.width = W;
+        canvas.height = H;
+        ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#EDF2F8';
+        ctx.fillRect(0, 0, W, H);
+        // Title
+        ctx.fillStyle = '#00264C';
+        ctx.font = '700 48px Plus Jakarta Sans, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(isoFilter.value === 'diso' ? 'My DISOs' : 'My D23 ISOs', W / 2, 90);
+        yPos = 130;
+        pages.push(canvas);
+      }
+
+      function drawFooter() {
+        // Legend at bottom right — bigger
+        const ly = H - 50;
+        const lx = W - padX;
+        // DISO label
+        ctx.textAlign = 'right';
+        ctx.fillStyle = '#0A1929';
+        ctx.font = '600 28px Plus Jakarta Sans, sans-serif';
+        ctx.fillText('DISO', lx, ly);
+        const disoW = ctx.measureText('DISO').width;
+        ctx.fillStyle = '#E91E63';
+        ctx.beginPath(); ctx.arc(lx - disoW - 26, ly - 9, 18, 0, Math.PI * 2); ctx.fill();
+        // Heart in legend — same SVG path scaled bigger
+        ctx.fillStyle = '#fff';
+        const hlx = lx - disoW - 26, hly = ly - 9;
+        const hs = 1.4;
+        const hox = hlx - 7*hs, hoy = hly - 7*hs;
+        ctx.beginPath();
+        ctx.moveTo(hox + 7*hs, hoy + 12.5*hs);
+        ctx.bezierCurveTo(hox + 7*hs, hoy + 12.5*hs, hox + 1.5*hs, hoy + 9.3*hs, hox + 1.5*hs, hoy + 6*hs);
+        ctx.bezierCurveTo(hox + 1.5*hs, hoy + 4*hs, hox + 2.8*hs, hoy + 2.5*hs, hox + 4.5*hs, hoy + 2.5*hs);
+        ctx.bezierCurveTo(hox + 5.5*hs, hoy + 2.5*hs, hox + 6.4*hs, hoy + 3*hs, hox + 7*hs, hoy + 3.8*hs);
+        ctx.bezierCurveTo(hox + 7.6*hs, hoy + 3*hs, hox + 8.5*hs, hoy + 2.5*hs, hox + 9.5*hs, hoy + 2.5*hs);
+        ctx.bezierCurveTo(hox + 11.2*hs, hoy + 2.5*hs, hox + 12.5*hs, hoy + 4*hs, hox + 12.5*hs, hoy + 6*hs);
+        ctx.bezierCurveTo(hox + 12.5*hs, hoy + 9.3*hs, hox + 7*hs, hoy + 12.5*hs, hox + 7*hs, hoy + 12.5*hs);
+        ctx.closePath(); ctx.fill();
+
+        // ISO label
+        const isoRightX = lx - disoW - 80;
+        ctx.fillStyle = '#0A1929';
+        ctx.font = '600 28px Plus Jakarta Sans, sans-serif';
+        ctx.textAlign = 'right';
+        ctx.fillText('ISO', isoRightX, ly);
+        const isoW = ctx.measureText('ISO').width;
+        ctx.fillStyle = '#2D7A47';
+        ctx.beginPath(); ctx.arc(isoRightX - isoW - 26, ly - 9, 18, 0, Math.PI * 2); ctx.fill();
+        // Checkmark in legend
+        ctx.strokeStyle = '#fff'; ctx.lineWidth = 3.5; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+        const clx = isoRightX - isoW - 26, cly = ly - 9;
+        ctx.beginPath(); ctx.moveTo(clx - 7, cly); ctx.lineTo(clx - 2, cly + 6); ctx.lineTo(clx + 8, cly - 5); ctx.stroke();
+      }
+
+      newPage();
+
+      // Pre-calculate pages: max 12 pins per page (4 rows of 3)
+      const MAX_PINS_PER_PAGE = 12;
+      let pageLayouts = []; // Each page: array of { type: 'header'|'row', ... }
+      let currentLayout = [];
+      let pinsOnPage = 0;
+      let lastGroupLabel = null;
+
+      for (const group of groups) {
+        let isFirst = true;
+        for (let i = 0; i < group.items.length; i += cols) {
+          // Would adding this row exceed max pins or overflow page?
+          const rowItems = group.items.slice(i, i + cols);
+          const currentContentH = currentLayout.reduce((h, e) => h + (e.type === 'header' ? headerH : cellH + gap), 0);
+          const wouldExceed = pinsOnPage + rowItems.length > MAX_PINS_PER_PAGE;
+          const wouldOverflow = currentContentH + (pinsOnPage === 0 ? headerH : 0) + cellH > H - 220;
+          if ((wouldExceed || wouldOverflow) && pinsOnPage > 0) {
+            pageLayouts.push(currentLayout);
+            currentLayout = [];
+            pinsOnPage = 0;
+            isFirst = false;
+          }
+          // Add header if needed
+          if (pinsOnPage === 0 || (isFirst && i === 0)) {
+            const label = group.store + ' — ' + group.date + (!isFirst || i > 0 ? ' (continued)' : '');
+            currentLayout.push({ type: 'header', label });
+            isFirst = false;
+          }
+          currentLayout.push({ type: 'row', items: rowItems });
+          pinsOnPage += rowItems.length;
+        }
+      }
+      if (currentLayout.length) pageLayouts.push(currentLayout);
+
+      // Render each page centered vertically
+      pages.length = 0; // clear the initial page
+      for (const layout of pageLayouts) {
+        // Calculate total content height
+        let contentH = 0;
+        for (const entry of layout) {
+          contentH += entry.type === 'header' ? headerH : (cellH + gap);
+        }
+        contentH -= gap; // remove last gap
+
+        canvas = document.createElement('canvas');
+        canvas.width = W;
+        canvas.height = H;
+        ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#EDF2F8';
+        ctx.fillRect(0, 0, W, H);
+        // Title
+        ctx.fillStyle = '#00264C';
+        ctx.font = '700 48px Plus Jakarta Sans, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(isoFilter.value === 'diso' ? 'My DISOs' : 'My D23 ISOs', W / 2, 90);
+
+        // Center content vertically between title (110) and footer (H-100)
+        const availTop = 120;
+        const availBottom = H - 100;
+        const startY = Math.max(availTop, availTop + (availBottom - availTop - contentH) / 2);
+        yPos = startY;
+
+        for (const entry of layout) {
+          if (entry.type === 'header') {
+            ctx.fillStyle = '#00264C';
+            ctx.font = '700 30px Plus Jakarta Sans, sans-serif';
+            ctx.textAlign = 'left';
+            ctx.fillText(entry.label, padX, yPos + 40);
+            yPos += headerH;
+          } else {
+            const rowItems = entry.items;
+
+          for (let c = 0; c < rowItems.length; c++) {
+            const item = rowItems[c];
+            const x = padX + c * (cellW + gap);
+            const y = yPos;
+
+            // Card bg
+            ctx.fillStyle = '#FFFFFF';
+            ctx.beginPath();
+            ctx.roundRect(x, y, cellW, cellH, 14);
+            ctx.fill();
+            ctx.strokeStyle = '#D8E3EE';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // Pin image first
+            const imgSrc = getImgSrc(item.pin);
+            if (imgSrc !== PLACEHOLDER_IMG) {
+              try {
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                await new Promise((resolve) => { img.onload = resolve; img.onerror = resolve; img.src = imgSrc; });
+                if (img.complete && img.naturalWidth) {
+                  const imgSize = cellW - 30;
+                  const imgX = x + 15;
+                  const imgY = y + 10;
+                  ctx.save();
+                  ctx.beginPath();
+                  ctx.roundRect(imgX, imgY, imgSize, imgSize, 10);
+                  ctx.clip();
+                  ctx.drawImage(img, imgX, imgY, imgSize, imgSize);
+                  ctx.restore();
+                }
+              } catch (e) {}
+            }
+
+            // Priority badge — drawn AFTER image so it's on top, with more buffer from corner
+            const badgeX = x + cellW - 32;
+            const badgeY = y + 32;
+            const badgeR = 20;
+            const isDiso = (item.priority || 'iso') === 'diso';
+            ctx.fillStyle = isDiso ? '#E91E63' : '#2D7A47';
+            ctx.beginPath();
+            ctx.arc(badgeX, badgeY, badgeR, 0, Math.PI * 2);
+            ctx.fill();
+            // Draw vector icon
+            ctx.strokeStyle = '#fff';
+            ctx.fillStyle = '#fff';
+            ctx.lineWidth = 3;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            if (isDiso) {
+              // Heart — replicate the UI SVG path scaled to badge size
+              // Original SVG: M7 12.5s-5.5-3.2-5.5-6.5c0-2 1.3-3.5 3-3.5 1 0 1.9.5 2.5 1.3C7.6 3 8.5 2.5 9.5 2.5c1.7 0 3 1.5 3 3.5 0 3.3-5.5 6.5-5.5 6.5z
+              // Scaled to fit ~20px wide, centered on badgeX, badgeY
+              const s = 1.5;
+              const ox = badgeX - 7 * s;
+              const oy = badgeY - 7 * s;
+              ctx.beginPath();
+              ctx.moveTo(ox + 7*s, oy + 12.5*s);
+              ctx.bezierCurveTo(ox + 7*s, oy + 12.5*s, ox + 1.5*s, oy + 9.3*s, ox + 1.5*s, oy + 6*s);
+              ctx.bezierCurveTo(ox + 1.5*s, oy + 4*s, ox + 2.8*s, oy + 2.5*s, ox + 4.5*s, oy + 2.5*s);
+              ctx.bezierCurveTo(ox + 5.5*s, oy + 2.5*s, ox + 6.4*s, oy + 3*s, ox + 7*s, oy + 3.8*s);
+              ctx.bezierCurveTo(ox + 7.6*s, oy + 3*s, ox + 8.5*s, oy + 2.5*s, ox + 9.5*s, oy + 2.5*s);
+              ctx.bezierCurveTo(ox + 11.2*s, oy + 2.5*s, ox + 12.5*s, oy + 4*s, ox + 12.5*s, oy + 6*s);
+              ctx.bezierCurveTo(ox + 12.5*s, oy + 9.3*s, ox + 7*s, oy + 12.5*s, ox + 7*s, oy + 12.5*s);
+              ctx.closePath();
+              ctx.fill();
+            } else {
+              // Checkmark path
+              ctx.beginPath();
+              ctx.moveTo(badgeX - 8, badgeY);
+              ctx.lineTo(badgeX - 2, badgeY + 7);
+              ctx.lineTo(badgeX + 9, badgeY - 6);
+              ctx.stroke();
+            }
+
+            // Pin name (1 line, truncate with ellipsis)
+            const textTop = y + cellW - 10;
+            ctx.fillStyle = '#0A1929';
+            ctx.font = '600 20px Plus Jakarta Sans, sans-serif';
+            ctx.textAlign = 'center';
+            let pinName = item.pin.name;
+            while (ctx.measureText(pinName).width > cellW - 20 && pinName.length > 3) {
+              pinName = pinName.slice(0, -2) + '…';
+            }
+            ctx.fillText(pinName, x + cellW / 2, textTop);
+
+            // Set name (1 line, truncate with ellipsis)
+            const setTop = textTop + 22;
+            ctx.fillStyle = '#5A6A7A';
+            ctx.font = '400 17px Plus Jakarta Sans, sans-serif';
+            let setName = item.set.set_name;
+            while (ctx.measureText(setName).width > cellW - 16 && setName.length > 3) {
+              setName = setName.slice(0, -2) + '…';
+            }
+            ctx.fillText(setName, x + cellW / 2, setTop);
+
+            // Price · LE size
+            const metaTop = setTop + 22;
+            if (metaTop < y + cellH - 10) {
+              ctx.fillStyle = '#5A6A7A';
+              ctx.font = '600 17px Plus Jakarta Sans, sans-serif';
+              let metaText = '';
+              const price = item.pin.retail_price || item.set.retail_price;
+              if (price) metaText += '\$' + price.toFixed(2);
+              if (price && item.pin.edition_size) metaText += ' · ';
+              if (item.pin.edition_size) metaText += 'LE ' + item.pin.edition_size;
+              if (metaText) ctx.fillText(metaText, x + cellW / 2, metaTop);
+            }
+          }
+          yPos += cellH + gap;
+          } // end row entry
+        } // end layout entries
+
+        pages.push(canvas);
+      } // end pageLayouts
+
+      // Draw footer legend on all pages
+      for (const pg of pages) {
+        ctx = pg.getContext('2d');
+        drawFooter();
+      }
+
+      // Download each page with delay to avoid browser blocking
+      for (let i = 0; i < pages.length; i++) {
+        await new Promise(resolve => setTimeout(resolve, i * 500));
+        const link = document.createElement('a');
+        link.download = `d23-iso-story${pages.length > 1 ? '-' + (i + 1) : ''}.png`;
+        link.href = pages[i].toDataURL('image/png');
+        link.click();
+      }
+
+      copyMsg.value = `${pages.length} image${pages.length > 1 ? 's' : ''} saved!`;
+      setTimeout(() => { copyMsg.value = ''; }, 3000);
     }
 
     function featureTags(features) {
@@ -644,9 +999,9 @@ const app = createApp({
     return {
       catalog, error, view, storeFilter, dateFilter, typeFilter, attrFilter, showFilters, searchQuery,
       isoList, selectedPin, copyMsg, isoFilter, stores, dates, dateLabels,
-      filteredSets, searchResults, isoGroups, isoTotal, filterCount, typeOptions, attrOptions,
+      filteredSets, searchResults, isoGroups, isoTotal, disoCount, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
-      updateQty, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText,
+      updateQty, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory,
       featureTags, filteredPins, displayDates, badgeClass, badgeLabel, PLACEHOLDER_IMG
     };
   },
@@ -750,15 +1105,17 @@ const app = createApp({
 </div>
 
 <!-- ISO VIEW -->
-<div v-if="view==='iso'" style="padding: 16px; padding-bottom: 120px;">
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
-    <h2 style="font-weight:700;font-size:20px;">My ISOs
-      <span v-if="isoFilter==='all' && isoTotal.count" class="badge badge-individual" style="font-size:12px;vertical-align:middle;margin-left:6px;">{{ isoTotal.count }}</span>
-      <span v-if="isoFilter==='diso'" class="badge badge-individual" style="font-size:12px;vertical-align:middle;margin-left:6px;background:#E91E63;">{{ isoGroups.reduce((s,g) => s+g.items.length, 0) }}</span>
-    </h2>
-    <div v-if="isoList.length" style="display:flex;gap:8px;">
-      <button class="filter-chip" :class="{ active: isoFilter==='all' }" @click="isoFilter='all'">All</button>
-      <button class="filter-chip" :class="{ active: isoFilter==='diso' }" @click="isoFilter='diso'">♥ DISO</button>
+<div v-if="view==='iso'" style="padding: 16px; padding-bottom: 80px;">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+    <h2 style="font-weight:700;font-size:20px;">My ISOs</h2>
+    <div v-if="isoList.length" style="display:flex;gap:6px;">
+      <button class="filter-chip" :class="{ active: isoFilter==='all' }" @click="isoFilter='all'">All ({{ isoTotal.count }})</button>
+      <button class="filter-chip" :class="{ active: isoFilter==='diso' }" @click="isoFilter='diso'">♥ DISO ({{ disoCount }})</button>
+    </div>
+    <div v-if="isoList.length" style="margin-left:auto;display:flex;gap:6px;align-items:center;">
+      <button class="btn-secondary" style="padding:8px 14px;font-size:12px;" @click="copyAsText">📋 Text</button>
+      <button class="btn-primary" style="padding:8px 14px;font-size:12px;" @click="exportStory">📸 Story</button>
+      <span v-if="copyMsg" style="margin-left:6px;color:var(--color-green);font-size:12px;">{{ copyMsg }}</span>
     </div>
   </div>
 
@@ -769,7 +1126,7 @@ const app = createApp({
 
   <div v-for="group in isoGroups" :key="group.store+group.date" style="margin-bottom:20px;">
     <h3 style="font-size:14px;font-weight:700;color:var(--color-navy);margin-bottom:8px;">{{ group.store }} — {{ group.date }}</h3>
-    <div class="pin-grid" style="border:1px solid var(--color-border);border-radius:16px;">
+    <div class="pin-grid iso-grid" style="border:1px solid var(--color-border);border-radius:16px;">
       <div v-for="item in group.items" :key="item.pinId" class="pin-card" @click="openPin(item.pin, item.set)">
         <span v-if="item.priority==='iso'" class="icon-added pin-add-btn" @click.stop="togglePriority(item.pinId)" title="ISO — click for DISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
         <span v-else class="icon-diso pin-add-btn" @click.stop="togglePriority(item.pinId)" title="DISO — click for ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 12.5s-5.5-3.2-5.5-6.5c0-2 1.3-3.5 3-3.5 1 0 1.9.5 2.5 1.3C7.6 3 8.5 2.5 9.5 2.5c1.7 0 3 1.5 3 3.5 0 3.3-5.5 6.5-5.5 6.5z" fill="currentColor" stroke="none"/></svg></span>
@@ -797,11 +1154,6 @@ const app = createApp({
     </div>
   </div>
 
-  <div v-if="isoList.length" style="margin-top:16px;text-align:center;">
-    <button class="btn-secondary" @click="copyAsText">📋 Copy as Text</button>
-    <span v-if="copyMsg" style="margin-left:8px;color:var(--color-green);font-size:13px;">{{ copyMsg }}</span>
-  </div>
-
   <div v-if="isoTotal.hasMystery && isoList.length" style="font-size:11px;color:var(--color-text-secondary);text-align:center;margin-top:12px;font-style:italic;">
     * Mystery box prices are per box. Actual pin received may vary.
   </div>
@@ -816,8 +1168,10 @@ const app = createApp({
 <!-- SEARCH VIEW -->
 <div v-if="view==='search'">
   <div class="search-bar">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-    <input v-model="searchQuery" placeholder="Search pins, sets, characters..." autofocus>
+    <div class="search-bar-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input v-model="searchQuery" placeholder="Search pins, sets, characters..." autofocus>
+    </div>
   </div>
   <div v-if="searchQuery.trim()">
     <div class="search-count">{{ searchResults.length }} result{{ searchResults.length!==1?'s':'' }}</div>
@@ -825,7 +1179,7 @@ const app = createApp({
       <p>No pins found for "{{ searchQuery }}"</p>
       <button class="btn-secondary" @click="searchQuery=''">Clear Search</button>
     </div>
-    <div class="pin-grid" style="margin:0 16px;border:1px solid var(--color-border);border-radius:16px;">
+    <div v-if="searchResults.length" class="pin-grid" style="margin:0 16px;border:1px solid var(--color-border);border-radius:16px;">
       <div v-for="r in searchResults" :key="r.pin.id" class="pin-card" @click="openPin(r.pin, r.set)">
         <button v-if="!isInIso(r.pin.id)" class="icon-add pin-add-btn" @click.stop="cyclePin(r.pin, r.set)" title="Add to ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
         <span v-else-if="getPriority(r.pin.id)==='iso'" class="icon-added pin-add-btn" @click.stop="cyclePin(r.pin, r.set)" title="ISO — click for DISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
@@ -859,10 +1213,10 @@ const app = createApp({
   <div class="sheet-set">{{ selectedPin.set.set_name }}</div>
   <div class="sheet-meta">
     <div><strong>Store:</strong> {{ selectedPin.set.store }}</div>
-    <div><strong>Drop:</strong> {{ selectedPin.set.drop_day_label }}</div>
+    <div><strong>Drop:</strong> {{ selectedPin.pin.drop_date ? ({'2026-08-14':'Friday, August 14','2026-08-15':'Saturday, August 15','2026-08-16':'Sunday, August 16'}[selectedPin.pin.drop_date] || selectedPin.pin.drop_date) : selectedPin.set.drop_day_label }}</div>
     <div v-if="selectedPin.set.features"><strong>Features:</strong> {{ selectedPin.set.features }}</div>
     <div v-if="selectedPin.set.dimensions"><strong>Dimensions:</strong> {{ selectedPin.set.dimensions }}</div>
-    <div><strong>Retail:</strong> {{ selectedPin.set.retail_display }} {{ selectedPin.set.retail_note || '' }}</div>
+    <div><strong>Retail:</strong> {{ selectedPin.pin.retail_display || selectedPin.set.retail_display }} {{ selectedPin.set.retail_note || '' }}</div>
     <div v-if="selectedPin.pin.edition_size"><strong>Edition:</strong> LE {{ selectedPin.pin.edition_size }} {{ selectedPin.pin.edition_notes || '' }}</div>
     <div v-if="selectedPin.set.purchase_limit"><strong>Limit:</strong> {{ selectedPin.set.purchase_limit }}</div>
   </div>
