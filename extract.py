@@ -501,7 +501,7 @@ def build_twdc_sets():
         [make_pin(sid, None, n, 500) for n in [
             "The Little Mermaid", "Beauty and the Beast", "Aladdin", "The Lion King",
             "Pocahontas", "The Hunchback of Notre Dame", "Mulan", "Tarzan",
-            "Emperor's New Groove", "Atlantis", "Lilo & Stitch"]],
+            "Emperor's New Groove", "Atlantis", "Hercules"]],
     ))
 
     sid = "twdc-royal-chambers"
@@ -1007,8 +1007,8 @@ def apply_image_mappings(all_sets):
         "twdc-disney-stamp-modern-baymax-hiro": f"{twdc_fri_dir}/fri_stamp_p4_057.png",
         "twdc-disney-stamp-modern-judy-nick": f"{twdc_fri_dir}/fri_stamp_p4_059.png",
         "twdc-disney-stamp-modern-moana-hei-hei": f"{twdc_fri_dir}/fri_stamp_p4_061.png",
-        "twdc-disney-stamp-modern-wreck-it-ralph-vanellope": f"{twdc_fri_dir}/fri_stamp_p4_063.png",
-        "twdc-disney-stamp-modern-rapunzel-pascal": f"{twdc_fri_dir}/fri_stamp_p4_065.png",
+        "twdc-disney-stamp-modern-wreck-it-ralph-vanellope": f"{twdc_fri_dir}/fri_stamp_p4_065.png",
+        "twdc-disney-stamp-modern-rapunzel-pascal": f"{twdc_fri_dir}/fri_stamp_p4_063.png",
         "twdc-disney-stamp-modern-elsa-bruni": f"{twdc_fri_dir}/fri_stamp_p4_067.png",
         "twdc-disney-stamp-modern-raya-tuk-tuk": f"{twdc_fri_dir}/fri_stamp_p4_069.png",
         "twdc-disney-stamp-modern-valentino-star": f"{twdc_fri_dir}/fri_stamp_p4_071.png",
@@ -1019,11 +1019,11 @@ def apply_image_mappings(all_sets):
         "twdc-reel-of-magic-the-lion-king": f"{twdc_fri_dir}/fri_reel_row1_02.png",
         "twdc-reel-of-magic-pocahontas": f"{twdc_fri_dir}/fri_reel_row1_03.png",
         "twdc-reel-of-magic-the-hunchback-of-notre-dame": f"{twdc_fri_dir}/fri_reel_row1_04.png",
-        "twdc-reel-of-magic-mulan": f"{twdc_fri_dir}/fri_reel_row1_05.png",
-        "twdc-reel-of-magic-tarzan": f"{twdc_fri_dir}/fri_reel_row2_01.png",
-        "twdc-reel-of-magic-emperors-new-groove": f"{twdc_fri_dir}/fri_reel_row2_02.png",
-        "twdc-reel-of-magic-atlantis": f"{twdc_fri_dir}/fri_reel_row2_03.png",
-        "twdc-reel-of-magic-lilo-stitch": f"{twdc_fri_dir}/fri_reel_row2_04.png",
+        "twdc-reel-of-magic-mulan": f"{twdc_fri_dir}/fri_reel_row2_01.png",
+        "twdc-reel-of-magic-tarzan": f"{twdc_fri_dir}/fri_reel_row2_02.png",
+        "twdc-reel-of-magic-emperors-new-groove": f"{twdc_fri_dir}/fri_reel_row2_03.png",
+        "twdc-reel-of-magic-atlantis": f"{twdc_fri_dir}/fri_reel_row2_04.png",
+        "twdc-reel-of-magic-hercules": f"{twdc_fri_dir}/fri_reel_row1_05.png",
         # Royal Chambers (PDF layout: 1 featured, then right col 10-14, left col 2-7, bottom 8-9)
         "twdc-royal-chambers-evil-queen": f"{twdc_fri_dir}/fri_royal_p6_089.png",
         "twdc-royal-chambers-emperor": f"{twdc_fri_dir}/fri_royal_p6_091.png",

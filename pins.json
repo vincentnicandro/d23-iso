@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T21:25:34.578028Z",
+  "generated_at": "2026-07-23T22:45:50.890624Z",
   "stores": [
     "TWDC",
     "MOG",
@@ -233,7 +233,7 @@
           "name": "Rapunzel & Pascal",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p4_065.png"
+          "image_path": "images/twdc/fri/fri_stamp_p4_063.png"
         },
         {
           "id": "twdc-disney-stamp-modern-wreck-it-ralph-vanellope",
@@ -241,7 +241,7 @@
           "name": "Wreck-It Ralph & Vanellope",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p4_063.png"
+          "image_path": "images/twdc/fri/fri_stamp_p4_065.png"
         },
         {
           "id": "twdc-disney-stamp-modern-anna-olaf",
@@ -388,7 +388,7 @@
           "name": "Mulan",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row1_05.png",
+          "image_path": "images/twdc/fri/fri_reel_row2_01.png",
           "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
@@ -397,7 +397,7 @@
           "name": "Tarzan",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row2_01.png",
+          "image_path": "images/twdc/fri/fri_reel_row2_02.png",
           "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
@@ -406,7 +406,7 @@
           "name": "Emperor's New Groove",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row2_02.png",
+          "image_path": "images/twdc/fri/fri_reel_row2_03.png",
           "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
@@ -415,16 +415,16 @@
           "name": "Atlantis",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row2_03.png",
+          "image_path": "images/twdc/fri/fri_reel_row2_04.png",
           "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
-          "id": "twdc-reel-of-magic-lilo-stitch",
+          "id": "twdc-reel-of-magic-hercules",
           "catalog_number": null,
-          "name": "Lilo & Stitch",
+          "name": "Hercules",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row2_04.png",
+          "image_path": "images/twdc/fri/fri_reel_row1_05.png",
           "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         }
       ]

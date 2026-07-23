@@ -40,7 +40,7 @@ img { display: block; max-width: 100%; }
 
 /* FILTER BAR */
 .filter-bar {
-  display: flex; align-items: center; gap: 10px; padding: 10px 16px;
+  display: flex; align-items: center; gap: 10px; padding: 16px;
   background: #fff; border-bottom: 1px solid var(--color-border);
   position: sticky; top: 0; z-index: 50;
 }
@@ -146,8 +146,9 @@ img { display: block; max-width: 100%; }
 .set-group-ultra .set-group-header { border-left: 3px solid var(--color-gold); }
 .set-group-header {
   background: var(--color-surface); border-radius: 16px 16px 0 0;
-  box-shadow: 0 2px 12px rgba(0,38,76,0.08); border: 1px solid var(--color-border);
-  border-bottom: none; padding: 16px; position: sticky; top: 61px; z-index: 10;
+  box-shadow: 0 2px 12px rgba(0,38,76,0.08);
+  border: 1px solid var(--color-border);
+  border-bottom: none; padding: 16px; position: relative;
 }
 
 /* ADD ICONS */
@@ -159,6 +160,11 @@ img { display: block; max-width: 100%; }
 .icon-add:hover { background: var(--color-navy-light); }
 .icon-added {
   width: 28px; height: 28px; border-radius: 50%; background: var(--color-green);
+  color: #fff; display: flex; align-items: center;
+  justify-content: center; cursor: pointer;
+}
+.icon-diso {
+  width: 28px; height: 28px; border-radius: 50%; background: #E91E63;
   color: #fff; display: flex; align-items: center;
   justify-content: center; cursor: pointer;
 }
@@ -235,6 +241,12 @@ img { display: block; max-width: 100%; }
 }
 .sheet-thumb.active { opacity: 1; border-color: var(--color-navy); }
 .sheet-name { font-weight: 700; font-size: 20px; text-align: center; margin-bottom: 4px; }
+.sheet-close {
+  position: absolute; top: 16px; right: 16px; width: 32px; height: 32px;
+  border-radius: 50%; background: #f0f4f8; border: none; display: flex;
+  align-items: center; justify-content: center; cursor: pointer; color: var(--color-text-secondary); z-index: 1;
+}
+.sheet-close:hover { background: #e3ecf5; color: var(--color-navy); }
 .sheet-set { font-size: 14px; color: var(--color-text-secondary); text-align: center; margin-bottom: 16px; }
 .sheet-meta { font-size: 13px; color: var(--color-text-secondary); line-height: 1.8; }
 .sheet-meta strong { color: var(--color-text-primary); }
@@ -270,11 +282,15 @@ img { display: block; max-width: 100%; }
 .remove-btn:hover { background: #fff0f0; }
 
 /* ISO card stepper (compact) */
+.iso-card-footer {
+  display: flex; align-items: center; justify-content: space-between; margin-top: 6px;
+}
 .iso-card-stepper {
-  display: flex; align-items: center; gap: 4px; margin-top: 4px;
+  display: flex; align-items: center; gap: 4px;
 }
 .iso-card-stepper span { font-size: 12px; font-weight: 600; min-width: 16px; text-align: center; }
 .stepper-btn-sm { width: 24px; height: 24px; }
+.remove-btn-sm { width: 24px; height: 24px; }
 
 /* ISO FOOTER */
 .iso-footer {
@@ -321,8 +337,7 @@ img { display: block; max-width: 100%; }
   .top-nav { display: flex !important; }
   .pin-grid { grid-template-columns: repeat(4, 1fr); }
   .iso-footer { bottom: 0; }
-  .filter-bar { top: 49px; }
-  .set-group-header { top: 110px; }
+  .filter-bar { top: 59px; }
 }
 @media (min-width: 1200px) {
   .pin-grid { grid-template-columns: repeat(6, 1fr); }
@@ -361,6 +376,7 @@ const app = createApp({
     const selectedPin = ref(null);
     const sheetActiveImg = ref(0);
     const copyMsg = ref('');
+    const isoFilter = ref('all'); // 'all' or 'diso'
 
     // Load data
     onMounted(async () => {
@@ -428,9 +444,34 @@ const app = createApp({
 
     function isInIso(pinId) { return isoList.value.some(i => i.pinId === pinId); }
 
+    function getPriority(pinId) {
+      const item = isoList.value.find(i => i.pinId === pinId);
+      return item ? (item.priority || 'iso') : null;
+    }
+
+    function cyclePin(pin, set) {
+      const current = getPriority(pin.id);
+      if (!current) {
+        // not added → ISO
+        isoList.value.push({ pinId: pin.id, qty: 1, priority: 'iso' });
+      } else if (current === 'iso') {
+        // ISO → DISO
+        const item = isoList.value.find(i => i.pinId === pin.id);
+        if (item) item.priority = 'diso';
+      } else {
+        // DISO → remove
+        isoList.value = isoList.value.filter(i => i.pinId !== pin.id);
+      }
+    }
+
+    function togglePriority(pinId) {
+      const item = isoList.value.find(i => i.pinId === pinId);
+      if (item) item.priority = item.priority === 'diso' ? 'iso' : 'diso';
+    }
+
     function addToIso(pin, set) {
       if (isInIso(pin.id)) return;
-      isoList.value.push({ pinId: pin.id, qty: 1 });
+      isoList.value.push({ pinId: pin.id, qty: 1, priority: 'iso' });
     }
 
     function removeFromIso(pinId) {
@@ -446,10 +487,24 @@ const app = createApp({
       return pins.length > 0 && pins.every(p => isInIso(p.id));
     }
 
+    function allDiso(set) {
+      const pins = filteredPins(set);
+      return pins.length > 0 && pins.every(p => getPriority(p.id) === 'diso');
+    }
+
     function toggleAllIso(set) {
-      if (allInIso(set)) {
-        filteredPins(set).forEach(p => removeFromIso(p.id));
+      const pins = filteredPins(set);
+      if (allDiso(set)) {
+        // all DISO → remove all
+        pins.forEach(p => removeFromIso(p.id));
+      } else if (allInIso(set)) {
+        // all in ISO → upgrade all to DISO
+        pins.forEach(p => {
+          const item = isoList.value.find(i => i.pinId === p.id);
+          if (item) item.priority = 'diso';
+        });
       } else {
+        // some or none → add all as ISO
         addAllToIso(set);
       }
     }
@@ -485,6 +540,7 @@ const app = createApp({
     const isoGroups = computed(() => {
       const groups = {};
       isoList.value.forEach(item => {
+        if (isoFilter.value === 'diso' && (item.priority || 'iso') !== 'diso') return;
         const found = findPin(item.pinId);
         if (!found) return;
         const key = `${found.set.store}|${found.set.drop_date}`;
@@ -587,9 +643,9 @@ const app = createApp({
 
     return {
       catalog, error, view, storeFilter, dateFilter, typeFilter, attrFilter, showFilters, searchQuery,
-      isoList, selectedPin, copyMsg, stores, dates, dateLabels,
+      isoList, selectedPin, copyMsg, isoFilter, stores, dates, dateLabels,
       filteredSets, searchResults, isoGroups, isoTotal, filterCount, typeOptions, attrOptions,
-      getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, toggleAllIso, resetFilters, toggleFilter,
+      getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
       updateQty, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText,
       featureTags, filteredPins, displayDates, badgeClass, badgeLabel, PLACEHOLDER_IMG
     };
@@ -601,7 +657,7 @@ const app = createApp({
 <!-- TOP NAV (desktop) -->
 <nav class="top-nav">
   <button :class="{ active: view==='catalog' }" @click="view='catalog'">Catalog</button>
-  <button :class="{ active: view==='iso' }" @click="view='iso'">ISO List</button>
+  <button :class="{ active: view==='iso' }" @click="view='iso'">ISO</button>
   <button :class="{ active: view==='search' }" @click="view='search'">Search</button>
 </nav>
 
@@ -660,7 +716,8 @@ const app = createApp({
   <div v-for="set in filteredSets" :key="set.id" class="set-group" :class="{ 'set-group-ultra': set.set_type==='ultra_jumbo' }">
     <div class="set-group-header">
       <button v-if="!allInIso(set)" class="icon-add set-add-btn" @click="toggleAllIso(set)" title="Add all to ISO"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-      <span v-else class="icon-added set-add-btn" @click="toggleAllIso(set)" title="Remove all from ISO"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+      <span v-else-if="!allDiso(set)" class="icon-added set-add-btn" @click="toggleAllIso(set)" title="All ISO — click for DISO"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+      <span v-else class="icon-diso set-add-btn" @click="toggleAllIso(set)" title="All DISO — click to remove"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 12.5s-5.5-3.2-5.5-6.5c0-2 1.3-3.5 3-3.5 1 0 1.9.5 2.5 1.3C7.6 3 8.5 2.5 9.5 2.5c1.7 0 3 1.5 3 3.5 0 3.3-5.5 6.5-5.5 6.5z" fill="currentColor" stroke="none"/></svg></span>
       <div class="set-name">{{ set.set_name }} <span v-if="set.retail_display" class="set-name-price">· {{ set.retail_display }}<span v-if="set.retail_note">&nbsp;{{ set.retail_note }}</span></span></div>
       <div class="set-header">
         <span :class="badgeClass(set.set_type)">{{ badgeLabel(set.set_type) }}</span>
@@ -671,8 +728,9 @@ const app = createApp({
     </div>
     <div class="pin-grid">
       <div v-for="pin in filteredPins(set)" :key="pin.id" class="pin-card" @click="openPin(pin, set)">
-        <button v-if="!isInIso(pin.id)" class="icon-add pin-add-btn" @click.stop="addToIso(pin, set)" title="Add to ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <span v-else class="icon-added pin-add-btn" @click.stop="removeFromIso(pin.id)" title="Remove from ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+        <button v-if="!isInIso(pin.id)" class="icon-add pin-add-btn" @click.stop="cyclePin(pin, set)" title="Add to ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <span v-else-if="getPriority(pin.id)==='iso'" class="icon-added pin-add-btn" @click.stop="cyclePin(pin, set)" title="ISO — click for DISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+        <span v-else class="icon-diso pin-add-btn" @click.stop="cyclePin(pin, set)" title="DISO — click to remove"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 12.5s-5.5-3.2-5.5-6.5c0-2 1.3-3.5 3-3.5 1 0 1.9.5 2.5 1.3C7.6 3 8.5 2.5 9.5 2.5c1.7 0 3 1.5 3 3.5 0 3.3-5.5 6.5-5.5 6.5z" fill="currentColor" stroke="none"/></svg></span>
         <div class="pin-card-img">
           <img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy">
         </div>
@@ -692,10 +750,17 @@ const app = createApp({
 </div>
 
 <!-- ISO VIEW -->
-<div v-if="view==='iso'" style="padding: 16px;">
-  <h2 style="font-weight:700;font-size:20px;margin-bottom:4px;">My ISO List
-    <span v-if="isoTotal.count" class="badge badge-individual" style="font-size:12px;vertical-align:middle;margin-left:6px;">{{ isoTotal.count }}</span>
-  </h2>
+<div v-if="view==='iso'" style="padding: 16px; padding-bottom: 120px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+    <h2 style="font-weight:700;font-size:20px;">My ISOs
+      <span v-if="isoFilter==='all' && isoTotal.count" class="badge badge-individual" style="font-size:12px;vertical-align:middle;margin-left:6px;">{{ isoTotal.count }}</span>
+      <span v-if="isoFilter==='diso'" class="badge badge-individual" style="font-size:12px;vertical-align:middle;margin-left:6px;background:#E91E63;">{{ isoGroups.reduce((s,g) => s+g.items.length, 0) }}</span>
+    </h2>
+    <div v-if="isoList.length" style="display:flex;gap:8px;">
+      <button class="filter-chip" :class="{ active: isoFilter==='all' }" @click="isoFilter='all'">All</button>
+      <button class="filter-chip" :class="{ active: isoFilter==='diso' }" @click="isoFilter='diso'">♥ DISO</button>
+    </div>
+  </div>
 
   <div v-if="isoList.length===0" class="empty-state">
     <p>Your ISO list is empty.</p>
@@ -706,7 +771,8 @@ const app = createApp({
     <h3 style="font-size:14px;font-weight:700;color:var(--color-navy);margin-bottom:8px;">{{ group.store }} — {{ group.date }}</h3>
     <div class="pin-grid" style="border:1px solid var(--color-border);border-radius:16px;">
       <div v-for="item in group.items" :key="item.pinId" class="pin-card" @click="openPin(item.pin, item.set)">
-        <button class="remove-btn pin-add-btn" @click.stop="removeFromIso(item.pinId)" title="Remove"><svg width="10" height="10" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <span v-if="item.priority==='iso'" class="icon-added pin-add-btn" @click.stop="togglePriority(item.pinId)" title="ISO — click for DISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+        <span v-else class="icon-diso pin-add-btn" @click.stop="togglePriority(item.pinId)" title="DISO — click for ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 12.5s-5.5-3.2-5.5-6.5c0-2 1.3-3.5 3-3.5 1 0 1.9.5 2.5 1.3C7.6 3 8.5 2.5 9.5 2.5c1.7 0 3 1.5 3 3.5 0 3.3-5.5 6.5-5.5 6.5z" fill="currentColor" stroke="none"/></svg></span>
         <div class="pin-card-img">
           <img :src="getImgSrc(item.pin)" :alt="item.pin.name" loading="lazy">
         </div>
@@ -718,10 +784,13 @@ const app = createApp({
             <span v-else-if="item.set.retail_display">{{ item.set.retail_display }}</span>
             <span v-if="item.pin.edition_size"> · LE {{ item.pin.edition_size }}</span>
           </div>
-          <div class="iso-card-stepper">
-            <button class="stepper-btn stepper-btn-sm" @click.stop="updateQty(item.pinId, -1)"><svg width="10" height="10" viewBox="0 0 14 14"><path d="M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-            <span>{{ item.qty }}</span>
-            <button class="stepper-btn stepper-btn-sm" @click.stop="updateQty(item.pinId, 1)"><svg width="10" height="10" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          <div class="iso-card-footer">
+            <div class="iso-card-stepper">
+              <button class="stepper-btn stepper-btn-sm" @click.stop="updateQty(item.pinId, -1)"><svg width="10" height="10" viewBox="0 0 14 14"><path d="M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+              <span>{{ item.qty }}</span>
+              <button class="stepper-btn stepper-btn-sm" @click.stop="updateQty(item.pinId, 1)"><svg width="10" height="10" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+            </div>
+            <button class="remove-btn remove-btn-sm" @click.stop="removeFromIso(item.pinId)" title="Remove"><svg width="10" height="10" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
           </div>
         </div>
       </div>
@@ -758,8 +827,9 @@ const app = createApp({
     </div>
     <div class="pin-grid" style="margin:0 16px;border:1px solid var(--color-border);border-radius:16px;">
       <div v-for="r in searchResults" :key="r.pin.id" class="pin-card" @click="openPin(r.pin, r.set)">
-        <button v-if="!isInIso(r.pin.id)" class="icon-add pin-add-btn" @click.stop="addToIso(r.pin, r.set)" title="Add to ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <span v-else class="icon-added pin-add-btn" @click.stop="removeFromIso(r.pin.id)" title="Remove from ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+        <button v-if="!isInIso(r.pin.id)" class="icon-add pin-add-btn" @click.stop="cyclePin(r.pin, r.set)" title="Add to ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <span v-else-if="getPriority(r.pin.id)==='iso'" class="icon-added pin-add-btn" @click.stop="cyclePin(r.pin, r.set)" title="ISO — click for DISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+        <span v-else class="icon-diso pin-add-btn" @click.stop="cyclePin(r.pin, r.set)" title="DISO — click to remove"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 12.5s-5.5-3.2-5.5-6.5c0-2 1.3-3.5 3-3.5 1 0 1.9.5 2.5 1.3C7.6 3 8.5 2.5 9.5 2.5c1.7 0 3 1.5 3 3.5 0 3.3-5.5 6.5-5.5 6.5z" fill="currentColor" stroke="none"/></svg></span>
         <div class="pin-card-img">
           <img :src="getImgSrc(r.pin)" :alt="r.pin.name" loading="lazy">
         </div>
@@ -779,6 +849,7 @@ const app = createApp({
 <!-- PIN DETAIL SHEET -->
 <div v-if="selectedPin" class="overlay" @click.self="closeSheet"></div>
 <div v-if="selectedPin" class="sheet">
+  <button class="sheet-close" @click="closeSheet"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
   <img :src="sheetImages()[sheetActiveImg]" :alt="selectedPin.pin.name" class="sheet-img">
   <div class="sheet-thumbs">
     <img v-for="(img, idx) in sheetImages()" :key="idx" :src="img" class="sheet-thumb" :class="{ active: sheetActiveImg === idx }" @click="sheetActiveImg = idx">
@@ -799,8 +870,9 @@ const app = createApp({
     🎲 This is a mystery box pull — pin received is random. Price shown is per box.
   </div>
   <div class="sheet-actions">
-    <button v-if="!isInIso(selectedPin.pin.id)" class="btn-primary" @click="addToIso(selectedPin.pin, selectedPin.set); closeSheet()">+ Add to ISO List</button>
-    <button v-else class="btn-danger" @click="removeFromIso(selectedPin.pin.id); closeSheet()">Remove from ISO</button>
+    <button v-if="!isInIso(selectedPin.pin.id)" class="btn-primary" @click="cyclePin(selectedPin.pin, selectedPin.set)">+ Add to ISO</button>
+    <button v-else-if="getPriority(selectedPin.pin.id)==='iso'" class="btn-primary" style="background:var(--color-green);" @click="cyclePin(selectedPin.pin, selectedPin.set)">✓ ISO — Upgrade to DISO</button>
+    <button v-else class="btn-primary" style="background:#E91E63;" @click="cyclePin(selectedPin.pin, selectedPin.set)">♥ DISO — Remove</button>
   </div>
 </div>
 
@@ -812,7 +884,7 @@ const app = createApp({
   </button>
   <button class="nav-tab" :class="{ active: view==='iso' }" @click="view='iso'">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
-    ISO List
+    ISO
   </button>
   <button class="nav-tab" :class="{ active: view==='search' }" @click="view='search'">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
