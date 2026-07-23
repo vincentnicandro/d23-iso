@@ -69,7 +69,8 @@ img { display: block; max-width: 100%; }
 .filter-chip-reset { border-color: var(--color-accent); color: var(--color-accent); }
 
 /* FILTER SHEET */
-.filter-sheet { padding: 24px 20px 20px; overflow-y: auto; }
+.filter-sheet { padding: 0; display: flex; flex-direction: column; }
+.filter-sheet-content { flex: 1; overflow-y: auto; padding: 24px 20px; padding-bottom: 24px; }
 .filter-sheet-header { display: flex; justify-content: space-between; align-items: center; }
 .filter-sheet-header h2 { font-size: 20px; font-weight: 700; }
 .filter-reset { color: var(--color-accent); font-size: 14px; font-weight: 600; cursor: pointer; background: none; border: none; }
@@ -83,9 +84,8 @@ img { display: block; max-width: 100%; }
 }
 .filter-pill.active { border-color: var(--color-navy); background: var(--color-navy); color: #fff; }
 .filter-sheet-footer {
-  position: sticky; bottom: 0; left: 0; right: 0; padding: 16px 20px;
-  background: #fff; border-top: 1px solid var(--color-border);
-  display: flex; gap: 12px;
+  padding: 12px 20px; background: #fff; border-top: 1px solid var(--color-border);
+  display: flex; gap: 12px; flex-shrink: 0;
 }
 .filter-sheet-footer .btn-secondary { flex: 1; display: flex; align-items: center; justify-content: center; }
 .filter-sheet-footer .btn-primary { flex: 1; display: flex; align-items: center; justify-content: center; }
@@ -225,6 +225,7 @@ img { display: block; max-width: 100%; }
   overflow-y: auto; z-index: 201; transform: translateY(0);
   transition: transform 0.2s ease-out;
 }
+.filter-sheet.sheet { padding: 0; overflow: hidden; }
 .sheet-img { width: 200px; height: 200px; object-fit: contain; margin: 0 auto 16px; background: #f5f7fa; border-radius: 12px; }
 .sheet-name { font-weight: 700; font-size: 20px; text-align: center; margin-bottom: 4px; }
 .sheet-set { font-size: 14px; color: var(--color-text-secondary); text-align: center; margin-bottom: 16px; }
@@ -385,8 +386,11 @@ const app = createApp({
       return catalog.value.sets.filter(s => {
         if (storeFilter.value.length && !storeFilter.value.includes(s.store)) return false;
         if (dateFilter.value.length && !s.available_dates.some(d => dateFilter.value.includes(d))) return false;
-        if (typeFilter.value.length && !typeFilter.value.includes(s.set_type)) return false;
-        if (attrFilter.value.length && !attrFilter.value.every(a => matchesAttr(s.features, a))) return false;
+        if (typeFilter.value.length) {
+          const effectiveType = s.set_type === 'ultra_jumbo' ? 'individual' : s.set_type;
+          if (!typeFilter.value.includes(effectiveType)) return false;
+        }
+        if (attrFilter.value.length && !attrFilter.value.some(a => matchesAttr(s.features, a))) return false;
         return true;
       });
     });
@@ -424,6 +428,19 @@ const app = createApp({
 
     function addAllToIso(set) {
       filteredPins(set).forEach(p => { if (!isInIso(p.id)) addToIso(p, set); });
+    }
+
+    function allInIso(set) {
+      const pins = filteredPins(set);
+      return pins.length > 0 && pins.every(p => isInIso(p.id));
+    }
+
+    function toggleAllIso(set) {
+      if (allInIso(set)) {
+        filteredPins(set).forEach(p => removeFromIso(p.id));
+      } else {
+        addAllToIso(set);
+      }
     }
 
     function updateQty(pinId, delta) {
@@ -504,12 +521,14 @@ const app = createApp({
       return storeFilter.value.length + dateFilter.value.length + typeFilter.value.length + attrFilter.value.length;
     });
 
-    const typeOptions = ['individual', 'mystery', 'box_set', 'ultra_jumbo', 'framed_set'];
-    const attrOptions = ['Hard Enamel', 'Soft Enamel', 'Pin-on-Pin', 'Laser Print', 'Stained Glass', 'Glitter', 'Translucent', 'Marbleized', 'Pearlized', 'Hinge Pin', 'Jumbo', '3D', 'Spinner', 'Gemstones', 'Gold Base', 'Silver Base', 'Antique Gold', 'Custom Backing Card', 'UV-Reactive'];
+    const typeOptions = ['individual', 'mystery', 'box_set', 'framed_set'];
+    const attrOptions = ['Hard Enamel', 'Soft Enamel', 'Pin-on-Pin', 'Laser Print', 'Stained Glass', 'Glitter', 'Translucent', 'Marbleized', 'Pearlized', 'Hinged', 'Jumbo', 'Spinner', 'Gemstones', 'Gold Base', 'Silver Base', 'Antique Gold', 'UV-Reactive'];
 
     function matchesAttr(features, attr) {
       if (!features) return false;
-      return features.toLowerCase().includes(attr.toLowerCase());
+      const lower = features.toLowerCase();
+      if (attr === 'Hinged') return lower.includes('hinged');
+      return lower.includes(attr.toLowerCase());
     }
 
     function resetFilters() {
@@ -545,14 +564,14 @@ const app = createApp({
     function badgeClass(type) { return `badge badge-${type}`; }
     function badgeLabel(type) {
       return { individual: 'Individual', mystery: 'Mystery Box', box_set: 'Box Set',
-               ultra_jumbo: 'Ultra Jumbo', framed_set: 'Framed Set' }[type] || type;
+               ultra_jumbo: 'Individual', framed_set: 'Framed Set' }[type] || type;
     }
 
     return {
       catalog, error, view, storeFilter, dateFilter, typeFilter, attrFilter, showFilters, searchQuery,
       isoList, selectedPin, copyMsg, stores, dates, dateLabels,
       filteredSets, searchResults, isoGroups, isoTotal, filterCount, typeOptions, attrOptions,
-      getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, resetFilters, toggleFilter,
+      getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, toggleAllIso, resetFilters, toggleFilter,
       updateQty, findPin, openPin, closeSheet, copyAsText,
       featureTags, filteredPins, displayDates, badgeClass, badgeLabel, PLACEHOLDER_IMG
     };
@@ -576,7 +595,7 @@ const app = createApp({
       <span v-if="filterCount" class="filter-icon-count">{{ filterCount }}</span>
     </button>
     <div class="filter-scroll">
-      <button v-for="s in ['MOG','TWDC','DSSH']" :key="s" class="filter-chip" :class="{ active: storeFilter.includes(s) }" @click="toggleFilter(storeFilter, s)">{{ s }}</button>
+      <button v-for="s in ['TWDC','MOG','DSSH']" :key="s" class="filter-chip" :class="{ active: storeFilter.includes(s) }" @click="toggleFilter(storeFilter, s)">{{ s }}</button>
       <button v-for="d in ['2026-08-14','2026-08-15','2026-08-16']" :key="d" class="filter-chip" :class="{ active: dateFilter.includes(d) }" @click="toggleFilter(dateFilter, d)">{{ dateLabels[d] }}</button>
       <button v-if="filterCount" class="filter-chip filter-chip-reset" @click="resetFilters">Reset All</button>
     </div>
@@ -585,32 +604,33 @@ const app = createApp({
   <!-- FILTER SHEET -->
   <div v-if="showFilters" class="overlay" @click.self="showFilters=false"></div>
   <div v-if="showFilters" class="sheet filter-sheet">
-    <div class="filter-sheet-header">
-      <h2>Filters</h2>
-      <button class="filter-reset" @click="resetFilters">Reset All Filters</button>
-    </div>
-    <p class="filter-sheet-count">{{ filterCount }} selected</p>
+    <div class="filter-sheet-content">
+      <div class="filter-sheet-header">
+        <h2>Filters</h2>
+        <button class="filter-reset" @click="resetFilters">Reset All Filters</button>
+      </div>
+      <p class="filter-sheet-count">{{ filterCount }} selected</p>
 
-    <h3 class="filter-section-title">Store</h3>
-    <div class="filter-pills">
-      <button v-for="s in ['MOG','TWDC','DSSH']" :key="s" class="filter-pill" :class="{ active: storeFilter.includes(s) }" @click="toggleFilter(storeFilter, s)">{{ s }}</button>
-    </div>
+      <h3 class="filter-section-title">Store</h3>
+      <div class="filter-pills">
+        <button v-for="s in ['TWDC','MOG','DSSH']" :key="s" class="filter-pill" :class="{ active: storeFilter.includes(s) }" @click="toggleFilter(storeFilter, s)">{{ s }}</button>
+      </div>
 
-    <h3 class="filter-section-title">Drop Date</h3>
-    <div class="filter-pills">
-      <button v-for="d in ['2026-08-14','2026-08-15','2026-08-16']" :key="d" class="filter-pill" :class="{ active: dateFilter.includes(d) }" @click="toggleFilter(dateFilter, d)">{{ dateLabels[d] || d }}</button>
-    </div>
+      <h3 class="filter-section-title">Drop Date</h3>
+      <div class="filter-pills">
+        <button v-for="d in ['2026-08-14','2026-08-15','2026-08-16']" :key="d" class="filter-pill" :class="{ active: dateFilter.includes(d) }" @click="toggleFilter(dateFilter, d)">{{ dateLabels[d] || d }}</button>
+      </div>
 
-    <h3 class="filter-section-title">Pin Type</h3>
-    <div class="filter-pills">
-      <button v-for="t in typeOptions" :key="t" class="filter-pill" :class="{ active: typeFilter.includes(t) }" @click="toggleFilter(typeFilter, t)">{{ badgeLabel(t) }}</button>
-    </div>
+      <h3 class="filter-section-title">Pin Type</h3>
+      <div class="filter-pills">
+        <button v-for="t in typeOptions" :key="t" class="filter-pill" :class="{ active: typeFilter.includes(t) }" @click="toggleFilter(typeFilter, t)">{{ badgeLabel(t) }}</button>
+      </div>
 
-    <h3 class="filter-section-title">Attributes</h3>
-    <div class="filter-pills">
-      <button v-for="a in attrOptions" :key="a" class="filter-pill" :class="{ active: attrFilter.includes(a) }" @click="toggleFilter(attrFilter, a)">{{ a }}</button>
+      <h3 class="filter-section-title">Attributes</h3>
+      <div class="filter-pills">
+        <button v-for="a in attrOptions" :key="a" class="filter-pill" :class="{ active: attrFilter.includes(a) }" @click="toggleFilter(attrFilter, a)">{{ a }}</button>
+      </div>
     </div>
-
     <div class="filter-sheet-footer">
       <button class="btn-secondary" @click="showFilters=false">Cancel</button>
       <button class="btn-primary" @click="showFilters=false">Apply</button>
@@ -621,7 +641,8 @@ const app = createApp({
 
   <div v-for="set in filteredSets" :key="set.id" class="set-group" :class="{ 'set-group-ultra': set.set_type==='ultra_jumbo' }">
     <div class="set-group-header">
-      <button class="icon-add set-add-btn" @click="addAllToIso(set)" title="Add all to ISO"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button v-if="!allInIso(set)" class="icon-add set-add-btn" @click="toggleAllIso(set)" title="Add all to ISO"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <span v-else class="icon-added set-add-btn" @click="toggleAllIso(set)" title="Remove all from ISO"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
       <div class="set-name">{{ set.set_name }} <span v-if="set.retail_display" class="set-name-price">· {{ set.retail_display }}<span v-if="set.retail_note">&nbsp;{{ set.retail_note }}</span></span></div>
       <div class="set-header">
         <span :class="badgeClass(set.set_type)">{{ badgeLabel(set.set_type) }}</span>

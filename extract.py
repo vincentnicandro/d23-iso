@@ -461,7 +461,7 @@ def build_twdc_sets():
     # --- FRIDAY ---
     sid = "twdc-disney-stamp-classic"
     sets.append(make_set(sid, T, FRI, FRI_L,
-        "The Ultimate Disney Stamp (Classic Era)", None, "individual",
+        "The Ultimate Disney Stamp — Classic Era", None, "individual",
         "Gold base metal, pin on pin, hard enamel, glitter and laser printed background details",
         None, 34.95, None, PL1, False,
         [make_pin(sid, None, n, 500) for n in [
@@ -473,7 +473,7 @@ def build_twdc_sets():
 
     sid = "twdc-disney-stamp-renaissance"
     sets.append(make_set(sid, T, FRI, FRI_L,
-        "The Ultimate Disney Stamp (Renaissance Era)", None, "individual",
+        "The Ultimate Disney Stamp — Renaissance Era", None, "individual",
         "Gold base metal, pin on pin, hard enamel, glitter and laser printed background details",
         None, 34.95, None, PL1, False,
         [make_pin(sid, None, n, 500) for n in [
@@ -484,7 +484,7 @@ def build_twdc_sets():
 
     sid = "twdc-disney-stamp-modern"
     sets.append(make_set(sid, T, FRI, FRI_L,
-        "The Ultimate Disney Stamp (Modern Era)", None, "individual",
+        "The Ultimate Disney Stamp — Modern Era", None, "individual",
         "Gold base metal, pin on pin, hard enamel, glitter and laser printed background details",
         None, 34.95, None, PL1, False,
         [make_pin(sid, None, n, 500) for n in [
@@ -1285,15 +1285,15 @@ def standardize_features(all_sets):
         ("soft enamel", "Soft Enamel"),
         ("pin on pin", "Pin-on-Pin"),
         ("pin-on-pin", "Pin-on-Pin"),
+        ("3d", "Pin-on-Pin"),
         ("laser print", "Laser Print"),
         ("stained glass", "Stained Glass"),
         ("glitter", "Glitter"),
         ("translucent", "Translucent"),
         ("marbleized", "Marbleized"),
         ("pearlized", "Pearlized"),
-        ("hinge pin", "Hinge Pin"),
+        ("hinge pin", "Hinged"),
         ("jumbo", "Jumbo"),
-        ("3d", "3D"),
         ("gemstone", "Gemstones"),
         ("custom backing", "Custom Backing Card"),
         ("uv-reactive", "UV-Reactive"),
@@ -1335,7 +1335,7 @@ def main():
     mog = build_mog_sets()
     twdc = build_twdc_sets()
     dssh = build_dssh_sets()
-    all_sets = mog + twdc + dssh
+    all_sets = twdc + mog + dssh
 
     # Apply image mappings
     mapped = apply_image_mappings(all_sets)
@@ -1348,7 +1348,7 @@ def main():
 
     output = {
         "generated_at": datetime.utcnow().isoformat() + "Z",
-        "stores": ["MOG", "TWDC", "DSSH"],
+        "stores": ["TWDC", "MOG", "DSSH"],
         "sets": all_sets,
     }
 

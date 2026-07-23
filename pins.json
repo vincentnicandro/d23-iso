@@ -1,1518 +1,17 @@
 {
-  "generated_at": "2026-07-23T20:20:42.846521Z",
+  "generated_at": "2026-07-23T20:47:23.278969Z",
   "stores": [
-    "MOG",
     "TWDC",
+    "MOG",
     "DSSH"
   ],
   "sets": [
-    {
-      "id": "mog-alice-mystery",
-      "store": "MOG",
-      "drop_date": "2026-08-14",
-      "drop_day_label": "Friday, August 14",
-      "set_name": "Alice in Wonderland Mystery Set",
-      "set_description": null,
-      "set_type": "mystery",
-      "features": "Soft Enamel, Laser Print, Marbleized, 3D",
-      "dimensions": "1.9″–2.0″H",
-      "retail_price": 34.95,
-      "retail_display": "$34.95",
-      "retail_note": "per box",
-      "purchase_limit": "Limit six (6) boxes per guest",
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-14"
-      ],
-      "pins": [
-        {
-          "id": "mog-alice-mystery-1",
-          "catalog_number": 1,
-          "name": "Mystery Box",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-alice-75th",
-      "store": "MOG",
-      "drop_date": "2026-08-14",
-      "drop_day_label": "Friday, August 14",
-      "set_name": "Alice in Wonderland 75th Anniversary",
-      "set_description": "Celebrate the 75th Anniversary of Alice in Wonderland with this comic-inspired pin series.",
-      "set_type": "individual",
-      "features": "Hard Enamel, Laser Print, Translucent, Marbleized",
-      "dimensions": "3.25″–4.15″H",
-      "retail_price": 52.95,
-      "retail_display": "$52.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-14"
-      ],
-      "pins": [
-        {
-          "id": "mog-alice-75th-2",
-          "catalog_number": 2,
-          "name": "Alice",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-alice-75th-3",
-          "catalog_number": 3,
-          "name": "Queen of Hearts",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-alice-75th-4",
-          "catalog_number": 4,
-          "name": "White Rabbit",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-alice-75th-5",
-          "catalog_number": 5,
-          "name": "Cheshire Cat",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-alice-75th-6",
-          "catalog_number": 6,
-          "name": "The Flowers",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-princess-windows",
-      "store": "MOG",
-      "drop_date": "2026-08-14",
-      "drop_day_label": "Friday, August 14",
-      "set_name": "Disney Princess Dream Windows",
-      "set_description": "Celebrate timeless Disney Princess stories with these enchanting stained glass pins.",
-      "set_type": "individual",
-      "features": "Hard Enamel, Laser Print, Stained Glass",
-      "dimensions": "3.8″–4.0″H",
-      "retail_price": 42.95,
-      "retail_display": "$42.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-14"
-      ],
-      "pins": [
-        {
-          "id": "mog-princess-windows-7",
-          "catalog_number": 7,
-          "name": "Snow White",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-princess-windows-8",
-          "catalog_number": 8,
-          "name": "Cinderella",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-princess-windows-9",
-          "catalog_number": 9,
-          "name": "Aurora",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-princess-windows-10",
-          "catalog_number": 10,
-          "name": "Ariel",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-princess-windows-11",
-          "catalog_number": 11,
-          "name": "Belle",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-princess-windows-12",
-          "catalog_number": 12,
-          "name": "Jasmine",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-princess-windows-13",
-          "catalog_number": 13,
-          "name": "Pocahontas",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-princess-windows-14",
-          "catalog_number": 14,
-          "name": "Mulan",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-princess-windows-15",
-          "catalog_number": 15,
-          "name": "Tiana",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-princess-windows-16",
-          "catalog_number": 16,
-          "name": "Rapunzel",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-princess-windows-17",
-          "catalog_number": 17,
-          "name": "Merida",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-princess-windows-18",
-          "catalog_number": 18,
-          "name": "Moana",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-princess-windows-19",
-          "catalog_number": 19,
-          "name": "Raya",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-ducktales-mystery",
-      "store": "MOG",
-      "drop_date": "2026-08-14",
-      "drop_day_label": "Friday, August 14",
-      "set_name": "DuckTales the Movie: Treasure of the Lost Lamp Mystery Set",
-      "set_description": null,
-      "set_type": "mystery",
-      "features": null,
-      "dimensions": "1.2″–1.8″H",
-      "retail_price": 34.95,
-      "retail_display": "$34.95",
-      "retail_note": "per box",
-      "purchase_limit": "Limit eight (8) boxes per guest",
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-14"
-      ],
-      "pins": [
-        {
-          "id": "mog-ducktales-mystery-20",
-          "catalog_number": 20,
-          "name": "Mystery Box (Regular)",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-ducktales-mystery-chaser",
-          "catalog_number": null,
-          "name": "Mystery Box (Chaser)",
-          "edition_size": 300,
-          "edition_notes": "chaser",
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-treasure-seekers",
-      "store": "MOG",
-      "drop_date": "2026-08-14",
-      "drop_day_label": "Friday, August 14",
-      "set_name": "Disney Treasure Seekers",
-      "set_description": null,
-      "set_type": "individual",
-      "features": null,
-      "dimensions": null,
-      "retail_price": 34.95,
-      "retail_display": "$34.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-14"
-      ],
-      "pins": [
-        {
-          "id": "mog-treasure-seekers-21",
-          "catalog_number": 21,
-          "name": "Ariel",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-treasure-seekers-22",
-          "catalog_number": 22,
-          "name": "Scrooge McDuck",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-treasure-seekers-23",
-          "catalog_number": 23,
-          "name": "Jim Hawkins",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-treasure-seekers-24",
-          "catalog_number": 24,
-          "name": "Peter Pan",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-treasure-seekers-25",
-          "catalog_number": 25,
-          "name": "Abu",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-treasure-seekers-26",
-          "catalog_number": 26,
-          "name": "Penny",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-squad-goals",
-      "store": "MOG",
-      "drop_date": "2026-08-14",
-      "drop_day_label": "Friday, August 14",
-      "set_name": "Disney Squad Goals",
-      "set_description": null,
-      "set_type": "individual",
-      "features": null,
-      "dimensions": null,
-      "retail_price": 69.95,
-      "retail_display": "$69.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-14"
-      ],
-      "pins": [
-        {
-          "id": "mog-squad-goals-27",
-          "catalog_number": 27,
-          "name": "The Little Mermaid",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-squad-goals-28",
-          "catalog_number": 28,
-          "name": "Treasure Planet",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-squad-goals-29",
-          "catalog_number": 29,
-          "name": "The Princess and the Frog",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-squad-goals-30",
-          "catalog_number": 30,
-          "name": "Big Hero 6",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-squad-goals-31",
-          "catalog_number": 31,
-          "name": "Raya",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-squad-goals-32",
-          "catalog_number": 32,
-          "name": "Lilo & Stitch",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-squad-goals-33",
-          "catalog_number": 33,
-          "name": "A Goofy Movie",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-squad-goals-34",
-          "catalog_number": 34,
-          "name": "Moana",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-squad-goals-35",
-          "catalog_number": 35,
-          "name": "Robin Hood",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-squad-goals-36",
-          "catalog_number": 36,
-          "name": "Snow White and the Seven Dwarfs",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-pov",
-      "store": "MOG",
-      "drop_date": "2026-08-14",
-      "drop_day_label": "Friday, August 14",
-      "set_name": "POV: Another Point of View",
-      "set_description": "Rotating double-sided spinner pins featuring heroes and villains.",
-      "set_type": "individual",
-      "features": "Hard Enamel, Glitter, Translucent, Marbleized, Jumbo, 3D, Gemstones, Spinner",
-      "dimensions": "5″–5.5″H",
-      "retail_price": 79.95,
-      "retail_display": "$79.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-14"
-      ],
-      "pins": [
-        {
-          "id": "mog-pov-37",
-          "catalog_number": 37,
-          "name": "Moana and Te Kā",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-pov-38",
-          "catalog_number": 38,
-          "name": "Belle and Beast",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-pov-39",
-          "catalog_number": 39,
-          "name": "Snow White and Evil Queen",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-pov-40",
-          "catalog_number": 40,
-          "name": "Ariel and Ursula",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-pov-41",
-          "catalog_number": 41,
-          "name": "Aurora and Maleficent",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-pov-42",
-          "catalog_number": 42,
-          "name": "Aladdin and Genie",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-pov-43",
-          "catalog_number": 43,
-          "name": "Alice and the Queen of Hearts",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-pov-44",
-          "catalog_number": 44,
-          "name": "Cinderella and Prince Charming",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-pov-45",
-          "catalog_number": 45,
-          "name": "Rapunzel and Flynn Rider",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-pov-46",
-          "catalog_number": 46,
-          "name": "Sorcerer's Apprentice Mickey and Yen Sid",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-dining-character",
-      "store": "MOG",
-      "drop_date": "2026-08-14",
-      "drop_day_label": "Friday, August 14",
-      "set_name": "Dining with Character",
-      "set_description": "Detailed dining scenes on commemorative plate-inspired pins.",
-      "set_type": "individual",
-      "features": "Hard Enamel, Laser Print, Glitter, Translucent, Marbleized, Jumbo",
-      "dimensions": "4.5″H",
-      "retail_price": 79.95,
-      "retail_display": "$79.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-14"
-      ],
-      "pins": [
-        {
-          "id": "mog-dining-character-47",
-          "catalog_number": 47,
-          "name": "The Emperor's New Groove",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-dining-character-48",
-          "catalog_number": 48,
-          "name": "Sleeping Beauty",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-dining-character-49",
-          "catalog_number": 49,
-          "name": "Alice in Wonderland",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-dining-character-50",
-          "catalog_number": 50,
-          "name": "The Princess and the Frog",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-dining-character-51",
-          "catalog_number": 51,
-          "name": "Winnie the Pooh",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-dining-character-52",
-          "catalog_number": 52,
-          "name": "The Little Mermaid",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-dining-character-53",
-          "catalog_number": 53,
-          "name": "Mickey and the Beanstalk",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-dining-character-54",
-          "catalog_number": 54,
-          "name": "Lady and the Tramp",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-dining-character-55",
-          "catalog_number": 55,
-          "name": "Beauty and the Beast",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-dining-character-56",
-          "catalog_number": 56,
-          "name": "Ratatouille",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-world-princess-ultra",
-      "store": "MOG",
-      "drop_date": "2026-08-14",
-      "drop_day_label": "Friday, August 14",
-      "set_name": "World Princess Week Ultra Jumbo",
-      "set_description": "Gathering beloved heroines from across Disney's animated legacy, this majestic pin celebrates the optimism, courage, and timeless stories of the Disney Princesses.",
-      "set_type": "ultra_jumbo",
-      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Stained Glass, Jumbo",
-      "dimensions": "16″W × 9″H",
-      "retail_price": 1200.0,
-      "retail_display": "$1,200.00",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-14"
-      ],
-      "pins": [
-        {
-          "id": "mog-world-princess-ultra-57",
-          "catalog_number": 57,
-          "name": "World Princess Week",
-          "edition_size": 150,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-sea-mystery",
-      "store": "MOG",
-      "drop_date": "2026-08-15",
-      "drop_day_label": "Saturday, August 15",
-      "set_name": "S.E.A. Mystery Set",
-      "set_description": "Collect all 15 pins plus trading cards to reveal a hidden image.",
-      "set_type": "mystery",
-      "features": null,
-      "dimensions": null,
-      "retail_price": 39.95,
-      "retail_display": "$39.95",
-      "retail_note": "per box",
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-15"
-      ],
-      "pins": [
-        {
-          "id": "mog-sea-mystery-58",
-          "catalog_number": 58,
-          "name": "Mystery Box",
-          "edition_size": 500,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-parks-to-ports",
-      "store": "MOG",
-      "drop_date": "2026-08-15",
-      "drop_day_label": "Saturday, August 15",
-      "set_name": "Around the World with Disney: Parks to Ports",
-      "set_description": null,
-      "set_type": "individual",
-      "features": null,
-      "dimensions": null,
-      "retail_price": 36.95,
-      "retail_display": "$36.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-15"
-      ],
-      "pins": [
-        {
-          "id": "mog-parks-to-ports-59",
-          "catalog_number": 59,
-          "name": "Disneyland",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-parks-to-ports-60",
-          "catalog_number": 60,
-          "name": "Magic Kingdom",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-parks-to-ports-61",
-          "catalog_number": 61,
-          "name": "Tokyo Disneyland",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-parks-to-ports-62",
-          "catalog_number": 62,
-          "name": "Disneyland Paris",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-parks-to-ports-63",
-          "catalog_number": 63,
-          "name": "Hong Kong Disneyland",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-parks-to-ports-64",
-          "catalog_number": 64,
-          "name": "Shanghai Disneyland",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-parks-to-ports-65",
-          "catalog_number": 65,
-          "name": "Disney Cruise Line",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-park-stamps-2",
-      "store": "MOG",
-      "drop_date": "2026-08-15",
-      "drop_day_label": "Saturday, August 15",
-      "set_name": "Disney Park Stamps: Series 2",
-      "set_description": "Commemorative stamp pin series celebrating the characters and attractions of Disney Parks.",
-      "set_type": "individual",
-      "features": "Hard Enamel, Laser Print, Stained Glass, Glitter, Translucent, Pearlized",
-      "dimensions": "2.5″–3″H",
-      "retail_price": 34.95,
-      "retail_display": "$34.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-15"
-      ],
-      "pins": [
-        {
-          "id": "mog-park-stamps-2-66",
-          "catalog_number": 66,
-          "name": "Ariel",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-67",
-          "catalog_number": 67,
-          "name": "Rosita",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-68",
-          "catalog_number": 68,
-          "name": "Teddi Barra",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-69",
-          "catalog_number": 69,
-          "name": "Hatbox Ghost",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-70",
-          "catalog_number": 70,
-          "name": "Albert",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-71",
-          "catalog_number": 71,
-          "name": "Scooter",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-72",
-          "catalog_number": 72,
-          "name": "Yeti",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-73",
-          "catalog_number": 73,
-          "name": "Chuuby",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-74",
-          "catalog_number": 74,
-          "name": "Tom Morrow 2.0",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-75",
-          "catalog_number": 75,
-          "name": "Dumbo",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-76",
-          "catalog_number": 76,
-          "name": "Winnie the Pooh",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-77",
-          "catalog_number": 77,
-          "name": "Sonny Eclipse",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-78",
-          "catalog_number": 78,
-          "name": "Lagoona Gator",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-79",
-          "catalog_number": 79,
-          "name": "The Dapper Dans",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-park-stamps-2-80",
-          "catalog_number": 80,
-          "name": "Jingles",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-panoramas",
-      "store": "MOG",
-      "drop_date": "2026-08-15",
-      "drop_day_label": "Saturday, August 15",
-      "set_name": "Disney Attraction Panoramas — Gate-fold",
-      "set_description": null,
-      "set_type": "individual",
-      "features": null,
-      "dimensions": null,
-      "retail_price": 74.95,
-      "retail_display": "$74.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-15"
-      ],
-      "pins": [
-        {
-          "id": "mog-panoramas-81",
-          "catalog_number": 81,
-          "name": "Peter Pan's Flight",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-panoramas-82",
-          "catalog_number": 82,
-          "name": "Jungle Cruise",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-panoramas-83",
-          "catalog_number": 83,
-          "name": "Alice in Wonderland",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-panoramas-84",
-          "catalog_number": 84,
-          "name": "Matterhorn Bobsleds",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-panoramas-85",
-          "catalog_number": 85,
-          "name": "It's a Small World",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-panoramas-86",
-          "catalog_number": 86,
-          "name": "Pirates of the Caribbean",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-panoramas-87",
-          "catalog_number": 87,
-          "name": "Haunted Mansion",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-panoramas-88",
-          "catalog_number": 88,
-          "name": "Big Thunder Mountain Railroad",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-carousel-horses",
-      "store": "MOG",
-      "drop_date": "2026-08-15",
-      "drop_day_label": "Saturday, August 15",
-      "set_name": "Disney Royal Carousel Horses — Box Set",
-      "set_description": "Box set of 6 carousel horse pins with display box.",
-      "set_type": "box_set",
-      "features": null,
-      "dimensions": null,
-      "retail_price": 324.95,
-      "retail_display": "$324.95",
-      "retail_note": "for set of 6",
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-15"
-      ],
-      "pins": [
-        {
-          "id": "mog-carousel-horses-89",
-          "catalog_number": 89,
-          "name": "Carousel Horses Box Set",
-          "edition_size": 250,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-avengers-mystery",
-      "store": "MOG",
-      "drop_date": "2026-08-16",
-      "drop_day_label": "Sunday, August 16",
-      "set_name": "The Avengers Mystery Set",
-      "set_description": null,
-      "set_type": "mystery",
-      "features": null,
-      "dimensions": "1.3″–1.7″H",
-      "retail_price": 34.95,
-      "retail_display": "$34.95",
-      "retail_note": "per box",
-      "purchase_limit": "Limit eight (8) boxes per guest",
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-16"
-      ],
-      "pins": [
-        {
-          "id": "mog-avengers-mystery-mystery-box-regular",
-          "catalog_number": null,
-          "name": "Mystery Box (Regular)",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-avengers-mystery-chaser",
-          "catalog_number": null,
-          "name": "Mystery Box (Chaser)",
-          "edition_size": 300,
-          "edition_notes": "chaser",
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-avengers-mystery-super-chaser",
-          "catalog_number": null,
-          "name": "Mystery Box (Super Chaser)",
-          "edition_size": 200,
-          "edition_notes": "super chaser",
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-guardians-boxset",
-      "store": "MOG",
-      "drop_date": "2026-08-16",
-      "drop_day_label": "Sunday, August 16",
-      "set_name": "Guardians of the Galaxy Box Set",
-      "set_description": "Each box contains one mystery pin under the tray.",
-      "set_type": "box_set",
-      "features": null,
-      "dimensions": "1″–1.7″H",
-      "retail_price": 74.95,
-      "retail_display": "$74.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-16"
-      ],
-      "pins": [
-        {
-          "id": "mog-guardians-boxset-91",
-          "catalog_number": 91,
-          "name": "Guardians of the Galaxy Box Set",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-kingdom-hearts-mystery",
-      "store": "MOG",
-      "drop_date": "2026-08-16",
-      "drop_day_label": "Sunday, August 16",
-      "set_name": "Kingdom Hearts Mystery Set",
-      "set_description": null,
-      "set_type": "mystery",
-      "features": null,
-      "dimensions": null,
-      "retail_price": 34.95,
-      "retail_display": "$34.95",
-      "retail_note": "per box",
-      "purchase_limit": "Limit eight (8) boxes per guest",
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-16"
-      ],
-      "pins": [
-        {
-          "id": "mog-kingdom-hearts-mystery-mystery-box-regular",
-          "catalog_number": null,
-          "name": "Mystery Box (Regular)",
-          "edition_size": 500,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-kingdom-hearts-mystery-chaser",
-          "catalog_number": null,
-          "name": "Mystery Box (Chaser)",
-          "edition_size": 400,
-          "edition_notes": "chaser",
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-kingdom-hearts-mystery-super-chaser",
-          "catalog_number": null,
-          "name": "Mystery Box (Super Chaser)",
-          "edition_size": 300,
-          "edition_notes": "super chaser",
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-pixar-soul-mystery",
-      "store": "MOG",
-      "drop_date": "2026-08-16",
-      "drop_day_label": "Sunday, August 16",
-      "set_name": "Pixar Soul Mystery Set",
-      "set_description": null,
-      "set_type": "mystery",
-      "features": null,
-      "dimensions": null,
-      "retail_price": 34.95,
-      "retail_display": "$34.95",
-      "retail_note": "per box",
-      "purchase_limit": "Limit eight (8) boxes per guest",
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-16"
-      ],
-      "pins": [
-        {
-          "id": "mog-pixar-soul-mystery-mystery-box-regular",
-          "catalog_number": null,
-          "name": "Mystery Box (Regular)",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-pixar-soul-mystery-chaser",
-          "catalog_number": null,
-          "name": "Mystery Box (Chaser)",
-          "edition_size": 300,
-          "edition_notes": "chaser",
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-pixar-soul-mystery-super-chaser",
-          "catalog_number": null,
-          "name": "Mystery Box (Super Chaser)",
-          "edition_size": 200,
-          "edition_notes": "super chaser",
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-pixar-soul-boxset",
-      "store": "MOG",
-      "drop_date": "2026-08-16",
-      "drop_day_label": "Sunday, August 16",
-      "set_name": "Pixar Soul Box Set",
-      "set_description": null,
-      "set_type": "box_set",
-      "features": null,
-      "dimensions": null,
-      "retail_price": 49.95,
-      "retail_display": "$49.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-16"
-      ],
-      "pins": [
-        {
-          "id": "mog-pixar-soul-boxset-94",
-          "catalog_number": 94,
-          "name": "Pixar Soul Box Set",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-muppet-show-50th",
-      "store": "MOG",
-      "drop_date": "2026-08-16",
-      "drop_day_label": "Sunday, August 16",
-      "set_name": "The Muppet Show 50th",
-      "set_description": "Celebrating 50 years of The Muppet Show.",
-      "set_type": "individual",
-      "features": "Pin-on-Pin, Laser Print, Glitter, Translucent, Marbleized, Pearlized, 3D",
-      "dimensions": "3.5″W",
-      "retail_price": 54.95,
-      "retail_display": "$54.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-16"
-      ],
-      "pins": [
-        {
-          "id": "mog-muppet-show-50th-95",
-          "catalog_number": 95,
-          "name": "Kermit",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-muppet-show-50th-96",
-          "catalog_number": 96,
-          "name": "Veterinarian's Hospital",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-muppet-show-50th-97",
-          "catalog_number": 97,
-          "name": "At the Dance",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-muppet-show-50th-98",
-          "catalog_number": 98,
-          "name": "Swedish Chef",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-muppet-show-50th-99",
-          "catalog_number": 99,
-          "name": "Great Gonzo",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-muppet-show-50th-100",
-          "catalog_number": 100,
-          "name": "Fozzie's Stand-Up",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-muppet-show-50th-101",
-          "catalog_number": 101,
-          "name": "Pigs in Space",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-muppet-show-50th-102",
-          "catalog_number": 102,
-          "name": "The Electric Mayhem",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-muppet-show-50th-103",
-          "catalog_number": 103,
-          "name": "Muppet Labs",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-muppet-show-50th-104",
-          "catalog_number": 104,
-          "name": "Statler and Waldorf",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-portraits-of-evil",
-      "store": "MOG",
-      "drop_date": "2026-08-16",
-      "drop_day_label": "Sunday, August 16",
-      "set_name": "Portraits of Evil",
-      "set_description": null,
-      "set_type": "individual",
-      "features": null,
-      "dimensions": null,
-      "retail_price": 44.95,
-      "retail_display": "$44.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-16"
-      ],
-      "pins": [
-        {
-          "id": "mog-portraits-of-evil-105",
-          "catalog_number": 105,
-          "name": "Evil Queen",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-portraits-of-evil-106",
-          "catalog_number": 106,
-          "name": "Chernabog",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-portraits-of-evil-107",
-          "catalog_number": 107,
-          "name": "Queen of Hearts",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-portraits-of-evil-108",
-          "catalog_number": 108,
-          "name": "Maleficent",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-portraits-of-evil-109",
-          "catalog_number": 109,
-          "name": "Cruella De Vil",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-portraits-of-evil-110",
-          "catalog_number": 110,
-          "name": "Horned King",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-portraits-of-evil-111",
-          "catalog_number": 111,
-          "name": "Ursula",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-portraits-of-evil-112",
-          "catalog_number": 112,
-          "name": "Gaston",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-portraits-of-evil-113",
-          "catalog_number": 113,
-          "name": "Jafar",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-portraits-of-evil-114",
-          "catalog_number": 114,
-          "name": "Scar",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-portraits-of-evil-115",
-          "catalog_number": 115,
-          "name": "Hades",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-portraits-of-evil-116",
-          "catalog_number": 116,
-          "name": "Yzma",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-portraits-of-evil-117",
-          "catalog_number": 117,
-          "name": "Mother Gothel",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-colorful-world-mystery",
-      "store": "MOG",
-      "drop_date": "2026-08-16",
-      "drop_day_label": "Sunday, August 16",
-      "set_name": "The Colorful World of Disney Mystery Set",
-      "set_description": "23 color-changing UV-reactive pins.",
-      "set_type": "mystery",
-      "features": "UV-Reactive",
-      "dimensions": null,
-      "retail_price": 34.95,
-      "retail_display": "$34.95",
-      "retail_note": "per box",
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-16"
-      ],
-      "pins": [
-        {
-          "id": "mog-colorful-world-mystery-118",
-          "catalog_number": 118,
-          "name": "Mystery Box",
-          "edition_size": 500,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
-    {
-      "id": "mog-imagineering-pin-boards",
-      "store": "MOG",
-      "drop_date": "2026-08-14",
-      "drop_day_label": "Friday, August 14",
-      "set_name": "Walt Disney Imagineering Pin Boards",
-      "set_description": "Unique pin boards inspired by the iconic Mickey's of Glendale backer cards.",
-      "set_type": "individual",
-      "features": "Foam Pin Board, Debossed",
-      "dimensions": null,
-      "retail_price": 34.95,
-      "retail_display": "$34.95",
-      "retail_note": null,
-      "purchase_limit": null,
-      "ship_only": false,
-      "available_dates": [
-        "2026-08-14",
-        "2026-08-15",
-        "2026-08-16"
-      ],
-      "pins": [
-        {
-          "id": "mog-imagineering-pin-boards-119",
-          "catalog_number": 119,
-          "name": "Backer Card Pin Board (10″W × 16″H)",
-          "edition_size": null,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
-        {
-          "id": "mog-imagineering-pin-boards-120",
-          "catalog_number": 120,
-          "name": "Mickey Backer Card Pin Board (9″W × 16″H)",
-          "edition_size": null,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        }
-      ]
-    },
     {
       "id": "twdc-disney-stamp-classic",
       "store": "TWDC",
       "drop_date": "2026-08-14",
       "drop_day_label": "Friday, August 14",
-      "set_name": "The Ultimate Disney Stamp (Classic Era)",
+      "set_name": "The Ultimate Disney Stamp — Classic Era",
       "set_description": null,
       "set_type": "individual",
       "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
@@ -1613,7 +112,7 @@
       "store": "TWDC",
       "drop_date": "2026-08-14",
       "drop_day_label": "Friday, August 14",
-      "set_name": "The Ultimate Disney Stamp (Renaissance Era)",
+      "set_name": "The Ultimate Disney Stamp — Renaissance Era",
       "set_description": null,
       "set_type": "individual",
       "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
@@ -1714,7 +213,7 @@
       "store": "TWDC",
       "drop_date": "2026-08-14",
       "drop_day_label": "Friday, August 14",
-      "set_name": "The Ultimate Disney Stamp (Modern Era)",
+      "set_name": "The Ultimate Disney Stamp — Modern Era",
       "set_description": null,
       "set_type": "individual",
       "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
@@ -1818,7 +317,7 @@
       "set_name": "Reel of Magic",
       "set_description": null,
       "set_type": "individual",
-      "features": "Hard Enamel, Laser Print, Translucent, Hinge Pin, Gold Base, Clear Epoxy",
+      "features": "Hard Enamel, Laser Print, Translucent, Hinged, Gold Base, Clear Epoxy",
       "dimensions": "3.47″×3.5″",
       "retail_price": 52.95,
       "retail_display": "$52.95",
@@ -4282,6 +2781,1507 @@
       ]
     },
     {
+      "id": "mog-alice-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Alice in Wonderland Mystery Set",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": "Soft Enamel, Pin-on-Pin, Laser Print, Marbleized",
+      "dimensions": "1.9″–2.0″H",
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": "per box",
+      "purchase_limit": "Limit six (6) boxes per guest",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-alice-mystery-1",
+          "catalog_number": 1,
+          "name": "Mystery Box",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-alice-75th",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Alice in Wonderland 75th Anniversary",
+      "set_description": "Celebrate the 75th Anniversary of Alice in Wonderland with this comic-inspired pin series.",
+      "set_type": "individual",
+      "features": "Hard Enamel, Laser Print, Translucent, Marbleized",
+      "dimensions": "3.25″–4.15″H",
+      "retail_price": 52.95,
+      "retail_display": "$52.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-alice-75th-2",
+          "catalog_number": 2,
+          "name": "Alice",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-alice-75th-3",
+          "catalog_number": 3,
+          "name": "Queen of Hearts",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-alice-75th-4",
+          "catalog_number": 4,
+          "name": "White Rabbit",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-alice-75th-5",
+          "catalog_number": 5,
+          "name": "Cheshire Cat",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-alice-75th-6",
+          "catalog_number": 6,
+          "name": "The Flowers",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-princess-windows",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Disney Princess Dream Windows",
+      "set_description": "Celebrate timeless Disney Princess stories with these enchanting stained glass pins.",
+      "set_type": "individual",
+      "features": "Hard Enamel, Laser Print, Stained Glass",
+      "dimensions": "3.8″–4.0″H",
+      "retail_price": 42.95,
+      "retail_display": "$42.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-princess-windows-7",
+          "catalog_number": 7,
+          "name": "Snow White",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-8",
+          "catalog_number": 8,
+          "name": "Cinderella",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-9",
+          "catalog_number": 9,
+          "name": "Aurora",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-10",
+          "catalog_number": 10,
+          "name": "Ariel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-11",
+          "catalog_number": 11,
+          "name": "Belle",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-12",
+          "catalog_number": 12,
+          "name": "Jasmine",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-13",
+          "catalog_number": 13,
+          "name": "Pocahontas",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-14",
+          "catalog_number": 14,
+          "name": "Mulan",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-15",
+          "catalog_number": 15,
+          "name": "Tiana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-16",
+          "catalog_number": 16,
+          "name": "Rapunzel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-17",
+          "catalog_number": 17,
+          "name": "Merida",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-18",
+          "catalog_number": 18,
+          "name": "Moana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-19",
+          "catalog_number": 19,
+          "name": "Raya",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-ducktales-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "DuckTales the Movie: Treasure of the Lost Lamp Mystery Set",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": "1.2″–1.8″H",
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": "per box",
+      "purchase_limit": "Limit eight (8) boxes per guest",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-ducktales-mystery-20",
+          "catalog_number": 20,
+          "name": "Mystery Box (Regular)",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-ducktales-mystery-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Chaser)",
+          "edition_size": 300,
+          "edition_notes": "chaser",
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-treasure-seekers",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Disney Treasure Seekers",
+      "set_description": null,
+      "set_type": "individual",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-treasure-seekers-21",
+          "catalog_number": 21,
+          "name": "Ariel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-treasure-seekers-22",
+          "catalog_number": 22,
+          "name": "Scrooge McDuck",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-treasure-seekers-23",
+          "catalog_number": 23,
+          "name": "Jim Hawkins",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-treasure-seekers-24",
+          "catalog_number": 24,
+          "name": "Peter Pan",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-treasure-seekers-25",
+          "catalog_number": 25,
+          "name": "Abu",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-treasure-seekers-26",
+          "catalog_number": 26,
+          "name": "Penny",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-squad-goals",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Disney Squad Goals",
+      "set_description": null,
+      "set_type": "individual",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 69.95,
+      "retail_display": "$69.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-squad-goals-27",
+          "catalog_number": 27,
+          "name": "The Little Mermaid",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-28",
+          "catalog_number": 28,
+          "name": "Treasure Planet",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-29",
+          "catalog_number": 29,
+          "name": "The Princess and the Frog",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-30",
+          "catalog_number": 30,
+          "name": "Big Hero 6",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-31",
+          "catalog_number": 31,
+          "name": "Raya",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-32",
+          "catalog_number": 32,
+          "name": "Lilo & Stitch",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-33",
+          "catalog_number": 33,
+          "name": "A Goofy Movie",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-34",
+          "catalog_number": 34,
+          "name": "Moana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-35",
+          "catalog_number": 35,
+          "name": "Robin Hood",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-36",
+          "catalog_number": 36,
+          "name": "Snow White and the Seven Dwarfs",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-pov",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "POV: Another Point of View",
+      "set_description": "Rotating double-sided spinner pins featuring heroes and villains.",
+      "set_type": "individual",
+      "features": "Hard Enamel, Pin-on-Pin, Glitter, Translucent, Marbleized, Jumbo, Gemstones, Spinner",
+      "dimensions": "5″–5.5″H",
+      "retail_price": 79.95,
+      "retail_display": "$79.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-pov-37",
+          "catalog_number": 37,
+          "name": "Moana and Te Kā",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-38",
+          "catalog_number": 38,
+          "name": "Belle and Beast",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-39",
+          "catalog_number": 39,
+          "name": "Snow White and Evil Queen",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-40",
+          "catalog_number": 40,
+          "name": "Ariel and Ursula",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-41",
+          "catalog_number": 41,
+          "name": "Aurora and Maleficent",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-42",
+          "catalog_number": 42,
+          "name": "Aladdin and Genie",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-43",
+          "catalog_number": 43,
+          "name": "Alice and the Queen of Hearts",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-44",
+          "catalog_number": 44,
+          "name": "Cinderella and Prince Charming",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-45",
+          "catalog_number": 45,
+          "name": "Rapunzel and Flynn Rider",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-46",
+          "catalog_number": 46,
+          "name": "Sorcerer's Apprentice Mickey and Yen Sid",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-dining-character",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Dining with Character",
+      "set_description": "Detailed dining scenes on commemorative plate-inspired pins.",
+      "set_type": "individual",
+      "features": "Hard Enamel, Laser Print, Glitter, Translucent, Marbleized, Jumbo",
+      "dimensions": "4.5″H",
+      "retail_price": 79.95,
+      "retail_display": "$79.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-dining-character-47",
+          "catalog_number": 47,
+          "name": "The Emperor's New Groove",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-48",
+          "catalog_number": 48,
+          "name": "Sleeping Beauty",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-49",
+          "catalog_number": 49,
+          "name": "Alice in Wonderland",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-50",
+          "catalog_number": 50,
+          "name": "The Princess and the Frog",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-51",
+          "catalog_number": 51,
+          "name": "Winnie the Pooh",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-52",
+          "catalog_number": 52,
+          "name": "The Little Mermaid",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-53",
+          "catalog_number": 53,
+          "name": "Mickey and the Beanstalk",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-54",
+          "catalog_number": 54,
+          "name": "Lady and the Tramp",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-55",
+          "catalog_number": 55,
+          "name": "Beauty and the Beast",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-56",
+          "catalog_number": 56,
+          "name": "Ratatouille",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-world-princess-ultra",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "World Princess Week Ultra Jumbo",
+      "set_description": "Gathering beloved heroines from across Disney's animated legacy, this majestic pin celebrates the optimism, courage, and timeless stories of the Disney Princesses.",
+      "set_type": "ultra_jumbo",
+      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Stained Glass, Jumbo",
+      "dimensions": "16″W × 9″H",
+      "retail_price": 1200.0,
+      "retail_display": "$1,200.00",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-world-princess-ultra-57",
+          "catalog_number": 57,
+          "name": "World Princess Week",
+          "edition_size": 150,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-sea-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "S.E.A. Mystery Set",
+      "set_description": "Collect all 15 pins plus trading cards to reveal a hidden image.",
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 39.95,
+      "retail_display": "$39.95",
+      "retail_note": "per box",
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "mog-sea-mystery-58",
+          "catalog_number": 58,
+          "name": "Mystery Box",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-parks-to-ports",
+      "store": "MOG",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Around the World with Disney: Parks to Ports",
+      "set_description": null,
+      "set_type": "individual",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 36.95,
+      "retail_display": "$36.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "mog-parks-to-ports-59",
+          "catalog_number": 59,
+          "name": "Disneyland",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-parks-to-ports-60",
+          "catalog_number": 60,
+          "name": "Magic Kingdom",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-parks-to-ports-61",
+          "catalog_number": 61,
+          "name": "Tokyo Disneyland",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-parks-to-ports-62",
+          "catalog_number": 62,
+          "name": "Disneyland Paris",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-parks-to-ports-63",
+          "catalog_number": 63,
+          "name": "Hong Kong Disneyland",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-parks-to-ports-64",
+          "catalog_number": 64,
+          "name": "Shanghai Disneyland",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-parks-to-ports-65",
+          "catalog_number": 65,
+          "name": "Disney Cruise Line",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-park-stamps-2",
+      "store": "MOG",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Disney Park Stamps: Series 2",
+      "set_description": "Commemorative stamp pin series celebrating the characters and attractions of Disney Parks.",
+      "set_type": "individual",
+      "features": "Hard Enamel, Laser Print, Stained Glass, Glitter, Translucent, Pearlized",
+      "dimensions": "2.5″–3″H",
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "mog-park-stamps-2-66",
+          "catalog_number": 66,
+          "name": "Ariel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-67",
+          "catalog_number": 67,
+          "name": "Rosita",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-68",
+          "catalog_number": 68,
+          "name": "Teddi Barra",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-69",
+          "catalog_number": 69,
+          "name": "Hatbox Ghost",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-70",
+          "catalog_number": 70,
+          "name": "Albert",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-71",
+          "catalog_number": 71,
+          "name": "Scooter",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-72",
+          "catalog_number": 72,
+          "name": "Yeti",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-73",
+          "catalog_number": 73,
+          "name": "Chuuby",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-74",
+          "catalog_number": 74,
+          "name": "Tom Morrow 2.0",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-75",
+          "catalog_number": 75,
+          "name": "Dumbo",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-76",
+          "catalog_number": 76,
+          "name": "Winnie the Pooh",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-77",
+          "catalog_number": 77,
+          "name": "Sonny Eclipse",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-78",
+          "catalog_number": 78,
+          "name": "Lagoona Gator",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-79",
+          "catalog_number": 79,
+          "name": "The Dapper Dans",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-80",
+          "catalog_number": 80,
+          "name": "Jingles",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-panoramas",
+      "store": "MOG",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Disney Attraction Panoramas — Gate-fold",
+      "set_description": null,
+      "set_type": "individual",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 74.95,
+      "retail_display": "$74.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "mog-panoramas-81",
+          "catalog_number": 81,
+          "name": "Peter Pan's Flight",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-82",
+          "catalog_number": 82,
+          "name": "Jungle Cruise",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-83",
+          "catalog_number": 83,
+          "name": "Alice in Wonderland",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-84",
+          "catalog_number": 84,
+          "name": "Matterhorn Bobsleds",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-85",
+          "catalog_number": 85,
+          "name": "It's a Small World",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-86",
+          "catalog_number": 86,
+          "name": "Pirates of the Caribbean",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-87",
+          "catalog_number": 87,
+          "name": "Haunted Mansion",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-88",
+          "catalog_number": 88,
+          "name": "Big Thunder Mountain Railroad",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-carousel-horses",
+      "store": "MOG",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Disney Royal Carousel Horses — Box Set",
+      "set_description": "Box set of 6 carousel horse pins with display box.",
+      "set_type": "box_set",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 324.95,
+      "retail_display": "$324.95",
+      "retail_note": "for set of 6",
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "mog-carousel-horses-89",
+          "catalog_number": 89,
+          "name": "Carousel Horses Box Set",
+          "edition_size": 250,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-avengers-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "The Avengers Mystery Set",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": "1.3″–1.7″H",
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": "per box",
+      "purchase_limit": "Limit eight (8) boxes per guest",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-avengers-mystery-mystery-box-regular",
+          "catalog_number": null,
+          "name": "Mystery Box (Regular)",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-avengers-mystery-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Chaser)",
+          "edition_size": 300,
+          "edition_notes": "chaser",
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-avengers-mystery-super-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Super Chaser)",
+          "edition_size": 200,
+          "edition_notes": "super chaser",
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-guardians-boxset",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Guardians of the Galaxy Box Set",
+      "set_description": "Each box contains one mystery pin under the tray.",
+      "set_type": "box_set",
+      "features": null,
+      "dimensions": "1″–1.7″H",
+      "retail_price": 74.95,
+      "retail_display": "$74.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-guardians-boxset-91",
+          "catalog_number": 91,
+          "name": "Guardians of the Galaxy Box Set",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-kingdom-hearts-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Kingdom Hearts Mystery Set",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": "per box",
+      "purchase_limit": "Limit eight (8) boxes per guest",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-kingdom-hearts-mystery-mystery-box-regular",
+          "catalog_number": null,
+          "name": "Mystery Box (Regular)",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-kingdom-hearts-mystery-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Chaser)",
+          "edition_size": 400,
+          "edition_notes": "chaser",
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-kingdom-hearts-mystery-super-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Super Chaser)",
+          "edition_size": 300,
+          "edition_notes": "super chaser",
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-pixar-soul-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Pixar Soul Mystery Set",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": "per box",
+      "purchase_limit": "Limit eight (8) boxes per guest",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-pixar-soul-mystery-mystery-box-regular",
+          "catalog_number": null,
+          "name": "Mystery Box (Regular)",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pixar-soul-mystery-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Chaser)",
+          "edition_size": 300,
+          "edition_notes": "chaser",
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pixar-soul-mystery-super-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Super Chaser)",
+          "edition_size": 200,
+          "edition_notes": "super chaser",
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-pixar-soul-boxset",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Pixar Soul Box Set",
+      "set_description": null,
+      "set_type": "box_set",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 49.95,
+      "retail_display": "$49.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-pixar-soul-boxset-94",
+          "catalog_number": 94,
+          "name": "Pixar Soul Box Set",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-muppet-show-50th",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "The Muppet Show 50th",
+      "set_description": "Celebrating 50 years of The Muppet Show.",
+      "set_type": "individual",
+      "features": "Pin-on-Pin, Laser Print, Glitter, Translucent, Marbleized, Pearlized",
+      "dimensions": "3.5″W",
+      "retail_price": 54.95,
+      "retail_display": "$54.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-muppet-show-50th-95",
+          "catalog_number": 95,
+          "name": "Kermit",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-96",
+          "catalog_number": 96,
+          "name": "Veterinarian's Hospital",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-97",
+          "catalog_number": 97,
+          "name": "At the Dance",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-98",
+          "catalog_number": 98,
+          "name": "Swedish Chef",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-99",
+          "catalog_number": 99,
+          "name": "Great Gonzo",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-100",
+          "catalog_number": 100,
+          "name": "Fozzie's Stand-Up",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-101",
+          "catalog_number": 101,
+          "name": "Pigs in Space",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-102",
+          "catalog_number": 102,
+          "name": "The Electric Mayhem",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-103",
+          "catalog_number": 103,
+          "name": "Muppet Labs",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-104",
+          "catalog_number": 104,
+          "name": "Statler and Waldorf",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-portraits-of-evil",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Portraits of Evil",
+      "set_description": null,
+      "set_type": "individual",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 44.95,
+      "retail_display": "$44.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-portraits-of-evil-105",
+          "catalog_number": 105,
+          "name": "Evil Queen",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-106",
+          "catalog_number": 106,
+          "name": "Chernabog",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-107",
+          "catalog_number": 107,
+          "name": "Queen of Hearts",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-108",
+          "catalog_number": 108,
+          "name": "Maleficent",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-109",
+          "catalog_number": 109,
+          "name": "Cruella De Vil",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-110",
+          "catalog_number": 110,
+          "name": "Horned King",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-111",
+          "catalog_number": 111,
+          "name": "Ursula",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-112",
+          "catalog_number": 112,
+          "name": "Gaston",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-113",
+          "catalog_number": 113,
+          "name": "Jafar",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-114",
+          "catalog_number": 114,
+          "name": "Scar",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-115",
+          "catalog_number": 115,
+          "name": "Hades",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-116",
+          "catalog_number": 116,
+          "name": "Yzma",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-117",
+          "catalog_number": 117,
+          "name": "Mother Gothel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-colorful-world-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "The Colorful World of Disney Mystery Set",
+      "set_description": "23 color-changing UV-reactive pins.",
+      "set_type": "mystery",
+      "features": "UV-Reactive",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": "per box",
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-colorful-world-mystery-118",
+          "catalog_number": 118,
+          "name": "Mystery Box",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-imagineering-pin-boards",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Walt Disney Imagineering Pin Boards",
+      "set_description": "Unique pin boards inspired by the iconic Mickey's of Glendale backer cards.",
+      "set_type": "individual",
+      "features": "Foam Pin Board, Debossed",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14",
+        "2026-08-15",
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-imagineering-pin-boards-119",
+          "catalog_number": 119,
+          "name": "Backer Card Pin Board (10″W × 16″H)",
+          "edition_size": null,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-imagineering-pin-boards-120",
+          "catalog_number": 120,
+          "name": "Mickey Backer Card Pin Board (9″W × 16″H)",
+          "edition_size": null,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
       "id": "dssh-premiere-el-capitan",
       "store": "DSSH",
       "drop_date": "2026-08-14",
@@ -4318,7 +4318,7 @@
       "set_name": "Artist Series — Avengers: Endgame by Matt Ferguson",
       "set_description": null,
       "set_type": "individual",
-      "features": "Laser Print, 3D, Custom Backing Card",
+      "features": "Pin-on-Pin, Laser Print, Custom Backing Card",
       "dimensions": "1.69″W×2.25″H",
       "retail_price": 29.95,
       "retail_display": "$29.95",
@@ -5009,7 +5009,7 @@
       "set_name": "Unlocking the Magic Series",
       "set_description": null,
       "set_type": "individual",
-      "features": "Glitter, Hinge Pin, Custom Backing Card",
+      "features": "Glitter, Hinged, Custom Backing Card",
       "dimensions": null,
       "retail_price": 49.95,
       "retail_display": "$49.95",
@@ -5652,7 +5652,7 @@
       "set_name": "Cursive Cuties Series",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin, Translucent, 3D",
+      "features": "Pin-on-Pin, Translucent",
       "dimensions": "2.5″W×2.5″H",
       "retail_price": 44.95,
       "retail_display": "$44.95",
