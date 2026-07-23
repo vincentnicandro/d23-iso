@@ -147,7 +147,7 @@ img { display: block; max-width: 100%; }
 .set-group-header {
   background: var(--color-surface); border-radius: 16px 16px 0 0;
   box-shadow: 0 2px 12px rgba(0,38,76,0.08); border: 1px solid var(--color-border);
-  border-bottom: none; padding: 16px; position: relative;
+  border-bottom: none; padding: 16px; position: sticky; top: 61px; z-index: 10;
 }
 
 /* ADD ICONS */
@@ -226,7 +226,14 @@ img { display: block; max-width: 100%; }
   transition: transform 0.2s ease-out;
 }
 .filter-sheet.sheet { padding: 0; overflow: hidden; }
-.sheet-img { width: 200px; height: 200px; object-fit: contain; margin: 0 auto 16px; background: #f5f7fa; border-radius: 12px; }
+.sheet-img { width: 200px; height: 200px; object-fit: contain; margin: 0 auto 12px; background: #f5f7fa; border-radius: 12px; display: block; }
+.sheet-thumbs { display: flex; justify-content: center; gap: 8px; margin-bottom: 16px; }
+.sheet-thumb {
+  width: 48px; height: 48px; object-fit: cover; border-radius: 8px;
+  border: 2px solid transparent; cursor: pointer; opacity: 0.4;
+  transition: opacity 0.15s, border-color 0.15s;
+}
+.sheet-thumb.active { opacity: 1; border-color: var(--color-navy); }
 .sheet-name { font-weight: 700; font-size: 20px; text-align: center; margin-bottom: 4px; }
 .sheet-set { font-size: 14px; color: var(--color-text-secondary); text-align: center; margin-bottom: 16px; }
 .sheet-meta { font-size: 13px; color: var(--color-text-secondary); line-height: 1.8; }
@@ -314,6 +321,8 @@ img { display: block; max-width: 100%; }
   .top-nav { display: flex !important; }
   .pin-grid { grid-template-columns: repeat(4, 1fr); }
   .iso-footer { bottom: 0; }
+  .filter-bar { top: 49px; }
+  .set-group-header { top: 110px; }
 }
 @media (min-width: 1200px) {
   .pin-grid { grid-template-columns: repeat(6, 1fr); }
@@ -321,6 +330,7 @@ img { display: block; max-width: 100%; }
 .top-nav {
   display: none; background: #fff; border-bottom: 1px solid var(--color-border);
   padding: 12px 24px; gap: 24px; align-items: center; justify-content: center;
+  position: sticky; top: 0; z-index: 60;
 }
 .top-nav button { font-size: 14px; font-weight: 600; color: var(--color-text-secondary); padding: 8px 16px; border-radius: 999px; }
 .top-nav button.active { color: var(--color-navy); background: #edf2f8; }
@@ -349,6 +359,7 @@ const app = createApp({
     const searchQuery = ref('');
     const isoList = ref([]);
     const selectedPin = ref(null);
+    const sheetActiveImg = ref(0);
     const copyMsg = ref('');
 
     // Load data
@@ -460,8 +471,15 @@ const app = createApp({
       return null;
     }
 
-    function openPin(pin, set) { selectedPin.value = { pin, set }; }
+    function openPin(pin, set) { selectedPin.value = { pin, set }; sheetActiveImg.value = 0; }
     function closeSheet() { selectedPin.value = null; }
+
+    function sheetImages() {
+      if (!selectedPin.value) return [];
+      const imgs = [getImgSrc(selectedPin.value.pin)];
+      if (selectedPin.value.pin.box_image_path) imgs.push(selectedPin.value.pin.box_image_path);
+      return imgs;
+    }
 
     // ISO grouping
     const isoGroups = computed(() => {
@@ -498,7 +516,7 @@ const app = createApp({
         text += `📌 MY D23 ISO LIST — ${group.store} ${group.date.split(', ')[1] || group.date}\n\n`;
         group.items.forEach(item => {
           const cn = item.pin.catalog_number ? ` (#${item.pin.catalog_number})` : '';
-          const le = item.pin.edition_size ? ` LE${item.pin.edition_size}` : '';
+          const le = item.pin.edition_size ? ` LE ${item.pin.edition_size}` : '';
           const price = item.set.retail_price ? `$${item.set.retail_price.toFixed(2)}` : '';
           const qty = item.qty > 1 ? ` ×${item.qty}` : '';
           text += `□ ${item.set.set_name} — ${item.pin.name}${cn} — ${price}${le}${qty}\n`;
@@ -522,7 +540,7 @@ const app = createApp({
     });
 
     const typeOptions = ['individual', 'mystery', 'box_set', 'framed_set'];
-    const attrOptions = ['Hard Enamel', 'Soft Enamel', 'Pin-on-Pin', 'Laser Print', 'Stained Glass', 'Glitter', 'Translucent', 'Marbleized', 'Pearlized', 'Hinged', 'Jumbo', 'Spinner', 'Gemstones', 'Gold Base', 'Silver Base', 'Antique Gold', 'UV-Reactive'];
+    const attrOptions = ['Hard Enamel', 'Soft Enamel', 'Pin on Pin', 'Laser Print', 'Stained Glass', 'Glitter', 'Translucent', 'Marbleized', 'Pearlized', 'Hinged', 'Jumbo', 'Spinner', 'Gemstones', 'Gold Base', 'Silver Base', 'Antique Gold', 'UV Reactive'];
 
     function matchesAttr(features, attr) {
       if (!features) return false;
@@ -563,8 +581,8 @@ const app = createApp({
 
     function badgeClass(type) { return `badge badge-${type}`; }
     function badgeLabel(type) {
-      return { individual: 'Individual', mystery: 'Mystery Box', box_set: 'Box Set',
-               ultra_jumbo: 'Individual', framed_set: 'Framed Set' }[type] || type;
+      return { individual: 'Individual', mystery: 'Mystery', box_set: 'Box Set',
+               ultra_jumbo: 'Individual', framed_set: 'Framed' }[type] || type;
     }
 
     return {
@@ -572,7 +590,7 @@ const app = createApp({
       isoList, selectedPin, copyMsg, stores, dates, dateLabels,
       filteredSets, searchResults, isoGroups, isoTotal, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, toggleAllIso, resetFilters, toggleFilter,
-      updateQty, findPin, openPin, closeSheet, copyAsText,
+      updateQty, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText,
       featureTags, filteredPins, displayDates, badgeClass, badgeLabel, PLACEHOLDER_IMG
     };
   },
@@ -626,7 +644,7 @@ const app = createApp({
         <button v-for="t in typeOptions" :key="t" class="filter-pill" :class="{ active: typeFilter.includes(t) }" @click="toggleFilter(typeFilter, t)">{{ badgeLabel(t) }}</button>
       </div>
 
-      <h3 class="filter-section-title">Attributes</h3>
+      <h3 class="filter-section-title">Features</h3>
       <div class="filter-pills">
         <button v-for="a in attrOptions" :key="a" class="filter-pill" :class="{ active: attrFilter.includes(a) }" @click="toggleFilter(attrFilter, a)">{{ a }}</button>
       </div>
@@ -648,7 +666,6 @@ const app = createApp({
         <span :class="badgeClass(set.set_type)">{{ badgeLabel(set.set_type) }}</span>
         <span class="badge badge-store">{{ set.store }}</span>
         <span v-for="d in displayDates(set)" :key="d" class="badge badge-date">{{ d }}</span>
-        <span v-for="t in featureTags(set.features)" :key="t" class="tag">{{ t }}</span>
       </div>
       <div v-if="set.ship_only" class="ship-notice">🚢 Ship only — no in-person pickup</div>
     </div>
@@ -662,11 +679,10 @@ const app = createApp({
         <div class="pin-card-body">
           <div class="pin-card-name">{{ pin.name }}</div>
           <div class="pin-card-meta">
-            <span v-if="pin.catalog_number">#{{ pin.catalog_number }} · </span>
             <span v-if="pin.retail_display">{{ pin.retail_display }}</span>
             <span v-else-if="set.retail_display">{{ set.retail_display }}</span>
             <span v-if="set.retail_note">&nbsp;{{ set.retail_note }}</span>
-            <span v-if="pin.edition_size"> · LE{{ pin.edition_size }}</span>
+            <span v-if="pin.edition_size"> · LE {{ pin.edition_size }}</span>
             <span v-if="pin.edition_notes" class="pin-card-tier"> · {{ pin.edition_notes }}</span>
           </div>
         </div>
@@ -700,7 +716,7 @@ const app = createApp({
           <div class="pin-card-meta">
             <span v-if="item.pin.retail_display">{{ item.pin.retail_display }}</span>
             <span v-else-if="item.set.retail_display">{{ item.set.retail_display }}</span>
-            <span v-if="item.pin.edition_size"> · LE{{ item.pin.edition_size }}</span>
+            <span v-if="item.pin.edition_size"> · LE {{ item.pin.edition_size }}</span>
           </div>
           <div class="iso-card-stepper">
             <button class="stepper-btn stepper-btn-sm" @click.stop="updateQty(item.pinId, -1)"><svg width="10" height="10" viewBox="0 0 14 14"><path d="M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
@@ -763,7 +779,10 @@ const app = createApp({
 <!-- PIN DETAIL SHEET -->
 <div v-if="selectedPin" class="overlay" @click.self="closeSheet"></div>
 <div v-if="selectedPin" class="sheet">
-  <img :src="getImgSrc(selectedPin.pin)" :alt="selectedPin.pin.name" class="sheet-img">
+  <img :src="sheetImages()[sheetActiveImg]" :alt="selectedPin.pin.name" class="sheet-img">
+  <div class="sheet-thumbs">
+    <img v-for="(img, idx) in sheetImages()" :key="idx" :src="img" class="sheet-thumb" :class="{ active: sheetActiveImg === idx }" @click="sheetActiveImg = idx">
+  </div>
   <div class="sheet-name">{{ selectedPin.pin.name }}</div>
   <div v-if="selectedPin.pin.catalog_number" class="sheet-set">#{{ selectedPin.pin.catalog_number }}</div>
   <div class="sheet-set">{{ selectedPin.set.set_name }}</div>
@@ -773,7 +792,7 @@ const app = createApp({
     <div v-if="selectedPin.set.features"><strong>Features:</strong> {{ selectedPin.set.features }}</div>
     <div v-if="selectedPin.set.dimensions"><strong>Dimensions:</strong> {{ selectedPin.set.dimensions }}</div>
     <div><strong>Retail:</strong> {{ selectedPin.set.retail_display }} {{ selectedPin.set.retail_note || '' }}</div>
-    <div v-if="selectedPin.pin.edition_size"><strong>Edition:</strong> LE{{ selectedPin.pin.edition_size }} {{ selectedPin.pin.edition_notes || '' }}</div>
+    <div v-if="selectedPin.pin.edition_size"><strong>Edition:</strong> LE {{ selectedPin.pin.edition_size }} {{ selectedPin.pin.edition_notes || '' }}</div>
     <div v-if="selectedPin.set.purchase_limit"><strong>Limit:</strong> {{ selectedPin.set.purchase_limit }}</div>
   </div>
   <div v-if="selectedPin.set.set_type==='mystery'" class="sheet-disclaimer">

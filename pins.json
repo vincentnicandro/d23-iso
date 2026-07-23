@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T20:47:23.278969Z",
+  "generated_at": "2026-07-23T21:25:34.578028Z",
   "stores": [
     "TWDC",
     "MOG",
@@ -14,7 +14,7 @@
       "set_name": "The Ultimate Disney Stamp — Classic Era",
       "set_description": null,
       "set_type": "individual",
-      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
+      "features": "Hard Enamel, Pin on Pin, Laser Print, Glitter, Gold Base",
       "dimensions": null,
       "retail_price": 34.95,
       "retail_display": "$34.95",
@@ -115,7 +115,7 @@
       "set_name": "The Ultimate Disney Stamp — Renaissance Era",
       "set_description": null,
       "set_type": "individual",
-      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
+      "features": "Hard Enamel, Pin on Pin, Laser Print, Glitter, Gold Base",
       "dimensions": null,
       "retail_price": 34.95,
       "retail_display": "$34.95",
@@ -216,7 +216,7 @@
       "set_name": "The Ultimate Disney Stamp — Modern Era",
       "set_description": null,
       "set_type": "individual",
-      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
+      "features": "Hard Enamel, Pin on Pin, Laser Print, Glitter, Gold Base",
       "dimensions": null,
       "retail_price": 34.95,
       "retail_display": "$34.95",
@@ -334,7 +334,8 @@
           "name": "The Little Mermaid",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_top1_01.png"
+          "image_path": "images/twdc/fri/fri_reel_top1_01.png",
+          "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
           "id": "twdc-reel-of-magic-beauty-and-the-beast",
@@ -342,7 +343,8 @@
           "name": "Beauty and the Beast",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_top1_02.png"
+          "image_path": "images/twdc/fri/fri_reel_top1_02.png",
+          "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
           "id": "twdc-reel-of-magic-aladdin",
@@ -350,7 +352,8 @@
           "name": "Aladdin",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row1_01.png"
+          "image_path": "images/twdc/fri/fri_reel_row1_01.png",
+          "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
           "id": "twdc-reel-of-magic-the-lion-king",
@@ -358,7 +361,8 @@
           "name": "The Lion King",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row1_02.png"
+          "image_path": "images/twdc/fri/fri_reel_row1_02.png",
+          "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
           "id": "twdc-reel-of-magic-pocahontas",
@@ -366,7 +370,8 @@
           "name": "Pocahontas",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row1_03.png"
+          "image_path": "images/twdc/fri/fri_reel_row1_03.png",
+          "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
           "id": "twdc-reel-of-magic-the-hunchback-of-notre-dame",
@@ -374,7 +379,8 @@
           "name": "The Hunchback of Notre Dame",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row1_04.png"
+          "image_path": "images/twdc/fri/fri_reel_row1_04.png",
+          "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
           "id": "twdc-reel-of-magic-mulan",
@@ -382,7 +388,8 @@
           "name": "Mulan",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row1_05.png"
+          "image_path": "images/twdc/fri/fri_reel_row1_05.png",
+          "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
           "id": "twdc-reel-of-magic-tarzan",
@@ -390,7 +397,8 @@
           "name": "Tarzan",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row2_01.png"
+          "image_path": "images/twdc/fri/fri_reel_row2_01.png",
+          "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
           "id": "twdc-reel-of-magic-emperors-new-groove",
@@ -398,7 +406,8 @@
           "name": "Emperor's New Groove",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row2_02.png"
+          "image_path": "images/twdc/fri/fri_reel_row2_02.png",
+          "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
           "id": "twdc-reel-of-magic-atlantis",
@@ -406,7 +415,8 @@
           "name": "Atlantis",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row2_03.png"
+          "image_path": "images/twdc/fri/fri_reel_row2_03.png",
+          "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         },
         {
           "id": "twdc-reel-of-magic-lilo-stitch",
@@ -414,7 +424,8 @@
           "name": "Lilo & Stitch",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_reel_row2_04.png"
+          "image_path": "images/twdc/fri/fri_reel_row2_04.png",
+          "box_image_path": "images/twdc/fri/fri_reel_top2_01.png"
         }
       ]
     },
@@ -426,7 +437,7 @@
       "set_name": "Royal Chambers",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin",
+      "features": "Pin on Pin",
       "dimensions": null,
       "retail_price": 45.95,
       "retail_display": "$45.95",
@@ -559,7 +570,7 @@
       "set_name": "Role Models",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin",
+      "features": "Pin on Pin",
       "dimensions": null,
       "retail_price": 45.95,
       "retail_display": "$45.95",
@@ -1223,7 +1234,7 @@
       "set_name": "The Ultimate Pixar Stamp — Series 1",
       "set_description": null,
       "set_type": "individual",
-      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
+      "features": "Hard Enamel, Pin on Pin, Laser Print, Glitter, Gold Base",
       "dimensions": null,
       "retail_price": 34.95,
       "retail_display": "$34.95",
@@ -1324,7 +1335,7 @@
       "set_name": "The Ultimate Pixar Stamp — Series 2",
       "set_description": null,
       "set_type": "individual",
-      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
+      "features": "Hard Enamel, Pin on Pin, Laser Print, Glitter, Gold Base",
       "dimensions": null,
       "retail_price": 34.95,
       "retail_display": "$34.95",
@@ -1425,7 +1436,7 @@
       "set_name": "The Ultimate Pixar Stamp — Series 3",
       "set_description": null,
       "set_type": "individual",
-      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
+      "features": "Hard Enamel, Pin on Pin, Laser Print, Glitter, Gold Base",
       "dimensions": null,
       "retail_price": 34.95,
       "retail_display": "$34.95",
@@ -1526,7 +1537,7 @@
       "set_name": "Game Changers",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin",
+      "features": "Pin on Pin",
       "dimensions": null,
       "retail_price": 39.95,
       "retail_display": "$39.95",
@@ -1675,7 +1686,7 @@
       "set_name": "Welcome Home",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin",
+      "features": "Pin on Pin",
       "dimensions": null,
       "retail_price": 42.95,
       "retail_display": "$42.95",
@@ -1745,7 +1756,7 @@
         {
           "id": "twdc-welcome-home-the-incredibles-home",
           "catalog_number": null,
-          "name": "The Incredible's Home",
+          "name": "The Incredibles' Home",
           "edition_size": 400,
           "edition_notes": null,
           "image_path": "images/twdc/sat/sat_home_strip3_01.png"
@@ -1783,9 +1794,9 @@
           "image_path": "images/twdc/sat/sat_home_single_108.png"
         },
         {
-          "id": "twdc-welcome-home-roger-annitas-home",
+          "id": "twdc-welcome-home-roger-anitas-home",
           "catalog_number": null,
-          "name": "Roger & Annita's Home",
+          "name": "Roger & Anita's Home",
           "edition_size": 400,
           "edition_notes": null,
           "image_path": "images/twdc/sat/sat_home_single_110.png"
@@ -1808,7 +1819,7 @@
       "set_name": "Disney Epic Rivals",
       "set_description": null,
       "set_type": "box_set",
-      "features": "Pin-on-Pin, Jumbo",
+      "features": "Pin on Pin, Jumbo",
       "dimensions": null,
       "retail_price": 79.95,
       "retail_display": "$79.95",
@@ -1825,7 +1836,8 @@
           "name": "Hades & Hercules",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/sat/sat_epic_rivals_173.png"
+          "image_path": "images/twdc/sat/sat_epic_rivals_181.png",
+          "box_image_path": "images/twdc/sat/sat_epic_rivals_185.png"
         },
         {
           "id": "twdc-epic-rivals-maleficent-3-fairies",
@@ -1833,7 +1845,8 @@
           "name": "Maleficent & 3 Fairies",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/sat/sat_epic_rivals_175.png"
+          "image_path": "images/twdc/sat/sat_epic_rivals_183.png",
+          "box_image_path": "images/twdc/sat/sat_epic_rivals_185.png"
         },
         {
           "id": "twdc-epic-rivals-lucifer-mice",
@@ -1841,7 +1854,8 @@
           "name": "Lucifer & Mice",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/sat/sat_epic_rivals_181.png"
+          "image_path": "images/twdc/sat/sat_epic_rivals_187.png",
+          "box_image_path": "images/twdc/sat/sat_epic_rivals_185.png"
         },
         {
           "id": "twdc-epic-rivals-alice-cheshire-cat",
@@ -1849,7 +1863,8 @@
           "name": "Alice & Cheshire Cat",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/sat/sat_epic_rivals_183.png"
+          "image_path": "images/twdc/sat/sat_epic_rivals_173.png",
+          "box_image_path": "images/twdc/sat/sat_epic_rivals_185.png"
         },
         {
           "id": "twdc-epic-rivals-vanessa-ariel",
@@ -1857,7 +1872,8 @@
           "name": "Vanessa & Ariel",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/sat/sat_epic_rivals_185.png"
+          "image_path": "images/twdc/sat/sat_epic_rivals_175.png",
+          "box_image_path": "images/twdc/sat/sat_epic_rivals_185.png"
         }
       ]
     },
@@ -1887,6 +1903,78 @@
           "edition_size": 400,
           "edition_notes": null,
           "image_path": "images/twdc/sat/sat_villains_mystery_card.png"
+        },
+        {
+          "id": "twdc-villains-sidekicks-mystery-hades-pain-panic",
+          "catalog_number": null,
+          "name": "Hades, Pain, & Panic",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_villains_mystery_05.png",
+          "box_image_path": "images/twdc/sat/sat_villains_mystery_card.png"
+        },
+        {
+          "id": "twdc-villains-sidekicks-mystery-maleficent-diablo",
+          "catalog_number": null,
+          "name": "Maleficent & Diablo",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_villains_mystery_01.png",
+          "box_image_path": "images/twdc/sat/sat_villains_mystery_card.png"
+        },
+        {
+          "id": "twdc-villains-sidekicks-mystery-ursula-flotsam-jetsam",
+          "catalog_number": null,
+          "name": "Ursula & Flotsam & Jetsam",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_villains_mystery_07.png",
+          "box_image_path": "images/twdc/sat/sat_villains_mystery_card.png"
+        },
+        {
+          "id": "twdc-villains-sidekicks-mystery-cruella-jasper-horace",
+          "catalog_number": null,
+          "name": "Cruella, Jasper, & Horace",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_villains_mystery_04.png",
+          "box_image_path": "images/twdc/sat/sat_villains_mystery_card.png"
+        },
+        {
+          "id": "twdc-villains-sidekicks-mystery-mother-gothel-the-stabbington-brothers",
+          "catalog_number": null,
+          "name": "Mother Gothel & The Stabbington Brothers",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_villains_mystery_06.png",
+          "box_image_path": "images/twdc/sat/sat_villains_mystery_card.png"
+        },
+        {
+          "id": "twdc-villains-sidekicks-mystery-gaston-lefou",
+          "catalog_number": null,
+          "name": "Gaston & LeFou",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_villains_mystery_09.png",
+          "box_image_path": "images/twdc/sat/sat_villains_mystery_card.png"
+        },
+        {
+          "id": "twdc-villains-sidekicks-mystery-scar-shenzi-banzai-ed",
+          "catalog_number": null,
+          "name": "Scar, Shenzi, Banzai, & Ed",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_villains_mystery_02.png",
+          "box_image_path": "images/twdc/sat/sat_villains_mystery_card.png"
+        },
+        {
+          "id": "twdc-villains-sidekicks-mystery-lady-tremaine-lucifer",
+          "catalog_number": null,
+          "name": "Lady Tremaine & Lucifer",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_villains_mystery_08.png",
+          "box_image_path": "images/twdc/sat/sat_villains_mystery_card.png"
         }
       ]
     },
@@ -1916,6 +2004,78 @@
           "edition_size": 400,
           "edition_notes": null,
           "image_path": "images/twdc/sat/sat_muppet_mystery_card.png"
+        },
+        {
+          "id": "twdc-muppet-babies-mystery-baby-kermit",
+          "catalog_number": null,
+          "name": "Baby Kermit",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_muppet_mystery_04.png",
+          "box_image_path": "images/twdc/sat/sat_muppet_mystery_card.png"
+        },
+        {
+          "id": "twdc-muppet-babies-mystery-baby-piggy",
+          "catalog_number": null,
+          "name": "Baby Piggy",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_muppet_mystery_06.png",
+          "box_image_path": "images/twdc/sat/sat_muppet_mystery_card.png"
+        },
+        {
+          "id": "twdc-muppet-babies-mystery-baby-fozzie",
+          "catalog_number": null,
+          "name": "Baby Fozzie",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_muppet_mystery_08.png",
+          "box_image_path": "images/twdc/sat/sat_muppet_mystery_card.png"
+        },
+        {
+          "id": "twdc-muppet-babies-mystery-baby-gonzo",
+          "catalog_number": null,
+          "name": "Baby Gonzo",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_muppet_mystery_07.png",
+          "box_image_path": "images/twdc/sat/sat_muppet_mystery_card.png"
+        },
+        {
+          "id": "twdc-muppet-babies-mystery-baby-animal",
+          "catalog_number": null,
+          "name": "Baby Animal",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_muppet_mystery_01.png",
+          "box_image_path": "images/twdc/sat/sat_muppet_mystery_card.png"
+        },
+        {
+          "id": "twdc-muppet-babies-mystery-baby-scooter",
+          "catalog_number": null,
+          "name": "Baby Scooter",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_muppet_mystery_03.png",
+          "box_image_path": "images/twdc/sat/sat_muppet_mystery_card.png"
+        },
+        {
+          "id": "twdc-muppet-babies-mystery-baby-bunsen-beaker",
+          "catalog_number": null,
+          "name": "Baby Bunsen & Beaker",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_muppet_mystery_02.png",
+          "box_image_path": "images/twdc/sat/sat_muppet_mystery_card.png"
+        },
+        {
+          "id": "twdc-muppet-babies-mystery-baby-rowlf",
+          "catalog_number": null,
+          "name": "Baby Rowlf",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_muppet_mystery_05.png",
+          "box_image_path": "images/twdc/sat/sat_muppet_mystery_card.png"
         }
       ]
     },
@@ -1927,7 +2087,7 @@
       "set_name": "Elements of Nature — Fire",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin, Gold Base",
+      "features": "Pin on Pin, Gold Base",
       "dimensions": null,
       "retail_price": 42.95,
       "retail_display": "$42.95",
@@ -1996,7 +2156,7 @@
       "set_name": "Elements of Nature — Water",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin, Gold Base",
+      "features": "Pin on Pin, Gold Base",
       "dimensions": null,
       "retail_price": 42.95,
       "retail_display": "$42.95",
@@ -2065,7 +2225,7 @@
       "set_name": "Elements of Nature — Wind",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin, Silver Base",
+      "features": "Pin on Pin, Silver Base",
       "dimensions": null,
       "retail_price": 42.95,
       "retail_display": "$42.95",
@@ -2134,7 +2294,7 @@
       "set_name": "Elements of Nature — Earth",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin, Silver Base",
+      "features": "Pin on Pin, Silver Base",
       "dimensions": null,
       "retail_price": 42.95,
       "retail_display": "$42.95",
@@ -2336,7 +2496,7 @@
       "set_name": "Table for One",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin",
+      "features": "Pin on Pin",
       "dimensions": null,
       "retail_price": 45.95,
       "retail_display": "$45.95",
@@ -2619,7 +2779,8 @@
           "name": "Pooh with Flowers",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/winnie_pooh_01.png"
+          "image_path": "images/twdc/sun/winnie_pooh_01.png",
+          "box_image_path": "images/twdc/sun/winnie_pooh_box.png"
         },
         {
           "id": "twdc-pooh-mystery-birthday-pooh",
@@ -2627,7 +2788,8 @@
           "name": "Birthday Pooh",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/winnie_pooh_02.png"
+          "image_path": "images/twdc/sun/winnie_pooh_02.png",
+          "box_image_path": "images/twdc/sun/winnie_pooh_box.png"
         },
         {
           "id": "twdc-pooh-mystery-pooh-piglet",
@@ -2635,7 +2797,8 @@
           "name": "Pooh & Piglet",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/winnie_pooh_03.png"
+          "image_path": "images/twdc/sun/winnie_pooh_03.png",
+          "box_image_path": "images/twdc/sun/winnie_pooh_box.png"
         },
         {
           "id": "twdc-pooh-mystery-bedtime-pooh",
@@ -2643,7 +2806,8 @@
           "name": "Bedtime Pooh",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/winnie_pooh_04.png"
+          "image_path": "images/twdc/sun/winnie_pooh_04.png",
+          "box_image_path": "images/twdc/sun/winnie_pooh_box.png"
         },
         {
           "id": "twdc-pooh-mystery-king-pooh",
@@ -2651,7 +2815,8 @@
           "name": "King Pooh",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/winnie_pooh_05.png"
+          "image_path": "images/twdc/sun/winnie_pooh_05.png",
+          "box_image_path": "images/twdc/sun/winnie_pooh_box.png"
         },
         {
           "id": "twdc-pooh-mystery-rainy-day-pooh",
@@ -2659,7 +2824,8 @@
           "name": "Rainy Day Pooh",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/winnie_pooh_06.png"
+          "image_path": "images/twdc/sun/winnie_pooh_06.png",
+          "box_image_path": "images/twdc/sun/winnie_pooh_box.png"
         },
         {
           "id": "twdc-pooh-mystery-adventurer-pooh",
@@ -2667,7 +2833,8 @@
           "name": "Adventurer Pooh",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/winnie_pooh_07.png"
+          "image_path": "images/twdc/sun/winnie_pooh_07.png",
+          "box_image_path": "images/twdc/sun/winnie_pooh_box.png"
         },
         {
           "id": "twdc-pooh-mystery-pirate-pooh",
@@ -2675,7 +2842,8 @@
           "name": "Pirate Pooh",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/winnie_pooh_08.png"
+          "image_path": "images/twdc/sun/winnie_pooh_08.png",
+          "box_image_path": "images/twdc/sun/winnie_pooh_box.png"
         }
       ]
     },
@@ -2712,7 +2880,8 @@
           "name": "Porg",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/galactic_pals_01.png"
+          "image_path": "images/twdc/sun/galactic_pals_01.png",
+          "box_image_path": "images/twdc/sun/galactic_pals_box.png"
         },
         {
           "id": "twdc-star-wars-galactic-mystery-loth-cat",
@@ -2720,7 +2889,8 @@
           "name": "Loth-Cat",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/galactic_pals_02.png"
+          "image_path": "images/twdc/sun/galactic_pals_02.png",
+          "box_image_path": "images/twdc/sun/galactic_pals_box.png"
         },
         {
           "id": "twdc-star-wars-galactic-mystery-gamorrean",
@@ -2728,7 +2898,8 @@
           "name": "Gamorrean",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/galactic_pals_03.png"
+          "image_path": "images/twdc/sun/galactic_pals_03.png",
+          "box_image_path": "images/twdc/sun/galactic_pals_box.png"
         },
         {
           "id": "twdc-star-wars-galactic-mystery-ortolan",
@@ -2736,7 +2907,8 @@
           "name": "Ortolan",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/galactic_pals_04.png"
+          "image_path": "images/twdc/sun/galactic_pals_04.png",
+          "box_image_path": "images/twdc/sun/galactic_pals_box.png"
         },
         {
           "id": "twdc-star-wars-galactic-mystery-wookiee",
@@ -2744,7 +2916,8 @@
           "name": "Wookiee",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/galactic_pals_05.png"
+          "image_path": "images/twdc/sun/galactic_pals_05.png",
+          "box_image_path": "images/twdc/sun/galactic_pals_box.png"
         },
         {
           "id": "twdc-star-wars-galactic-mystery-tauntaun",
@@ -2752,7 +2925,8 @@
           "name": "Tauntaun",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/galactic_pals_06.png"
+          "image_path": "images/twdc/sun/galactic_pals_06.png",
+          "box_image_path": "images/twdc/sun/galactic_pals_box.png"
         },
         {
           "id": "twdc-star-wars-galactic-mystery-ewok",
@@ -2760,7 +2934,8 @@
           "name": "Ewok",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/galactic_pals_07.png"
+          "image_path": "images/twdc/sun/galactic_pals_07.png",
+          "box_image_path": "images/twdc/sun/galactic_pals_box.png"
         },
         {
           "id": "twdc-star-wars-galactic-mystery-rodian",
@@ -2768,7 +2943,8 @@
           "name": "Rodian",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/galactic_pals_08.png"
+          "image_path": "images/twdc/sun/galactic_pals_08.png",
+          "box_image_path": "images/twdc/sun/galactic_pals_box.png"
         },
         {
           "id": "twdc-star-wars-galactic-mystery-huttlet",
@@ -2776,7 +2952,8 @@
           "name": "Huttlet",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/galactic_pals_09.png"
+          "image_path": "images/twdc/sun/galactic_pals_09.png",
+          "box_image_path": "images/twdc/sun/galactic_pals_box.png"
         }
       ]
     },
@@ -2788,7 +2965,7 @@
       "set_name": "Alice in Wonderland Mystery Set",
       "set_description": null,
       "set_type": "mystery",
-      "features": "Soft Enamel, Pin-on-Pin, Laser Print, Marbleized",
+      "features": "Soft Enamel, Pin on Pin, Laser Print, Marbleized",
       "dimensions": "1.9″–2.0″H",
       "retail_price": 34.95,
       "retail_display": "$34.95",
@@ -3210,7 +3387,7 @@
       "set_name": "POV: Another Point of View",
       "set_description": "Rotating double-sided spinner pins featuring heroes and villains.",
       "set_type": "individual",
-      "features": "Hard Enamel, Pin-on-Pin, Glitter, Translucent, Marbleized, Jumbo, Gemstones, Spinner",
+      "features": "Hard Enamel, Pin on Pin, Glitter, Translucent, Marbleized, Jumbo, Gemstones, Spinner",
       "dimensions": "5″–5.5″H",
       "retail_price": 79.95,
       "retail_display": "$79.95",
@@ -3412,7 +3589,7 @@
       "set_name": "World Princess Week Ultra Jumbo",
       "set_description": "Gathering beloved heroines from across Disney's animated legacy, this majestic pin celebrates the optimism, courage, and timeless stories of the Disney Princesses.",
       "set_type": "ultra_jumbo",
-      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Stained Glass, Jumbo",
+      "features": "Hard Enamel, Pin on Pin, Laser Print, Stained Glass, Jumbo",
       "dimensions": "16″W × 9″H",
       "retail_price": 1200.0,
       "retail_display": "$1,200.00",
@@ -3995,7 +4172,7 @@
       "set_name": "The Muppet Show 50th",
       "set_description": "Celebrating 50 years of The Muppet Show.",
       "set_type": "individual",
-      "features": "Pin-on-Pin, Laser Print, Glitter, Translucent, Marbleized, Pearlized",
+      "features": "Pin on Pin, Laser Print, Glitter, Translucent, Marbleized, Pearlized",
       "dimensions": "3.5″W",
       "retail_price": 54.95,
       "retail_display": "$54.95",
@@ -4221,7 +4398,7 @@
       "set_name": "The Colorful World of Disney Mystery Set",
       "set_description": "23 color-changing UV-reactive pins.",
       "set_type": "mystery",
-      "features": "UV-Reactive",
+      "features": "UV Reactive Color-Changing",
       "dimensions": null,
       "retail_price": 34.95,
       "retail_display": "$34.95",
@@ -4289,7 +4466,7 @@
       "set_name": "Premiere Collection — El Capitan 100 Years in Hollywood",
       "set_description": null,
       "set_type": "box_set",
-      "features": "Pin-on-Pin",
+      "features": "Pin on Pin",
       "dimensions": "5.04″W×3.425″H",
       "retail_price": 199.95,
       "retail_display": "$199.95",
@@ -4318,7 +4495,7 @@
       "set_name": "Artist Series — Avengers: Endgame by Matt Ferguson",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin, Laser Print, Custom Backing Card",
+      "features": "Pin on Pin, Laser Print, Custom Backing Card",
       "dimensions": "1.69″W×2.25″H",
       "retail_price": 29.95,
       "retail_display": "$29.95",
@@ -4379,7 +4556,7 @@
       "set_name": "It's All in a Name Series",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin, Translucent, Jumbo, Custom Backing Card",
+      "features": "Pin on Pin, Translucent, Jumbo, Custom Backing Card",
       "dimensions": null,
       "retail_price": 49.95,
       "retail_display": "$49.95",
@@ -4613,7 +4790,7 @@
       "set_name": "Best in Show Series",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin",
+      "features": "Pin on Pin",
       "dimensions": "1.27″W×2.0″H",
       "retail_price": 29.95,
       "retail_display": "$29.95",
@@ -4908,7 +5085,7 @@
       "set_name": "Vinyl Records — Individual Vinyls",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin, Custom Backing Card",
+      "features": "Pin on Pin, Custom Backing Card",
       "dimensions": null,
       "retail_price": 32.95,
       "retail_display": "$32.95",
@@ -5341,7 +5518,7 @@
       "set_name": "El Capitan Theatre 100th — Character Pins",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin, Antique Nickel",
+      "features": "Pin on Pin, Antique Nickel",
       "dimensions": null,
       "retail_price": 24.95,
       "retail_display": "$24.95",
@@ -5418,7 +5595,7 @@
       "set_name": "Tapestry Series",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin",
+      "features": "Pin on Pin",
       "dimensions": "1.56″W×2.0″H",
       "retail_price": 32.95,
       "retail_display": "$32.95",
@@ -5535,7 +5712,7 @@
       "set_name": "Duck Series",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin",
+      "features": "Pin on Pin",
       "dimensions": null,
       "retail_price": 32.95,
       "retail_display": "$32.95",
@@ -5652,7 +5829,7 @@
       "set_name": "Cursive Cuties Series",
       "set_description": null,
       "set_type": "individual",
-      "features": "Pin-on-Pin, Translucent",
+      "features": "Pin on Pin, Translucent",
       "dimensions": "2.5″W×2.5″H",
       "retail_price": 44.95,
       "retail_display": "$44.95",

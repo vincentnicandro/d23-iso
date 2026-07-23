@@ -422,7 +422,7 @@ def build_mog_sets():
         sid, MOG, SUN, SUN_L,
         "The Colorful World of Disney Mystery Set",
         "23 color-changing UV-reactive pins.", "mystery",
-        "UV-Reactive Color-Changing", None, 34.95, "per box", None, False,
+        "UV Reactive Color-Changing", None, 34.95, "per box", None, False,
         [make_pin(sid, 118, "Mystery Box", 500)],
     ))
 
@@ -656,9 +656,9 @@ def build_twdc_sets():
         [make_pin(sid, None, n, 400) for n in [
             "Carl & Ellie's Home", "Mulan's Family Home", "Geppetto's Workshop",
             "Robinsons Family Lab", "Snow White's Cottage", "Belle's Cottage",
-            "Lilo's Home", "The Incredible's Home", "Tinkerbell's Home",
+            "Lilo's Home", "The Incredibles' Home", "Tinkerbell's Home",
             "White Rabbit's Home", "Winnie the Pooh's Home", "Casa Madrigal",
-            "Roger & Annita's Home", "Lady & Tramp's Home"]],
+            "Roger & Anita's Home", "Lady & Tramp's Home"]],
     ))
 
     sid = "twdc-epic-rivals"
@@ -671,18 +671,28 @@ def build_twdc_sets():
     ))
 
     sid = "twdc-villains-sidekicks-mystery"
-    sets.append(make_set(sid, T, SAT, SAT_L,
+    s = make_set(sid, T, SAT, SAT_L,
         "Villains & Sidekicks Mystery Pin Box", None, "mystery",
         None, None, 32.95, "per box", PL5, False,
         [make_pin(sid, None, "Mystery Box", 400)],
-    ))
+    )
+    s["pins"].extend([make_pin(sid, None, n, 400) for n in [
+        "Hades, Pain, & Panic", "Maleficent & Diablo",
+        "Ursula & Flotsam & Jetsam", "Cruella, Jasper, & Horace",
+        "Mother Gothel & The Stabbington Brothers", "Gaston & LeFou",
+        "Scar, Shenzi, Banzai, & Ed", "Lady Tremaine & Lucifer"]])
+    sets.append(s)
 
     sid = "twdc-muppet-babies-mystery"
-    sets.append(make_set(sid, T, SAT, SAT_L,
+    s = make_set(sid, T, SAT, SAT_L,
         "Muppet Babies Mystery Pin Box", None, "mystery",
         None, None, 32.95, "per box", PL5, False,
         [make_pin(sid, None, "Mystery Box", 400)],
-    ))
+    )
+    s["pins"].extend([make_pin(sid, None, n, 400) for n in [
+        "Baby Kermit", "Baby Piggy", "Baby Fozzie", "Baby Gonzo",
+        "Baby Animal", "Baby Scooter", "Baby Bunsen & Beaker", "Baby Rowlf"]])
+    sets.append(s)
 
 
     # --- SUNDAY ---
@@ -1138,18 +1148,34 @@ def apply_image_mappings(all_sets):
         "twdc-welcome-home-white-rabbits-home": f"{twdc_sat_dir}/sat_home_strip5_01.png",
         "twdc-welcome-home-winnie-the-poohs-home": f"{twdc_sat_dir}/sat_home_strip5_02.png",
         "twdc-welcome-home-casa-madrigal": f"{twdc_sat_dir}/sat_home_single_108.png",
-        "twdc-welcome-home-roger-annitas-home": f"{twdc_sat_dir}/sat_home_single_110.png",
+        "twdc-welcome-home-roger-anitas-home": f"{twdc_sat_dir}/sat_home_single_110.png",
         "twdc-welcome-home-lady-tramps-home": f"{twdc_sat_dir}/sat_home_single_112.png",
         # Disney Epic Rivals
-        "twdc-epic-rivals-hades-hercules": f"{twdc_sat_dir}/sat_epic_rivals_173.png",
-        "twdc-epic-rivals-maleficent-3-fairies": f"{twdc_sat_dir}/sat_epic_rivals_175.png",
-        "twdc-epic-rivals-lucifer-mice": f"{twdc_sat_dir}/sat_epic_rivals_181.png",
-        "twdc-epic-rivals-alice-cheshire-cat": f"{twdc_sat_dir}/sat_epic_rivals_183.png",
-        "twdc-epic-rivals-vanessa-ariel": f"{twdc_sat_dir}/sat_epic_rivals_185.png",
+        "twdc-epic-rivals-hades-hercules": f"{twdc_sat_dir}/sat_epic_rivals_181.png",
+        "twdc-epic-rivals-maleficent-3-fairies": f"{twdc_sat_dir}/sat_epic_rivals_183.png",
+        "twdc-epic-rivals-lucifer-mice": f"{twdc_sat_dir}/sat_epic_rivals_187.png",
+        "twdc-epic-rivals-alice-cheshire-cat": f"{twdc_sat_dir}/sat_epic_rivals_173.png",
+        "twdc-epic-rivals-vanessa-ariel": f"{twdc_sat_dir}/sat_epic_rivals_175.png",
         # Villains & Sidekicks Mystery
         "twdc-villains-sidekicks-mystery-mystery-box": f"{twdc_sat_dir}/sat_villains_mystery_card.png",
+        "twdc-villains-sidekicks-mystery-hades-pain-panic": f"{twdc_sat_dir}/sat_villains_mystery_05.png",
+        "twdc-villains-sidekicks-mystery-maleficent-diablo": f"{twdc_sat_dir}/sat_villains_mystery_01.png",
+        "twdc-villains-sidekicks-mystery-ursula-flotsam-jetsam": f"{twdc_sat_dir}/sat_villains_mystery_07.png",
+        "twdc-villains-sidekicks-mystery-cruella-jasper-horace": f"{twdc_sat_dir}/sat_villains_mystery_04.png",
+        "twdc-villains-sidekicks-mystery-mother-gothel-the-stabbington-brothers": f"{twdc_sat_dir}/sat_villains_mystery_06.png",
+        "twdc-villains-sidekicks-mystery-gaston-lefou": f"{twdc_sat_dir}/sat_villains_mystery_09.png",
+        "twdc-villains-sidekicks-mystery-scar-shenzi-banzai-ed": f"{twdc_sat_dir}/sat_villains_mystery_02.png",
+        "twdc-villains-sidekicks-mystery-lady-tremaine-lucifer": f"{twdc_sat_dir}/sat_villains_mystery_08.png",
         # Muppet Babies Mystery
         "twdc-muppet-babies-mystery-mystery-box": f"{twdc_sat_dir}/sat_muppet_mystery_card.png",
+        "twdc-muppet-babies-mystery-baby-kermit": f"{twdc_sat_dir}/sat_muppet_mystery_04.png",
+        "twdc-muppet-babies-mystery-baby-piggy": f"{twdc_sat_dir}/sat_muppet_mystery_06.png",
+        "twdc-muppet-babies-mystery-baby-fozzie": f"{twdc_sat_dir}/sat_muppet_mystery_08.png",
+        "twdc-muppet-babies-mystery-baby-gonzo": f"{twdc_sat_dir}/sat_muppet_mystery_07.png",
+        "twdc-muppet-babies-mystery-baby-animal": f"{twdc_sat_dir}/sat_muppet_mystery_01.png",
+        "twdc-muppet-babies-mystery-baby-scooter": f"{twdc_sat_dir}/sat_muppet_mystery_03.png",
+        "twdc-muppet-babies-mystery-baby-bunsen-beaker": f"{twdc_sat_dir}/sat_muppet_mystery_02.png",
+        "twdc-muppet-babies-mystery-baby-rowlf": f"{twdc_sat_dir}/sat_muppet_mystery_05.png",
         # Framed — Saturday
         "twdc-framed-star-wars-stamps-star-wars-stamps-framed": f"{twdc_sat_dir}/sat_framed_starwars_stamps.png",
         "twdc-framed-a-day-at-the-studio-lot-a-day-at-the-studio-lot-framed": f"{twdc_sat_dir}/sat_framed_studio_lot.png",
@@ -1274,6 +1300,36 @@ def apply_image_mappings(all_sets):
             if pin["id"] in mappings:
                 pin["image_path"] = mappings[pin["id"]]
                 mapped += 1
+
+    # Assign box_image_path to individual pulls in mystery sets
+    for s in all_sets:
+        if s["set_type"] != "mystery":
+            continue
+        # Find the mystery box pin's image
+        box_img = None
+        for pin in s["pins"]:
+            if "mystery-box" in pin["id"] or pin["name"] == "Mystery Box":
+                box_img = pin.get("image_path")
+                break
+        if box_img and box_img != PLACEHOLDER:
+            for pin in s["pins"]:
+                if pin["name"] != "Mystery Box":
+                    pin["box_image_path"] = box_img
+
+    # Assign secondary image to Reel of Magic pins
+    reel_secondary = "images/twdc/fri/fri_reel_top2_01.png"
+    for s in all_sets:
+        if s["id"] == "twdc-reel-of-magic":
+            for pin in s["pins"]:
+                pin["box_image_path"] = reel_secondary
+
+    # Assign box image to Epic Rivals pins
+    epic_rivals_box = "images/twdc/sat/sat_epic_rivals_185.png"
+    for s in all_sets:
+        if s["id"] == "twdc-epic-rivals":
+            for pin in s["pins"]:
+                pin["box_image_path"] = epic_rivals_box
+
     return mapped
 
 
@@ -1283,9 +1339,9 @@ def standardize_features(all_sets):
     rules = [
         ("hard enamel", "Hard Enamel"),
         ("soft enamel", "Soft Enamel"),
-        ("pin on pin", "Pin-on-Pin"),
-        ("pin-on-pin", "Pin-on-Pin"),
-        ("3d", "Pin-on-Pin"),
+        ("pin on pin", "Pin on Pin"),
+        ("pin-on-pin", "Pin on Pin"),
+        ("3d", "Pin on Pin"),
         ("laser print", "Laser Print"),
         ("stained glass", "Stained Glass"),
         ("glitter", "Glitter"),
@@ -1296,7 +1352,7 @@ def standardize_features(all_sets):
         ("jumbo", "Jumbo"),
         ("gemstone", "Gemstones"),
         ("custom backing", "Custom Backing Card"),
-        ("uv-reactive", "UV-Reactive"),
+        ("uv-reactive", "UV Reactive"),
         ("foam pin board", "Foam Pin Board"),
         ("debossed", "Debossed"),
         ("antique gold", "Antique Gold"),
