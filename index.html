@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>D23 Pin Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-bg: #EDF2F8;
+  --color-surface: #FFFFFF;
+  --color-navy: #00264C;
+  --color-navy-light: #1A3A5C;
+  --color-accent: #0063D3;
+  --color-green: #2D7A47;
+  --color-gold: #F5A800;
+  --color-text-primary: #0A1929;
+  --color-text-secondary: #5A6A7A;
+  --color-border: #D8E3EE;
+  --color-hero-gradient-start: #B8D4EF;
+  --color-hero-gradient-end: #EDF2F8;
+  --color-teal: #0097A7;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 100dvh;
+  padding-bottom: 72px;
+}
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+input { font-family: inherit; }
+img { display: block; max-width: 100%; }
+
+/* FILTER BAR */
+.filter-bar {
+  display: flex; align-items: center; gap: 10px; padding: 10px 16px;
+  background: #fff; border-bottom: 1px solid var(--color-border);
+  position: sticky; top: 0; z-index: 50;
+}
+.filter-icon-btn {
+  width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--color-border);
+  background: #fff; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; cursor: pointer; position: relative; color: var(--color-navy);
+}
+.filter-icon-btn:hover { background: #f0f4f8; }
+.filter-icon-count {
+  position: absolute; top: -2px; right: -2px; background: var(--color-navy); color: #fff;
+  border-radius: 50%; width: 16px; height: 16px; font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.filter-scroll {
+  display: flex; gap: 8px; overflow-x: auto; flex: 1;
+  -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+.filter-scroll::-webkit-scrollbar { display: none; }
+.filter-chip {
+  padding: 8px 16px; border-radius: 999px; font-size: 13px; font-weight: 600;
+  border: 1.5px solid var(--color-border); color: var(--color-text-primary);
+  background: #fff; cursor: pointer; white-space: nowrap; flex-shrink: 0;
+}
+.filter-chip.active { border-color: var(--color-navy); background: var(--color-navy); color: #fff; }
+.filter-chip-reset { border-color: var(--color-accent); color: var(--color-accent); }
+
+/* FILTER SHEET */
+.filter-sheet { padding: 24px 20px 20px; overflow-y: auto; }
+.filter-sheet-header { display: flex; justify-content: space-between; align-items: center; }
+.filter-sheet-header h2 { font-size: 20px; font-weight: 700; }
+.filter-reset { color: var(--color-accent); font-size: 14px; font-weight: 600; cursor: pointer; background: none; border: none; }
+.filter-sheet-count { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 20px; }
+.filter-section-title { font-size: 16px; font-weight: 700; margin: 20px 0 10px; }
+.filter-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-pill {
+  padding: 8px 16px; border-radius: 999px; font-size: 13px; font-weight: 600;
+  border: 1.5px solid var(--color-border); color: var(--color-text-primary);
+  background: #fff; cursor: pointer;
+}
+.filter-pill.active { border-color: var(--color-navy); background: var(--color-navy); color: #fff; }
+.filter-sheet-footer {
+  position: sticky; bottom: 0; left: 0; right: 0; padding: 16px 20px;
+  background: #fff; border-top: 1px solid var(--color-border);
+  display: flex; gap: 12px;
+}
+.filter-sheet-footer .btn-secondary { flex: 1; display: flex; align-items: center; justify-content: center; }
+.filter-sheet-footer .btn-primary { flex: 1; display: flex; align-items: center; justify-content: center; }
+
+/* CARDS */
+.card {
+  background: var(--color-surface); border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,38,76,0.08); border: 1px solid var(--color-border);
+  padding: 16px; margin: 12px 16px;
+}
+
+/* BADGES */
+.badge {
+  display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 999px;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.badge-individual { background: var(--color-navy); color: #fff; }
+.badge-mystery { background: var(--color-gold); color: #1a1a00; }
+.badge-box_set { background: var(--color-teal); color: #fff; }
+.badge-ultra_jumbo { background: var(--color-gold); color: #1a1a00; }
+.badge-framed_set { background: #6B21A8; color: #fff; }
+
+.badge-store { background: #1A3A5C; color: #fff; }
+.badge-date { background: #e3ecf5; color: var(--color-navy); }
+
+/* SET CARD LAYOUT */
+.set-header { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 6px; }
+.set-name { font-weight: 700; font-size: 17px; color: var(--color-navy); padding-right: 40px; }
+.set-name-price { font-weight: 600; font-size: 15px; color: var(--color-text-primary); }
+.set-meta { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 8px; }
+.set-price { font-weight: 700; font-size: 18px; color: var(--color-text-primary); }
+.set-edition { font-size: 13px; color: var(--color-text-secondary); margin-left: 8px; }
+
+/* FEATURE TAGS */
+.tags { display: contents; }
+.tag {
+  display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 999px;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+  border: 1.5px solid var(--color-navy); color: var(--color-navy); background: #fff;
+  white-space: nowrap;
+}
+
+/* PIN RAIL */
+.pin-rail { display: flex; overflow-x: auto; gap: 10px; padding: 8px 0; -webkit-overflow-scrolling: touch; }
+.pin-rail::-webkit-scrollbar { height: 4px; }
+.pin-rail::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }
+.pin-thumb {
+  flex: 0 0 80px; width: 80px; height: 80px; border-radius: 10px;
+  background: #f0f4f8; display: flex; align-items: center; justify-content: center;
+  overflow: hidden; cursor: pointer; border: 1px solid var(--color-border);
+}
+.pin-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.pin-thumb-name { font-size: 10px; color: var(--color-text-secondary); text-align: center; width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+
+/* SET GROUP */
+.set-group { margin: 16px; }
+.set-group-ultra .set-group-header { border-left: 3px solid var(--color-gold); }
+.set-group-header {
+  background: var(--color-surface); border-radius: 16px 16px 0 0;
+  box-shadow: 0 2px 12px rgba(0,38,76,0.08); border: 1px solid var(--color-border);
+  border-bottom: none; padding: 16px; position: relative;
+}
+
+/* ADD ICONS */
+.icon-add {
+  width: 28px; height: 28px; border-radius: 50%; background: var(--color-navy);
+  color: #fff; display: flex; align-items: center;
+  justify-content: center; cursor: pointer; border: none;
+}
+.icon-add:hover { background: var(--color-navy-light); }
+.icon-added {
+  width: 28px; height: 28px; border-radius: 50%; background: var(--color-green);
+  color: #fff; display: flex; align-items: center;
+  justify-content: center; cursor: pointer;
+}
+.set-add-btn { position: absolute; top: 12px; right: 12px; z-index: 2; }
+.pin-add-btn { position: absolute; top: 6px; right: 6px; z-index: 2; width: 24px; height: 24px; }
+
+/* PIN GRID */
+.pin-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+  padding: 10px; background: #f5f8fb;
+  border: 1px solid var(--color-border);
+  border-top: none; border-radius: 0 0 16px 16px;
+}
+.pin-card {
+  background: var(--color-surface); display: flex; flex-direction: column;
+  cursor: pointer; transition: background 0.1s;
+  border-radius: 10px; overflow: hidden;
+  border: 1px solid var(--color-border); position: relative;
+}
+.pin-card:hover { background: #f8fafc; }
+.pin-card-img {
+  width: 100%; aspect-ratio: 1; background: #f0f4f8;
+  overflow: hidden; display: flex; align-items: center; justify-content: center;
+}
+.pin-card-img img { width: 100%; height: 100%; object-fit: cover; }
+.pin-card-body { padding: 6px 8px 8px; display: flex; flex-direction: column; gap: 1px; }
+.pin-card-name { font-weight: 600; font-size: 11px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.pin-card-meta { font-size: 10px; color: var(--color-text-secondary); margin-top: 1px; }
+.pin-card-tier { color: var(--color-gold); font-weight: 600; }
+.pin-card-added { font-size: 10px; color: var(--color-green); font-weight: 600; margin-top: 4px; cursor: pointer; }
+
+/* BUTTONS */
+.btn-primary {
+  background: var(--color-navy); color: #fff; border-radius: 999px;
+  padding: 12px 24px; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; gap: 6px;
+}
+.btn-primary:hover { background: var(--color-navy-light); }
+.btn-secondary {
+  background: #fff; color: var(--color-navy); border: 1.5px solid var(--color-navy);
+  border-radius: 999px; padding: 10px 20px; font-weight: 700; font-size: 13px;
+}
+.btn-secondary:hover { background: #f0f4f8; }
+.btn-danger { background: #fff; color: #c00; border: 1.5px solid #c00; border-radius: 999px; padding: 6px 12px; font-size: 12px; font-weight: 600; }
+.btn-small { padding: 8px 16px; font-size: 12px; }
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 64px; background: #fff;
+  border-top: 1px solid var(--color-border); display: flex; z-index: 100;
+}
+.nav-tab {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2px; font-size: 10px; font-weight: 600; color: var(--color-text-secondary);
+  min-height: 56px;
+}
+.nav-tab.active { color: var(--color-navy); }
+.nav-tab svg { width: 24px; height: 24px; }
+
+/* BOTTOM SHEET / MODAL */
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 200; }
+.sheet {
+  position: fixed; bottom: 0; left: 0; right: 0; max-height: 85vh;
+  background: #fff; border-radius: 20px 20px 0 0; padding: 24px 20px 32px;
+  overflow-y: auto; z-index: 201; transform: translateY(0);
+  transition: transform 0.2s ease-out;
+}
+.sheet-img { width: 200px; height: 200px; object-fit: contain; margin: 0 auto 16px; background: #f5f7fa; border-radius: 12px; }
+.sheet-name { font-weight: 700; font-size: 20px; text-align: center; margin-bottom: 4px; }
+.sheet-set { font-size: 14px; color: var(--color-text-secondary); text-align: center; margin-bottom: 16px; }
+.sheet-meta { font-size: 13px; color: var(--color-text-secondary); line-height: 1.8; }
+.sheet-meta strong { color: var(--color-text-primary); }
+.sheet-actions { margin-top: 20px; text-align: center; }
+.sheet-disclaimer { font-size: 12px; color: var(--color-gold); text-align: center; margin-top: 12px; font-style: italic; }
+
+/* ISO LIST */
+.iso-item {
+  display: flex; align-items: center; gap: 12px; padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.iso-item:last-child { border-bottom: none; }
+.iso-thumb { width: 48px; height: 48px; border-radius: 8px; background: #f0f4f8; flex-shrink: 0; object-fit: cover; }
+.iso-info { flex: 1; min-width: 0; }
+.iso-info h4 { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.iso-info p { font-size: 12px; color: var(--color-text-secondary); }
+.iso-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+/* STEPPER */
+.stepper { display: flex; align-items: center; gap: 6px; }
+.stepper-btn {
+  width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--color-navy);
+  background: #fff; color: var(--color-navy); display: flex; align-items: center;
+  justify-content: center; cursor: pointer; padding: 0;
+}
+.stepper-btn:hover { background: #f0f4f8; }
+.stepper span { font-size: 14px; font-weight: 600; min-width: 20px; text-align: center; }
+.remove-btn {
+  width: 32px; height: 32px; border-radius: 50%; border: 2px solid #c00;
+  background: #fff; color: #c00; display: flex; align-items: center;
+  justify-content: center; cursor: pointer; padding: 0;
+}
+.remove-btn:hover { background: #fff0f0; }
+
+/* ISO card stepper (compact) */
+.iso-card-stepper {
+  display: flex; align-items: center; gap: 4px; margin-top: 4px;
+}
+.iso-card-stepper span { font-size: 12px; font-weight: 600; min-width: 16px; text-align: center; }
+.stepper-btn-sm { width: 24px; height: 24px; }
+
+/* ISO FOOTER */
+.iso-footer {
+  position: fixed; bottom: 64px; left: 0; right: 0; background: #fff;
+  border-top: 1px solid var(--color-border); padding: 12px 16px;
+  display: flex; justify-content: space-between; align-items: center; z-index: 50;
+}
+.iso-footer-left { font-size: 13px; color: var(--color-text-secondary); }
+.iso-footer-right { font-size: 16px; font-weight: 700; color: var(--color-navy); }
+
+/* SEARCH */
+.search-bar {
+  margin: 16px; position: relative;
+}
+.search-bar input {
+  width: 100%; padding: 14px 16px 14px 44px; border-radius: 999px;
+  border: 1.5px solid var(--color-border); font-size: 15px;
+  background: #fff; outline: none;
+}
+.search-bar input:focus { border-color: var(--color-navy); }
+.search-bar svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--color-text-secondary); }
+.search-count { font-size: 13px; color: var(--color-text-secondary); padding: 0 16px; margin-bottom: 8px; }
+
+/* EMPTY STATE */
+.empty-state { text-align: center; padding: 48px 24px; color: var(--color-text-secondary); }
+.empty-state p { margin-bottom: 16px; }
+
+/* SHIP ONLY NOTICE */
+.ship-notice { font-size: 11px; color: #c00; font-weight: 600; margin-top: 4px; }
+
+/* ULTRA JUMBO HIGHLIGHT */
+.card-ultra { border: 2px solid var(--color-gold); }
+
+/* MYSTERY CUE */
+.mystery-cue { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--color-gold); font-weight: 600; margin-top: 4px; }
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .pin-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 768px) {
+  .bottom-nav { display: none; }
+  body { padding-bottom: 0; }
+  .top-nav { display: flex !important; }
+  .pin-grid { grid-template-columns: repeat(4, 1fr); }
+  .iso-footer { bottom: 0; }
+}
+@media (min-width: 1200px) {
+  .pin-grid { grid-template-columns: repeat(6, 1fr); }
+}
+.top-nav {
+  display: none; background: #fff; border-bottom: 1px solid var(--color-border);
+  padding: 12px 24px; gap: 24px; align-items: center; justify-content: center;
+}
+.top-nav button { font-size: 14px; font-weight: 600; color: var(--color-text-secondary); padding: 8px 16px; border-radius: 999px; }
+.top-nav button.active { color: var(--color-navy); background: #edf2f8; }
+
+@media (prefers-reduced-motion: reduce) { .sheet { transition: none; } }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+const PLACEHOLDER_IMG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='200' height='200' fill='%23E8EDF3'/%3E%3Ctext x='100' y='106' text-anchor='middle' font-family='sans-serif' font-size='12' fill='%239BA8B8'%3EPin Image%3C/text%3E%3C/svg%3E`;
+
+const { createApp, ref, computed, onMounted, watch, nextTick } = Vue;
+
+const app = createApp({
+  setup() {
+    const catalog = ref(null);
+    const error = ref(null);
+    const view = ref('catalog');
+    const storeFilter = ref([]);
+    const dateFilter = ref([]);
+    const typeFilter = ref([]);
+    const attrFilter = ref([]);
+    const showFilters = ref(false);
+    const searchQuery = ref('');
+    const isoList = ref([]);
+    const selectedPin = ref(null);
+    const copyMsg = ref('');
+
+    // Load data
+    onMounted(async () => {
+      try {
+        const res = await fetch('./pins.json');
+        if (!res.ok) throw new Error('Failed to load');
+        catalog.value = await res.json();
+      } catch (e) {
+        error.value = "Catalog data not found. Make sure pins.json is in the same folder as index.html.";
+      }
+      // Load ISO from localStorage
+      try {
+        const saved = localStorage.getItem('d23_iso_list');
+        if (saved) isoList.value = JSON.parse(saved);
+      } catch (e) {}
+    });
+
+    // Save ISO on change
+    watch(isoList, (val) => {
+      localStorage.setItem('d23_iso_list', JSON.stringify(val));
+    }, { deep: true });
+
+    const stores = ['All', 'MOG', 'TWDC', 'DSSH'];
+    const dates = computed(() => {
+      if (!catalog.value) return [];
+      const d = new Set();
+      catalog.value.sets.forEach(s => s.available_dates.forEach(ad => d.add(ad)));
+      return ['All', ...Array.from(d).sort()];
+    });
+    const dateLabels = { '2026-08-14': 'Aug 14', '2026-08-15': 'Aug 15', '2026-08-16': 'Aug 16' };
+
+    const filteredSets = computed(() => {
+      if (!catalog.value) return [];
+      return catalog.value.sets.filter(s => {
+        if (storeFilter.value.length && !storeFilter.value.includes(s.store)) return false;
+        if (dateFilter.value.length && !s.available_dates.some(d => dateFilter.value.includes(d))) return false;
+        if (typeFilter.value.length && !typeFilter.value.includes(s.set_type)) return false;
+        if (attrFilter.value.length && !attrFilter.value.every(a => matchesAttr(s.features, a))) return false;
+        return true;
+      });
+    });
+
+    const searchResults = computed(() => {
+      if (!catalog.value || !searchQuery.value.trim()) return [];
+      const q = searchQuery.value.toLowerCase();
+      const results = [];
+      catalog.value.sets.forEach(s => {
+        s.pins.forEach(p => {
+          if (p.name.toLowerCase().includes(q) ||
+              s.set_name.toLowerCase().includes(q)) {
+            results.push({ pin: p, set: s });
+          }
+        });
+      });
+      return results;
+    });
+
+    function getImgSrc(pin) {
+      if (!pin.image_path || pin.image_path === 'images/placeholder.png') return PLACEHOLDER_IMG;
+      return pin.image_path;
+    }
+
+    function isInIso(pinId) { return isoList.value.some(i => i.pinId === pinId); }
+
+    function addToIso(pin, set) {
+      if (isInIso(pin.id)) return;
+      isoList.value.push({ pinId: pin.id, qty: 1 });
+    }
+
+    function removeFromIso(pinId) {
+      isoList.value = isoList.value.filter(i => i.pinId !== pinId);
+    }
+
+    function addAllToIso(set) {
+      filteredPins(set).forEach(p => { if (!isInIso(p.id)) addToIso(p, set); });
+    }
+
+    function updateQty(pinId, delta) {
+      const item = isoList.value.find(i => i.pinId === pinId);
+      if (item) {
+        item.qty = Math.max(1, item.qty + delta);
+      }
+    }
+
+    function findPin(pinId) {
+      if (!catalog.value) return null;
+      for (const s of catalog.value.sets) {
+        for (const p of s.pins) {
+          if (p.id === pinId) return { pin: p, set: s };
+        }
+      }
+      return null;
+    }
+
+    function openPin(pin, set) { selectedPin.value = { pin, set }; }
+    function closeSheet() { selectedPin.value = null; }
+
+    // ISO grouping
+    const isoGroups = computed(() => {
+      const groups = {};
+      isoList.value.forEach(item => {
+        const found = findPin(item.pinId);
+        if (!found) return;
+        const key = `${found.set.store}|${found.set.drop_date}`;
+        if (!groups[key]) groups[key] = { store: found.set.store, date: found.set.drop_day_label, items: [] };
+        groups[key].items.push({ ...item, pin: found.pin, set: found.set });
+      });
+      return Object.values(groups).sort((a, b) => a.store.localeCompare(b.store) || a.date.localeCompare(b.date));
+    });
+
+    const isoTotal = computed(() => {
+      let total = 0;
+      let count = 0;
+      let setIds = new Set();
+      let hasMystery = false;
+      isoList.value.forEach(item => {
+        const found = findPin(item.pinId);
+        if (!found) return;
+        total += (found.set.retail_price || 0) * item.qty;
+        count += item.qty;
+        setIds.add(found.set.id);
+        if (found.set.set_type === 'mystery') hasMystery = true;
+      });
+      return { total, count, sets: setIds.size, hasMystery };
+    });
+
+    function copyAsText() {
+      let text = '';
+      isoGroups.value.forEach(group => {
+        text += `📌 MY D23 ISO LIST — ${group.store} ${group.date.split(', ')[1] || group.date}\n\n`;
+        group.items.forEach(item => {
+          const cn = item.pin.catalog_number ? ` (#${item.pin.catalog_number})` : '';
+          const le = item.pin.edition_size ? ` LE${item.pin.edition_size}` : '';
+          const price = item.set.retail_price ? `$${item.set.retail_price.toFixed(2)}` : '';
+          const qty = item.qty > 1 ? ` ×${item.qty}` : '';
+          text += `□ ${item.set.set_name} — ${item.pin.name}${cn} — ${price}${le}${qty}\n`;
+        });
+        text += '\n';
+      });
+      text += `💰 Est. Total: $${isoTotal.value.total.toFixed(2)}\n`;
+      navigator.clipboard.writeText(text).then(() => {
+        copyMsg.value = 'Copied!';
+        setTimeout(() => { copyMsg.value = ''; }, 2000);
+      });
+    }
+
+    function featureTags(features) {
+      if (!features) return [];
+      return features.split(',').map(f => f.trim()).filter(f => f.length > 0 && f.length < 30);
+    }
+
+    const filterCount = computed(() => {
+      return storeFilter.value.length + dateFilter.value.length + typeFilter.value.length + attrFilter.value.length;
+    });
+
+    const typeOptions = ['individual', 'mystery', 'box_set', 'ultra_jumbo', 'framed_set'];
+    const attrOptions = ['Hard Enamel', 'Soft Enamel', 'Pin-on-Pin', 'Laser Print', 'Stained Glass', 'Glitter', 'Translucent', 'Marbleized', 'Pearlized', 'Hinge Pin', 'Jumbo', '3D', 'Spinner', 'Gemstones', 'Gold Base', 'Silver Base', 'Antique Gold', 'Custom Backing Card', 'UV-Reactive'];
+
+    function matchesAttr(features, attr) {
+      if (!features) return false;
+      return features.toLowerCase().includes(attr.toLowerCase());
+    }
+
+    function resetFilters() {
+      storeFilter.value = [];
+      dateFilter.value = [];
+      typeFilter.value = [];
+      attrFilter.value = [];
+    }
+
+    function toggleFilter(arr, val) {
+      const idx = arr.indexOf(val);
+      if (idx >= 0) arr.splice(idx, 1);
+      else arr.push(val);
+    }
+
+    function filteredPins(set) {
+      if (!dateFilter.value.length || set.available_dates.length <= 1) return set.pins;
+      return set.pins.filter(p => !p.drop_date || dateFilter.value.includes(p.drop_date));
+    }
+
+    const dayLabelMap = { '2026-08-14': 'Friday, August 14', '2026-08-15': 'Saturday, August 15', '2026-08-16': 'Sunday, August 16' };
+
+    function displayDates(set) {
+      if (set.available_dates.length <= 1) return [set.drop_day_label];
+      if (dateFilter.value.length) {
+        return set.available_dates
+          .filter(d => dateFilter.value.includes(d))
+          .map(d => dayLabelMap[d] || d);
+      }
+      return set.available_dates.map(d => dayLabelMap[d] || d);
+    }
+
+    function badgeClass(type) { return `badge badge-${type}`; }
+    function badgeLabel(type) {
+      return { individual: 'Individual', mystery: 'Mystery Box', box_set: 'Box Set',
+               ultra_jumbo: 'Ultra Jumbo', framed_set: 'Framed Set' }[type] || type;
+    }
+
+    return {
+      catalog, error, view, storeFilter, dateFilter, typeFilter, attrFilter, showFilters, searchQuery,
+      isoList, selectedPin, copyMsg, stores, dates, dateLabels,
+      filteredSets, searchResults, isoGroups, isoTotal, filterCount, typeOptions, attrOptions,
+      getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, resetFilters, toggleFilter,
+      updateQty, findPin, openPin, closeSheet, copyAsText,
+      featureTags, filteredPins, displayDates, badgeClass, badgeLabel, PLACEHOLDER_IMG
+    };
+  },
+  template: `
+<div v-if="error" class="empty-state"><p>{{ error }}</p></div>
+<div v-else-if="catalog">
+
+<!-- TOP NAV (desktop) -->
+<nav class="top-nav">
+  <button :class="{ active: view==='catalog' }" @click="view='catalog'">Catalog</button>
+  <button :class="{ active: view==='iso' }" @click="view='iso'">ISO List</button>
+  <button :class="{ active: view==='search' }" @click="view='search'">Search</button>
+</nav>
+
+<!-- CATALOG VIEW -->
+<div v-if="view==='catalog'">
+  <div class="filter-bar">
+    <button class="filter-icon-btn" @click="showFilters=true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M7 12h10M10 18h4"/></svg>
+      <span v-if="filterCount" class="filter-icon-count">{{ filterCount }}</span>
+    </button>
+    <div class="filter-scroll">
+      <button v-for="s in ['MOG','TWDC','DSSH']" :key="s" class="filter-chip" :class="{ active: storeFilter.includes(s) }" @click="toggleFilter(storeFilter, s)">{{ s }}</button>
+      <button v-for="d in ['2026-08-14','2026-08-15','2026-08-16']" :key="d" class="filter-chip" :class="{ active: dateFilter.includes(d) }" @click="toggleFilter(dateFilter, d)">{{ dateLabels[d] }}</button>
+      <button v-if="filterCount" class="filter-chip filter-chip-reset" @click="resetFilters">Reset All</button>
+    </div>
+  </div>
+
+  <!-- FILTER SHEET -->
+  <div v-if="showFilters" class="overlay" @click.self="showFilters=false"></div>
+  <div v-if="showFilters" class="sheet filter-sheet">
+    <div class="filter-sheet-header">
+      <h2>Filters</h2>
+      <button class="filter-reset" @click="resetFilters">Reset All Filters</button>
+    </div>
+    <p class="filter-sheet-count">{{ filterCount }} selected</p>
+
+    <h3 class="filter-section-title">Store</h3>
+    <div class="filter-pills">
+      <button v-for="s in ['MOG','TWDC','DSSH']" :key="s" class="filter-pill" :class="{ active: storeFilter.includes(s) }" @click="toggleFilter(storeFilter, s)">{{ s }}</button>
+    </div>
+
+    <h3 class="filter-section-title">Drop Date</h3>
+    <div class="filter-pills">
+      <button v-for="d in ['2026-08-14','2026-08-15','2026-08-16']" :key="d" class="filter-pill" :class="{ active: dateFilter.includes(d) }" @click="toggleFilter(dateFilter, d)">{{ dateLabels[d] || d }}</button>
+    </div>
+
+    <h3 class="filter-section-title">Pin Type</h3>
+    <div class="filter-pills">
+      <button v-for="t in typeOptions" :key="t" class="filter-pill" :class="{ active: typeFilter.includes(t) }" @click="toggleFilter(typeFilter, t)">{{ badgeLabel(t) }}</button>
+    </div>
+
+    <h3 class="filter-section-title">Attributes</h3>
+    <div class="filter-pills">
+      <button v-for="a in attrOptions" :key="a" class="filter-pill" :class="{ active: attrFilter.includes(a) }" @click="toggleFilter(attrFilter, a)">{{ a }}</button>
+    </div>
+
+    <div class="filter-sheet-footer">
+      <button class="btn-secondary" @click="showFilters=false">Cancel</button>
+      <button class="btn-primary" @click="showFilters=false">Apply</button>
+    </div>
+  </div>
+
+  <div v-if="filteredSets.length===0" class="empty-state"><p>No sets match your filters.</p></div>
+
+  <div v-for="set in filteredSets" :key="set.id" class="set-group" :class="{ 'set-group-ultra': set.set_type==='ultra_jumbo' }">
+    <div class="set-group-header">
+      <button class="icon-add set-add-btn" @click="addAllToIso(set)" title="Add all to ISO"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <div class="set-name">{{ set.set_name }} <span v-if="set.retail_display" class="set-name-price">· {{ set.retail_display }}<span v-if="set.retail_note">&nbsp;{{ set.retail_note }}</span></span></div>
+      <div class="set-header">
+        <span :class="badgeClass(set.set_type)">{{ badgeLabel(set.set_type) }}</span>
+        <span class="badge badge-store">{{ set.store }}</span>
+        <span v-for="d in displayDates(set)" :key="d" class="badge badge-date">{{ d }}</span>
+        <span v-for="t in featureTags(set.features)" :key="t" class="tag">{{ t }}</span>
+      </div>
+      <div v-if="set.ship_only" class="ship-notice">🚢 Ship only — no in-person pickup</div>
+    </div>
+    <div class="pin-grid">
+      <div v-for="pin in filteredPins(set)" :key="pin.id" class="pin-card" @click="openPin(pin, set)">
+        <button v-if="!isInIso(pin.id)" class="icon-add pin-add-btn" @click.stop="addToIso(pin, set)" title="Add to ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <span v-else class="icon-added pin-add-btn" @click.stop="removeFromIso(pin.id)" title="Remove from ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+        <div class="pin-card-img">
+          <img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy">
+        </div>
+        <div class="pin-card-body">
+          <div class="pin-card-name">{{ pin.name }}</div>
+          <div class="pin-card-meta">
+            <span v-if="pin.catalog_number">#{{ pin.catalog_number }} · </span>
+            <span v-if="pin.retail_display">{{ pin.retail_display }}</span>
+            <span v-else-if="set.retail_display">{{ set.retail_display }}</span>
+            <span v-if="set.retail_note">&nbsp;{{ set.retail_note }}</span>
+            <span v-if="pin.edition_size"> · LE{{ pin.edition_size }}</span>
+            <span v-if="pin.edition_notes" class="pin-card-tier"> · {{ pin.edition_notes }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ISO VIEW -->
+<div v-if="view==='iso'" style="padding: 16px;">
+  <h2 style="font-weight:700;font-size:20px;margin-bottom:4px;">My ISO List
+    <span v-if="isoTotal.count" class="badge badge-individual" style="font-size:12px;vertical-align:middle;margin-left:6px;">{{ isoTotal.count }}</span>
+  </h2>
+
+  <div v-if="isoList.length===0" class="empty-state">
+    <p>Your ISO list is empty.</p>
+    <button class="btn-secondary" @click="view='catalog'">Browse Catalog</button>
+  </div>
+
+  <div v-for="group in isoGroups" :key="group.store+group.date" style="margin-bottom:20px;">
+    <h3 style="font-size:14px;font-weight:700;color:var(--color-navy);margin-bottom:8px;">{{ group.store }} — {{ group.date }}</h3>
+    <div class="pin-grid" style="border:1px solid var(--color-border);border-radius:16px;">
+      <div v-for="item in group.items" :key="item.pinId" class="pin-card" @click="openPin(item.pin, item.set)">
+        <button class="remove-btn pin-add-btn" @click.stop="removeFromIso(item.pinId)" title="Remove"><svg width="10" height="10" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="pin-card-img">
+          <img :src="getImgSrc(item.pin)" :alt="item.pin.name" loading="lazy">
+        </div>
+        <div class="pin-card-body">
+          <div class="pin-card-name">{{ item.pin.name }}</div>
+          <div class="pin-card-meta">{{ item.set.set_name }}</div>
+          <div class="pin-card-meta">
+            <span v-if="item.pin.retail_display">{{ item.pin.retail_display }}</span>
+            <span v-else-if="item.set.retail_display">{{ item.set.retail_display }}</span>
+            <span v-if="item.pin.edition_size"> · LE{{ item.pin.edition_size }}</span>
+          </div>
+          <div class="iso-card-stepper">
+            <button class="stepper-btn stepper-btn-sm" @click.stop="updateQty(item.pinId, -1)"><svg width="10" height="10" viewBox="0 0 14 14"><path d="M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+            <span>{{ item.qty }}</span>
+            <button class="stepper-btn stepper-btn-sm" @click.stop="updateQty(item.pinId, 1)"><svg width="10" height="10" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div v-if="isoList.length" style="margin-top:16px;text-align:center;">
+    <button class="btn-secondary" @click="copyAsText">📋 Copy as Text</button>
+    <span v-if="copyMsg" style="margin-left:8px;color:var(--color-green);font-size:13px;">{{ copyMsg }}</span>
+  </div>
+
+  <div v-if="isoTotal.hasMystery && isoList.length" style="font-size:11px;color:var(--color-text-secondary);text-align:center;margin-top:12px;font-style:italic;">
+    * Mystery box prices are per box. Actual pin received may vary.
+  </div>
+</div>
+
+<!-- ISO FOOTER -->
+<div v-if="view==='iso' && isoList.length" class="iso-footer">
+  <span class="iso-footer-left">{{ isoTotal.count }} item{{ isoTotal.count!==1?'s':'' }} across {{ isoTotal.sets }} set{{ isoTotal.sets!==1?'s':'' }}</span>
+  <span class="iso-footer-right">Est. Total: \${{ isoTotal.total.toFixed(2) }}</span>
+</div>
+
+<!-- SEARCH VIEW -->
+<div v-if="view==='search'">
+  <div class="search-bar">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input v-model="searchQuery" placeholder="Search pins, sets, characters..." autofocus>
+  </div>
+  <div v-if="searchQuery.trim()">
+    <div class="search-count">{{ searchResults.length }} result{{ searchResults.length!==1?'s':'' }}</div>
+    <div v-if="searchResults.length===0" class="empty-state">
+      <p>No pins found for "{{ searchQuery }}"</p>
+      <button class="btn-secondary" @click="searchQuery=''">Clear Search</button>
+    </div>
+    <div class="pin-grid" style="margin:0 16px;border:1px solid var(--color-border);border-radius:16px;">
+      <div v-for="r in searchResults" :key="r.pin.id" class="pin-card" @click="openPin(r.pin, r.set)">
+        <button v-if="!isInIso(r.pin.id)" class="icon-add pin-add-btn" @click.stop="addToIso(r.pin, r.set)" title="Add to ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <span v-else class="icon-added pin-add-btn" @click.stop="removeFromIso(r.pin.id)" title="Remove from ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+        <div class="pin-card-img">
+          <img :src="getImgSrc(r.pin)" :alt="r.pin.name" loading="lazy">
+        </div>
+        <div class="pin-card-body">
+          <div class="pin-card-name">{{ r.pin.name }}</div>
+          <div class="pin-card-meta">{{ r.set.set_name }} · {{ r.set.store }}</div>
+          <div class="pin-card-meta">
+            <span v-if="r.pin.retail_display">{{ r.pin.retail_display }}</span>
+            <span v-else-if="r.set.retail_display">{{ r.set.retail_display }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PIN DETAIL SHEET -->
+<div v-if="selectedPin" class="overlay" @click.self="closeSheet"></div>
+<div v-if="selectedPin" class="sheet">
+  <img :src="getImgSrc(selectedPin.pin)" :alt="selectedPin.pin.name" class="sheet-img">
+  <div class="sheet-name">{{ selectedPin.pin.name }}</div>
+  <div v-if="selectedPin.pin.catalog_number" class="sheet-set">#{{ selectedPin.pin.catalog_number }}</div>
+  <div class="sheet-set">{{ selectedPin.set.set_name }}</div>
+  <div class="sheet-meta">
+    <div><strong>Store:</strong> {{ selectedPin.set.store }}</div>
+    <div><strong>Drop:</strong> {{ selectedPin.set.drop_day_label }}</div>
+    <div v-if="selectedPin.set.features"><strong>Features:</strong> {{ selectedPin.set.features }}</div>
+    <div v-if="selectedPin.set.dimensions"><strong>Dimensions:</strong> {{ selectedPin.set.dimensions }}</div>
+    <div><strong>Retail:</strong> {{ selectedPin.set.retail_display }} {{ selectedPin.set.retail_note || '' }}</div>
+    <div v-if="selectedPin.pin.edition_size"><strong>Edition:</strong> LE{{ selectedPin.pin.edition_size }} {{ selectedPin.pin.edition_notes || '' }}</div>
+    <div v-if="selectedPin.set.purchase_limit"><strong>Limit:</strong> {{ selectedPin.set.purchase_limit }}</div>
+  </div>
+  <div v-if="selectedPin.set.set_type==='mystery'" class="sheet-disclaimer">
+    🎲 This is a mystery box pull — pin received is random. Price shown is per box.
+  </div>
+  <div class="sheet-actions">
+    <button v-if="!isInIso(selectedPin.pin.id)" class="btn-primary" @click="addToIso(selectedPin.pin, selectedPin.set); closeSheet()">+ Add to ISO List</button>
+    <button v-else class="btn-danger" @click="removeFromIso(selectedPin.pin.id); closeSheet()">Remove from ISO</button>
+  </div>
+</div>
+
+<!-- BOTTOM NAV (mobile) -->
+<nav class="bottom-nav">
+  <button class="nav-tab" :class="{ active: view==='catalog' }" @click="view='catalog'">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    Catalog
+  </button>
+  <button class="nav-tab" :class="{ active: view==='iso' }" @click="view='iso'">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+    ISO List
+  </button>
+  <button class="nav-tab" :class="{ active: view==='search' }" @click="view='search'">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    Search
+  </button>
+</nav>
+
+</div>
+`
+});
+app.mount('#app');
+</script>
+</body>
+</html>

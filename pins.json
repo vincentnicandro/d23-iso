@@ -1,0 +1,5866 @@
+{
+  "generated_at": "2026-07-23T20:20:42.846521Z",
+  "stores": [
+    "MOG",
+    "TWDC",
+    "DSSH"
+  ],
+  "sets": [
+    {
+      "id": "mog-alice-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Alice in Wonderland Mystery Set",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": "Soft Enamel, Laser Print, Marbleized, 3D",
+      "dimensions": "1.9″–2.0″H",
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": "per box",
+      "purchase_limit": "Limit six (6) boxes per guest",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-alice-mystery-1",
+          "catalog_number": 1,
+          "name": "Mystery Box",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-alice-75th",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Alice in Wonderland 75th Anniversary",
+      "set_description": "Celebrate the 75th Anniversary of Alice in Wonderland with this comic-inspired pin series.",
+      "set_type": "individual",
+      "features": "Hard Enamel, Laser Print, Translucent, Marbleized",
+      "dimensions": "3.25″–4.15″H",
+      "retail_price": 52.95,
+      "retail_display": "$52.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-alice-75th-2",
+          "catalog_number": 2,
+          "name": "Alice",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-alice-75th-3",
+          "catalog_number": 3,
+          "name": "Queen of Hearts",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-alice-75th-4",
+          "catalog_number": 4,
+          "name": "White Rabbit",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-alice-75th-5",
+          "catalog_number": 5,
+          "name": "Cheshire Cat",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-alice-75th-6",
+          "catalog_number": 6,
+          "name": "The Flowers",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-princess-windows",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Disney Princess Dream Windows",
+      "set_description": "Celebrate timeless Disney Princess stories with these enchanting stained glass pins.",
+      "set_type": "individual",
+      "features": "Hard Enamel, Laser Print, Stained Glass",
+      "dimensions": "3.8″–4.0″H",
+      "retail_price": 42.95,
+      "retail_display": "$42.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-princess-windows-7",
+          "catalog_number": 7,
+          "name": "Snow White",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-8",
+          "catalog_number": 8,
+          "name": "Cinderella",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-9",
+          "catalog_number": 9,
+          "name": "Aurora",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-10",
+          "catalog_number": 10,
+          "name": "Ariel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-11",
+          "catalog_number": 11,
+          "name": "Belle",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-12",
+          "catalog_number": 12,
+          "name": "Jasmine",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-13",
+          "catalog_number": 13,
+          "name": "Pocahontas",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-14",
+          "catalog_number": 14,
+          "name": "Mulan",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-15",
+          "catalog_number": 15,
+          "name": "Tiana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-16",
+          "catalog_number": 16,
+          "name": "Rapunzel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-17",
+          "catalog_number": 17,
+          "name": "Merida",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-18",
+          "catalog_number": 18,
+          "name": "Moana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-princess-windows-19",
+          "catalog_number": 19,
+          "name": "Raya",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-ducktales-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "DuckTales the Movie: Treasure of the Lost Lamp Mystery Set",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": "1.2″–1.8″H",
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": "per box",
+      "purchase_limit": "Limit eight (8) boxes per guest",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-ducktales-mystery-20",
+          "catalog_number": 20,
+          "name": "Mystery Box (Regular)",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-ducktales-mystery-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Chaser)",
+          "edition_size": 300,
+          "edition_notes": "chaser",
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-treasure-seekers",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Disney Treasure Seekers",
+      "set_description": null,
+      "set_type": "individual",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-treasure-seekers-21",
+          "catalog_number": 21,
+          "name": "Ariel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-treasure-seekers-22",
+          "catalog_number": 22,
+          "name": "Scrooge McDuck",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-treasure-seekers-23",
+          "catalog_number": 23,
+          "name": "Jim Hawkins",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-treasure-seekers-24",
+          "catalog_number": 24,
+          "name": "Peter Pan",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-treasure-seekers-25",
+          "catalog_number": 25,
+          "name": "Abu",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-treasure-seekers-26",
+          "catalog_number": 26,
+          "name": "Penny",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-squad-goals",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Disney Squad Goals",
+      "set_description": null,
+      "set_type": "individual",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 69.95,
+      "retail_display": "$69.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-squad-goals-27",
+          "catalog_number": 27,
+          "name": "The Little Mermaid",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-28",
+          "catalog_number": 28,
+          "name": "Treasure Planet",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-29",
+          "catalog_number": 29,
+          "name": "The Princess and the Frog",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-30",
+          "catalog_number": 30,
+          "name": "Big Hero 6",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-31",
+          "catalog_number": 31,
+          "name": "Raya",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-32",
+          "catalog_number": 32,
+          "name": "Lilo & Stitch",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-33",
+          "catalog_number": 33,
+          "name": "A Goofy Movie",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-34",
+          "catalog_number": 34,
+          "name": "Moana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-35",
+          "catalog_number": 35,
+          "name": "Robin Hood",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-squad-goals-36",
+          "catalog_number": 36,
+          "name": "Snow White and the Seven Dwarfs",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-pov",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "POV: Another Point of View",
+      "set_description": "Rotating double-sided spinner pins featuring heroes and villains.",
+      "set_type": "individual",
+      "features": "Hard Enamel, Glitter, Translucent, Marbleized, Jumbo, 3D, Gemstones, Spinner",
+      "dimensions": "5″–5.5″H",
+      "retail_price": 79.95,
+      "retail_display": "$79.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-pov-37",
+          "catalog_number": 37,
+          "name": "Moana and Te Kā",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-38",
+          "catalog_number": 38,
+          "name": "Belle and Beast",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-39",
+          "catalog_number": 39,
+          "name": "Snow White and Evil Queen",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-40",
+          "catalog_number": 40,
+          "name": "Ariel and Ursula",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-41",
+          "catalog_number": 41,
+          "name": "Aurora and Maleficent",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-42",
+          "catalog_number": 42,
+          "name": "Aladdin and Genie",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-43",
+          "catalog_number": 43,
+          "name": "Alice and the Queen of Hearts",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-44",
+          "catalog_number": 44,
+          "name": "Cinderella and Prince Charming",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-45",
+          "catalog_number": 45,
+          "name": "Rapunzel and Flynn Rider",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pov-46",
+          "catalog_number": 46,
+          "name": "Sorcerer's Apprentice Mickey and Yen Sid",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-dining-character",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Dining with Character",
+      "set_description": "Detailed dining scenes on commemorative plate-inspired pins.",
+      "set_type": "individual",
+      "features": "Hard Enamel, Laser Print, Glitter, Translucent, Marbleized, Jumbo",
+      "dimensions": "4.5″H",
+      "retail_price": 79.95,
+      "retail_display": "$79.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-dining-character-47",
+          "catalog_number": 47,
+          "name": "The Emperor's New Groove",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-48",
+          "catalog_number": 48,
+          "name": "Sleeping Beauty",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-49",
+          "catalog_number": 49,
+          "name": "Alice in Wonderland",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-50",
+          "catalog_number": 50,
+          "name": "The Princess and the Frog",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-51",
+          "catalog_number": 51,
+          "name": "Winnie the Pooh",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-52",
+          "catalog_number": 52,
+          "name": "The Little Mermaid",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-53",
+          "catalog_number": 53,
+          "name": "Mickey and the Beanstalk",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-54",
+          "catalog_number": 54,
+          "name": "Lady and the Tramp",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-55",
+          "catalog_number": 55,
+          "name": "Beauty and the Beast",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-dining-character-56",
+          "catalog_number": 56,
+          "name": "Ratatouille",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-world-princess-ultra",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "World Princess Week Ultra Jumbo",
+      "set_description": "Gathering beloved heroines from across Disney's animated legacy, this majestic pin celebrates the optimism, courage, and timeless stories of the Disney Princesses.",
+      "set_type": "ultra_jumbo",
+      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Stained Glass, Jumbo",
+      "dimensions": "16″W × 9″H",
+      "retail_price": 1200.0,
+      "retail_display": "$1,200.00",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "mog-world-princess-ultra-57",
+          "catalog_number": 57,
+          "name": "World Princess Week",
+          "edition_size": 150,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-sea-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "S.E.A. Mystery Set",
+      "set_description": "Collect all 15 pins plus trading cards to reveal a hidden image.",
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 39.95,
+      "retail_display": "$39.95",
+      "retail_note": "per box",
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "mog-sea-mystery-58",
+          "catalog_number": 58,
+          "name": "Mystery Box",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-parks-to-ports",
+      "store": "MOG",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Around the World with Disney: Parks to Ports",
+      "set_description": null,
+      "set_type": "individual",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 36.95,
+      "retail_display": "$36.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "mog-parks-to-ports-59",
+          "catalog_number": 59,
+          "name": "Disneyland",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-parks-to-ports-60",
+          "catalog_number": 60,
+          "name": "Magic Kingdom",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-parks-to-ports-61",
+          "catalog_number": 61,
+          "name": "Tokyo Disneyland",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-parks-to-ports-62",
+          "catalog_number": 62,
+          "name": "Disneyland Paris",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-parks-to-ports-63",
+          "catalog_number": 63,
+          "name": "Hong Kong Disneyland",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-parks-to-ports-64",
+          "catalog_number": 64,
+          "name": "Shanghai Disneyland",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-parks-to-ports-65",
+          "catalog_number": 65,
+          "name": "Disney Cruise Line",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-park-stamps-2",
+      "store": "MOG",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Disney Park Stamps: Series 2",
+      "set_description": "Commemorative stamp pin series celebrating the characters and attractions of Disney Parks.",
+      "set_type": "individual",
+      "features": "Hard Enamel, Laser Print, Stained Glass, Glitter, Translucent, Pearlized",
+      "dimensions": "2.5″–3″H",
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "mog-park-stamps-2-66",
+          "catalog_number": 66,
+          "name": "Ariel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-67",
+          "catalog_number": 67,
+          "name": "Rosita",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-68",
+          "catalog_number": 68,
+          "name": "Teddi Barra",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-69",
+          "catalog_number": 69,
+          "name": "Hatbox Ghost",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-70",
+          "catalog_number": 70,
+          "name": "Albert",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-71",
+          "catalog_number": 71,
+          "name": "Scooter",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-72",
+          "catalog_number": 72,
+          "name": "Yeti",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-73",
+          "catalog_number": 73,
+          "name": "Chuuby",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-74",
+          "catalog_number": 74,
+          "name": "Tom Morrow 2.0",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-75",
+          "catalog_number": 75,
+          "name": "Dumbo",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-76",
+          "catalog_number": 76,
+          "name": "Winnie the Pooh",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-77",
+          "catalog_number": 77,
+          "name": "Sonny Eclipse",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-78",
+          "catalog_number": 78,
+          "name": "Lagoona Gator",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-79",
+          "catalog_number": 79,
+          "name": "The Dapper Dans",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-park-stamps-2-80",
+          "catalog_number": 80,
+          "name": "Jingles",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-panoramas",
+      "store": "MOG",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Disney Attraction Panoramas — Gate-fold",
+      "set_description": null,
+      "set_type": "individual",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 74.95,
+      "retail_display": "$74.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "mog-panoramas-81",
+          "catalog_number": 81,
+          "name": "Peter Pan's Flight",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-82",
+          "catalog_number": 82,
+          "name": "Jungle Cruise",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-83",
+          "catalog_number": 83,
+          "name": "Alice in Wonderland",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-84",
+          "catalog_number": 84,
+          "name": "Matterhorn Bobsleds",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-85",
+          "catalog_number": 85,
+          "name": "It's a Small World",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-86",
+          "catalog_number": 86,
+          "name": "Pirates of the Caribbean",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-87",
+          "catalog_number": 87,
+          "name": "Haunted Mansion",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-panoramas-88",
+          "catalog_number": 88,
+          "name": "Big Thunder Mountain Railroad",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-carousel-horses",
+      "store": "MOG",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Disney Royal Carousel Horses — Box Set",
+      "set_description": "Box set of 6 carousel horse pins with display box.",
+      "set_type": "box_set",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 324.95,
+      "retail_display": "$324.95",
+      "retail_note": "for set of 6",
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "mog-carousel-horses-89",
+          "catalog_number": 89,
+          "name": "Carousel Horses Box Set",
+          "edition_size": 250,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-avengers-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "The Avengers Mystery Set",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": "1.3″–1.7″H",
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": "per box",
+      "purchase_limit": "Limit eight (8) boxes per guest",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-avengers-mystery-mystery-box-regular",
+          "catalog_number": null,
+          "name": "Mystery Box (Regular)",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-avengers-mystery-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Chaser)",
+          "edition_size": 300,
+          "edition_notes": "chaser",
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-avengers-mystery-super-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Super Chaser)",
+          "edition_size": 200,
+          "edition_notes": "super chaser",
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-guardians-boxset",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Guardians of the Galaxy Box Set",
+      "set_description": "Each box contains one mystery pin under the tray.",
+      "set_type": "box_set",
+      "features": null,
+      "dimensions": "1″–1.7″H",
+      "retail_price": 74.95,
+      "retail_display": "$74.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-guardians-boxset-91",
+          "catalog_number": 91,
+          "name": "Guardians of the Galaxy Box Set",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-kingdom-hearts-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Kingdom Hearts Mystery Set",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": "per box",
+      "purchase_limit": "Limit eight (8) boxes per guest",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-kingdom-hearts-mystery-mystery-box-regular",
+          "catalog_number": null,
+          "name": "Mystery Box (Regular)",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-kingdom-hearts-mystery-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Chaser)",
+          "edition_size": 400,
+          "edition_notes": "chaser",
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-kingdom-hearts-mystery-super-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Super Chaser)",
+          "edition_size": 300,
+          "edition_notes": "super chaser",
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-pixar-soul-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Pixar Soul Mystery Set",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": "per box",
+      "purchase_limit": "Limit eight (8) boxes per guest",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-pixar-soul-mystery-mystery-box-regular",
+          "catalog_number": null,
+          "name": "Mystery Box (Regular)",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pixar-soul-mystery-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Chaser)",
+          "edition_size": 300,
+          "edition_notes": "chaser",
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-pixar-soul-mystery-super-chaser",
+          "catalog_number": null,
+          "name": "Mystery Box (Super Chaser)",
+          "edition_size": 200,
+          "edition_notes": "super chaser",
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-pixar-soul-boxset",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Pixar Soul Box Set",
+      "set_description": null,
+      "set_type": "box_set",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 49.95,
+      "retail_display": "$49.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-pixar-soul-boxset-94",
+          "catalog_number": 94,
+          "name": "Pixar Soul Box Set",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-muppet-show-50th",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "The Muppet Show 50th",
+      "set_description": "Celebrating 50 years of The Muppet Show.",
+      "set_type": "individual",
+      "features": "Pin-on-Pin, Laser Print, Glitter, Translucent, Marbleized, Pearlized, 3D",
+      "dimensions": "3.5″W",
+      "retail_price": 54.95,
+      "retail_display": "$54.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-muppet-show-50th-95",
+          "catalog_number": 95,
+          "name": "Kermit",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-96",
+          "catalog_number": 96,
+          "name": "Veterinarian's Hospital",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-97",
+          "catalog_number": 97,
+          "name": "At the Dance",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-98",
+          "catalog_number": 98,
+          "name": "Swedish Chef",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-99",
+          "catalog_number": 99,
+          "name": "Great Gonzo",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-100",
+          "catalog_number": 100,
+          "name": "Fozzie's Stand-Up",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-101",
+          "catalog_number": 101,
+          "name": "Pigs in Space",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-102",
+          "catalog_number": 102,
+          "name": "The Electric Mayhem",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-103",
+          "catalog_number": 103,
+          "name": "Muppet Labs",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-muppet-show-50th-104",
+          "catalog_number": 104,
+          "name": "Statler and Waldorf",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-portraits-of-evil",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Portraits of Evil",
+      "set_description": null,
+      "set_type": "individual",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 44.95,
+      "retail_display": "$44.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-portraits-of-evil-105",
+          "catalog_number": 105,
+          "name": "Evil Queen",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-106",
+          "catalog_number": 106,
+          "name": "Chernabog",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-107",
+          "catalog_number": 107,
+          "name": "Queen of Hearts",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-108",
+          "catalog_number": 108,
+          "name": "Maleficent",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-109",
+          "catalog_number": 109,
+          "name": "Cruella De Vil",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-110",
+          "catalog_number": 110,
+          "name": "Horned King",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-111",
+          "catalog_number": 111,
+          "name": "Ursula",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-112",
+          "catalog_number": 112,
+          "name": "Gaston",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-113",
+          "catalog_number": 113,
+          "name": "Jafar",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-114",
+          "catalog_number": 114,
+          "name": "Scar",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-115",
+          "catalog_number": 115,
+          "name": "Hades",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-116",
+          "catalog_number": 116,
+          "name": "Yzma",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-portraits-of-evil-117",
+          "catalog_number": 117,
+          "name": "Mother Gothel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-colorful-world-mystery",
+      "store": "MOG",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "The Colorful World of Disney Mystery Set",
+      "set_description": "23 color-changing UV-reactive pins.",
+      "set_type": "mystery",
+      "features": "UV-Reactive",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": "per box",
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-colorful-world-mystery-118",
+          "catalog_number": 118,
+          "name": "Mystery Box",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "mog-imagineering-pin-boards",
+      "store": "MOG",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Walt Disney Imagineering Pin Boards",
+      "set_description": "Unique pin boards inspired by the iconic Mickey's of Glendale backer cards.",
+      "set_type": "individual",
+      "features": "Foam Pin Board, Debossed",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14",
+        "2026-08-15",
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "mog-imagineering-pin-boards-119",
+          "catalog_number": 119,
+          "name": "Backer Card Pin Board (10″W × 16″H)",
+          "edition_size": null,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "mog-imagineering-pin-boards-120",
+          "catalog_number": 120,
+          "name": "Mickey Backer Card Pin Board (9″W × 16″H)",
+          "edition_size": null,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-disney-stamp-classic",
+      "store": "TWDC",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "The Ultimate Disney Stamp (Classic Era)",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "twdc-disney-stamp-classic-yensid-sorcerer-mickey",
+          "catalog_number": null,
+          "name": "Yensid & Sorcerer Mickey",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p2_019.png"
+        },
+        {
+          "id": "twdc-disney-stamp-classic-blue-fairy-jiminy",
+          "catalog_number": null,
+          "name": "Blue Fairy & Jiminy",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p2_017.png"
+        },
+        {
+          "id": "twdc-disney-stamp-classic-dumbo-timothy",
+          "catalog_number": null,
+          "name": "Dumbo & Timothy",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p2_007.png"
+        },
+        {
+          "id": "twdc-disney-stamp-classic-donald-aracuan-bird",
+          "catalog_number": null,
+          "name": "Donald & Aracuan Bird",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p2_011.png"
+        },
+        {
+          "id": "twdc-disney-stamp-classic-alice-white-rabbit",
+          "catalog_number": null,
+          "name": "Alice & White Rabbit",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p2_013.png"
+        },
+        {
+          "id": "twdc-disney-stamp-classic-chip-dale",
+          "catalog_number": null,
+          "name": "Chip & Dale",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p2_015.png"
+        },
+        {
+          "id": "twdc-disney-stamp-classic-maleficent-dragon-prince-phillip",
+          "catalog_number": null,
+          "name": "Maleficent Dragon & Prince Phillip",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p2_021.png"
+        },
+        {
+          "id": "twdc-disney-stamp-classic-merlin-archimedes",
+          "catalog_number": null,
+          "name": "Merlin & Archimedes",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p2_023.png"
+        },
+        {
+          "id": "twdc-disney-stamp-classic-robin-hood-little-john",
+          "catalog_number": null,
+          "name": "Robin Hood & Little John",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p2_025.png"
+        },
+        {
+          "id": "twdc-disney-stamp-classic-pooh-piglet",
+          "catalog_number": null,
+          "name": "Pooh & Piglet",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p2_009.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-disney-stamp-renaissance",
+      "store": "TWDC",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "The Ultimate Disney Stamp (Renaissance Era)",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "twdc-disney-stamp-renaissance-todd-copper",
+          "catalog_number": null,
+          "name": "Todd & Copper",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p3_042.png"
+        },
+        {
+          "id": "twdc-disney-stamp-renaissance-dodger-oliver",
+          "catalog_number": null,
+          "name": "Dodger & Oliver",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p3_040.png"
+        },
+        {
+          "id": "twdc-disney-stamp-renaissance-ariel-scuttle",
+          "catalog_number": null,
+          "name": "Ariel & Scuttle",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p3_030.png"
+        },
+        {
+          "id": "twdc-disney-stamp-renaissance-bernard-bianca",
+          "catalog_number": null,
+          "name": "Bernard & Bianca",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p3_034.png"
+        },
+        {
+          "id": "twdc-disney-stamp-renaissance-belle-maurice",
+          "catalog_number": null,
+          "name": "Belle & Maurice",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p3_036.png"
+        },
+        {
+          "id": "twdc-disney-stamp-renaissance-hercules-phil",
+          "catalog_number": null,
+          "name": "Hercules & Phil",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p3_038.png"
+        },
+        {
+          "id": "twdc-disney-stamp-renaissance-mulan-mushu",
+          "catalog_number": null,
+          "name": "Mulan & Mushu",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p3_044.png"
+        },
+        {
+          "id": "twdc-disney-stamp-renaissance-kronk-yzma",
+          "catalog_number": null,
+          "name": "Kronk & Yzma",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p3_046.png"
+        },
+        {
+          "id": "twdc-disney-stamp-renaissance-lilo-stitch",
+          "catalog_number": null,
+          "name": "Lilo & Stitch",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p3_048.png"
+        },
+        {
+          "id": "twdc-disney-stamp-renaissance-tiana-charlotte",
+          "catalog_number": null,
+          "name": "Tiana & Charlotte",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p3_032.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-disney-stamp-modern",
+      "store": "TWDC",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "The Ultimate Disney Stamp (Modern Era)",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "twdc-disney-stamp-modern-rapunzel-pascal",
+          "catalog_number": null,
+          "name": "Rapunzel & Pascal",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p4_065.png"
+        },
+        {
+          "id": "twdc-disney-stamp-modern-wreck-it-ralph-vanellope",
+          "catalog_number": null,
+          "name": "Wreck-It Ralph & Vanellope",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p4_063.png"
+        },
+        {
+          "id": "twdc-disney-stamp-modern-anna-olaf",
+          "catalog_number": null,
+          "name": "Anna & Olaf",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p4_053.png"
+        },
+        {
+          "id": "twdc-disney-stamp-modern-baymax-hiro",
+          "catalog_number": null,
+          "name": "Baymax & Hiro",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p4_057.png"
+        },
+        {
+          "id": "twdc-disney-stamp-modern-judy-nick",
+          "catalog_number": null,
+          "name": "Judy & Nick",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p4_059.png"
+        },
+        {
+          "id": "twdc-disney-stamp-modern-moana-hei-hei",
+          "catalog_number": null,
+          "name": "Moana & Hei Hei",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p4_061.png"
+        },
+        {
+          "id": "twdc-disney-stamp-modern-elsa-bruni",
+          "catalog_number": null,
+          "name": "Elsa & Bruni",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p4_067.png"
+        },
+        {
+          "id": "twdc-disney-stamp-modern-raya-tuk-tuk",
+          "catalog_number": null,
+          "name": "Raya & Tuk Tuk",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p4_069.png"
+        },
+        {
+          "id": "twdc-disney-stamp-modern-valentino-star",
+          "catalog_number": null,
+          "name": "Valentino & Star",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p4_071.png"
+        },
+        {
+          "id": "twdc-disney-stamp-modern-gazelle-tiger",
+          "catalog_number": null,
+          "name": "Gazelle & Tiger",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_stamp_p4_055.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-reel-of-magic",
+      "store": "TWDC",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Reel of Magic",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Hard Enamel, Laser Print, Translucent, Hinge Pin, Gold Base, Clear Epoxy",
+      "dimensions": "3.47″×3.5″",
+      "retail_price": 52.95,
+      "retail_display": "$52.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "twdc-reel-of-magic-the-little-mermaid",
+          "catalog_number": null,
+          "name": "The Little Mermaid",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_reel_top1_01.png"
+        },
+        {
+          "id": "twdc-reel-of-magic-beauty-and-the-beast",
+          "catalog_number": null,
+          "name": "Beauty and the Beast",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_reel_top1_02.png"
+        },
+        {
+          "id": "twdc-reel-of-magic-aladdin",
+          "catalog_number": null,
+          "name": "Aladdin",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_reel_row1_01.png"
+        },
+        {
+          "id": "twdc-reel-of-magic-the-lion-king",
+          "catalog_number": null,
+          "name": "The Lion King",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_reel_row1_02.png"
+        },
+        {
+          "id": "twdc-reel-of-magic-pocahontas",
+          "catalog_number": null,
+          "name": "Pocahontas",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_reel_row1_03.png"
+        },
+        {
+          "id": "twdc-reel-of-magic-the-hunchback-of-notre-dame",
+          "catalog_number": null,
+          "name": "The Hunchback of Notre Dame",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_reel_row1_04.png"
+        },
+        {
+          "id": "twdc-reel-of-magic-mulan",
+          "catalog_number": null,
+          "name": "Mulan",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_reel_row1_05.png"
+        },
+        {
+          "id": "twdc-reel-of-magic-tarzan",
+          "catalog_number": null,
+          "name": "Tarzan",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_reel_row2_01.png"
+        },
+        {
+          "id": "twdc-reel-of-magic-emperors-new-groove",
+          "catalog_number": null,
+          "name": "Emperor's New Groove",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_reel_row2_02.png"
+        },
+        {
+          "id": "twdc-reel-of-magic-atlantis",
+          "catalog_number": null,
+          "name": "Atlantis",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_reel_row2_03.png"
+        },
+        {
+          "id": "twdc-reel-of-magic-lilo-stitch",
+          "catalog_number": null,
+          "name": "Lilo & Stitch",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_reel_row2_04.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-royal-chambers",
+      "store": "TWDC",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Royal Chambers",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin",
+      "dimensions": null,
+      "retail_price": 45.95,
+      "retail_display": "$45.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "twdc-royal-chambers-evil-queen",
+          "catalog_number": null,
+          "name": "Evil Queen",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_089.png"
+        },
+        {
+          "id": "twdc-royal-chambers-prince-charming",
+          "catalog_number": null,
+          "name": "Prince Charming",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_101.png"
+        },
+        {
+          "id": "twdc-royal-chambers-queen-of-hearts",
+          "catalog_number": null,
+          "name": "Queen of Hearts",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_103.png"
+        },
+        {
+          "id": "twdc-royal-chambers-king-stefan-queen-leah",
+          "catalog_number": null,
+          "name": "King Stefan & Queen Leah",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_105.png"
+        },
+        {
+          "id": "twdc-royal-chambers-king-arthur",
+          "catalog_number": null,
+          "name": "King Arthur",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_107.png"
+        },
+        {
+          "id": "twdc-royal-chambers-triton",
+          "catalog_number": null,
+          "name": "Triton",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_109.png"
+        },
+        {
+          "id": "twdc-royal-chambers-gaston",
+          "catalog_number": null,
+          "name": "Gaston",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_111.png"
+        },
+        {
+          "id": "twdc-royal-chambers-sultan",
+          "catalog_number": null,
+          "name": "Sultan",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_113.png"
+        },
+        {
+          "id": "twdc-royal-chambers-zeus",
+          "catalog_number": null,
+          "name": "Zeus",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_115.png"
+        },
+        {
+          "id": "twdc-royal-chambers-emperor",
+          "catalog_number": null,
+          "name": "Emperor",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_091.png"
+        },
+        {
+          "id": "twdc-royal-chambers-kuzco",
+          "catalog_number": null,
+          "name": "Kuzco",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_093.png"
+        },
+        {
+          "id": "twdc-royal-chambers-king-magnifico",
+          "catalog_number": null,
+          "name": "King Magnifico",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_095.png"
+        },
+        {
+          "id": "twdc-royal-chambers-king-candy",
+          "catalog_number": null,
+          "name": "King Candy",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_097.png"
+        },
+        {
+          "id": "twdc-royal-chambers-elsa",
+          "catalog_number": null,
+          "name": "Elsa",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p6_099.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-role-models",
+      "store": "TWDC",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Role Models",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin",
+      "dimensions": null,
+      "retail_price": 45.95,
+      "retail_display": "$45.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "twdc-role-models-rafiki-simba",
+          "catalog_number": null,
+          "name": "Rafiki & Simba",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_120.png"
+        },
+        {
+          "id": "twdc-role-models-jiminy-pinocchio",
+          "catalog_number": null,
+          "name": "Jiminy & Pinocchio",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_132.png"
+        },
+        {
+          "id": "twdc-role-models-tala-moana",
+          "catalog_number": null,
+          "name": "Tala & Moana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_134.png"
+        },
+        {
+          "id": "twdc-role-models-mei-mei-ming",
+          "catalog_number": null,
+          "name": "Mei Mei & Ming",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_136.png"
+        },
+        {
+          "id": "twdc-role-models-merlin-arthur",
+          "catalog_number": null,
+          "name": "Merlin & Arthur",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_138.png"
+        },
+        {
+          "id": "twdc-role-models-grandmother-willow-pocahontas",
+          "catalog_number": null,
+          "name": "Grandmother Willow & Pocahontas",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_140.png"
+        },
+        {
+          "id": "twdc-role-models-phil-hercules",
+          "catalog_number": null,
+          "name": "Phil & Hercules",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_142.png"
+        },
+        {
+          "id": "twdc-role-models-fairy-godmother-cinderella",
+          "catalog_number": null,
+          "name": "Fairy Godmother & Cinderella",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_144.png"
+        },
+        {
+          "id": "twdc-role-models-timothy-mouse-dumbo",
+          "catalog_number": null,
+          "name": "Timothy Mouse & Dumbo",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_146.png"
+        },
+        {
+          "id": "twdc-role-models-ancestor-mulan",
+          "catalog_number": null,
+          "name": "Ancestor & Mulan",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_122.png"
+        },
+        {
+          "id": "twdc-role-models-auguste-gusteau-remy",
+          "catalog_number": null,
+          "name": "Auguste Gusteau & Remy",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_124.png"
+        },
+        {
+          "id": "twdc-role-models-hector-miguel",
+          "catalog_number": null,
+          "name": "Hector & Miguel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_126.png"
+        },
+        {
+          "id": "twdc-role-models-tadashi-hiro",
+          "catalog_number": null,
+          "name": "Tadashi & Hiro",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_128.png"
+        },
+        {
+          "id": "twdc-role-models-carl-russel",
+          "catalog_number": null,
+          "name": "Carl & Russel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_royal_p7_130.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-disney-d-mystery",
+      "store": "TWDC",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Disney D's Mystery Pin Box",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 32.95,
+      "retail_display": "$32.95",
+      "retail_note": "per box",
+      "purchase_limit": "Purchase limit of FIVE BOXES (5) per person. 2 pins per box",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "twdc-disney-d-mystery-mickey",
+          "catalog_number": null,
+          "name": "Mickey",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_disney_ds_01.png"
+        },
+        {
+          "id": "twdc-disney-d-mystery-minnie",
+          "catalog_number": null,
+          "name": "Minnie",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_disney_ds_02.png"
+        },
+        {
+          "id": "twdc-disney-d-mystery-goofy",
+          "catalog_number": null,
+          "name": "Goofy",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_disney_ds_03.png"
+        },
+        {
+          "id": "twdc-disney-d-mystery-daisy",
+          "catalog_number": null,
+          "name": "Daisy",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_disney_ds_04.png"
+        },
+        {
+          "id": "twdc-disney-d-mystery-pluto",
+          "catalog_number": null,
+          "name": "Pluto",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_disney_ds_05.png"
+        },
+        {
+          "id": "twdc-disney-d-mystery-chip-dale",
+          "catalog_number": null,
+          "name": "Chip & Dale",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_disney_ds_06.png"
+        },
+        {
+          "id": "twdc-disney-d-mystery-donald",
+          "catalog_number": null,
+          "name": "Donald",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_disney_ds_07.png"
+        },
+        {
+          "id": "twdc-disney-d-mystery-blank-d",
+          "catalog_number": null,
+          "name": "Blank D",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_disney_ds_08.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-princess-mystery",
+      "store": "TWDC",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Disney Princess Mystery Pin Box",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 32.95,
+      "retail_display": "$32.95",
+      "retail_note": "per box",
+      "purchase_limit": "Purchase limit of FIVE BOXES (5) per person. 2 pins per box",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "twdc-princess-mystery-ariel",
+          "catalog_number": null,
+          "name": "Ariel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_princess_mystery_01.png"
+        },
+        {
+          "id": "twdc-princess-mystery-moana",
+          "catalog_number": null,
+          "name": "Moana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_princess_mystery_02.png"
+        },
+        {
+          "id": "twdc-princess-mystery-tiana",
+          "catalog_number": null,
+          "name": "Tiana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_princess_mystery_03.png"
+        },
+        {
+          "id": "twdc-princess-mystery-belle",
+          "catalog_number": null,
+          "name": "Belle",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_princess_mystery_04.png"
+        },
+        {
+          "id": "twdc-princess-mystery-rapunzel",
+          "catalog_number": null,
+          "name": "Rapunzel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_princess_mystery_05.png"
+        },
+        {
+          "id": "twdc-princess-mystery-pocahontas",
+          "catalog_number": null,
+          "name": "Pocahontas",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_princess_mystery_06.png"
+        },
+        {
+          "id": "twdc-princess-mystery-jasmine",
+          "catalog_number": null,
+          "name": "Jasmine",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_princess_mystery_07.png"
+        },
+        {
+          "id": "twdc-princess-mystery-cinderella",
+          "catalog_number": null,
+          "name": "Cinderella",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_princess_mystery_08.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-framed",
+      "store": "TWDC",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Framed",
+      "set_description": "Limited edition framed pin displays. All LE3.",
+      "set_type": "framed_set",
+      "features": null,
+      "dimensions": null,
+      "retail_price": null,
+      "retail_display": "Varies",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14",
+        "2026-08-15",
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "twdc-framed-color-shades-of-magic-color-shades-of-magic-framed",
+          "catalog_number": null,
+          "name": "Color Shades of Magic (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_framed_color_shades.png",
+          "retail_price": 6000.0,
+          "retail_display": "$6,000.00",
+          "dimensions": "22.31″×30.50″",
+          "ship_only": true,
+          "drop_date": "2026-08-14"
+        },
+        {
+          "id": "twdc-framed-the-songs-we-grew-up-with-the-songs-we-grew-up-with-framed",
+          "catalog_number": null,
+          "name": "The Songs We Grew Up With (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_framed_songs.png",
+          "retail_price": 2500.0,
+          "retail_display": "$2,500.00",
+          "dimensions": "26″×26″",
+          "ship_only": false,
+          "drop_date": "2026-08-14"
+        },
+        {
+          "id": "twdc-framed-friends-from-around-the-world-friends-from-around-the-world-framed",
+          "catalog_number": null,
+          "name": "Friends From Around the World (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_framed_friends_world.png",
+          "retail_price": 1500.0,
+          "retail_display": "$1,500.00",
+          "dimensions": "16.50″×12.25″",
+          "ship_only": false,
+          "drop_date": "2026-08-14"
+        },
+        {
+          "id": "twdc-framed-35-years-of-mermaid-emotions-35-years-of-mermaid-emotions-framed",
+          "catalog_number": null,
+          "name": "35 Years of Mermaid Emotions (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_framed_mermaid_emotions.png",
+          "retail_price": 1000.0,
+          "retail_display": "$1,000.00",
+          "dimensions": "21″×10.5″",
+          "ship_only": false,
+          "drop_date": "2026-08-14"
+        },
+        {
+          "id": "twdc-framed-spirit-of-family-spirit-of-family-framed",
+          "catalog_number": null,
+          "name": "Spirit of Family (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_framed_spirit_family.png",
+          "retail_price": 900.0,
+          "retail_display": "$900.00",
+          "dimensions": "21″×10″",
+          "ship_only": false,
+          "drop_date": "2026-08-14"
+        },
+        {
+          "id": "twdc-framed-pixar-animation-studios-pixar-animation-studios-framed",
+          "catalog_number": null,
+          "name": "Pixar Animation Studios (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_framed_pixar_studios.png",
+          "retail_price": 900.0,
+          "retail_display": "$900.00",
+          "dimensions": "21″×9.5″",
+          "ship_only": false,
+          "drop_date": "2026-08-14"
+        },
+        {
+          "id": "twdc-framed-encanto-tiles-encanto-tiles-framed",
+          "catalog_number": null,
+          "name": "Encanto Tiles (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_framed_encanto_tiles.png",
+          "retail_price": 700.0,
+          "retail_display": "$700.00",
+          "dimensions": "12.5″×12.5″",
+          "ship_only": false,
+          "drop_date": "2026-08-14"
+        },
+        {
+          "id": "twdc-framed-villains-villains-framed",
+          "catalog_number": null,
+          "name": "Villains (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_framed_villains.png",
+          "retail_price": 500.0,
+          "retail_display": "$500.00",
+          "dimensions": "12″×8.50″",
+          "ship_only": false,
+          "drop_date": "2026-08-14"
+        },
+        {
+          "id": "twdc-framed-the-ultimate-disney-fan-event-2024-the-ultimate-disney-fan-event-2024-framed",
+          "catalog_number": null,
+          "name": "The Ultimate Disney Fan Event 2024 (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/fri/fri_framed_fan_event.png",
+          "retail_price": 400.0,
+          "retail_display": "$400.00",
+          "dimensions": "14.75″×11″",
+          "ship_only": false,
+          "drop_date": "2026-08-14"
+        },
+        {
+          "id": "twdc-framed-star-wars-stamps-star-wars-stamps-framed",
+          "catalog_number": null,
+          "name": "Star Wars Stamps (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_framed_starwars_stamps.png",
+          "retail_price": 3000.0,
+          "retail_display": "$3,000.00",
+          "dimensions": "28.50″×12.50″",
+          "ship_only": false,
+          "drop_date": "2026-08-15"
+        },
+        {
+          "id": "twdc-framed-a-day-at-the-studio-lot-a-day-at-the-studio-lot-framed",
+          "catalog_number": null,
+          "name": "A Day at the Studio Lot (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_framed_studio_lot.png",
+          "retail_price": 2500.0,
+          "retail_display": "$2,500.00",
+          "dimensions": "17″×19″",
+          "ship_only": false,
+          "drop_date": "2026-08-15"
+        },
+        {
+          "id": "twdc-framed-seasons-of-friendship-seasons-of-friendship-framed",
+          "catalog_number": null,
+          "name": "Seasons of Friendship (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_framed_seasons_friendship.png",
+          "retail_price": 1500.0,
+          "retail_display": "$1,500.00",
+          "dimensions": "14″×17.50″",
+          "ship_only": false,
+          "drop_date": "2026-08-15"
+        },
+        {
+          "id": "twdc-framed-princess-ballerinas-princess-ballerinas-framed",
+          "catalog_number": null,
+          "name": "Princess Ballerinas (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_framed_princess_ballerinas.png",
+          "retail_price": 1000.0,
+          "retail_display": "$1,000.00",
+          "dimensions": "21.5″×12.50″",
+          "ship_only": false,
+          "drop_date": "2026-08-15"
+        },
+        {
+          "id": "twdc-framed-villains-premier-season-villains-premier-season-framed",
+          "catalog_number": null,
+          "name": "Villains Premier Season (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_framed_villains_premier.png",
+          "retail_price": 1000.0,
+          "retail_display": "$1,000.00",
+          "dimensions": "24.50″×10″",
+          "ship_only": false,
+          "drop_date": "2026-08-15"
+        },
+        {
+          "id": "twdc-framed-d23-15th-anniversary-cakes-d23-15th-anniversary-cakes-framed",
+          "catalog_number": null,
+          "name": "D23 15th Anniversary Cakes (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_framed_d23_cakes.png",
+          "retail_price": 900.0,
+          "retail_display": "$900.00",
+          "dimensions": "13″×16″",
+          "ship_only": false,
+          "drop_date": "2026-08-15"
+        },
+        {
+          "id": "twdc-framed-princess-friends-princess-friends-framed",
+          "catalog_number": null,
+          "name": "Princess & Friends (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_framed_princess_friends.png",
+          "retail_price": 500.0,
+          "retail_display": "$500.00",
+          "dimensions": "14″×8.50″",
+          "ship_only": false,
+          "drop_date": "2026-08-15"
+        },
+        {
+          "id": "twdc-framed-mickeys-city-outfits-mickeys-city-outfits-framed",
+          "catalog_number": null,
+          "name": "Mickey's City Outfits (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_framed_mickeys_city.png",
+          "retail_price": 500.0,
+          "retail_display": "$500.00",
+          "dimensions": "15″×9.50″",
+          "ship_only": false,
+          "drop_date": "2026-08-15"
+        },
+        {
+          "id": "twdc-framed-be-my-valentine-be-my-valentine-framed",
+          "catalog_number": null,
+          "name": "Be My Valentine (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_framed_be_my_valentine.png",
+          "retail_price": 500.0,
+          "retail_display": "$500.00",
+          "dimensions": "18.25″×7.25″",
+          "ship_only": false,
+          "drop_date": "2026-08-15"
+        },
+        {
+          "id": "twdc-framed-pixar-stamps-pixar-stamps-framed",
+          "catalog_number": null,
+          "name": "Pixar Stamps (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/framed_pixar_stamps.png",
+          "retail_price": 3000.0,
+          "retail_display": "$3,000.00",
+          "dimensions": "28.50″×12.50″",
+          "ship_only": false,
+          "drop_date": "2026-08-16"
+        },
+        {
+          "id": "twdc-framed-hugs-are-the-best-hugs-are-the-best-framed",
+          "catalog_number": null,
+          "name": "Hugs Are the Best (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/framed_hugs_are_the_best.png",
+          "retail_price": 2000.0,
+          "retail_display": "$2,000.00",
+          "dimensions": "17″×19″",
+          "ship_only": false,
+          "drop_date": "2026-08-16"
+        },
+        {
+          "id": "twdc-framed-fairytale-dancing-fairytale-dancing-framed",
+          "catalog_number": null,
+          "name": "Fairytale Dancing (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/framed_fairytale_dancing.png",
+          "retail_price": 1000.0,
+          "retail_display": "$1,000.00",
+          "dimensions": "14″×14″",
+          "ship_only": false,
+          "drop_date": "2026-08-16"
+        },
+        {
+          "id": "twdc-framed-a-villains-darkness-a-villains-darkness-framed",
+          "catalog_number": null,
+          "name": "A Villain's Darkness (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/framed_villains_darkness.png",
+          "retail_price": 750.0,
+          "retail_display": "$750.00",
+          "dimensions": "14″×14″",
+          "ship_only": false,
+          "drop_date": "2026-08-16"
+        },
+        {
+          "id": "twdc-framed-holiday-princess-party-holiday-princess-party-framed",
+          "catalog_number": null,
+          "name": "Holiday Princess Party (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/framed_holiday_princess_party.png",
+          "retail_price": 500.0,
+          "retail_display": "$500.00",
+          "dimensions": "17.75″×10.50″",
+          "ship_only": false,
+          "drop_date": "2026-08-16"
+        },
+        {
+          "id": "twdc-framed-minnies-city-outfits-minnies-city-outfits-framed",
+          "catalog_number": null,
+          "name": "Minnie's City Outfits (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/framed_minnies_city_outfits.png",
+          "retail_price": 500.0,
+          "retail_display": "$500.00",
+          "dimensions": "16″×9.50″",
+          "ship_only": false,
+          "drop_date": "2026-08-16"
+        },
+        {
+          "id": "twdc-framed-classic-friends-classic-friends-framed",
+          "catalog_number": null,
+          "name": "Classic Friends (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/framed_classic_friends.png",
+          "retail_price": 500.0,
+          "retail_display": "$500.00",
+          "dimensions": "15″×9.50″",
+          "ship_only": false,
+          "drop_date": "2026-08-16"
+        },
+        {
+          "id": "twdc-framed-holiday-snowflakes-holiday-snowflakes-framed",
+          "catalog_number": null,
+          "name": "Holiday Snowflakes (Framed)",
+          "edition_size": 3,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/framed_holiday_snowflakes.png",
+          "retail_price": 400.0,
+          "retail_display": "$400.00",
+          "dimensions": "14″×10.50″",
+          "ship_only": false,
+          "drop_date": "2026-08-16"
+        }
+      ]
+    },
+    {
+      "id": "twdc-pixar-stamp-1",
+      "store": "TWDC",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "The Ultimate Pixar Stamp — Series 1",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "twdc-pixar-stamp-1-buzz-woody",
+          "catalog_number": null,
+          "name": "Buzz & Woody",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p2_01.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-1-heimlich-flik",
+          "catalog_number": null,
+          "name": "Heimlich & Flik",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p2_02.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-1-jessie-bullseye",
+          "catalog_number": null,
+          "name": "Jessie & Bullseye",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p2_03.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-1-sulley-boo",
+          "catalog_number": null,
+          "name": "Sulley & Boo",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p2_04.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-1-nemo-crush",
+          "catalog_number": null,
+          "name": "Nemo & Crush",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p2_05.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-1-mr-incredible-frozone",
+          "catalog_number": null,
+          "name": "Mr Incredible & Frozone",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p2_06.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-1-lightning-mcqueen-mater",
+          "catalog_number": null,
+          "name": "Lightning McQueen & Mater",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p2_07.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-1-linguini-remy",
+          "catalog_number": null,
+          "name": "Linguini & Remy",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p2_08.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-1-wall-e-eve",
+          "catalog_number": null,
+          "name": "WALL-E & EVE",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p2_09.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-1-carl-ellie",
+          "catalog_number": null,
+          "name": "Carl & Ellie",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p2_10.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-pixar-stamp-2",
+      "store": "TWDC",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "The Ultimate Pixar Stamp — Series 2",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "twdc-pixar-stamp-2-gus-the-cloud-peck-the-stork",
+          "catalog_number": null,
+          "name": "Gus the Cloud & Peck the Stork",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p3_01.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-2-lotso-mr-pricklepants",
+          "catalog_number": null,
+          "name": "Lotso & Mr Pricklepants",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p3_02.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-2-young-boy-papa",
+          "catalog_number": null,
+          "name": "Young Boy & Papa",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p3_03.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-2-queen-elinor-merida",
+          "catalog_number": null,
+          "name": "Queen Elinor & Merida",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p3_04.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-2-mike-squishy",
+          "catalog_number": null,
+          "name": "Mike & Squishy",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p3_05.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-2-joy-bing-bong",
+          "catalog_number": null,
+          "name": "Joy & Bing Bong",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p3_06.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-2-arlo-spot",
+          "catalog_number": null,
+          "name": "Arlo & Spot",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p3_07.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-2-dory-hank",
+          "catalog_number": null,
+          "name": "Dory & Hank",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p3_08.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-2-miguel-dante",
+          "catalog_number": null,
+          "name": "Miguel & Dante",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p3_09.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-2-edna-mode-jack-jack",
+          "catalog_number": null,
+          "name": "Edna Mode & Jack-Jack",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p3_10.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-pixar-stamp-3",
+      "store": "TWDC",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "The Ultimate Pixar Stamp — Series 3",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Hard Enamel, Pin-on-Pin, Laser Print, Glitter, Gold Base",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "twdc-pixar-stamp-3-bonnie-forky",
+          "catalog_number": null,
+          "name": "Bonnie & Forky",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p4_01.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-3-ian-barley",
+          "catalog_number": null,
+          "name": "Ian & Barley",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p4_02.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-3-joe-22",
+          "catalog_number": null,
+          "name": "Joe & 22",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p4_03.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-3-luca-alberto",
+          "catalog_number": null,
+          "name": "Luca & Alberto",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p4_04.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-3-dug-carl",
+          "catalog_number": null,
+          "name": "Dug & Carl",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p4_05.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-3-meilin-ming",
+          "catalog_number": null,
+          "name": "Meilin & Ming",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p4_06.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-3-ember-wade",
+          "catalog_number": null,
+          "name": "Ember & Wade",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p4_07.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-3-paula-xeni",
+          "catalog_number": null,
+          "name": "Paula & Xeni",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p4_08.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-3-anxiety-sadness",
+          "catalog_number": null,
+          "name": "Anxiety & Sadness",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p4_09.png"
+        },
+        {
+          "id": "twdc-pixar-stamp-3-elio-glordon",
+          "catalog_number": null,
+          "name": "Elio & Glordon",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_pixar_p4_10.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-game-changers",
+      "store": "TWDC",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Game Changers",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin",
+      "dimensions": null,
+      "retail_price": 39.95,
+      "retail_display": "$39.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "twdc-game-changers-ariel",
+          "catalog_number": null,
+          "name": "Ariel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_01.png"
+        },
+        {
+          "id": "twdc-game-changers-belle",
+          "catalog_number": null,
+          "name": "Belle",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_02.png"
+        },
+        {
+          "id": "twdc-game-changers-jasmine",
+          "catalog_number": null,
+          "name": "Jasmine",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_03.png"
+        },
+        {
+          "id": "twdc-game-changers-pocahontas",
+          "catalog_number": null,
+          "name": "Pocahontas",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_04.png"
+        },
+        {
+          "id": "twdc-game-changers-esmeralda",
+          "catalog_number": null,
+          "name": "Esmeralda",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_05.png"
+        },
+        {
+          "id": "twdc-game-changers-megara",
+          "catalog_number": null,
+          "name": "Megara",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_06.png"
+        },
+        {
+          "id": "twdc-game-changers-mulan",
+          "catalog_number": null,
+          "name": "Mulan",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_07.png"
+        },
+        {
+          "id": "twdc-game-changers-tiana",
+          "catalog_number": null,
+          "name": "Tiana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_08.png"
+        },
+        {
+          "id": "twdc-game-changers-rapunzel",
+          "catalog_number": null,
+          "name": "Rapunzel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_09.png"
+        },
+        {
+          "id": "twdc-game-changers-merida",
+          "catalog_number": null,
+          "name": "Merida",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_10.png"
+        },
+        {
+          "id": "twdc-game-changers-moana",
+          "catalog_number": null,
+          "name": "Moana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_11.png"
+        },
+        {
+          "id": "twdc-game-changers-anna",
+          "catalog_number": null,
+          "name": "Anna",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_12.png"
+        },
+        {
+          "id": "twdc-game-changers-elsa",
+          "catalog_number": null,
+          "name": "Elsa",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_13.png"
+        },
+        {
+          "id": "twdc-game-changers-raya",
+          "catalog_number": null,
+          "name": "Raya",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_14.png"
+        },
+        {
+          "id": "twdc-game-changers-vanellope",
+          "catalog_number": null,
+          "name": "Vanellope",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_15.png"
+        },
+        {
+          "id": "twdc-game-changers-mirabel",
+          "catalog_number": null,
+          "name": "Mirabel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_game_changers_16.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-welcome-home",
+      "store": "TWDC",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Welcome Home",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin",
+      "dimensions": null,
+      "retail_price": 42.95,
+      "retail_display": "$42.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "twdc-welcome-home-carl-ellies-home",
+          "catalog_number": null,
+          "name": "Carl & Ellie's Home",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_strip1_01.png"
+        },
+        {
+          "id": "twdc-welcome-home-mulans-family-home",
+          "catalog_number": null,
+          "name": "Mulan's Family Home",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_strip1_02.png"
+        },
+        {
+          "id": "twdc-welcome-home-geppettos-workshop",
+          "catalog_number": null,
+          "name": "Geppetto's Workshop",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_strip1_03.png"
+        },
+        {
+          "id": "twdc-welcome-home-robinsons-family-lab",
+          "catalog_number": null,
+          "name": "Robinsons Family Lab",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_strip1_04.png"
+        },
+        {
+          "id": "twdc-welcome-home-snow-whites-cottage",
+          "catalog_number": null,
+          "name": "Snow White's Cottage",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_strip2_01.png"
+        },
+        {
+          "id": "twdc-welcome-home-belles-cottage",
+          "catalog_number": null,
+          "name": "Belle's Cottage",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_strip2_02.png"
+        },
+        {
+          "id": "twdc-welcome-home-lilos-home",
+          "catalog_number": null,
+          "name": "Lilo's Home",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_strip2_03.png"
+        },
+        {
+          "id": "twdc-welcome-home-the-incredibles-home",
+          "catalog_number": null,
+          "name": "The Incredible's Home",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_strip3_01.png"
+        },
+        {
+          "id": "twdc-welcome-home-tinkerbells-home",
+          "catalog_number": null,
+          "name": "Tinkerbell's Home",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_strip4_01.png"
+        },
+        {
+          "id": "twdc-welcome-home-white-rabbits-home",
+          "catalog_number": null,
+          "name": "White Rabbit's Home",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_strip5_01.png"
+        },
+        {
+          "id": "twdc-welcome-home-winnie-the-poohs-home",
+          "catalog_number": null,
+          "name": "Winnie the Pooh's Home",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_strip5_02.png"
+        },
+        {
+          "id": "twdc-welcome-home-casa-madrigal",
+          "catalog_number": null,
+          "name": "Casa Madrigal",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_single_108.png"
+        },
+        {
+          "id": "twdc-welcome-home-roger-annitas-home",
+          "catalog_number": null,
+          "name": "Roger & Annita's Home",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_single_110.png"
+        },
+        {
+          "id": "twdc-welcome-home-lady-tramps-home",
+          "catalog_number": null,
+          "name": "Lady & Tramp's Home",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_home_single_112.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-epic-rivals",
+      "store": "TWDC",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Disney Epic Rivals",
+      "set_description": null,
+      "set_type": "box_set",
+      "features": "Pin-on-Pin, Jumbo",
+      "dimensions": null,
+      "retail_price": 79.95,
+      "retail_display": "$79.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "twdc-epic-rivals-hades-hercules",
+          "catalog_number": null,
+          "name": "Hades & Hercules",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_epic_rivals_173.png"
+        },
+        {
+          "id": "twdc-epic-rivals-maleficent-3-fairies",
+          "catalog_number": null,
+          "name": "Maleficent & 3 Fairies",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_epic_rivals_175.png"
+        },
+        {
+          "id": "twdc-epic-rivals-lucifer-mice",
+          "catalog_number": null,
+          "name": "Lucifer & Mice",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_epic_rivals_181.png"
+        },
+        {
+          "id": "twdc-epic-rivals-alice-cheshire-cat",
+          "catalog_number": null,
+          "name": "Alice & Cheshire Cat",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_epic_rivals_183.png"
+        },
+        {
+          "id": "twdc-epic-rivals-vanessa-ariel",
+          "catalog_number": null,
+          "name": "Vanessa & Ariel",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_epic_rivals_185.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-villains-sidekicks-mystery",
+      "store": "TWDC",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Villains & Sidekicks Mystery Pin Box",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 32.95,
+      "retail_display": "$32.95",
+      "retail_note": "per box",
+      "purchase_limit": "Purchase limit of FIVE BOXES (5) per person. 2 pins per box",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "twdc-villains-sidekicks-mystery-mystery-box",
+          "catalog_number": null,
+          "name": "Mystery Box",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_villains_mystery_card.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-muppet-babies-mystery",
+      "store": "TWDC",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Muppet Babies Mystery Pin Box",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 32.95,
+      "retail_display": "$32.95",
+      "retail_note": "per box",
+      "purchase_limit": "Purchase limit of FIVE BOXES (5) per person. 2 pins per box",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "twdc-muppet-babies-mystery-mystery-box",
+          "catalog_number": null,
+          "name": "Mystery Box",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sat/sat_muppet_mystery_card.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-elements-fire",
+      "store": "TWDC",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Elements of Nature — Fire",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin, Gold Base",
+      "dimensions": null,
+      "retail_price": 42.95,
+      "retail_display": "$42.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "twdc-elements-fire-maleficent-dragon",
+          "catalog_number": null,
+          "name": "Maleficent Dragon",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_fire_01.png"
+        },
+        {
+          "id": "twdc-elements-fire-chernabog",
+          "catalog_number": null,
+          "name": "Chernabog",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_fire_02.png"
+        },
+        {
+          "id": "twdc-elements-fire-scar",
+          "catalog_number": null,
+          "name": "Scar",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_fire_03.png"
+        },
+        {
+          "id": "twdc-elements-fire-ember",
+          "catalog_number": null,
+          "name": "Ember",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_fire_04.png"
+        },
+        {
+          "id": "twdc-elements-fire-mushu",
+          "catalog_number": null,
+          "name": "Mushu",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_fire_05.png"
+        },
+        {
+          "id": "twdc-elements-fire-lotso",
+          "catalog_number": null,
+          "name": "Lotso",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_fire_06.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-elements-water",
+      "store": "TWDC",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Elements of Nature — Water",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin, Gold Base",
+      "dimensions": null,
+      "retail_price": 42.95,
+      "retail_display": "$42.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "twdc-elements-water-moana",
+          "catalog_number": null,
+          "name": "Moana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_water_01.png"
+        },
+        {
+          "id": "twdc-elements-water-sorcerers-apprentice",
+          "catalog_number": null,
+          "name": "Sorcerer's Apprentice",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_water_02.png"
+        },
+        {
+          "id": "twdc-elements-water-simba-friends",
+          "catalog_number": null,
+          "name": "Simba & Friends",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_water_03.png"
+        },
+        {
+          "id": "twdc-elements-water-nemo-dory",
+          "catalog_number": null,
+          "name": "Nemo & Dory",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_water_04.png"
+        },
+        {
+          "id": "twdc-elements-water-nokk-elsa",
+          "catalog_number": null,
+          "name": "Nokk & Elsa",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_water_05.png"
+        },
+        {
+          "id": "twdc-elements-water-wade",
+          "catalog_number": null,
+          "name": "Wade",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_water_06.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-elements-wind",
+      "store": "TWDC",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Elements of Nature — Wind",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin, Silver Base",
+      "dimensions": null,
+      "retail_price": 42.95,
+      "retail_display": "$42.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "twdc-elements-wind-pocahontas",
+          "catalog_number": null,
+          "name": "Pocahontas",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_wind_01.png"
+        },
+        {
+          "id": "twdc-elements-wind-gale-olaf",
+          "catalog_number": null,
+          "name": "Gale & Olaf",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_wind_02.png"
+        },
+        {
+          "id": "twdc-elements-wind-pooh-piglet",
+          "catalog_number": null,
+          "name": "Pooh & Piglet",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_wind_03.png"
+        },
+        {
+          "id": "twdc-elements-wind-bernard-bianca",
+          "catalog_number": null,
+          "name": "Bernard & Bianca",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_wind_04.png"
+        },
+        {
+          "id": "twdc-elements-wind-band-concert",
+          "catalog_number": null,
+          "name": "Band Concert",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_wind_05.png"
+        },
+        {
+          "id": "twdc-elements-wind-wolf-pigs",
+          "catalog_number": null,
+          "name": "Wolf & Pigs",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_wind_06.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-elements-earth",
+      "store": "TWDC",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Elements of Nature — Earth",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin, Silver Base",
+      "dimensions": null,
+      "retail_price": 42.95,
+      "retail_display": "$42.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "twdc-elements-earth-grandma-willow",
+          "catalog_number": null,
+          "name": "Grandma Willow",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_earth_01.png"
+        },
+        {
+          "id": "twdc-elements-earth-mufasa-simba",
+          "catalog_number": null,
+          "name": "Mufasa & Simba",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_earth_02.png"
+        },
+        {
+          "id": "twdc-elements-earth-gaetan-mole-moliere",
+          "catalog_number": null,
+          "name": "Gaetan 'Mole' Moliere",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_earth_03.png"
+        },
+        {
+          "id": "twdc-elements-earth-sprite",
+          "catalog_number": null,
+          "name": "Sprite",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_earth_04.png"
+        },
+        {
+          "id": "twdc-elements-earth-flik-dot",
+          "catalog_number": null,
+          "name": "Flik & Dot",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_earth_05.png"
+        },
+        {
+          "id": "twdc-elements-earth-te-fiti",
+          "catalog_number": null,
+          "name": "Te Fiti",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/elements_earth_06.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-cat-astrophe",
+      "store": "TWDC",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Cat-astrophe",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Hard Enamel, Antique Gold, Gold Base",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "twdc-cat-astrophe-yzma",
+          "catalog_number": null,
+          "name": "Yzma",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_01.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-toulouse",
+          "catalog_number": null,
+          "name": "Toulouse",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_02.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-sergeant-tibbs",
+          "catalog_number": null,
+          "name": "Sergeant Tibbs",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_03.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-snowball",
+          "catalog_number": null,
+          "name": "Snowball",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_04.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-oliver",
+          "catalog_number": null,
+          "name": "Oliver",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_06.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-mr-mittens",
+          "catalog_number": null,
+          "name": "Mr. Mittens",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_07.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-marie-berlioz",
+          "catalog_number": null,
+          "name": "Marie & Berlioz",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_08.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-madam-mim",
+          "catalog_number": null,
+          "name": "Madam Mim",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_05.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-machiavelli",
+          "catalog_number": null,
+          "name": "Machiavelli",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_09.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-lucifer",
+          "catalog_number": null,
+          "name": "Lucifer",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_10.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-figaro",
+          "catalog_number": null,
+          "name": "Figaro",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_11.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-dinah",
+          "catalog_number": null,
+          "name": "Dinah",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_12.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-mochi",
+          "catalog_number": null,
+          "name": "Mochi",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_14.png"
+        },
+        {
+          "id": "twdc-cat-astrophe-cheshire",
+          "catalog_number": null,
+          "name": "Cheshire",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/catastrophe_13.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-table-for-one",
+      "store": "TWDC",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Table for One",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin",
+      "dimensions": null,
+      "retail_price": 45.95,
+      "retail_display": "$45.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "twdc-table-for-one-evil-queen",
+          "catalog_number": null,
+          "name": "Evil Queen",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_01.png"
+        },
+        {
+          "id": "twdc-table-for-one-maleficent",
+          "catalog_number": null,
+          "name": "Maleficent",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_02.png"
+        },
+        {
+          "id": "twdc-table-for-one-captain-hook",
+          "catalog_number": null,
+          "name": "Captain Hook",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_03.png"
+        },
+        {
+          "id": "twdc-table-for-one-cruella-de-vil",
+          "catalog_number": null,
+          "name": "Cruella de Vil",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_04.png"
+        },
+        {
+          "id": "twdc-table-for-one-ursula",
+          "catalog_number": null,
+          "name": "Ursula",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_05.png"
+        },
+        {
+          "id": "twdc-table-for-one-king-candy",
+          "catalog_number": null,
+          "name": "King Candy",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_06.png"
+        },
+        {
+          "id": "twdc-table-for-one-hades",
+          "catalog_number": null,
+          "name": "Hades",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_07.png"
+        },
+        {
+          "id": "twdc-table-for-one-mother-gothel",
+          "catalog_number": null,
+          "name": "Mother Gothel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_08.png"
+        },
+        {
+          "id": "twdc-table-for-one-yzma",
+          "catalog_number": null,
+          "name": "Yzma",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_09.png"
+        },
+        {
+          "id": "twdc-table-for-one-ernesto-de-la-cruz",
+          "catalog_number": null,
+          "name": "Ernesto de la Cruz",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_10.png"
+        },
+        {
+          "id": "twdc-table-for-one-hans",
+          "catalog_number": null,
+          "name": "Hans",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_11.png"
+        },
+        {
+          "id": "twdc-table-for-one-king-magnifico",
+          "catalog_number": null,
+          "name": "King Magnifico",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_12.png"
+        },
+        {
+          "id": "twdc-table-for-one-madam-mim",
+          "catalog_number": null,
+          "name": "Madam Mim",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_13.png"
+        },
+        {
+          "id": "twdc-table-for-one-prince-john",
+          "catalog_number": null,
+          "name": "Prince John",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_14.png"
+        },
+        {
+          "id": "twdc-table-for-one-dr-facilier",
+          "catalog_number": null,
+          "name": "Dr. Facilier",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/table_for_one_15.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-enchanted-gowns",
+      "store": "TWDC",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Enchanted Gowns",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Glitter, Gold Base",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": "Purchase limit of ONE (1) of each limited edition pin per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "twdc-enchanted-gowns-snow-white",
+          "catalog_number": null,
+          "name": "Snow White",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/enchanted_gowns_01.png"
+        },
+        {
+          "id": "twdc-enchanted-gowns-cinderella",
+          "catalog_number": null,
+          "name": "Cinderella",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/enchanted_gowns_02.png"
+        },
+        {
+          "id": "twdc-enchanted-gowns-aurora",
+          "catalog_number": null,
+          "name": "Aurora",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/enchanted_gowns_03.png"
+        },
+        {
+          "id": "twdc-enchanted-gowns-ariel",
+          "catalog_number": null,
+          "name": "Ariel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/enchanted_gowns_04.png"
+        },
+        {
+          "id": "twdc-enchanted-gowns-jasmine",
+          "catalog_number": null,
+          "name": "Jasmine",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/enchanted_gowns_05.png"
+        },
+        {
+          "id": "twdc-enchanted-gowns-belle",
+          "catalog_number": null,
+          "name": "Belle",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/enchanted_gowns_06.png"
+        },
+        {
+          "id": "twdc-enchanted-gowns-pocahontas",
+          "catalog_number": null,
+          "name": "Pocahontas",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/enchanted_gowns_07.png"
+        },
+        {
+          "id": "twdc-enchanted-gowns-mulan",
+          "catalog_number": null,
+          "name": "Mulan",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/enchanted_gowns_08.png"
+        },
+        {
+          "id": "twdc-enchanted-gowns-tiana",
+          "catalog_number": null,
+          "name": "Tiana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/enchanted_gowns_09.png"
+        },
+        {
+          "id": "twdc-enchanted-gowns-rapunzel",
+          "catalog_number": null,
+          "name": "Rapunzel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/enchanted_gowns_10.png"
+        },
+        {
+          "id": "twdc-enchanted-gowns-anna",
+          "catalog_number": null,
+          "name": "Anna",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/enchanted_gowns_11.png"
+        },
+        {
+          "id": "twdc-enchanted-gowns-elsa",
+          "catalog_number": null,
+          "name": "Elsa",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/enchanted_gowns_12.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-pooh-mystery",
+      "store": "TWDC",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Winnie the Pooh Mystery Pin Box",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 32.95,
+      "retail_display": "$32.95",
+      "retail_note": "per box",
+      "purchase_limit": "Purchase limit of FIVE BOXES (5) per person. 2 pins per box",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "twdc-pooh-mystery-mystery-box",
+          "catalog_number": null,
+          "name": "Mystery Box",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/winnie_pooh_box.png"
+        },
+        {
+          "id": "twdc-pooh-mystery-pooh-with-flowers",
+          "catalog_number": null,
+          "name": "Pooh with Flowers",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/winnie_pooh_01.png"
+        },
+        {
+          "id": "twdc-pooh-mystery-birthday-pooh",
+          "catalog_number": null,
+          "name": "Birthday Pooh",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/winnie_pooh_02.png"
+        },
+        {
+          "id": "twdc-pooh-mystery-pooh-piglet",
+          "catalog_number": null,
+          "name": "Pooh & Piglet",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/winnie_pooh_03.png"
+        },
+        {
+          "id": "twdc-pooh-mystery-bedtime-pooh",
+          "catalog_number": null,
+          "name": "Bedtime Pooh",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/winnie_pooh_04.png"
+        },
+        {
+          "id": "twdc-pooh-mystery-king-pooh",
+          "catalog_number": null,
+          "name": "King Pooh",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/winnie_pooh_05.png"
+        },
+        {
+          "id": "twdc-pooh-mystery-rainy-day-pooh",
+          "catalog_number": null,
+          "name": "Rainy Day Pooh",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/winnie_pooh_06.png"
+        },
+        {
+          "id": "twdc-pooh-mystery-adventurer-pooh",
+          "catalog_number": null,
+          "name": "Adventurer Pooh",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/winnie_pooh_07.png"
+        },
+        {
+          "id": "twdc-pooh-mystery-pirate-pooh",
+          "catalog_number": null,
+          "name": "Pirate Pooh",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/winnie_pooh_08.png"
+        }
+      ]
+    },
+    {
+      "id": "twdc-star-wars-galactic-mystery",
+      "store": "TWDC",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Star Wars Galactic Pals Mystery Pin Box",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 32.95,
+      "retail_display": "$32.95",
+      "retail_note": "per box",
+      "purchase_limit": "Purchase limit of FIVE BOXES (5) per person. 2 pins per box",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "twdc-star-wars-galactic-mystery-mystery-box",
+          "catalog_number": null,
+          "name": "Mystery Box",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/galactic_pals_box.png"
+        },
+        {
+          "id": "twdc-star-wars-galactic-mystery-porg",
+          "catalog_number": null,
+          "name": "Porg",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/galactic_pals_01.png"
+        },
+        {
+          "id": "twdc-star-wars-galactic-mystery-loth-cat",
+          "catalog_number": null,
+          "name": "Loth-Cat",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/galactic_pals_02.png"
+        },
+        {
+          "id": "twdc-star-wars-galactic-mystery-gamorrean",
+          "catalog_number": null,
+          "name": "Gamorrean",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/galactic_pals_03.png"
+        },
+        {
+          "id": "twdc-star-wars-galactic-mystery-ortolan",
+          "catalog_number": null,
+          "name": "Ortolan",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/galactic_pals_04.png"
+        },
+        {
+          "id": "twdc-star-wars-galactic-mystery-wookiee",
+          "catalog_number": null,
+          "name": "Wookiee",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/galactic_pals_05.png"
+        },
+        {
+          "id": "twdc-star-wars-galactic-mystery-tauntaun",
+          "catalog_number": null,
+          "name": "Tauntaun",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/galactic_pals_06.png"
+        },
+        {
+          "id": "twdc-star-wars-galactic-mystery-ewok",
+          "catalog_number": null,
+          "name": "Ewok",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/galactic_pals_07.png"
+        },
+        {
+          "id": "twdc-star-wars-galactic-mystery-rodian",
+          "catalog_number": null,
+          "name": "Rodian",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/galactic_pals_08.png"
+        },
+        {
+          "id": "twdc-star-wars-galactic-mystery-huttlet",
+          "catalog_number": null,
+          "name": "Huttlet",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/twdc/sun/galactic_pals_09.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-premiere-el-capitan",
+      "store": "DSSH",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Premiere Collection — El Capitan 100 Years in Hollywood",
+      "set_description": null,
+      "set_type": "box_set",
+      "features": "Pin-on-Pin",
+      "dimensions": "5.04″W×3.425″H",
+      "retail_price": 199.95,
+      "retail_display": "$199.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "dssh-premiere-el-capitan-el-capitan-100-years",
+          "catalog_number": null,
+          "name": "El Capitan 100 Years",
+          "edition_size": 200,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-artist-avengers",
+      "store": "DSSH",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Artist Series — Avengers: Endgame by Matt Ferguson",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Laser Print, 3D, Custom Backing Card",
+      "dimensions": "1.69″W×2.25″H",
+      "retail_price": 29.95,
+      "retail_display": "$29.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "dssh-artist-avengers-ant-man",
+          "catalog_number": null,
+          "name": "Ant-Man",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-artist-avengers-iron-man",
+          "catalog_number": null,
+          "name": "Iron Man",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-artist-avengers-thanos",
+          "catalog_number": null,
+          "name": "Thanos",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-artist-avengers-captain-america",
+          "catalog_number": null,
+          "name": "Captain America",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-artist-avengers-thor",
+          "catalog_number": null,
+          "name": "Thor",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-all-in-a-name",
+      "store": "DSSH",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "It's All in a Name Series",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin, Translucent, Jumbo, Custom Backing Card",
+      "dimensions": null,
+      "retail_price": 49.95,
+      "retail_display": "$49.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "dssh-all-in-a-name-ariel",
+          "catalog_number": null,
+          "name": "Ariel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-belle",
+          "catalog_number": null,
+          "name": "Belle",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-marie",
+          "catalog_number": null,
+          "name": "Marie",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-ursula",
+          "catalog_number": null,
+          "name": "Ursula",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-stitch",
+          "catalog_number": null,
+          "name": "Stitch",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-maleficent",
+          "catalog_number": null,
+          "name": "Maleficent",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-dumbo",
+          "catalog_number": null,
+          "name": "Dumbo",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-kuzco",
+          "catalog_number": null,
+          "name": "Kuzco",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-alice",
+          "catalog_number": null,
+          "name": "Alice",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-aurora",
+          "catalog_number": null,
+          "name": "Aurora",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-hades",
+          "catalog_number": null,
+          "name": "Hades",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-eeyore",
+          "catalog_number": null,
+          "name": "Eeyore",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-goofy",
+          "catalog_number": null,
+          "name": "Goofy",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-all-in-a-name-moana",
+          "catalog_number": null,
+          "name": "Moana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-dragons-cuties",
+      "store": "DSSH",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Disney Dragons Cuties Series",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Custom Backing Card",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "dssh-dragons-cuties-elliott",
+          "catalog_number": null,
+          "name": "Elliott",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-dragons-cuties-madam-mim",
+          "catalog_number": null,
+          "name": "Madam Mim",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-dragons-cuties-maleficent",
+          "catalog_number": null,
+          "name": "Maleficent",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-dragons-cuties-sisu",
+          "catalog_number": null,
+          "name": "Sisu",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-dragons-cuties-the-reluctant-dragon",
+          "catalog_number": null,
+          "name": "The Reluctant Dragon",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-dragons-cuties-queen-narissa",
+          "catalog_number": null,
+          "name": "Queen Narissa",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-dragons-cuties-hydra",
+          "catalog_number": null,
+          "name": "Hydra",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-dragons-cuties-the-gwythaints",
+          "catalog_number": null,
+          "name": "The Gwythaints",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-dragons-cuties-blazey",
+          "catalog_number": null,
+          "name": "Blazey",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-dragons-cuties-mushu",
+          "catalog_number": null,
+          "name": "Mushu",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-best-in-show",
+      "store": "DSSH",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Best in Show Series",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin",
+      "dimensions": "1.27″W×2.0″H",
+      "retail_price": 29.95,
+      "retail_display": "$29.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "dssh-best-in-show-marie",
+          "catalog_number": null,
+          "name": "Marie",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-lucifer",
+          "catalog_number": null,
+          "name": "Lucifer",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-cheshire-cat",
+          "catalog_number": null,
+          "name": "Cheshire Cat",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-fifi-the-peke",
+          "catalog_number": null,
+          "name": "Fifi the Peke",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-dinah",
+          "catalog_number": null,
+          "name": "Dinah",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-max",
+          "catalog_number": null,
+          "name": "Max",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-nana",
+          "catalog_number": null,
+          "name": "Nana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-dodger",
+          "catalog_number": null,
+          "name": "Dodger",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-little-brother",
+          "catalog_number": null,
+          "name": "Little Brother",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-pongo",
+          "catalog_number": null,
+          "name": "Pongo",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-pluto",
+          "catalog_number": null,
+          "name": "Pluto",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-berlioz",
+          "catalog_number": null,
+          "name": "Berlioz",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-toulouse",
+          "catalog_number": null,
+          "name": "Toulouse",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-best-in-show-mochi",
+          "catalog_number": null,
+          "name": "Mochi",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-throwback-mystery",
+      "store": "DSSH",
+      "drop_date": "2026-08-14",
+      "drop_day_label": "Friday, August 14",
+      "set_name": "Throwback Mystery Series",
+      "set_description": null,
+      "set_type": "mystery",
+      "features": null,
+      "dimensions": null,
+      "retail_price": 49.95,
+      "retail_display": "$49.95",
+      "retail_note": "per box",
+      "purchase_limit": "Limit five (5) boxes per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-14"
+      ],
+      "pins": [
+        {
+          "id": "dssh-throwback-mystery-kim-possible-cheer",
+          "catalog_number": null,
+          "name": "Kim Possible Cheer",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-ron-and-rufus",
+          "catalog_number": null,
+          "name": "Ron and Rufus",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-lizzie-on-scooter",
+          "catalog_number": null,
+          "name": "Lizzie on Scooter",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-lizzie-frame",
+          "catalog_number": null,
+          "name": "Lizzie Frame",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-lizzie-heart",
+          "catalog_number": null,
+          "name": "Lizzie Heart",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-east-high-school",
+          "catalog_number": null,
+          "name": "East High School",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-troy-and-gabriella",
+          "catalog_number": null,
+          "name": "Troy and Gabriella",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-rufus",
+          "catalog_number": null,
+          "name": "Rufus",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-kim-possible",
+          "catalog_number": null,
+          "name": "Kim Possible",
+          "edition_size": 300,
+          "edition_notes": "chaser",
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-lizzie-hooray",
+          "catalog_number": null,
+          "name": "Lizzie Hooray",
+          "edition_size": 300,
+          "edition_notes": "chaser",
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-lizzie-flower-crown",
+          "catalog_number": null,
+          "name": "Lizzie Flower Crown",
+          "edition_size": 300,
+          "edition_notes": "chaser",
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-ehs-megaphone",
+          "catalog_number": null,
+          "name": "EHS Megaphone",
+          "edition_size": 300,
+          "edition_notes": "chaser",
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-so-not-the-drama",
+          "catalog_number": null,
+          "name": "So Not the Drama",
+          "edition_size": 150,
+          "edition_notes": "super chaser",
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-throwback-mystery-lizzie-in-heels",
+          "catalog_number": null,
+          "name": "Lizzie in Heels",
+          "edition_size": 150,
+          "edition_notes": "super chaser",
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-vinyl-starter",
+      "store": "DSSH",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Vinyl Records — Starter Set",
+      "set_description": null,
+      "set_type": "box_set",
+      "features": "Custom Backing Card",
+      "dimensions": "2.25″W×1.84″H player; 1.88″W×1.88″H vinyls",
+      "retail_price": 89.95,
+      "retail_display": "$89.95",
+      "retail_note": null,
+      "purchase_limit": null,
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "dssh-vinyl-starter-record-player-sleeping-beauty-pinocchio",
+          "catalog_number": null,
+          "name": "Record Player + Sleeping Beauty + Pinocchio",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-vinyl-records",
+      "store": "DSSH",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Vinyl Records — Individual Vinyls",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin, Custom Backing Card",
+      "dimensions": null,
+      "retail_price": 32.95,
+      "retail_display": "$32.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "dssh-vinyl-records-tangled",
+          "catalog_number": null,
+          "name": "Tangled",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-vinyl-records-hoppers",
+          "catalog_number": null,
+          "name": "Hoppers",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-vinyl-records-pocahontas",
+          "catalog_number": null,
+          "name": "Pocahontas",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-vinyl-records-big-hero-6",
+          "catalog_number": null,
+          "name": "Big Hero 6",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-vinyl-records-snow-white-the-seven-dwarfs",
+          "catalog_number": null,
+          "name": "Snow White & the Seven Dwarfs",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-vinyl-records-mulan",
+          "catalog_number": null,
+          "name": "Mulan",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-vinyl-records-frozen",
+          "catalog_number": null,
+          "name": "Frozen",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-vinyl-records-cinderella",
+          "catalog_number": null,
+          "name": "Cinderella",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-vinyl-records-dumbo",
+          "catalog_number": null,
+          "name": "Dumbo",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-vinyl-records-fantasia",
+          "catalog_number": null,
+          "name": "Fantasia",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-unlocking-magic",
+      "store": "DSSH",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Unlocking the Magic Series",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Glitter, Hinge Pin, Custom Backing Card",
+      "dimensions": null,
+      "retail_price": 49.95,
+      "retail_display": "$49.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "dssh-unlocking-magic-the-little-mermaid",
+          "catalog_number": null,
+          "name": "The Little Mermaid",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-unlocking-magic-lilo-stitch",
+          "catalog_number": null,
+          "name": "Lilo & Stitch",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-unlocking-magic-mulan",
+          "catalog_number": null,
+          "name": "Mulan",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-unlocking-magic-sleeping-beauty",
+          "catalog_number": null,
+          "name": "Sleeping Beauty",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-unlocking-magic-aladdin",
+          "catalog_number": null,
+          "name": "Aladdin",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-unlocking-magic-rapunzel",
+          "catalog_number": null,
+          "name": "Rapunzel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-unlocking-magic-big-hero-6",
+          "catalog_number": null,
+          "name": "Big Hero 6",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-unlocking-magic-frozen",
+          "catalog_number": null,
+          "name": "Frozen",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-unlocking-magic-pinocchio",
+          "catalog_number": null,
+          "name": "Pinocchio",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-unlocking-magic-moana",
+          "catalog_number": null,
+          "name": "Moana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-unlocking-magic-dumbo",
+          "catalog_number": null,
+          "name": "Dumbo",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-unlocking-magic-cinderella",
+          "catalog_number": null,
+          "name": "Cinderella",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-duos",
+      "store": "DSSH",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Duos Series",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Stained Glass, Custom Backing Card",
+      "dimensions": "1.07″W×3.0″H",
+      "retail_price": 74.95,
+      "retail_display": "$74.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "dssh-duos-anna-elsa",
+          "catalog_number": null,
+          "name": "Anna & Elsa",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duos-the-mandalorian-grogu",
+          "catalog_number": null,
+          "name": "The Mandalorian & Grogu",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duos-goofy-max",
+          "catalog_number": null,
+          "name": "Goofy & Max",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duos-maui-moana",
+          "catalog_number": null,
+          "name": "Maui & Moana",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duos-deadpool-wolverine",
+          "catalog_number": null,
+          "name": "Deadpool & Wolverine",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duos-mr-mrs-incredible",
+          "catalog_number": null,
+          "name": "Mr. & Mrs. Incredible",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duos-robin-hood-little-john",
+          "catalog_number": null,
+          "name": "Robin Hood & Little John",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duos-hercules-megara",
+          "catalog_number": null,
+          "name": "Hercules & Megara",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duos-baymax-hiro",
+          "catalog_number": null,
+          "name": "Baymax & Hiro",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duos-ariel-prince-eric",
+          "catalog_number": null,
+          "name": "Ariel & Prince Eric",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duos-nick-wilde-judy-hopps",
+          "catalog_number": null,
+          "name": "Nick Wilde & Judy Hopps",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duos-lilo-stitch",
+          "catalog_number": null,
+          "name": "Lilo & Stitch",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-zootopia-cars",
+      "store": "DSSH",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "Zootopia 10th Anniversary Car Series",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Characters driving cars",
+      "dimensions": null,
+      "retail_price": 24.95,
+      "retail_display": "$24.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "dssh-zootopia-cars-judy-hopps",
+          "catalog_number": null,
+          "name": "Judy Hopps",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-zootopia-cars-flash",
+          "catalog_number": null,
+          "name": "Flash",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-zootopia-cars-finnick",
+          "catalog_number": null,
+          "name": "Finnick",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-zootopia-cars-nick-wilde",
+          "catalog_number": null,
+          "name": "Nick Wilde",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-zootopia-cars-dawn-bellwether",
+          "catalog_number": null,
+          "name": "Dawn Bellwether",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-zootopia-cars-chief-bogo",
+          "catalog_number": null,
+          "name": "Chief Bogo",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-el-capitan-hinge",
+      "store": "DSSH",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "El Capitan Theatre 100th — El Capitan 1926 Hinged Pin",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Antique Gold",
+      "dimensions": "1.83″W×2.25″H",
+      "retail_price": 29.95,
+      "retail_display": "$29.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "dssh-el-capitan-hinge-el-capitan-1926-hinged-pin",
+          "catalog_number": null,
+          "name": "El Capitan 1926 Hinged Pin",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-el-capitan-characters",
+      "store": "DSSH",
+      "drop_date": "2026-08-15",
+      "drop_day_label": "Saturday, August 15",
+      "set_name": "El Capitan Theatre 100th — Character Pins",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin, Antique Nickel",
+      "dimensions": null,
+      "retail_price": 24.95,
+      "retail_display": "$24.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-15"
+      ],
+      "pins": [
+        {
+          "id": "dssh-el-capitan-characters-mickey",
+          "catalog_number": null,
+          "name": "Mickey",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-el-capitan-characters-minnie",
+          "catalog_number": null,
+          "name": "Minnie",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-el-capitan-characters-oswald-the-lucky-rabbit",
+          "catalog_number": null,
+          "name": "Oswald the Lucky Rabbit",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-el-capitan-characters-donald",
+          "catalog_number": null,
+          "name": "Donald",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-el-capitan-characters-daisy",
+          "catalog_number": null,
+          "name": "Daisy",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-el-capitan-characters-judy-hopps",
+          "catalog_number": null,
+          "name": "Judy Hopps",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-el-capitan-characters-nick-wilde",
+          "catalog_number": null,
+          "name": "Nick Wilde",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-tapestry",
+      "store": "DSSH",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Tapestry Series",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin",
+      "dimensions": "1.56″W×2.0″H",
+      "retail_price": 32.95,
+      "retail_display": "$32.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "dssh-tapestry-miguel",
+          "catalog_number": null,
+          "name": "Miguel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-tapestry-alice",
+          "catalog_number": null,
+          "name": "Alice",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-tapestry-jasmine",
+          "catalog_number": null,
+          "name": "Jasmine",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-tapestry-jack-and-sally",
+          "catalog_number": null,
+          "name": "Jack and Sally",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-tapestry-elsa",
+          "catalog_number": null,
+          "name": "Elsa",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-tapestry-merida",
+          "catalog_number": null,
+          "name": "Merida",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-tapestry-rapunzel",
+          "catalog_number": null,
+          "name": "Rapunzel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-tapestry-briar-rose",
+          "catalog_number": null,
+          "name": "Briar Rose",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-tapestry-yzma",
+          "catalog_number": null,
+          "name": "Yzma",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-tapestry-maleficent",
+          "catalog_number": null,
+          "name": "Maleficent",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-tapestry-ursula",
+          "catalog_number": null,
+          "name": "Ursula",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-tapestry-mirabel",
+          "catalog_number": null,
+          "name": "Mirabel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-duck-series",
+      "store": "DSSH",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Duck Series",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin",
+      "dimensions": null,
+      "retail_price": 32.95,
+      "retail_display": "$32.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "dssh-duck-series-stitch",
+          "catalog_number": null,
+          "name": "Stitch",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duck-series-lilo",
+          "catalog_number": null,
+          "name": "Lilo",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duck-series-maleficent",
+          "catalog_number": null,
+          "name": "Maleficent",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duck-series-cruella",
+          "catalog_number": null,
+          "name": "Cruella",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duck-series-hades",
+          "catalog_number": null,
+          "name": "Hades",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duck-series-jiminy-cricket",
+          "catalog_number": null,
+          "name": "Jiminy Cricket",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duck-series-fairy-godmother",
+          "catalog_number": null,
+          "name": "Fairy Godmother",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duck-series-flora",
+          "catalog_number": null,
+          "name": "Flora",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duck-series-fauna",
+          "catalog_number": null,
+          "name": "Fauna",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duck-series-merryweather",
+          "catalog_number": null,
+          "name": "Merryweather",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duck-series-mad-hatter",
+          "catalog_number": null,
+          "name": "Mad Hatter",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-duck-series-panda-mei",
+          "catalog_number": null,
+          "name": "Panda Mei",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-cursive-cuties",
+      "store": "DSSH",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "Cursive Cuties Series",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Pin-on-Pin, Translucent, 3D",
+      "dimensions": "2.5″W×2.5″H",
+      "retail_price": 44.95,
+      "retail_display": "$44.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "dssh-cursive-cuties-baymax",
+          "catalog_number": null,
+          "name": "Baymax",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-bing-bong",
+          "catalog_number": null,
+          "name": "Bing Bong",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-bolt",
+          "catalog_number": null,
+          "name": "Bolt",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-cheshire-cat",
+          "catalog_number": null,
+          "name": "Cheshire Cat",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-merryweather",
+          "catalog_number": null,
+          "name": "Merryweather",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-grumpy",
+          "catalog_number": null,
+          "name": "Grumpy",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-louis",
+          "catalog_number": null,
+          "name": "Louis",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-meeko",
+          "catalog_number": null,
+          "name": "Meeko",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-flora",
+          "catalog_number": null,
+          "name": "Flora",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-cri-kee",
+          "catalog_number": null,
+          "name": "Cri-Kee",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-mushu",
+          "catalog_number": null,
+          "name": "Mushu",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-oswald-the-lucky-rabbit",
+          "catalog_number": null,
+          "name": "Oswald the Lucky Rabbit",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-scrump",
+          "catalog_number": null,
+          "name": "Scrump",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-cursive-cuties-fauna",
+          "catalog_number": null,
+          "name": "Fauna",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    },
+    {
+      "id": "dssh-goofy-movie-cuties",
+      "store": "DSSH",
+      "drop_date": "2026-08-16",
+      "drop_day_label": "Sunday, August 16",
+      "set_name": "A Goofy Movie Cuties Series",
+      "set_description": null,
+      "set_type": "individual",
+      "features": "Custom Backing Card",
+      "dimensions": null,
+      "retail_price": 34.95,
+      "retail_display": "$34.95",
+      "retail_note": null,
+      "purchase_limit": "Limit one (1) per person",
+      "ship_only": false,
+      "available_dates": [
+        "2026-08-16"
+      ],
+      "pins": [
+        {
+          "id": "dssh-goofy-movie-cuties-goofy",
+          "catalog_number": null,
+          "name": "Goofy",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-goofy-movie-cuties-max",
+          "catalog_number": null,
+          "name": "Max",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-goofy-movie-cuties-pj-pete",
+          "catalog_number": null,
+          "name": "P.J. Pete",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-goofy-movie-cuties-powerline",
+          "catalog_number": null,
+          "name": "Powerline",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-goofy-movie-cuties-pete",
+          "catalog_number": null,
+          "name": "Pete",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-goofy-movie-cuties-bobby-zimuruski",
+          "catalog_number": null,
+          "name": "Bobby Zimuruski",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-goofy-movie-cuties-roxanne",
+          "catalog_number": null,
+          "name": "Roxanne",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
+          "id": "dssh-goofy-movie-cuties-stacey",
+          "catalog_number": null,
+          "name": "Stacey",
+          "edition_size": 300,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        }
+      ]
+    }
+  ]
+}
