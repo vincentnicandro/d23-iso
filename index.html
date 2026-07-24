@@ -371,6 +371,13 @@ img { display: block; max-width: 100%; }
   display: flex; align-items: center; gap: 4px;
 }
 .iso-card-stepper span { font-size: 12px; font-weight: 600; min-width: 16px; text-align: center; }
+.iso-note-input {
+  width: 100%; margin-top: 6px; padding: 6px 8px; font-size: 11px;
+  border: 1px solid var(--color-border); border-radius: 8px; background: #f9fafb;
+  outline: none; color: var(--color-text-primary);
+}
+.iso-note-input:focus { border-color: var(--color-navy); background: #fff; }
+.iso-note-input::placeholder { color: var(--color-text-secondary); }
 .stepper-btn-sm { width: 24px; height: 24px; }
 .remove-btn-sm { width: 24px; height: 24px; }
 
@@ -431,8 +438,25 @@ img { display: block; max-width: 100%; }
   background: #fff; outline: none;
 }
 .search-bar input:focus { border-color: var(--color-navy); }
-.search-bar-inner svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--color-text-secondary); }
+.search-bar input { padding-right: 44px; }
+.search-bar-inner > svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--color-text-secondary); }
+.search-clear {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  width: 28px; height: 28px; border-radius: 50%; background: #f0f4f8;
+  border: none; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--color-text-secondary);
+}
+.search-clear:hover { background: #e3ecf5; color: var(--color-navy); }
 .search-count { font-size: 13px; color: var(--color-text-secondary); padding: 12px 16px 0; margin-bottom: 8px; }
+
+/* POPULAR SEARCHES */
+.popular-searches { padding: 24px 20px; border-top: 1px solid var(--color-border); }
+.popular-searches-title { font-size: 14px; font-weight: 600; color: var(--color-text-secondary); margin-bottom: 16px; }
+.popular-search-item {
+  display: block; width: 100%; text-align: left; padding: 12px 0;
+  font-size: 15px; font-weight: 500; color: var(--color-accent);
+  border: none; background: none; cursor: pointer;
+}
 
 /* EXPORT MENU */
 .export-menu {
@@ -488,6 +512,28 @@ img { display: block; max-width: 100%; }
 .top-nav button.active { color: var(--color-navy); background: #edf2f8; }
 
 @media (prefers-reduced-motion: reduce) { .sheet { transition: none; } }
+
+/* HELP FAB */
+.help-fab {
+  position: fixed; bottom: 80px; right: 16px; z-index: 150;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--color-navy); color: #fff; border: none;
+  font-size: 18px; font-weight: 700; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: bottom 0.2s ease;
+}
+.help-fab.has-footer { bottom: 130px; }
+@media (min-width: 768px) {
+  .help-fab { bottom: 16px; }
+  .help-fab.has-footer { bottom: 66px; }
+}
+.help-fab:hover { background: #1a3a6b; }
+.help-sheet { padding: 24px 20px 32px; max-height: 80vh; overflow-y: auto; }
+.help-content h3 { font-size: 15px; font-weight: 700; margin: 16px 0 8px; }
+.help-content h3:first-child { margin-top: 0; }
+.help-content ul { margin: 0; padding-left: 20px; }
+.help-content li { font-size: 14px; line-height: 1.8; color: var(--color-text-primary); }
 </style>
 </head>
 <body>
@@ -515,6 +561,7 @@ const app = createApp({
     const copyMsg = ref('');
     const isoFilter = ref('all'); // 'all' or 'diso'
     const showExportMenu = ref(false);
+    const showHelp = ref(false);
     const showReceipt = ref(false);
     const storyImages = ref([]);
 
@@ -656,6 +703,11 @@ const app = createApp({
       }
     }
 
+    function updateNote(pinId, text) {
+      const item = isoList.value.find(i => i.pinId === pinId);
+      if (item) item.note = text;
+    }
+
     function findPin(pinId) {
       if (!catalog.value) return null;
       for (const s of catalog.value.sets) {
@@ -680,6 +732,16 @@ const app = createApp({
     const isoGroups = computed(() => {
       const groups = {};
       const dayLbl = { '2026-08-14': 'Friday, August 14', '2026-08-15': 'Saturday, August 15', '2026-08-16': 'Sunday, August 16' };
+      // Build catalog order index
+      const catalogOrder = {};
+      if (catalog.value) {
+        let idx = 0;
+        for (const s of catalog.value.sets) {
+          for (const p of s.pins) {
+            catalogOrder[p.id] = idx++;
+          }
+        }
+      }
       isoList.value.forEach(item => {
         if (isoFilter.value === 'diso' && (item.priority || 'iso') !== 'diso') return;
         const found = findPin(item.pinId);
@@ -690,6 +752,10 @@ const app = createApp({
         if (!groups[key]) groups[key] = { store: found.set.store, date: pinDateLabel, items: [] };
         groups[key].items.push({ ...item, pin: found.pin, set: found.set });
       });
+      // Sort items within each group by catalog order
+      for (const g of Object.values(groups)) {
+        g.items.sort((a, b) => (catalogOrder[a.pin.id] ?? 9999) - (catalogOrder[b.pin.id] ?? 9999));
+      }
       return Object.values(groups).sort((a, b) => a.store.localeCompare(b.store) || a.date.localeCompare(b.date));
     });
 
@@ -775,20 +841,21 @@ const app = createApp({
     }
 
     function copyAsText() {
-      let text = '';
+      let text = '✨ My D23 ISOs\n\n';
       isoGroups.value.forEach(group => {
         const sn = {'TWDC':'The Walt Disney Company Store','MOG':"Mickey's of Glendale",'DSSH':'Disney Studio Store Hollywood'}[group.store] || group.store;
-        text += `📌 MY D23 ISO LIST — ${sn} ${group.date.split(', ')[1] || group.date}\n\n`;
+        const dateShort = group.date.split(', ')[1] || group.date;
+        text += `${sn} — ${dateShort}\n`;
         group.items.forEach(item => {
-          const cn = item.pin.catalog_number ? ` (#${item.pin.catalog_number})` : '';
-          const le = item.pin.edition_size ? ` LE ${item.pin.edition_size}` : '';
-          const price = item.set.retail_price ? `$${item.set.retail_price.toFixed(2)}` : '';
+          const series = item.set.set_name;
           const qty = item.qty > 1 ? ` ×${item.qty}` : '';
-          text += `□ ${item.set.set_name} — ${item.pin.name}${cn} — ${price}${le}${qty}\n`;
+          const price = item.set.retail_price ? ` · \$${item.set.retail_price.toFixed(2)}` : '';
+          const note = item.note ? ` — ${item.note}` : '';
+          text += `• ${item.pin.name} · ${series}${qty}${price}${note}\n`;
         });
         text += '\n';
       });
-      text += `💰 Est. Total: $${isoTotal.value.total.toFixed(2)}\n`;
+      text += `💰 Est. Total: \$${isoTotal.value.total.toFixed(2)}`;
       navigator.clipboard.writeText(text).then(() => {
         copyMsg.value = 'Copied!';
         setTimeout(() => { copyMsg.value = ''; }, 2000);
@@ -1083,7 +1150,7 @@ const app = createApp({
             ctx.fillStyle = '#0A1929';
             ctx.font = '600 20px Plus Jakarta Sans, sans-serif';
             ctx.textAlign = 'center';
-            let pinName = item.pin.name;
+            let pinName = item.pin.name + (item.qty > 1 ? ' ×' + item.qty : '');
             while (ctx.measureText(pinName).width > cellW - 20 && pinName.length > 3) {
               pinName = pinName.slice(0, -2) + '…';
             }
@@ -1139,6 +1206,201 @@ const app = createApp({
           link.click();
         }
         copyMsg.value = `${pages.length} image${pages.length > 1 ? 's' : ''} saved!`;
+        setTimeout(() => { copyMsg.value = ''; }, 3000);
+      }
+    }
+
+    async function exportImage() {
+      const groups = isoGroups.value;
+      if (!groups.length) return;
+
+      const cols = 6;
+      const W = 2160;
+      const padX = 60, gap = 16;
+      const cellW = (W - padX * 2 - gap * (cols - 1)) / cols;
+      const headerH = 70;
+      const cellH = 380;
+      const titleH = 140;
+      const footerH = 120;
+
+      // Calculate total height
+      let totalH = titleH;
+      for (const group of groups) {
+        totalH += headerH;
+        const rows = Math.ceil(group.items.length / cols);
+        totalH += rows * (cellH + gap);
+      }
+      totalH += footerH;
+
+      const canvas = document.createElement('canvas');
+      canvas.width = W;
+      canvas.height = totalH;
+      const ctx = canvas.getContext('2d');
+
+      // Background
+      ctx.fillStyle = '#EDF2F8';
+      ctx.fillRect(0, 0, W, totalH);
+
+      // Title
+      ctx.fillStyle = '#00264C';
+      ctx.font = '700 48px Plus Jakarta Sans, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(isoFilter.value === 'diso' ? 'My DISOs' : 'My D23 ISOs', W / 2, 80);
+
+      let yPos = titleH;
+
+      for (const group of groups) {
+        // Group header
+        const sn = ({'TWDC':'The Walt Disney Company Store','MOG':"Mickey's of Glendale",'DSSH':'Disney Studio Store Hollywood'}[group.store] || group.store);
+        ctx.fillStyle = '#00264C';
+        ctx.font = '700 30px Plus Jakarta Sans, sans-serif';
+        ctx.textAlign = 'left';
+        ctx.fillText(`${sn} — ${group.date}`, padX, yPos + 40);
+        yPos += headerH;
+
+        // Pin rows
+        for (let i = 0; i < group.items.length; i += cols) {
+          const rowItems = group.items.slice(i, i + cols);
+          for (let c = 0; c < rowItems.length; c++) {
+            const item = rowItems[c];
+            const x = padX + c * (cellW + gap);
+            const y = yPos;
+
+            // Card bg
+            ctx.fillStyle = '#FFFFFF';
+            ctx.beginPath(); ctx.roundRect(x, y, cellW, cellH, 14); ctx.fill();
+            ctx.strokeStyle = '#D8E3EE'; ctx.lineWidth = 1; ctx.stroke();
+
+            // Pin image
+            const imgSrc = getImgSrc(item.pin);
+            if (imgSrc !== PLACEHOLDER_IMG) {
+              try {
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                await new Promise((resolve) => { img.onload = resolve; img.onerror = resolve; img.src = imgSrc; });
+                if (img.complete && img.naturalWidth) {
+                  const imgSize = cellW - 30;
+                  const imgX = x + 15;
+                  const imgY = y + 10;
+                  ctx.save();
+                  ctx.beginPath(); ctx.roundRect(imgX, imgY, imgSize, imgSize, 10); ctx.clip();
+                  ctx.drawImage(img, imgX, imgY, imgSize, imgSize);
+                  ctx.restore();
+                }
+              } catch (e) {}
+            }
+
+            // Priority badge
+            const badgeX = x + cellW - 32;
+            const badgeY = y + 32;
+            const badgeR = 20;
+            const isDiso = (item.priority || 'iso') === 'diso';
+            ctx.fillStyle = isDiso ? '#E91E63' : '#2D7A47';
+            ctx.beginPath(); ctx.arc(badgeX, badgeY, badgeR, 0, Math.PI * 2); ctx.fill();
+            ctx.strokeStyle = '#fff'; ctx.fillStyle = '#fff'; ctx.lineWidth = 3; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+            if (isDiso) {
+              const s = 1.5, ox = badgeX - 7*s, oy = badgeY - 7*s;
+              ctx.beginPath();
+              ctx.moveTo(ox+7*s,oy+12.5*s); ctx.bezierCurveTo(ox+7*s,oy+12.5*s,ox+1.5*s,oy+9.3*s,ox+1.5*s,oy+6*s);
+              ctx.bezierCurveTo(ox+1.5*s,oy+4*s,ox+2.8*s,oy+2.5*s,ox+4.5*s,oy+2.5*s);
+              ctx.bezierCurveTo(ox+5.5*s,oy+2.5*s,ox+6.4*s,oy+3*s,ox+7*s,oy+3.8*s);
+              ctx.bezierCurveTo(ox+7.6*s,oy+3*s,ox+8.5*s,oy+2.5*s,ox+9.5*s,oy+2.5*s);
+              ctx.bezierCurveTo(ox+11.2*s,oy+2.5*s,ox+12.5*s,oy+4*s,ox+12.5*s,oy+6*s);
+              ctx.bezierCurveTo(ox+12.5*s,oy+9.3*s,ox+7*s,oy+12.5*s,ox+7*s,oy+12.5*s);
+              ctx.closePath(); ctx.fill();
+            } else {
+              ctx.beginPath(); ctx.moveTo(badgeX-8,badgeY); ctx.lineTo(badgeX-2,badgeY+7); ctx.lineTo(badgeX+9,badgeY-6); ctx.stroke();
+            }
+
+            // Pin name + qty
+            const textTop = y + cellW - 10;
+            ctx.fillStyle = '#0A1929'; ctx.font = '600 20px Plus Jakarta Sans, sans-serif'; ctx.textAlign = 'center';
+            let pinName = item.pin.name + (item.qty > 1 ? ' ×' + item.qty : '');
+            while (ctx.measureText(pinName).width > cellW - 20 && pinName.length > 3) pinName = pinName.slice(0,-2) + '…';
+            ctx.fillText(pinName, x + cellW/2, textTop);
+
+            // Set name
+            ctx.fillStyle = '#5A6A7A'; ctx.font = '400 17px Plus Jakarta Sans, sans-serif';
+            let setName = item.set.set_name;
+            while (ctx.measureText(setName).width > cellW - 16 && setName.length > 3) setName = setName.slice(0,-2) + '…';
+            ctx.fillText(setName, x + cellW/2, textTop + 22);
+
+            // Price · LE
+            const metaTop = textTop + 44;
+            if (metaTop < y + cellH - 10) {
+              ctx.fillStyle = '#5A6A7A'; ctx.font = '600 17px Plus Jakarta Sans, sans-serif';
+              let metaText = '';
+              const price = item.pin.retail_price || item.set.retail_price;
+              if (price) metaText += '\$' + price.toFixed(2);
+              if (price && item.pin.edition_size) metaText += ' · ';
+              if (item.pin.edition_size) metaText += 'LE ' + item.pin.edition_size;
+              if (metaText) ctx.fillText(metaText, x + cellW/2, metaTop);
+            }
+
+            // Note
+            if (item.note) {
+              const noteTop = metaTop + 22;
+              if (noteTop < y + cellH - 10) {
+                ctx.fillStyle = '#7A8A9A'; ctx.font = 'italic 400 15px Plus Jakarta Sans, sans-serif';
+                let noteText = item.note;
+                while (ctx.measureText(noteText).width > cellW - 16 && noteText.length > 3) noteText = noteText.slice(0,-2) + '…';
+                ctx.fillText(noteText, x + cellW/2, noteTop);
+              }
+            }
+          }
+          yPos += cellH + gap;
+        }
+      }
+
+      // Footer: legend + total
+      const ly = totalH - 40;
+      const lx = W - padX;
+      // DISO label
+      ctx.textAlign = 'right';
+      ctx.fillStyle = '#0A1929';
+      ctx.font = '600 28px Plus Jakarta Sans, sans-serif';
+      ctx.fillText('DISO', lx, ly);
+      const disoW = ctx.measureText('DISO').width;
+      ctx.fillStyle = '#E91E63';
+      ctx.beginPath(); ctx.arc(lx - disoW - 26, ly - 9, 18, 0, Math.PI * 2); ctx.fill();
+      // Heart in legend
+      ctx.fillStyle = '#fff';
+      const hlx = lx - disoW - 26, hly = ly - 9, hs = 1.4;
+      const hox = hlx - 7*hs, hoy = hly - 7*hs;
+      ctx.beginPath();
+      ctx.moveTo(hox+7*hs,hoy+12.5*hs); ctx.bezierCurveTo(hox+7*hs,hoy+12.5*hs,hox+1.5*hs,hoy+9.3*hs,hox+1.5*hs,hoy+6*hs);
+      ctx.bezierCurveTo(hox+1.5*hs,hoy+4*hs,hox+2.8*hs,hoy+2.5*hs,hox+4.5*hs,hoy+2.5*hs);
+      ctx.bezierCurveTo(hox+5.5*hs,hoy+2.5*hs,hox+6.4*hs,hoy+3*hs,hox+7*hs,hoy+3.8*hs);
+      ctx.bezierCurveTo(hox+7.6*hs,hoy+3*hs,hox+8.5*hs,hoy+2.5*hs,hox+9.5*hs,hoy+2.5*hs);
+      ctx.bezierCurveTo(hox+11.2*hs,hoy+2.5*hs,hox+12.5*hs,hoy+4*hs,hox+12.5*hs,hoy+6*hs);
+      ctx.bezierCurveTo(hox+12.5*hs,hoy+9.3*hs,hox+7*hs,hoy+12.5*hs,hox+7*hs,hoy+12.5*hs);
+      ctx.closePath(); ctx.fill();
+      // ISO label
+      const isoRightX = lx - disoW - 80;
+      ctx.fillStyle = '#0A1929'; ctx.font = '600 28px Plus Jakarta Sans, sans-serif'; ctx.textAlign = 'right';
+      ctx.fillText('ISO', isoRightX, ly);
+      const isoW = ctx.measureText('ISO').width;
+      ctx.fillStyle = '#2D7A47';
+      ctx.beginPath(); ctx.arc(isoRightX - isoW - 26, ly - 9, 18, 0, Math.PI * 2); ctx.fill();
+      // Checkmark in legend
+      ctx.strokeStyle = '#fff'; ctx.lineWidth = 3.5; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      const clx = isoRightX - isoW - 26, cly = ly - 9;
+      ctx.beginPath(); ctx.moveTo(clx-7,cly); ctx.lineTo(clx-2,cly+6); ctx.lineTo(clx+8,cly-5); ctx.stroke();
+
+      // Total on the left
+      ctx.fillStyle = '#00264C'; ctx.font = '700 28px Plus Jakarta Sans, sans-serif'; ctx.textAlign = 'left';
+      ctx.fillText(`Est. Total: \$${isoTotal.value.total.toFixed(2)}`, padX, ly);
+
+      // Download / display
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        storyImages.value = [canvas.toDataURL('image/png')];
+      } else {
+        const link = document.createElement('a');
+        link.download = 'd23-iso-list.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        copyMsg.value = 'Image saved!';
         setTimeout(() => { copyMsg.value = ''; }, 3000);
       }
     }
@@ -1211,10 +1473,10 @@ const app = createApp({
 
     return {
       catalog, error, view, storeFilter, dateFilter, typeFilter, attrFilter, showFilters, searchQuery,
-      isoList, selectedPin, copyMsg, isoFilter, showExportMenu, showReceipt, storyImages, stores, dates, dateLabels,
+      isoList, selectedPin, copyMsg, isoFilter, showExportMenu, showReceipt, showHelp, storyImages, stores, dates, dateLabels,
       filteredSets, searchResults, isoGroups, isoTotal, disoCount, receiptData, receiptGroupBy, expandedReceiptDays, expandedReceiptStores, toggleReceiptDay, toggleReceiptStore, expandAllReceipt, collapseAllReceipt, allReceiptExpanded, toggleAllReceipt, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
-      updateQty, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory,
+      updateQty, updateNote, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory, exportImage,
       featureTags, filteredPins, displayDates, badgeClass, storeName, pinPriceDisplay, badgeLabel,
       PLACEHOLDER_IMG
     };
@@ -1226,7 +1488,7 @@ const app = createApp({
 <!-- TOP NAV (desktop) -->
 <nav class="top-nav">
   <button :class="{ active: view==='catalog' }" @click="view='catalog'">Catalog</button>
-  <button :class="{ active: view==='iso' }" @click="view='iso'">ISO</button>
+  <button :class="{ active: view==='iso' }" @click="view='iso'">My ISOs</button>
   <button :class="{ active: view==='search' }" @click="view='search'">Search</button>
 </nav>
 
@@ -1348,6 +1610,7 @@ const app = createApp({
       <button class="btn-secondary" style="padding:8px 14px;font-size:12px;display:inline-flex;align-items:center;gap:4px;" @click="showExportMenu=!showExportMenu">Share <svg width="10" height="10" viewBox="0 0 14 14" style="margin-top:1px;"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button>
       <div v-if="showExportMenu" class="export-menu">
         <button @click="copyAsText(); showExportMenu=false">Copy to Clipboard</button>
+        <button @click="exportImage(); showExportMenu=false">Export as Image</button>
         <button @click="exportStory(); showExportMenu=false">Export as Story</button>
       </div>
     </div>
@@ -1385,6 +1648,7 @@ const app = createApp({
             </div>
             <button class="remove-btn remove-btn-sm" @click.stop="removeFromIso(item.pinId)" title="Remove"><svg width="10" height="10" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
           </div>
+          <input class="iso-note-input" :value="item.note || ''" @input="updateNote(item.pinId, $event.target.value)" @click.stop placeholder="Add a note..." />
         </div>
       </div>
     </div>
@@ -1452,7 +1716,12 @@ const app = createApp({
     <div class="search-bar-inner">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
       <input v-model="searchQuery" placeholder="Search pins, sets, characters..." autofocus>
+      <button v-if="searchQuery" class="search-clear" @click="searchQuery=''"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
+  </div>
+  <div v-if="!searchQuery.trim()" class="popular-searches">
+    <h3 class="popular-searches-title">Popular Searches</h3>
+    <button v-for="term in ['Stamp','Rapunzel','Framed','Alice in Wonderland','Stitch']" :key="term" class="popular-search-item" @click="searchQuery=term">{{ term }}</button>
   </div>
   <div v-if="searchQuery.trim()">
     <div class="search-count">{{ searchResults.length }} result{{ searchResults.length!==1?'s':'' }}</div>
@@ -1530,7 +1799,7 @@ const app = createApp({
   </button>
   <button class="nav-tab" :class="{ active: view==='iso' }" @click="view='iso'">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
-    ISO
+    My ISOs
   </button>
   <button class="nav-tab" :class="{ active: view==='search' }" @click="view='search'">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
@@ -1538,6 +1807,39 @@ const app = createApp({
   </button>
 </nav>
 
+<!-- HELP BUTTON -->
+<button class="help-fab" :class="{ 'has-footer': view==='iso' && isoList.length }" @click="showHelp=true" title="How to use">?</button>
+
+<!-- HELP MODAL -->
+<div v-if="showHelp" class="overlay" @click.self="showHelp=false"></div>
+<div v-if="showHelp" class="sheet help-sheet">
+  <button class="sheet-close" @click="showHelp=false"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  <h2 style="font-weight:700;font-size:20px;text-align:center;margin-bottom:16px;">How to Use</h2>
+  <div class="help-content">
+    <h3>Catalog</h3>
+    <ul>
+      <li>Tap a pin card to view details</li>
+      <li>Tap the <strong>+</strong> icon to add to your ISO list</li>
+      <li>Tap again to mark as <strong>DISO</strong> (♥)</li>
+      <li>Tap a third time to remove</li>
+      <li>Use Filters to narrow by store, day, type, or features</li>
+    </ul>
+    <h3>My ISOs</h3>
+    <ul>
+      <li>View all your ISO and DISO pins grouped by store and day</li>
+      <li>Use the <strong>–</strong> / <strong>+</strong> stepper to adjust quantity</li>
+      <li>Add notes for trade details or reminders</li>
+      <li>Tap the status icon to toggle between ISO ✓ and DISO ♥</li>
+      <li>Tap <strong>✕</strong> to remove a pin</li>
+      <li>Use <strong>Share</strong> to copy your list, export as image, or export as IG story</li>
+    </ul>
+    <h3>Search</h3>
+    <ul>
+      <li>Search by pin name, character, or series</li>
+      <li>Tap a result to view details or add to your ISO</li>
+    </ul>
+  </div>
+  <p style="font-size:11px;color:var(--color-text-secondary);text-align:center;margin-top:20px;">Images belong to their respective owners. Not affiliated with The Walt Disney Company.</p>
 </div>
 `
 });
