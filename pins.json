@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T17:04:54.508564Z",
+  "generated_at": "2026-07-24T18:49:03.718954Z",
   "stores": [
     "TWDC",
     "MOG",
@@ -4472,7 +4472,7 @@
       "dimensions": "1″–1.7″H",
       "retail_price": 74.95,
       "retail_display": "$74.95",
-      "retail_note": null,
+      "retail_note": "for set of 6",
       "purchase_limit": null,
       "ship_only": false,
       "available_dates": [
@@ -4692,7 +4692,7 @@
       "dimensions": null,
       "retail_price": 49.95,
       "retail_display": "$49.95",
-      "retail_note": null,
+      "retail_note": "for set of 3",
       "purchase_limit": null,
       "ship_only": false,
       "available_dates": [
@@ -4991,7 +4991,8 @@
           "name": "El Capitan 100 Years",
           "edition_size": 200,
           "edition_notes": null,
-          "image_path": "images/dssh/Premiere_Collection/Premiere_Collection_pin_only.png"
+          "image_path": "images/dssh/Premiere_Collection/Premiere_Collection_pin_only.png",
+          "box_image_path": "images/dssh/Premiere_Collection/Premiere_Collection_pin_and_box.png"
         }
       ]
     },
@@ -5577,7 +5578,7 @@
       "dimensions": "2.25″W×1.84″H player; 1.88″W×1.88″H vinyls",
       "retail_price": 89.95,
       "retail_display": "$89.95",
-      "retail_note": null,
+      "retail_note": "for set of 3",
       "purchase_limit": null,
       "ship_only": false,
       "available_dates": [
@@ -5585,14 +5586,33 @@
       ],
       "pins": [
         {
-          "id": "dssh-vinyl-starter-record-player-sleeping-beauty-pinocchio",
+          "id": "dssh-vinyl-starter-starter-set",
           "catalog_number": null,
-          "name": "Record Player + Sleeping Beauty + Pinocchio",
+          "name": "Starter Set",
           "edition_size": 400,
           "edition_notes": null,
           "image_path": "images/dssh/Vinyl_Records_Starter_Set/Starter_Set_pair.png"
+        },
+        {
+          "id": "dssh-vinyl-starter-record-player-sleeping-beauty",
+          "catalog_number": null,
+          "name": "Record Player + Sleeping Beauty",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/dssh/Vinyl_Records_Starter_Set/Starter_Sleeping_Beauty_record_player.png",
+          "box_image_path": "images/dssh/Vinyl_Records_Starter_Set/Starter_Set_pair.png"
+        },
+        {
+          "id": "dssh-vinyl-starter-pinocchio",
+          "catalog_number": null,
+          "name": "Pinocchio",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/dssh/Vinyl_Records_Starter_Set/Starter_Pinocchio.png",
+          "box_image_path": "images/dssh/Vinyl_Records_Starter_Set/Starter_Set_pair.png"
         }
-      ]
+      ],
+      "pins_per_box": 3
     },
     {
       "id": "dssh-vinyl-records",

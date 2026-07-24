@@ -70,11 +70,14 @@ img { display: block; max-width: 100%; }
 
 /* FILTER SHEET */
 .filter-sheet { padding: 0; display: flex; flex-direction: column; }
-.filter-sheet-content { flex: 1; overflow-y: auto; padding: 24px 20px; padding-bottom: 24px; }
-.filter-sheet-header { display: flex; justify-content: space-between; align-items: center; }
-.filter-sheet-header h2 { font-size: 20px; font-weight: 700; }
-.filter-reset { color: var(--color-accent); font-size: 14px; font-weight: 600; cursor: pointer; background: none; border: none; }
-.filter-sheet-count { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 20px; }
+.filter-sheet-content { flex: 1; overflow-y: auto; padding: 4px 20px 24px; }
+.filter-sheet-header {
+  padding: 24px 20px 12px; position: relative; background: #fff;
+  border-radius: 20px 20px 0 0; flex-shrink: 0; z-index: 5;
+}
+.filter-sheet-header h2 { font-size: 20px; font-weight: 700; text-align: center; margin-bottom: 4px; }
+.filter-reset { position: absolute; top: 24px; right: 20px; color: var(--color-accent); font-size: 13px; font-weight: 600; cursor: pointer; background: none; border: none; }
+.filter-sheet-count { font-size: 13px; color: var(--color-text-secondary); text-align: center; }
 .filter-section-title { font-size: 16px; font-weight: 700; margin: 20px 0 10px; }
 .filter-pills { display: flex; flex-wrap: wrap; gap: 8px; }
 .filter-pill {
@@ -201,8 +204,9 @@ img { display: block; max-width: 100%; }
   transform-style: preserve-3d; transition: transform 0.6s ease;
   will-change: transform;
 }
-.pin-card:hover .pin-card-flip-inner { transform: rotateY(180deg); }
-.pin-card-flip.swiped .pin-card-flip-inner { transform: rotateY(180deg); }
+@media (hover: hover) {
+  .pin-card:hover .pin-card-flip-inner { transform: rotateY(180deg); }
+}
 .pin-card-flip-front, .pin-card-flip-back {
   position: absolute; inset: 0; backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -221,7 +225,6 @@ img { display: block; max-width: 100%; }
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
   opacity: 0; transition: opacity 0.3s ease;
 }
-.pin-card:hover .gatefold-back { opacity: 1; }
 .gatefold-back img { width: 100%; height: 100%; object-fit: cover; }
 .gatefold-left, .gatefold-right {
   position: absolute; top: 0; bottom: 0; width: 50%;
@@ -238,12 +241,36 @@ img { display: block; max-width: 100%; }
   position: absolute; top: 0; right: 0; left: auto; width: 200%; height: 100%; object-fit: cover;
   object-position: right;
 }
-.pin-card:hover .gatefold-left { transform: rotateY(-160deg); }
-.pin-card:hover .gatefold-right { transform: rotateY(160deg); }
-.pin-card-gatefold.swiped .gatefold-left { transform: rotateY(-160deg); }
-.pin-card-gatefold.swiped .gatefold-right { transform: rotateY(160deg); }
-.pin-card:hover .gatefold-back { opacity: 1; }
-.pin-card-gatefold.swiped .gatefold-back { opacity: 1; }
+@media (hover: hover) {
+  .pin-card:hover .gatefold-left { transform: rotateY(-160deg); }
+  .pin-card:hover .gatefold-right { transform: rotateY(160deg); }
+  .pin-card:hover .gatefold-back { opacity: 1; }
+}
+
+/* Open-book animation for Unlocking the Magic & El Capitan hinged pin */
+.pin-card-book {
+  width: 100%; aspect-ratio: 1; position: relative;
+  background: #f0f4f8; overflow: hidden; perspective: 900px;
+}
+.book-back {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.3s ease;
+}
+@media (hover: hover) {
+  .pin-card:hover .book-back { opacity: 1; }
+}
+.book-back img { width: 100%; height: 100%; object-fit: cover; }
+.book-cover {
+  position: absolute; inset: 0; overflow: hidden;
+  transform-origin: left center; transition: transform 0.6s ease;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  will-change: transform; background: #f0f4f8;
+}
+.book-cover img { width: 100%; height: 100%; object-fit: cover; }
+@media (hover: hover) {
+  .pin-card:hover .book-cover { transform: rotateY(-160deg); }
+}
+
 .pin-card-body { padding: 6px 8px 8px; display: flex; flex-direction: column; gap: 1px; }
 .pin-card-name { font-weight: 600; font-size: 11px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .pin-card-meta { font-size: 10px; color: var(--color-text-secondary); margin-top: 1px; }
@@ -367,7 +394,7 @@ img { display: block; max-width: 100%; }
 .iso-footer-right { font-size: 16px; font-weight: 700; color: var(--color-navy); }
 
 /* RECEIPT DRAWER */
-.receipt-sheet { padding: 0; display: flex; flex-direction: column; }
+.receipt-sheet { padding: 0; display: flex; flex-direction: column; height: 85vh; }
 .receipt-sheet-header { padding: 24px 20px 12px; position: sticky; top: 0; background: #fff; z-index: 5; border-radius: 20px 20px 0 0; }
 .receipt { padding: 0 20px 32px; overflow-y: auto; flex: 1; }
 .receipt-day { margin-bottom: 8px; }
@@ -485,7 +512,6 @@ const app = createApp({
     const isoList = ref([]);
     const selectedPin = ref(null);
     const sheetActiveImg = ref(0);
-    const swipedPins = ref(new Set());
     const copyMsg = ref('');
     const isoFilter = ref('all'); // 'all' or 'diso'
     const showExportMenu = ref(false);
@@ -677,7 +703,7 @@ const app = createApp({
         if (!found) return;
         const price = found.pin.retail_price || found.set.retail_price || 0;
         const perBox = found.set.pins_per_box || 1;
-        const pinPrice = found.pin.name === 'Mystery Box' || found.pin.name === 'Box Set' ? price : price / perBox;
+        const pinPrice = (found.pin.name === 'Mystery Box' || found.pin.name === 'Box Set' || found.pin.name === 'Starter Set') ? price : price / perBox;
         total += pinPrice * item.qty;
         count += item.qty;
         setIds.add(found.set.id);
@@ -702,7 +728,7 @@ const app = createApp({
         const storeName = storeNames[found.set.store] || found.set.store;
         const price = found.pin.retail_price || found.set.retail_price || 0;
         const perBox = found.set.pins_per_box || 1;
-        const pinPrice = (found.pin.name === 'Mystery Box' || found.pin.name === 'Box Set') ? price : price / perBox;
+        const pinPrice = (found.pin.name === 'Mystery Box' || found.pin.name === 'Box Set' || found.pin.name === 'Starter Set') ? price : price / perBox;
         const lineTotal = pinPrice * item.qty;
         const lineItem = { name: found.pin.name, set: found.set.set_name, qty: item.qty, lineTotal };
 
@@ -737,6 +763,16 @@ const app = createApp({
       receiptData.value.forEach(g => { expandedReceiptDays.value[g.key] = true; g.children.forEach(c => { expandedReceiptStores.value[g.key + c.key] = true; }); });
     }
     function collapseAllReceipt() { expandedReceiptDays.value = {}; expandedReceiptStores.value = {}; }
+    const allReceiptExpanded = computed(() => {
+      const groups = receiptData.value;
+      if (!groups.length) return false;
+      return groups.every(g => expandedReceiptDays.value[g.key]
+        && g.children.every(c => expandedReceiptStores.value[g.key + c.key]));
+    });
+    function toggleAllReceipt() {
+      if (allReceiptExpanded.value) collapseAllReceipt();
+      else expandAllReceipt();
+    }
 
     function copyAsText() {
       let text = '';
@@ -1107,23 +1143,6 @@ const app = createApp({
       }
     }
 
-    // Swipe handling for mobile flip/gatefold
-    let touchStartX = 0;
-    function onTouchStart(e) { touchStartX = e.touches[0].clientX; }
-    function onTouchEnd(e, pinId) {
-      const dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 30) {
-        if (swipedPins.value.has(pinId)) {
-          swipedPins.value.delete(pinId);
-        } else {
-          swipedPins.value.add(pinId);
-        }
-        // Force reactivity
-        swipedPins.value = new Set(swipedPins.value);
-      }
-    }
-    function isSwiped(pinId) { return swipedPins.value.has(pinId); }
-
     function featureTags(features) {
       if (!features) return [];
       return features.split(',').map(f => f.trim()).filter(f => f.length > 0 && f.length < 30);
@@ -1180,7 +1199,7 @@ const app = createApp({
       const price = pin.retail_price || set.retail_price;
       if (!price) return null;
       const perBox = set.pins_per_box || 1;
-      if (pin.name === 'Mystery Box' || pin.name === 'Box Set' || perBox === 1) {
+      if (pin.name === 'Mystery Box' || pin.name === 'Box Set' || pin.name === 'Starter Set' || perBox === 1) {
         return '\$' + price.toFixed(2);
       }
       return '\$' + (price / perBox).toFixed(2);
@@ -1193,11 +1212,11 @@ const app = createApp({
     return {
       catalog, error, view, storeFilter, dateFilter, typeFilter, attrFilter, showFilters, searchQuery,
       isoList, selectedPin, copyMsg, isoFilter, showExportMenu, showReceipt, storyImages, stores, dates, dateLabels,
-      filteredSets, searchResults, isoGroups, isoTotal, disoCount, receiptData, receiptGroupBy, expandedReceiptDays, expandedReceiptStores, toggleReceiptDay, toggleReceiptStore, expandAllReceipt, collapseAllReceipt, filterCount, typeOptions, attrOptions,
+      filteredSets, searchResults, isoGroups, isoTotal, disoCount, receiptData, receiptGroupBy, expandedReceiptDays, expandedReceiptStores, toggleReceiptDay, toggleReceiptStore, expandAllReceipt, collapseAllReceipt, allReceiptExpanded, toggleAllReceipt, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
       updateQty, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory,
       featureTags, filteredPins, displayDates, badgeClass, storeName, pinPriceDisplay, badgeLabel,
-      onTouchStart, onTouchEnd, isSwiped, PLACEHOLDER_IMG
+      PLACEHOLDER_IMG
     };
   },
   template: `
@@ -1228,13 +1247,12 @@ const app = createApp({
   <!-- FILTER SHEET -->
   <div v-if="showFilters" class="overlay" @click.self="showFilters=false"></div>
   <div v-if="showFilters" class="sheet filter-sheet">
-    <div class="filter-sheet-content">
-      <div class="filter-sheet-header">
-        <h2>Filters</h2>
-        <button class="filter-reset" @click="resetFilters">Reset All Filters</button>
-      </div>
+    <div class="filter-sheet-header">
+      <button class="filter-reset" @click="resetFilters">Reset All Filters</button>
+      <h2>Filters</h2>
       <p class="filter-sheet-count">{{ filterCount }} selected</p>
-
+    </div>
+    <div class="filter-sheet-content">
       <h3 class="filter-section-title">Store</h3>
       <div class="filter-pills">
         <button v-for="s in ['TWDC','MOG','DSSH']" :key="s" class="filter-pill" :class="{ active: storeFilter.includes(s) }" @click="toggleFilter(storeFilter, s)">{{ s }}</button>
@@ -1281,13 +1299,17 @@ const app = createApp({
         <button v-if="!isInIso(pin.id)" class="icon-add pin-add-btn" @click.stop="cyclePin(pin, set)" title="Add to ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
         <span v-else-if="getPriority(pin.id)==='iso'" class="icon-added pin-add-btn" @click.stop="cyclePin(pin, set)" title="ISO — click for DISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
         <span v-else class="icon-diso pin-add-btn" @click.stop="cyclePin(pin, set)" title="DISO — click to remove"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 12.5s-5.5-3.2-5.5-6.5c0-2 1.3-3.5 3-3.5 1 0 1.9.5 2.5 1.3C7.6 3 8.5 2.5 9.5 2.5c1.7 0 3 1.5 3 3.5 0 3.3-5.5 6.5-5.5 6.5z" fill="currentColor" stroke="none"/></svg></span>
-        <div v-if="pin.box_image_path && set.id==='mog-pov'" class="pin-card-flip" :class="{ swiped: isSwiped(pin.id) }" @touchstart="onTouchStart" @touchend="(e) => onTouchEnd(e, pin.id)">
+        <div v-if="pin.box_image_path && set.id==='mog-pov'" class="pin-card-flip">
           <div class="pin-card-flip-inner">
             <div class="pin-card-flip-front"><img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy"></div>
             <div class="pin-card-flip-back"><img :src="pin.box_image_path" :alt="pin.name + ' (back)'" loading="lazy"></div>
           </div>
         </div>
-        <div v-else-if="pin.box_image_path && set.id==='mog-panoramas'" class="pin-card-gatefold" :class="{ swiped: isSwiped(pin.id) }" @touchstart="onTouchStart" @touchend="(e) => onTouchEnd(e, pin.id)">
+        <div v-else-if="pin.box_image_path && (set.id==='dssh-unlocking-magic' || set.id==='dssh-el-capitan-hinge')" class="pin-card-book">
+          <div class="book-back"><img :src="pin.box_image_path" :alt="pin.name + ' (open)'" loading="lazy"></div>
+          <div class="book-cover"><img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy"></div>
+        </div>
+        <div v-else-if="pin.box_image_path && set.id==='mog-panoramas'" class="pin-card-gatefold">
           <div class="gatefold-back"><img :src="pin.box_image_path" :alt="pin.name + ' (inside)'" loading="lazy"></div>
           <div class="gatefold-left"><img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy"></div>
           <div class="gatefold-right"><img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy"></div>
@@ -1321,13 +1343,13 @@ const app = createApp({
       <button class="filter-chip" :class="{ active: isoFilter==='all' }" @click="isoFilter='all'">All ({{ isoTotal.count }})</button>
       <button class="filter-chip" :class="{ active: isoFilter==='diso' }" @click="isoFilter='diso'">♥ DISO ({{ disoCount }})</button>
     </div>
-    <div v-if="isoList.length" style="margin-left:auto;position:relative;">
+    <div v-if="isoList.length" style="margin-left:auto;position:relative;display:inline-flex;align-items:center;">
+      <span v-if="copyMsg" style="margin-right:8px;color:var(--color-green);font-size:12px;">{{ copyMsg }}</span>
       <button class="btn-secondary" style="padding:8px 14px;font-size:12px;display:inline-flex;align-items:center;gap:4px;" @click="showExportMenu=!showExportMenu">Share <svg width="10" height="10" viewBox="0 0 14 14" style="margin-top:1px;"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button>
       <div v-if="showExportMenu" class="export-menu">
         <button @click="copyAsText(); showExportMenu=false">Copy to Clipboard</button>
         <button @click="exportStory(); showExportMenu=false">Export as Story</button>
       </div>
-      <span v-if="copyMsg" style="margin-left:6px;color:var(--color-green);font-size:12px;">{{ copyMsg }}</span>
     </div>
   </div>
   <div style="padding: 0 16px; padding-top: 12px;">
@@ -1394,10 +1416,7 @@ const app = createApp({
         <button class="filter-chip" :class="{ active: receiptGroupBy==='day' }" @click="receiptGroupBy='day'">By Day</button>
         <button class="filter-chip" :class="{ active: receiptGroupBy==='store' }" @click="receiptGroupBy='store'">By Store</button>
       </div>
-      <div style="display:flex;gap:8px;font-size:12px;">
-        <button style="color:var(--color-accent);font-weight:600;background:none;border:none;cursor:pointer;" @click="expandAllReceipt">Expand All</button>
-        <button style="color:var(--color-text-secondary);font-weight:600;background:none;border:none;cursor:pointer;" @click="collapseAllReceipt">Collapse</button>
-      </div>
+      <button style="color:var(--color-accent);font-weight:600;font-size:12px;background:none;border:none;cursor:pointer;" @click="toggleAllReceipt">{{ allReceiptExpanded ? 'Collapse All' : 'Expand All' }}</button>
     </div>
   </div>
   <div class="receipt">

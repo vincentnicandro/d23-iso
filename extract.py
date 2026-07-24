@@ -352,7 +352,7 @@ def build_mog_sets():
         sid, MOG, SUN, SUN_L,
         "Guardians of the Galaxy aDorbs! Box Set",
         "Each box contains one mystery pin under the tray.", "box_set",
-        None, '1″–1.7″H', 74.95, None, None, False,
+        None, '1″–1.7″H', 74.95, "for set of 6", None, False,
         [make_pin(sid, 91, "Guardians of the Galaxy aDorbs! Box Set", 400)],
     ))
 
@@ -393,7 +393,7 @@ def build_mog_sets():
     sets.append(make_set(
         sid, MOG, SUN, SUN_L,
         "Pixar Soul aDorbs! Box Set", None, "box_set",
-        None, None, 49.95, None, None, False,
+        None, None, 49.95, "for set of 3", None, False,
         [make_pin(sid, 94, "Pixar Soul aDorbs! Box Set", 400)],
     ))
 
@@ -875,11 +875,14 @@ def build_dssh_sets():
 
     # --- SATURDAY ---
     sid = "dssh-vinyl-starter"
-    sets.append(make_set(sid, D, SAT, SAT_L,
+    s = make_set(sid, D, SAT, SAT_L,
         "Vinyl Records — Starter Set", None, "box_set",
-        "Custom backing", '2.25″W×1.84″H player; 1.88″W×1.88″H vinyls', 89.95, None, None, False,
-        [make_pin(sid, None, "Record Player + Sleeping Beauty + Pinocchio", 400)],
-    ))
+        "Custom backing", '2.25″W×1.84″H player; 1.88″W×1.88″H vinyls', 89.95, "for set of 3", None, False,
+        [make_pin(sid, None, "Starter Set", 400)],
+    )
+    s["pins"].extend([make_pin(sid, None, n, 400) for n in [
+        "Record Player + Sleeping Beauty", "Pinocchio"]])
+    sets.append(s)
 
     sid = "dssh-vinyl-records"
     sets.append(make_set(sid, D, SAT, SAT_L,
@@ -1267,7 +1270,9 @@ def apply_image_mappings(all_sets):
         "dssh-throwback-mystery-so-not-the-drama": "images/dssh/Throwback_Mystery/So_Not_the_Drama.png",
         "dssh-throwback-mystery-lizzie-in-heels": "images/dssh/Throwback_Mystery/Lizzie_in_Heels.png",
         # Vinyl Records Starter Set
-        "dssh-vinyl-starter-record-player-sleeping-beauty-pinocchio": "images/dssh/Vinyl_Records_Starter_Set/Starter_Set_pair.png",
+        "dssh-vinyl-starter-starter-set": "images/dssh/Vinyl_Records_Starter_Set/Starter_Set_pair.png",
+        "dssh-vinyl-starter-record-player-sleeping-beauty": "images/dssh/Vinyl_Records_Starter_Set/Starter_Sleeping_Beauty_record_player.png",
+        "dssh-vinyl-starter-pinocchio": "images/dssh/Vinyl_Records_Starter_Set/Starter_Pinocchio.png",
         # Vinyl Records Individual
         "dssh-vinyl-records-tangled": "images/dssh/Vinyl_Records/Tangled.png",
         "dssh-vinyl-records-hoppers": "images/dssh/Vinyl_Records/Hoppers.png",
@@ -1812,6 +1817,25 @@ def apply_image_mappings(all_sets):
             for pin in s["pins"]:
                 pin["box_image_path"] = "images/dssh/El_Capitan_100th/1926_hinged_open_reveal.png"
 
+    # Assign box image as secondary for Premiere Collection box set
+    for s in all_sets:
+        if s["id"] == "dssh-premiere-el-capitan":
+            for pin in s["pins"]:
+                pin["box_image_path"] = "images/dssh/Premiere_Collection/Premiere_Collection_pin_and_box.png"
+
+    # Assign starter set pair image as secondary to Vinyl Starter individual pins
+    for s in all_sets:
+        if s["id"] == "dssh-vinyl-starter":
+            box_img = None
+            for pin in s["pins"]:
+                if pin["name"] == "Starter Set":
+                    box_img = pin.get("image_path")
+                    break
+            if box_img and box_img != PLACEHOLDER:
+                for pin in s["pins"]:
+                    if pin["name"] != "Starter Set":
+                        pin["box_image_path"] = box_img
+
     # Assign box set image as secondary to all Carousel Horses individual pins
     for s in all_sets:
         if s["id"] == "mog-carousel-horses":
@@ -1832,6 +1856,8 @@ def apply_image_mappings(all_sets):
             s["pins_per_box"] = 2  # default: most mystery boxes contain 2 pins
         elif s["id"] == "mog-carousel-horses":
             s["pins_per_box"] = 6
+        elif s["id"] == "dssh-vinyl-starter":
+            s["pins_per_box"] = 3
         elif s["id"] == "mog-guardians-boxset":
             s["pins_per_box"] = 1
         elif s["id"] == "mog-pixar-soul-boxset":
