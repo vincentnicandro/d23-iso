@@ -106,7 +106,7 @@ img { display: block; max-width: 100%; }
 .badge-individual { background: var(--color-navy); color: #fff; }
 .badge-mystery { background: var(--color-gold); color: #1a1a00; }
 .badge-box_set { background: var(--color-teal); color: #fff; }
-.badge-ultra_jumbo { background: var(--color-gold); color: #1a1a00; }
+.badge-ultra_jumbo { background: var(--color-navy); color: #fff; }
 .badge-framed_set { background: #6B21A8; color: #fff; }
 
 .badge-store { background: #1A3A5C; color: #fff; }
@@ -143,7 +143,7 @@ img { display: block; max-width: 100%; }
 
 /* SET GROUP */
 .set-group { margin: 16px; }
-.set-group-ultra .set-group-header { border-left: 3px solid var(--color-gold); }
+.set-group-ultra .set-group-header { }
 .set-group-header {
   background: var(--color-surface); border-radius: 16px 16px 0 0;
   box-shadow: 0 2px 12px rgba(0,38,76,0.08);
@@ -190,6 +190,55 @@ img { display: block; max-width: 100%; }
   overflow: hidden; display: flex; align-items: center; justify-content: center;
 }
 .pin-card-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* 3D Flip for POV spinners */
+.pin-card-flip {
+  width: 100%; aspect-ratio: 1; perspective: 600px;
+  background: #f0f4f8; overflow: hidden;
+}
+.pin-card-flip-inner {
+  width: 100%; height: 100%; position: relative;
+  transform-style: preserve-3d; transition: transform 0.6s ease;
+  will-change: transform;
+}
+.pin-card:hover .pin-card-flip-inner { transform: rotateY(180deg); }
+.pin-card-flip-front, .pin-card-flip-back {
+  position: absolute; inset: 0; backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; background: #f0f4f8;
+}
+.pin-card-flip-back { transform: rotateY(180deg); }
+.pin-card-flip-front img, .pin-card-flip-back img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Gate-fold animation for Panoramas */
+.pin-card-gatefold {
+  width: 100%; aspect-ratio: 1; position: relative;
+  background: #f0f4f8; overflow: hidden; perspective: 800px;
+}
+.gatefold-back {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.3s ease;
+}
+.pin-card:hover .gatefold-back { opacity: 1; }
+.gatefold-back img { width: 100%; height: 100%; object-fit: cover; }
+.gatefold-left, .gatefold-right {
+  position: absolute; top: 0; bottom: 0; width: 50%;
+  overflow: hidden; transition: transform 0.6s ease;
+  backface-visibility: hidden;
+}
+.gatefold-left { left: 0; transform-origin: left center; }
+.gatefold-right { right: 0; transform-origin: right center; }
+.gatefold-left img {
+  position: absolute; top: 0; left: 0; width: 200%; height: 100%; object-fit: cover;
+  object-position: left;
+}
+.gatefold-right img {
+  position: absolute; top: 0; right: 0; left: auto; width: 200%; height: 100%; object-fit: cover;
+  object-position: right;
+}
+.pin-card:hover .gatefold-left { transform: rotateY(-160deg); }
+.pin-card:hover .gatefold-right { transform: rotateY(160deg); }
 .pin-card-body { padding: 6px 8px 8px; display: flex; flex-direction: column; gap: 1px; }
 .pin-card-name { font-weight: 600; font-size: 11px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .pin-card-meta { font-size: 10px; color: var(--color-text-secondary); margin-top: 1px; }
@@ -598,7 +647,8 @@ const app = createApp({
     function copyAsText() {
       let text = '';
       isoGroups.value.forEach(group => {
-        text += `📌 MY D23 ISO LIST — ${group.store} ${group.date.split(', ')[1] || group.date}\n\n`;
+        const sn = {'TWDC':'The Walt Disney Company Store','MOG':"Mickey's of Glendale",'DSSH':'Disney Studio Store Hollywood'}[group.store] || group.store;
+        text += `📌 MY D23 ISO LIST — ${sn} ${group.date.split(', ')[1] || group.date}\n\n`;
         group.items.forEach(item => {
           const cn = item.pin.catalog_number ? ` (#${item.pin.catalog_number})` : '';
           const le = item.pin.edition_size ? ` LE ${item.pin.edition_size}` : '';
@@ -774,7 +824,7 @@ const app = createApp({
           }
           // Add header if needed
           if (pinsOnPage === 0 || (isFirst && i === 0)) {
-            const label = group.store + ' — ' + group.date + (!isFirst || i > 0 ? ' (continued)' : '');
+            const label = ({'TWDC':'The Walt Disney Company Store','MOG':"Mickey's of Glendale",'DSSH':'Disney Studio Store Hollywood'}[group.store] || group.store) + ' — ' + group.date;
             currentLayout.push({ type: 'header', label });
             isFirst = false;
           }
@@ -1013,6 +1063,7 @@ const app = createApp({
     }
 
     function badgeClass(type) { return `badge badge-${type}`; }
+    function storeName(store) { return { 'TWDC': 'The Walt Disney Company Store', 'MOG': "Mickey's of Glendale", 'DSSH': 'Disney Studio Store Hollywood' }[store] || store; }
     function badgeLabel(type) {
       return { individual: 'Individual', mystery: 'Mystery', box_set: 'Box Set',
                ultra_jumbo: 'Individual', framed_set: 'Framed' }[type] || type;
@@ -1024,7 +1075,7 @@ const app = createApp({
       filteredSets, searchResults, isoGroups, isoTotal, disoCount, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
       updateQty, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory,
-      featureTags, filteredPins, displayDates, badgeClass, badgeLabel, PLACEHOLDER_IMG
+      featureTags, filteredPins, displayDates, badgeClass, storeName, badgeLabel, PLACEHOLDER_IMG
     };
   },
   template: `
@@ -1090,7 +1141,7 @@ const app = createApp({
 
   <div v-if="filteredSets.length===0" class="empty-state"><p>No sets match your filters.</p></div>
 
-  <div v-for="set in filteredSets" :key="set.id" class="set-group" :class="{ 'set-group-ultra': set.set_type==='ultra_jumbo' }">
+  <div v-for="set in filteredSets" :key="set.id" class="set-group">
     <div class="set-group-header">
       <button v-if="!allInIso(set)" class="icon-add set-add-btn" @click="toggleAllIso(set)" title="Add all to ISO"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
       <span v-else-if="!allDiso(set)" class="icon-added set-add-btn" @click="toggleAllIso(set)" title="All ISO — click for DISO"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
@@ -1098,7 +1149,7 @@ const app = createApp({
       <div class="set-name">{{ set.set_name }} <span v-if="set.retail_display" class="set-name-price">· {{ set.retail_display }}<span v-if="set.retail_note">&nbsp;{{ set.retail_note }}</span></span></div>
       <div class="set-header">
         <span :class="badgeClass(set.set_type)">{{ badgeLabel(set.set_type) }}</span>
-        <span class="badge badge-store">{{ set.store }}</span>
+        <span class="badge badge-store">{{ storeName(set.store) }}</span>
         <span v-for="d in displayDates(set)" :key="d" class="badge badge-date">{{ d }}</span>
       </div>
       <div v-if="set.ship_only" class="ship-notice">🚢 Ship only — no in-person pickup</div>
@@ -1108,7 +1159,18 @@ const app = createApp({
         <button v-if="!isInIso(pin.id)" class="icon-add pin-add-btn" @click.stop="cyclePin(pin, set)" title="Add to ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
         <span v-else-if="getPriority(pin.id)==='iso'" class="icon-added pin-add-btn" @click.stop="cyclePin(pin, set)" title="ISO — click for DISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
         <span v-else class="icon-diso pin-add-btn" @click.stop="cyclePin(pin, set)" title="DISO — click to remove"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 12.5s-5.5-3.2-5.5-6.5c0-2 1.3-3.5 3-3.5 1 0 1.9.5 2.5 1.3C7.6 3 8.5 2.5 9.5 2.5c1.7 0 3 1.5 3 3.5 0 3.3-5.5 6.5-5.5 6.5z" fill="currentColor" stroke="none"/></svg></span>
-        <div class="pin-card-img">
+        <div v-if="pin.box_image_path && set.id==='mog-pov'" class="pin-card-flip">
+          <div class="pin-card-flip-inner">
+            <div class="pin-card-flip-front"><img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy"></div>
+            <div class="pin-card-flip-back"><img :src="pin.box_image_path" :alt="pin.name + ' (back)'" loading="lazy"></div>
+          </div>
+        </div>
+        <div v-else-if="pin.box_image_path && set.id==='mog-panoramas'" class="pin-card-gatefold">
+          <div class="gatefold-back"><img :src="pin.box_image_path" :alt="pin.name + ' (inside)'" loading="lazy"></div>
+          <div class="gatefold-left"><img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy"></div>
+          <div class="gatefold-right"><img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy"></div>
+        </div>
+        <div v-else class="pin-card-img">
           <img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy">
         </div>
         <div class="pin-card-body">
@@ -1150,7 +1212,7 @@ const app = createApp({
   </div>
 
   <div v-for="group in isoGroups" :key="group.store+group.date" style="margin-bottom:20px;">
-    <h3 style="font-size:14px;font-weight:700;color:var(--color-navy);margin-bottom:8px;">{{ group.store }} — {{ group.date }}</h3>
+    <h3 style="font-size:14px;font-weight:700;color:var(--color-navy);margin-bottom:8px;">{{ storeName(group.store) }} — {{ group.date }}</h3>
     <div class="pin-grid iso-grid" style="border:1px solid var(--color-border);border-radius:16px;">
       <div v-for="item in group.items" :key="item.pinId" class="pin-card" @click="openPin(item.pin, item.set)">
         <span v-if="item.priority==='iso'" class="icon-added pin-add-btn" @click.stop="togglePriority(item.pinId)" title="ISO — click for DISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
@@ -1214,7 +1276,7 @@ const app = createApp({
         </div>
         <div class="pin-card-body">
           <div class="pin-card-name">{{ r.pin.name }}</div>
-          <div class="pin-card-meta">{{ r.set.set_name }} · {{ r.set.store }}</div>
+          <div class="pin-card-meta">{{ r.set.set_name }} · {{ storeName(r.set.store) }}</div>
           <div class="pin-card-meta">
             <span v-if="r.pin.retail_display">{{ r.pin.retail_display }}</span>
             <span v-else-if="r.set.retail_display">{{ r.set.retail_display }}</span>
@@ -1237,7 +1299,7 @@ const app = createApp({
   <div v-if="selectedPin.pin.catalog_number" class="sheet-set">#{{ selectedPin.pin.catalog_number }}</div>
   <div class="sheet-set">{{ selectedPin.set.set_name }}</div>
   <div class="sheet-meta">
-    <div><strong>Store:</strong> {{ selectedPin.set.store }}</div>
+    <div><strong>Store:</strong> {{ storeName(selectedPin.set.store) }}</div>
     <div><strong>Drop:</strong> {{ selectedPin.pin.drop_date ? ({'2026-08-14':'Friday, August 14','2026-08-15':'Saturday, August 15','2026-08-16':'Sunday, August 16'}[selectedPin.pin.drop_date] || selectedPin.pin.drop_date) : selectedPin.set.drop_day_label }}</div>
     <div v-if="selectedPin.set.features"><strong>Features:</strong> {{ selectedPin.set.features }}</div>
     <div v-if="selectedPin.set.dimensions"><strong>Dimensions:</strong> {{ selectedPin.set.dimensions }}</div>

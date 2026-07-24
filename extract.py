@@ -81,13 +81,18 @@ def build_mog_sets():
 
     # --- Friday ---
     sid = "mog-alice-mystery"
-    sets.append(make_set(
+    s = make_set(
         sid, MOG, FRI, FRI_L,
         "Alice in Wonderland Mystery Set", None, "mystery",
         "Soft Enamel, Marbleized Fill, 3D Border, Laser Print", '1.9″–2.0″H',
         34.95, "per box", "Limit six (6) boxes per guest", False,
         [make_pin(sid, 1, "Mystery Box", 400)],
-    ))
+    )
+    s["pins"].extend([make_pin(sid, None, n, 400) for n in [
+        "Doorknob", "Mad Hatter", "Queen of Hearts", "March Hare",
+        "Red Rose", "Alice", "Caterpillar", "Dinah",
+        "White Rabbit", "King of Hearts", "Tweedledee & Tweedledum", "Cheshire Cat"]])
+    sets.append(s)
 
     sid = "mog-alice-75th"
     sets.append(make_set(
@@ -169,7 +174,7 @@ def build_mog_sets():
             make_pin(sid, 28, "Treasure Planet", 400),
             make_pin(sid, 29, "The Princess and the Frog", 400),
             make_pin(sid, 30, "Big Hero 6", 400),
-            make_pin(sid, 31, "Raya", 400),
+            make_pin(sid, 31, "Raya and the Last Dragon", 400),
             make_pin(sid, 32, "Lilo & Stitch", 400),
             make_pin(sid, 33, "A Goofy Movie", 400),
             make_pin(sid, 34, "Moana", 400),
@@ -235,13 +240,19 @@ def build_mog_sets():
 
     # --- Saturday ---
     sid = "mog-sea-mystery"
-    sets.append(make_set(
+    s = make_set(
         sid, MOG, SAT, SAT_L,
         "S.E.A. Mystery Set",
         "Collect all 15 pins plus trading cards to reveal a hidden image.",
         "mystery", None, None, 39.95, "per box", None, False,
         [make_pin(sid, 58, "Mystery Box", 500)],
-    ))
+    )
+    s["pins"].extend([make_pin(sid, None, n, 500) for n in [
+        "Mary Oceaneer", "Duncan the Parrot", "Alberta Falls", "Albert Falls",
+        "Pin 5", "Dr. Kon Chunosuke", "Camellia Falco", "S.E.A. Member",
+        "Harrison Hightower III", "Barnabas T. Bullion", "Lord Henry Mystic", "Albert",
+        "Pin 13", "Shiriki Utundu"]])
+    sets.append(s)
 
     sid = "mog-parks-to-ports"
     sets.append(make_set(
@@ -262,7 +273,7 @@ def build_mog_sets():
     sid = "mog-park-stamps-2"
     sets.append(make_set(
         sid, MOG, SAT, SAT_L,
-        "Disney Park Stamps: Series 2",
+        "Disney Park Stamps — Series 2",
         "Commemorative stamp pin series celebrating the characters and attractions of Disney Parks.",
         "individual",
         "Hard Enamel, Stained Glass, Specialty Fills (Glitter, Translucent, Pearlized), Laser Print",
@@ -289,7 +300,7 @@ def build_mog_sets():
     sid = "mog-panoramas"
     sets.append(make_set(
         sid, MOG, SAT, SAT_L,
-        "Disney Attraction Panoramas — Gate-fold", None, "individual",
+        "Disney Attraction Panoramas", None, "individual",
         None, None, 74.95, None, None, False,
         [
             make_pin(sid, 81, "Peter Pan's Flight", 400),
@@ -304,13 +315,16 @@ def build_mog_sets():
     ))
 
     sid = "mog-carousel-horses"
-    sets.append(make_set(
+    s = make_set(
         sid, MOG, SAT, SAT_L,
-        "Disney Royal Carousel Horses — Box Set",
+        "Disney Royal Carousel Horses",
         "Box set of 6 carousel horse pins with display box.", "box_set",
         None, None, 324.95, "for set of 6", None, False,
-        [make_pin(sid, 89, "Carousel Horses Box Set", 250)],
-    ))
+        [make_pin(sid, 89, "Box Set", 250)],
+    )
+    s["pins"].extend([make_pin(sid, None, n, 250) for n in [
+        "Mickey", "Minnie", "Donald", "Goofy", "Clarabelle", "Daisy"]])
+    sets.append(s)
 
     # --- Sunday ---
     sid = "mog-avengers-mystery"
@@ -426,22 +440,6 @@ def build_mog_sets():
         [make_pin(sid, 118, "Mystery Box", 500)],
     ))
 
-    # Pin boards appear all 3 days
-    sid = "mog-imagineering-pin-boards"
-    s = make_set(
-        sid, MOG, FRI, FRI_L,
-        "Walt Disney Imagineering Pin Boards",
-        "Unique pin boards inspired by the iconic Mickey's of Glendale backer cards.",
-        "individual", "Foam Pin Board, Debossed Front", None,
-        34.95, None, None, False,
-        [
-            make_pin(sid, 119, "Backer Card Pin Board (10″W × 16″H)", None),
-            make_pin(sid, 120, "Mickey Backer Card Pin Board (9″W × 16″H)", None),
-        ],
-    )
-    s["available_dates"] = [FRI, SAT, SUN]
-    sets.append(s)
-
     return sets
 
 
@@ -526,18 +524,22 @@ def build_twdc_sets():
     ))
 
     sid = "twdc-disney-d-mystery"
-    sets.append(make_set(sid, T, FRI, FRI_L,
+    s = make_set(sid, T, FRI, FRI_L,
         "Disney D's Mystery Pin Box", None, "mystery", None, None, 32.95, "per box", PL5, False,
-        [make_pin(sid, None, n, 400) for n in [
-            "Mickey", "Minnie", "Goofy", "Daisy", "Pluto", "Chip & Dale", "Donald", "Blank D"]],
-    ))
+        [make_pin(sid, None, "Mystery Box", 400)],
+    )
+    s["pins"].extend([make_pin(sid, None, n, 400) for n in [
+        "Mickey", "Minnie", "Goofy", "Daisy", "Pluto", "Chip & Dale", "Donald", "Blank D"]])
+    sets.append(s)
 
     sid = "twdc-princess-mystery"
-    sets.append(make_set(sid, T, FRI, FRI_L,
+    s = make_set(sid, T, FRI, FRI_L,
         "Disney Princess Mystery Pin Box", None, "mystery", None, None, 32.95, "per box", PL5, False,
-        [make_pin(sid, None, n, 400) for n in [
-            "Ariel", "Moana", "Tiana", "Belle", "Rapunzel", "Pocahontas", "Jasmine", "Cinderella"]],
-    ))
+        [make_pin(sid, None, "Mystery Box", 400)],
+    )
+    s["pins"].extend([make_pin(sid, None, n, 400) for n in [
+        "Ariel", "Moana", "Tiana", "Belle", "Rapunzel", "Pocahontas", "Jasmine", "Cinderella"]])
+    sets.append(s)
 
     # Framed — All days combined into one set
     framed_all = [
@@ -977,6 +979,147 @@ def apply_image_mappings(all_sets):
     twdc_fri_dir = "images/twdc/fri"
     mappings = {
         # =====================================================================
+        # MOG FRIDAY
+        # =====================================================================
+        # Alice Mystery (p02 — 12 individual pulls, no box image)
+        "mog-alice-mystery-doorknob": "images/mog/fri/mog_p02_0108.png",
+        "mog-alice-mystery-mad-hatter": "images/mog/fri/mog_p02_0110.png",
+        "mog-alice-mystery-queen-of-hearts": "images/mog/fri/mog_p02_0112.png",
+        "mog-alice-mystery-march-hare": "images/mog/fri/mog_p02_0114.png",
+        "mog-alice-mystery-red-rose": "images/mog/fri/mog_p02_0116.png",
+        "mog-alice-mystery-alice": "images/mog/fri/mog_p02_0118.png",
+        "mog-alice-mystery-caterpillar": "images/mog/fri/mog_p02_0120.png",
+        "mog-alice-mystery-dinah": "images/mog/fri/mog_p02_0122.png",
+        "mog-alice-mystery-white-rabbit": "images/mog/fri/mog_p02_0124.png",
+        "mog-alice-mystery-king-of-hearts": "images/mog/fri/mog_p02_0126.png",
+        "mog-alice-mystery-tweedledee-tweedledum": "images/mog/fri/mog_p02_0128.png",
+        "mog-alice-mystery-cheshire-cat": "images/mog/fri/mog_p02_0130.png",
+        # Alice 75th Anniversary (p03 — 5 pins)
+        "mog-alice-75th-2": "images/mog/fri/mog_p03_0175.png",
+        "mog-alice-75th-3": "images/mog/fri/mog_p03_0177.png",
+        "mog-alice-75th-4": "images/mog/fri/mog_p03_0179.png",
+        "mog-alice-75th-5": "images/mog/fri/mog_p03_0181.png",
+        "mog-alice-75th-6": "images/mog/fri/mog_p03_0183.png",
+        # Princess Dream Windows (p04-p06 — 13 pins)
+        "mog-princess-windows-7": "images/mog/fri/mog_p04_0232.png",
+        "mog-princess-windows-8": "images/mog/fri/mog_p04_0234.png",
+        "mog-princess-windows-9": "images/mog/fri/mog_p04_0236.png",
+        "mog-princess-windows-10": "images/mog/fri/mog_p04_0230.png",
+        "mog-princess-windows-11": "images/mog/fri/mog_p04_0228.png",
+        "mog-princess-windows-12": "images/mog/fri/mog_p05_0283.png",
+        "mog-princess-windows-13": "images/mog/fri/mog_p05_0285.png",
+        "mog-princess-windows-14": "images/mog/fri/mog_p05_0287.png",
+        "mog-princess-windows-15": "images/mog/fri/mog_p05_0281.png",
+        "mog-princess-windows-16": "images/mog/fri/mog_p05_0289.png",
+        "mog-princess-windows-17": "images/mog/fri/mog_p06_0335.png",
+        "mog-princess-windows-18": "images/mog/fri/mog_p06_0337.png",
+        "mog-princess-windows-19": "images/mog/fri/mog_p06_0339.png",
+        # Treasure Seekers (p07 — 6 pins)
+        "mog-treasure-seekers-21": "images/mog/fri/mog_p07_0392.png",
+        "mog-treasure-seekers-22": "images/mog/fri/mog_p07_0394.png",
+        "mog-treasure-seekers-23": "images/mog/fri/mog_p07_0396.png",
+        "mog-treasure-seekers-24": "images/mog/fri/mog_p07_0398.png",
+        "mog-treasure-seekers-25": "images/mog/fri/mog_p07_0400.png",
+        "mog-treasure-seekers-26": "images/mog/fri/mog_p07_0402.png",
+        # Squad Goals (p08-p09 — 10 pins)
+        "mog-squad-goals-27": "images/mog/fri/mog_p08_0447.png",
+        "mog-squad-goals-28": "images/mog/fri/mog_p08_0453.png",
+        "mog-squad-goals-29": "images/mog/fri/mog_p08_0455.png",
+        "mog-squad-goals-30": "images/mog/fri/mog_p08_0449.png",
+        "mog-squad-goals-31": "images/mog/fri/mog_p08_0451.png",
+        "mog-squad-goals-32": "images/mog/fri/mog_p09_0500.png",
+        "mog-squad-goals-33": "images/mog/fri/mog_p09_0506.png",
+        "mog-squad-goals-34": "images/mog/fri/mog_p09_0508.png",
+        "mog-squad-goals-35": "images/mog/fri/mog_p09_0502.png",
+        "mog-squad-goals-36": "images/mog/fri/mog_p09_0504.png",
+        # POV: Another Point of View (p10-p11 — 10 pins, 2 photos each = front/back of spinner)
+        # p10: pairs (593,595), (597,599), (601,603), (605,607), (609,611)
+        # p11: pairs (696,698), (700,702), (704,706), (708,710), (712,714)
+        "mog-pov-37": "images/mog/fri/mog_p10_0593.png",
+        "mog-pov-38": "images/mog/fri/mog_p10_0605.png",
+        "mog-pov-39": "images/mog/fri/mog_p10_0601.png",
+        "mog-pov-40": "images/mog/fri/mog_p10_0609.png",
+        "mog-pov-41": "images/mog/fri/mog_p10_0597.png",
+        "mog-pov-42": "images/mog/fri/mog_p11_0700.png",
+        "mog-pov-43": "images/mog/fri/mog_p11_0696.png",
+        "mog-pov-44": "images/mog/fri/mog_p11_0704.png",
+        "mog-pov-45": "images/mog/fri/mog_p11_0708.png",
+        "mog-pov-46": "images/mog/fri/mog_p11_0712.png",
+        # Dining with Character (p12-p14 — 10 pins)
+        "mog-dining-character-47": "images/mog/fri/mog_p12_0750.png",
+        "mog-dining-character-48": "images/mog/fri/mog_p12_0754.png",
+        "mog-dining-character-49": "images/mog/fri/mog_p12_0756.png",
+        "mog-dining-character-50": "images/mog/fri/mog_p12_0752.png",
+        "mog-dining-character-51": "images/mog/fri/mog_p13_0798.png",
+        "mog-dining-character-52": "images/mog/fri/mog_p13_0792.png",
+        "mog-dining-character-53": "images/mog/fri/mog_p13_0794.png",
+        "mog-dining-character-54": "images/mog/fri/mog_p13_0796.png",
+        "mog-dining-character-55": "images/mog/fri/mog_p14_0822.png",
+        "mog-dining-character-56": "images/mog/fri/mog_p14_0824.png",
+        # World Princess Week Ultra Jumbo (p15)
+        "mog-world-princess-ultra-57": "images/mog/fri/mog_p15_0837.png",
+
+        # =====================================================================
+        # MOG SATURDAY
+        # =====================================================================
+        # S.E.A. Mystery — 14 individual pulls (mystery box uses placeholder)
+        "mog-sea-mystery-mary-oceaneer": "images/mog/sat/mog_sea_mystery_01.png",
+        "mog-sea-mystery-duncan-the-parrot": "images/mog/sat/mog_sea_mystery_02.png",
+        "mog-sea-mystery-alberta-falls": "images/mog/sat/mog_sea_mystery_03.png",
+        "mog-sea-mystery-albert-falls": "images/mog/sat/mog_sea_mystery_04.png",
+        "mog-sea-mystery-pin-5": "images/mog/sat/mog_sea_mystery_05.png",
+        "mog-sea-mystery-dr-kon-chunosuke": "images/mog/sat/mog_sea_mystery_06.png",
+        "mog-sea-mystery-camellia-falco": "images/mog/sat/mog_sea_mystery_07.png",
+        "mog-sea-mystery-sea-member": "images/mog/sat/mog_sea_mystery_08.png",
+        "mog-sea-mystery-harrison-hightower-iii": "images/mog/sat/mog_sea_mystery_09.png",
+        "mog-sea-mystery-barnabas-t-bullion": "images/mog/sat/mog_sea_mystery_10.png",
+        "mog-sea-mystery-lord-henry-mystic": "images/mog/sat/mog_sea_mystery_11.png",
+        "mog-sea-mystery-albert": "images/mog/sat/mog_sea_mystery_12.png",
+        "mog-sea-mystery-pin-13": "images/mog/sat/mog_sea_mystery_13.png",
+        "mog-sea-mystery-shiriki-utundu": "images/mog/sat/mog_sea_mystery_14.png",
+        # Parks to Ports (p19-p20 — 7 pins)
+        "mog-parks-to-ports-59": "images/mog/sat/mog_p19_1010.png",
+        "mog-parks-to-ports-60": "images/mog/sat/mog_p19_1012.png",
+        "mog-parks-to-ports-61": "images/mog/sat/mog_p19_1008.png",
+        "mog-parks-to-ports-62": "images/mog/sat/mog_p19_1014.png",
+        "mog-parks-to-ports-63": "images/mog/sat/mog_p20_1043.png",
+        "mog-parks-to-ports-64": "images/mog/sat/mog_p20_1045.png",
+        "mog-parks-to-ports-65": "images/mog/sat/mog_p20_1047.png",
+        # Park Stamps Series 2 (custom named files + p21 + p22 — 15 pins)
+        "mog-park-stamps-2-66": "images/mog/sat/mog_park_stamps_row1_01.png",
+        "mog-park-stamps-2-67": "images/mog/sat/mog_park_stamps_row1_02.png",
+        "mog-park-stamps-2-68": "images/mog/sat/mog_park_stamps_row1_03.png",
+        "mog-park-stamps-2-69": "images/mog/sat/mog_park_stamps_row1_04.png",
+        "mog-park-stamps-2-70": "images/mog/sat/mog_p21_1078.png",
+        "mog-park-stamps-2-71": "images/mog/sat/mog_park_stamps_row2_01.png",
+        "mog-park-stamps-2-72": "images/mog/sat/mog_park_stamps_row2_02.png",
+        "mog-park-stamps-2-73": "images/mog/sat/mog_park_stamps_row2_03.png",
+        "mog-park-stamps-2-74": "images/mog/sat/mog_p22_1162.png",
+        "mog-park-stamps-2-75": "images/mog/sat/mog_p22_1150.png",
+        "mog-park-stamps-2-76": "images/mog/sat/mog_p22_1160.png",
+        "mog-park-stamps-2-77": "images/mog/sat/mog_p22_1152.png",
+        "mog-park-stamps-2-78": "images/mog/sat/mog_p22_1154.png",
+        "mog-park-stamps-2-79": "images/mog/sat/mog_p22_1156.png",
+        "mog-park-stamps-2-80": "images/mog/sat/mog_p22_1158.png",
+        # Panoramas Gate-fold (p23-p24 — 8 pins, 2 images each)
+        "mog-panoramas-81": "images/mog/sat/mog_p23_1235.png",
+        "mog-panoramas-82": "images/mog/sat/mog_p23_1239.png",
+        "mog-panoramas-83": "images/mog/sat/mog_p23_1243.png",
+        "mog-panoramas-84": "images/mog/sat/mog_p23_1247.png",
+        "mog-panoramas-85": "images/mog/sat/mog_p24_1326.png",
+        "mog-panoramas-86": "images/mog/sat/mog_p24_1330.png",
+        "mog-panoramas-87": "images/mog/sat/mog_p24_1334.png",
+        "mog-panoramas-88": "images/mog/sat/mog_p24_1322.png",
+        # Carousel Horses (p25)
+        "mog-carousel-horses-89": "images/mog/sat/mog_p25_1357.png",
+        "mog-carousel-horses-mickey": "images/mog/sat/mog_p25_carousel_01.png",
+        "mog-carousel-horses-minnie": "images/mog/sat/mog_p25_carousel_02.png",
+        "mog-carousel-horses-donald": "images/mog/sat/mog_p25_carousel_03.png",
+        "mog-carousel-horses-goofy": "images/mog/sat/mog_p25_carousel_04.png",
+        "mog-carousel-horses-clarabelle": "images/mog/sat/mog_p25_carousel_05.png",
+        "mog-carousel-horses-daisy": "images/mog/sat/mog_p25_carousel_06.png",
+
+        # =====================================================================
         # TWDC FRIDAY
         # =====================================================================
         # Disney Stamp Classic Era (PDF layout: left column top-to-bottom, then right column)
@@ -1041,20 +1184,21 @@ def apply_image_mappings(all_sets):
         "twdc-royal-chambers-zeus": f"{twdc_fri_dir}/fri_royal_p6_115.png",
         # Role Models (same layout pattern as Royal Chambers)
         "twdc-role-models-rafiki-simba": f"{twdc_fri_dir}/fri_royal_p7_120.png",
-        "twdc-role-models-ancestor-mulan": f"{twdc_fri_dir}/fri_royal_p7_122.png",
+        "twdc-role-models-ancestor-mulan": f"{twdc_fri_dir}/fri_royal_p7_126.png",
         "twdc-role-models-auguste-gusteau-remy": f"{twdc_fri_dir}/fri_royal_p7_124.png",
-        "twdc-role-models-hector-miguel": f"{twdc_fri_dir}/fri_royal_p7_126.png",
-        "twdc-role-models-tadashi-hiro": f"{twdc_fri_dir}/fri_royal_p7_128.png",
+        "twdc-role-models-hector-miguel": f"{twdc_fri_dir}/fri_royal_p7_128.png",
+        "twdc-role-models-tadashi-hiro": f"{twdc_fri_dir}/fri_royal_p7_136.png",
         "twdc-role-models-carl-russel": f"{twdc_fri_dir}/fri_royal_p7_130.png",
         "twdc-role-models-jiminy-pinocchio": f"{twdc_fri_dir}/fri_royal_p7_132.png",
         "twdc-role-models-tala-moana": f"{twdc_fri_dir}/fri_royal_p7_134.png",
-        "twdc-role-models-mei-mei-ming": f"{twdc_fri_dir}/fri_royal_p7_136.png",
+        "twdc-role-models-mei-mei-ming": f"{twdc_fri_dir}/fri_royal_p7_122.png",
         "twdc-role-models-merlin-arthur": f"{twdc_fri_dir}/fri_royal_p7_138.png",
         "twdc-role-models-grandmother-willow-pocahontas": f"{twdc_fri_dir}/fri_royal_p7_140.png",
         "twdc-role-models-phil-hercules": f"{twdc_fri_dir}/fri_royal_p7_142.png",
         "twdc-role-models-fairy-godmother-cinderella": f"{twdc_fri_dir}/fri_royal_p7_144.png",
         "twdc-role-models-timothy-mouse-dumbo": f"{twdc_fri_dir}/fri_royal_p7_146.png",
         # Disney D's Mystery
+        "twdc-disney-d-mystery-mystery-box": f"{twdc_fri_dir}/fri_disney_ds_box.png",
         "twdc-disney-d-mystery-mickey": f"{twdc_fri_dir}/fri_disney_ds_01.png",
         "twdc-disney-d-mystery-minnie": f"{twdc_fri_dir}/fri_disney_ds_02.png",
         "twdc-disney-d-mystery-goofy": f"{twdc_fri_dir}/fri_disney_ds_03.png",
@@ -1064,6 +1208,7 @@ def apply_image_mappings(all_sets):
         "twdc-disney-d-mystery-donald": f"{twdc_fri_dir}/fri_disney_ds_07.png",
         "twdc-disney-d-mystery-blank-d": f"{twdc_fri_dir}/fri_disney_ds_08.png",
         # Disney Princess Mystery
+        "twdc-princess-mystery-mystery-box": f"{twdc_fri_dir}/fri_princess_mystery_box.png",
         "twdc-princess-mystery-ariel": f"{twdc_fri_dir}/fri_princess_mystery_01.png",
         "twdc-princess-mystery-moana": f"{twdc_fri_dir}/fri_princess_mystery_02.png",
         "twdc-princess-mystery-tiana": f"{twdc_fri_dir}/fri_princess_mystery_03.png",
@@ -1322,6 +1467,56 @@ def apply_image_mappings(all_sets):
         if s["id"] == "twdc-reel-of-magic":
             for pin in s["pins"]:
                 pin["box_image_path"] = reel_secondary
+
+    # Assign secondary (back side) images to POV spinner pins
+    pov_back_images = {
+        "mog-pov-37": "images/mog/fri/mog_p10_0595.png",
+        "mog-pov-38": "images/mog/fri/mog_p10_0607.png",
+        "mog-pov-39": "images/mog/fri/mog_p10_0603.png",
+        "mog-pov-40": "images/mog/fri/mog_p10_0611.png",
+        "mog-pov-41": "images/mog/fri/mog_p10_0599.png",
+        "mog-pov-42": "images/mog/fri/mog_p11_0702.png",
+        "mog-pov-43": "images/mog/fri/mog_p11_0698.png",
+        "mog-pov-44": "images/mog/fri/mog_p11_0706.png",
+        "mog-pov-45": "images/mog/fri/mog_p11_0710.png",
+        "mog-pov-46": "images/mog/fri/mog_p11_0714.png",
+    }
+    for s in all_sets:
+        if s["id"] == "mog-pov":
+            for pin in s["pins"]:
+                if pin["id"] in pov_back_images:
+                    pin["box_image_path"] = pov_back_images[pin["id"]]
+
+    # Assign sea_card_969 as secondary image for all S.E.A. individual pins
+    # Except pin 6 (uses 967) and pin 12 (uses 965)
+    for s in all_sets:
+        if s["id"] == "mog-sea-mystery":
+            for pin in s["pins"]:
+                if pin["name"] != "Mystery Box":
+                    pin["box_image_path"] = "images/mog/sat/mog_sea_card_969.png"
+            # Override specific pins
+            for pin in s["pins"]:
+                if pin["id"] == "mog-sea-mystery-dr-kon-chunosuke":
+                    pin["box_image_path"] = "images/mog/sat/mog_sea_card_967.png"
+                elif pin["id"] == "mog-sea-mystery-albert":
+                    pin["box_image_path"] = "images/mog/sat/mog_sea_card_965.png"
+
+    # Assign secondary (gate-fold) images to Panoramas pins
+    panorama_back = {
+        "mog-panoramas-81": "images/mog/sat/mog_p23_1237.png",
+        "mog-panoramas-82": "images/mog/sat/mog_p23_1241.png",
+        "mog-panoramas-83": "images/mog/sat/mog_p23_1245.png",
+        "mog-panoramas-84": "images/mog/sat/mog_p23_1249.png",
+        "mog-panoramas-85": "images/mog/sat/mog_p24_1324.png",
+        "mog-panoramas-86": "images/mog/sat/mog_p24_1328.png",
+        "mog-panoramas-87": "images/mog/sat/mog_p24_1332.png",
+        "mog-panoramas-88": "images/mog/sat/mog_p24_1320.png",
+    }
+    for s in all_sets:
+        if s["id"] == "mog-panoramas":
+            for pin in s["pins"]:
+                if pin["id"] in panorama_back:
+                    pin["box_image_path"] = panorama_back[pin["id"]]
 
     # Assign box image to Epic Rivals pins
     epic_rivals_box = "images/twdc/sat/sat_epic_rivals_185.png"
