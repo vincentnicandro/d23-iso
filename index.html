@@ -564,6 +564,7 @@ const app = createApp({
     const showHelp = ref(false);
     const showReceipt = ref(false);
     const storyImages = ref([]);
+    const storyImageTitle = ref('Your Story Images');
 
     // Load data
     onMounted(async () => {
@@ -756,7 +757,8 @@ const app = createApp({
       for (const g of Object.values(groups)) {
         g.items.sort((a, b) => (catalogOrder[a.pin.id] ?? 9999) - (catalogOrder[b.pin.id] ?? 9999));
       }
-      return Object.values(groups).sort((a, b) => a.store.localeCompare(b.store) || a.date.localeCompare(b.date));
+      const storeOrder = { 'TWDC': 0, 'MOG': 1, 'DSSH': 2 };
+      return Object.values(groups).sort((a, b) => (storeOrder[a.store] ?? 9) - (storeOrder[b.store] ?? 9) || a.date.localeCompare(b.date));
     });
 
     const isoTotal = computed(() => {
@@ -1196,6 +1198,7 @@ const app = createApp({
       // On desktop: download directly
       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       if (isMobile) {
+        storyImageTitle.value = 'Your Story Images';
         storyImages.value = pages.map(c => c.toDataURL('image/png'));
       } else {
         for (let i = 0; i < pages.length; i++) {
@@ -1394,6 +1397,7 @@ const app = createApp({
       // Download / display
       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       if (isMobile) {
+        storyImageTitle.value = 'Your Image';
         storyImages.value = [canvas.toDataURL('image/png')];
       } else {
         const link = document.createElement('a');
@@ -1473,7 +1477,7 @@ const app = createApp({
 
     return {
       catalog, error, view, storeFilter, dateFilter, typeFilter, attrFilter, showFilters, searchQuery,
-      isoList, selectedPin, copyMsg, isoFilter, showExportMenu, showReceipt, showHelp, storyImages, stores, dates, dateLabels,
+      isoList, selectedPin, copyMsg, isoFilter, showExportMenu, showReceipt, showHelp, storyImages, storyImageTitle, stores, dates, dateLabels,
       filteredSets, searchResults, isoGroups, isoTotal, disoCount, receiptData, receiptGroupBy, expandedReceiptDays, expandedReceiptStores, toggleReceiptDay, toggleReceiptStore, expandAllReceipt, collapseAllReceipt, allReceiptExpanded, toggleAllReceipt, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
       updateQty, updateNote, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory, exportImage,
@@ -1784,7 +1788,7 @@ const app = createApp({
 <div v-if="storyImages.length" class="overlay" @click.self="storyImages=[]"></div>
 <div v-if="storyImages.length" class="sheet" style="padding:20px;text-align:center;">
   <button class="sheet-close" @click="storyImages=[]"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-  <p style="font-weight:600;font-size:16px;margin-bottom:4px;">Your Story Images</p>
+  <p style="font-weight:600;font-size:16px;margin-bottom:4px;">{{ storyImageTitle }}</p>
   <p style="font-size:13px;color:var(--color-text-secondary);margin-bottom:16px;">Long-press each image to save to Photos</p>
   <div v-for="(img, idx) in storyImages" :key="idx" style="margin-bottom:16px;">
     <img :src="img" style="width:100%;max-width:360px;border-radius:12px;border:1px solid var(--color-border);" :alt="'Story ' + (idx+1)">
