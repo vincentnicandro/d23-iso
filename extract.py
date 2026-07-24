@@ -819,7 +819,7 @@ def build_dssh_sets():
 
     sid = "dssh-all-in-a-name"
     sets.append(make_set(sid, D, FRI, FRI_L,
-        "It's All in a Name Series", None, "individual",
+        "It's All in a Name", None, "individual",
         "Jumbo, two pin-on-pins, translucent, custom backing card", None, 49.95, None, PL1, False,
         [make_pin(sid, None, n, 400) for n in [
             "Ariel", "Belle", "Marie", "Ursula", "Stitch", "Maleficent",
@@ -828,7 +828,7 @@ def build_dssh_sets():
 
     sid = "dssh-dragons-cuties"
     sets.append(make_set(sid, D, FRI, FRI_L,
-        "Disney Dragons Cuties Series", None, "individual",
+        "Disney Dragons Cuties", None, "individual",
         "Custom backing card", None, 34.95, None, PL1, False,
         [make_pin(sid, None, n, 300) for n in [
             "Elliott", "Madam Mim", "Maleficent", "Sisu", "The Reluctant Dragon",
@@ -837,7 +837,7 @@ def build_dssh_sets():
 
     sid = "dssh-best-in-show"
     sets.append(make_set(sid, D, FRI, FRI_L,
-        "Best in Show Series", None, "individual",
+        "Best in Show", None, "individual",
         "Pin-on-pin", '1.27″W×2.0″H', 29.95, None, PL1, False,
         [make_pin(sid, None, n, 400) for n in [
             "Marie", "Lucifer", "Cheshire Cat", "Fifi the Peke", "Dinah", "Max",
@@ -848,9 +848,10 @@ def build_dssh_sets():
     # Throwback Mystery with per-pin LE tiers
     sid = "dssh-throwback-mystery"
     s = make_set(sid, D, FRI, FRI_L,
-        "Throwback Mystery Series", None, "mystery",
+        "Throwback Mystery", None, "mystery",
         None, None, 49.95, "per box", PL5, False, [])
     s["pins"] = [
+        make_pin(sid, None, "Mystery Box", 400),
         make_pin(sid, None, "Kim Possible Cheer", 400),
         make_pin(sid, None, "Ron and Rufus", 400),
         make_pin(sid, None, "Lizzie on Scooter", 400),
@@ -892,7 +893,7 @@ def build_dssh_sets():
 
     sid = "dssh-unlocking-magic"
     sets.append(make_set(sid, D, SAT, SAT_L,
-        "Unlocking the Magic Series", None, "individual",
+        "Unlocking the Magic", None, "individual",
         "Hinge pin, glitter fill, custom backing", None, 49.95, None, PL1, False,
         [make_pin(sid, None, n, 400) for n in [
             "The Little Mermaid", "Lilo & Stitch", "Mulan", "Sleeping Beauty",
@@ -902,7 +903,7 @@ def build_dssh_sets():
 
     sid = "dssh-duos"
     sets.append(make_set(sid, D, SAT, SAT_L,
-        "Duos Series", None, "individual",
+        "Duos", None, "individual",
         "Stained glass, bookmark format, custom backing", '1.07″W×3.0″H', 74.95, None, PL1, False,
         [make_pin(sid, None, n, 400) for n in [
             "Anna & Elsa", "The Mandalorian & Grogu", "Goofy & Max",
@@ -913,7 +914,7 @@ def build_dssh_sets():
 
     sid = "dssh-zootopia-cars"
     sets.append(make_set(sid, D, SAT, SAT_L,
-        "Zootopia 10th Anniversary Car Series", None, "individual",
+        "Zootopia 10th Anniversary Cars", None, "individual",
         "Characters driving cars", None, 24.95, None, PL1, False,
         [make_pin(sid, None, n, 300) for n in [
             "Judy Hopps", "Flash", "Finnick", "Nick Wilde", "Dawn Bellwether", "Chief Bogo"]],
@@ -938,7 +939,7 @@ def build_dssh_sets():
     # --- SUNDAY ---
     sid = "dssh-tapestry"
     sets.append(make_set(sid, D, SUN, SUN_L,
-        "Tapestry Series", None, "individual",
+        "Tapestry", None, "individual",
         "Pin-on-pin", '1.56″W×2.0″H', 32.95, None, PL1, False,
         [make_pin(sid, None, n, 400) for n in [
             "Miguel", "Alice", "Jasmine", "Jack and Sally", "Elsa", "Merida",
@@ -947,7 +948,7 @@ def build_dssh_sets():
 
     sid = "dssh-duck-series"
     sets.append(make_set(sid, D, SUN, SUN_L,
-        "Duck Series", None, "individual",
+        "Duck", None, "individual",
         "Pin-on-pin rubber duck characters", None, 32.95, None, PL1, False,
         [make_pin(sid, None, n, 400) for n in [
             "Stitch", "Lilo", "Maleficent", "Cruella", "Hades", "Jiminy Cricket",
@@ -956,7 +957,7 @@ def build_dssh_sets():
 
     sid = "dssh-cursive-cuties"
     sets.append(make_set(sid, D, SUN, SUN_L,
-        "Cursive Cuties Series", None, "individual",
+        "Cursive Cuties", None, "individual",
         "3D color paste, pin-on-pin, translucent fill", '2.5″W×2.5″H', 44.95, None, PL1, False,
         [make_pin(sid, None, n, 400) for n in [
             "Baymax", "Bing Bong", "Bolt", "Cheshire Cat", "Merryweather",
@@ -966,7 +967,7 @@ def build_dssh_sets():
 
     sid = "dssh-goofy-movie-cuties"
     sets.append(make_set(sid, D, SUN, SUN_L,
-        "A Goofy Movie Cuties Series", None, "individual",
+        "A Goofy Movie Cuties", None, "individual",
         "Custom backing card", None, 34.95, None, PL1, False,
         [make_pin(sid, None, n, 300) for n in [
             "Goofy", "Max", "P.J. Pete", "Powerline", "Pete",
@@ -1197,6 +1198,180 @@ def apply_image_mappings(all_sets):
         "mog-portraits-of-evil-117": "images/mog/sun/mog_p33_1810.png",
         # Colorful World Mystery (p34)
         "mog-colorful-world-mystery-118": "images/mog/sun/mog_p34_1844.png",
+
+        # =====================================================================
+        # DSSH (all days, organized by collection)
+        # =====================================================================
+        # Premiere Collection
+        "dssh-premiere-el-capitan-el-capitan-100-years": "images/dssh/Premiere_Collection/Premiere_Collection_pin_only.png",
+        # Artist Series Avengers
+        "dssh-artist-avengers-ant-man": "images/dssh/Artist_Series_Avengers/Ant_Man.png",
+        "dssh-artist-avengers-iron-man": "images/dssh/Artist_Series_Avengers/Iron_Man.png",
+        "dssh-artist-avengers-thanos": "images/dssh/Artist_Series_Avengers/Thanos.png",
+        "dssh-artist-avengers-captain-america": "images/dssh/Artist_Series_Avengers/Captain_America.png",
+        "dssh-artist-avengers-thor": "images/dssh/Artist_Series_Avengers/Thor.png",
+        # It's All in a Name
+        "dssh-all-in-a-name-ariel": "images/dssh/Its_All_In_A_Name/Ariel.png",
+        "dssh-all-in-a-name-belle": "images/dssh/Its_All_In_A_Name/Belle.png",
+        "dssh-all-in-a-name-marie": "images/dssh/Its_All_In_A_Name/Marie.png",
+        "dssh-all-in-a-name-ursula": "images/dssh/Its_All_In_A_Name/Ursula.png",
+        "dssh-all-in-a-name-stitch": "images/dssh/Its_All_In_A_Name/Stitch.png",
+        "dssh-all-in-a-name-maleficent": "images/dssh/Its_All_In_A_Name/Maleficent.png",
+        "dssh-all-in-a-name-dumbo": "images/dssh/Its_All_In_A_Name/Dumbo.png",
+        "dssh-all-in-a-name-kuzco": "images/dssh/Its_All_In_A_Name/Kuzco.png",
+        "dssh-all-in-a-name-alice": "images/dssh/Its_All_In_A_Name/Alice.png",
+        "dssh-all-in-a-name-aurora": "images/dssh/Its_All_In_A_Name/Aurora.png",
+        "dssh-all-in-a-name-hades": "images/dssh/Its_All_In_A_Name/Hades.png",
+        "dssh-all-in-a-name-eeyore": "images/dssh/Its_All_In_A_Name/Eeyore.png",
+        "dssh-all-in-a-name-goofy": "images/dssh/Its_All_In_A_Name/Goofy.png",
+        "dssh-all-in-a-name-moana": "images/dssh/Its_All_In_A_Name/Moana.png",
+        # Disney Dragons Cuties
+        "dssh-dragons-cuties-elliott": "images/dssh/Disney_Dragons_Cuties/Elliott.png",
+        "dssh-dragons-cuties-madam-mim": "images/dssh/Disney_Dragons_Cuties/Madam_Mim.png",
+        "dssh-dragons-cuties-maleficent": "images/dssh/Disney_Dragons_Cuties/Maleficent.png",
+        "dssh-dragons-cuties-sisu": "images/dssh/Disney_Dragons_Cuties/Sisu.png",
+        "dssh-dragons-cuties-the-reluctant-dragon": "images/dssh/Disney_Dragons_Cuties/The_Reluctant_Dragon.png",
+        "dssh-dragons-cuties-queen-narissa": "images/dssh/Disney_Dragons_Cuties/Queen_Narissa.png",
+        "dssh-dragons-cuties-hydra": "images/dssh/Disney_Dragons_Cuties/Hydra.png",
+        "dssh-dragons-cuties-the-gwythaints": "images/dssh/Disney_Dragons_Cuties/The_Gwythaints.png",
+        "dssh-dragons-cuties-blazey": "images/dssh/Disney_Dragons_Cuties/Blazey.png",
+        "dssh-dragons-cuties-mushu": "images/dssh/Disney_Dragons_Cuties/Mushu.png",
+        # Best in Show
+        "dssh-best-in-show-marie": "images/dssh/Best_In_Show/Marie.png",
+        "dssh-best-in-show-lucifer": "images/dssh/Best_In_Show/Lucifer.png",
+        "dssh-best-in-show-cheshire-cat": "images/dssh/Best_In_Show/Cheshire_Cat.png",
+        "dssh-best-in-show-fifi-the-peke": "images/dssh/Best_In_Show/Fifi_the_Peke.png",
+        "dssh-best-in-show-dinah": "images/dssh/Best_In_Show/Dinah.png",
+        "dssh-best-in-show-max": "images/dssh/Best_In_Show/Max.png",
+        "dssh-best-in-show-nana": "images/dssh/Best_In_Show/Nana.png",
+        "dssh-best-in-show-dodger": "images/dssh/Best_In_Show/Dodger.png",
+        "dssh-best-in-show-little-brother": "images/dssh/Best_In_Show/Little_Brother.png",
+        "dssh-best-in-show-pongo": "images/dssh/Best_In_Show/Pongo.png",
+        "dssh-best-in-show-pluto": "images/dssh/Best_In_Show/Pluto.png",
+        "dssh-best-in-show-berlioz": "images/dssh/Best_In_Show/Berlioz.png",
+        "dssh-best-in-show-toulouse": "images/dssh/Best_In_Show/Toulouse.png",
+        "dssh-best-in-show-mochi": "images/dssh/Best_In_Show/Mochi.png",
+        # Throwback Mystery
+        "dssh-throwback-mystery-kim-possible-cheer": "images/dssh/Throwback_Mystery/Kim_Possible_Cheer.png",
+        "dssh-throwback-mystery-ron-and-rufus": "images/dssh/Throwback_Mystery/Ron_and_Rufus.png",
+        "dssh-throwback-mystery-lizzie-on-scooter": "images/dssh/Throwback_Mystery/Lizzie_on_Scooter.png",
+        "dssh-throwback-mystery-lizzie-frame": "images/dssh/Throwback_Mystery/Lizzie_Frame.png",
+        "dssh-throwback-mystery-lizzie-heart": "images/dssh/Throwback_Mystery/Lizzie_Heart.png",
+        "dssh-throwback-mystery-east-high-school": "images/dssh/Throwback_Mystery/East_High_School.png",
+        "dssh-throwback-mystery-troy-and-gabriella": "images/dssh/Throwback_Mystery/Troy_and_Gabriella.png",
+        "dssh-throwback-mystery-rufus": "images/dssh/Throwback_Mystery/Rufus.png",
+        "dssh-throwback-mystery-kim-possible": "images/dssh/Throwback_Mystery/Kim_Possible.png",
+        "dssh-throwback-mystery-lizzie-hooray": "images/dssh/Throwback_Mystery/Lizzie_Hooray.png",
+        "dssh-throwback-mystery-lizzie-flower-crown": "images/dssh/Throwback_Mystery/Lizzie_Flower_Crown.png",
+        "dssh-throwback-mystery-ehs-megaphone": "images/dssh/Throwback_Mystery/EHS_Megaphone.png",
+        "dssh-throwback-mystery-so-not-the-drama": "images/dssh/Throwback_Mystery/So_Not_the_Drama.png",
+        "dssh-throwback-mystery-lizzie-in-heels": "images/dssh/Throwback_Mystery/Lizzie_in_Heels.png",
+        # Vinyl Records Starter Set
+        "dssh-vinyl-starter-record-player-sleeping-beauty-pinocchio": "images/dssh/Vinyl_Records_Starter_Set/Starter_Set_pair.png",
+        # Vinyl Records Individual
+        "dssh-vinyl-records-tangled": "images/dssh/Vinyl_Records/Tangled.png",
+        "dssh-vinyl-records-hoppers": "images/dssh/Vinyl_Records/Hoppers.png",
+        "dssh-vinyl-records-pocahontas": "images/dssh/Vinyl_Records/Pocahontas.png",
+        "dssh-vinyl-records-big-hero-6": "images/dssh/Vinyl_Records/Big_Hero_6.png",
+        "dssh-vinyl-records-snow-white-the-seven-dwarfs": "images/dssh/Vinyl_Records/Snow_White_and_the_Seven_Dwarfs.png",
+        "dssh-vinyl-records-mulan": "images/dssh/Vinyl_Records/Mulan.png",
+        "dssh-vinyl-records-frozen": "images/dssh/Vinyl_Records/Frozen.png",
+        "dssh-vinyl-records-cinderella": "images/dssh/Vinyl_Records/Cinderella.png",
+        "dssh-vinyl-records-dumbo": "images/dssh/Vinyl_Records/Dumbo.png",
+        "dssh-vinyl-records-fantasia": "images/dssh/Vinyl_Records/Fantasia.png",
+        # Unlocking the Magic (use closed images as primary)
+        "dssh-unlocking-magic-the-little-mermaid": "images/dssh/Unlocking_The_Magic/The_Little_Mermaid_closed.png",
+        "dssh-unlocking-magic-lilo-stitch": "images/dssh/Unlocking_The_Magic/Lilo_and_Stitch_closed.png",
+        "dssh-unlocking-magic-mulan": "images/dssh/Unlocking_The_Magic/Mulan_closed.png",
+        "dssh-unlocking-magic-sleeping-beauty": "images/dssh/Unlocking_The_Magic/Sleeping_Beauty_closed.png",
+        "dssh-unlocking-magic-aladdin": "images/dssh/Unlocking_The_Magic/Aladdin_closed.png",
+        "dssh-unlocking-magic-rapunzel": "images/dssh/Unlocking_The_Magic/Rapunzel_closed.png",
+        "dssh-unlocking-magic-big-hero-6": "images/dssh/Unlocking_The_Magic/Big_Hero_6_closed.png",
+        "dssh-unlocking-magic-frozen": "images/dssh/Unlocking_The_Magic/Frozen_closed.png",
+        "dssh-unlocking-magic-pinocchio": "images/dssh/Unlocking_The_Magic/Pinocchio_closed.png",
+        "dssh-unlocking-magic-moana": "images/dssh/Unlocking_The_Magic/Moana_closed.png",
+        "dssh-unlocking-magic-dumbo": "images/dssh/Unlocking_The_Magic/Dumbo_closed.png",
+        "dssh-unlocking-magic-cinderella": "images/dssh/Unlocking_The_Magic/Cinderella_closed.png",
+        # Duos
+        "dssh-duos-anna-elsa": "images/dssh/Duos/Anna_and_Elsa.png",
+        "dssh-duos-the-mandalorian-grogu": "images/dssh/Duos/The_Mandalorian_and_Grogu.png",
+        "dssh-duos-goofy-max": "images/dssh/Duos/Goofy_and_Max.png",
+        "dssh-duos-maui-moana": "images/dssh/Duos/Maui_and_Moana.png",
+        "dssh-duos-deadpool-wolverine": "images/dssh/Duos/Deadpool_and_Wolverine.png",
+        "dssh-duos-mr-mrs-incredible": "images/dssh/Duos/Mr_and_Mrs_Incredible.png",
+        "dssh-duos-robin-hood-little-john": "images/dssh/Duos/Robin_Hood_and_Little_John.png",
+        "dssh-duos-hercules-megara": "images/dssh/Duos/Hercules_and_Megara.png",
+        "dssh-duos-baymax-hiro": "images/dssh/Duos/Baymax_and_Hiro.png",
+        "dssh-duos-ariel-prince-eric": "images/dssh/Duos/Ariel_and_Prince_Eric.png",
+        "dssh-duos-nick-wilde-judy-hopps": "images/dssh/Duos/Nick_Wilde_and_Judy_Hopps.png",
+        "dssh-duos-lilo-stitch": "images/dssh/Duos/Lilo_and_Stitch.png",
+        # Zootopia Cars
+        "dssh-zootopia-cars-judy-hopps": "images/dssh/Zootopia_Cars/Judy_Hopps.png",
+        "dssh-zootopia-cars-flash": "images/dssh/Zootopia_Cars/Flash.png",
+        "dssh-zootopia-cars-finnick": "images/dssh/Zootopia_Cars/Finnick.png",
+        "dssh-zootopia-cars-nick-wilde": "images/dssh/Zootopia_Cars/Nick_Wilde.png",
+        "dssh-zootopia-cars-dawn-bellwether": "images/dssh/Zootopia_Cars/Dawn_Bellwether.png",
+        "dssh-zootopia-cars-chief-bogo": "images/dssh/Zootopia_Cars/Chief_Bogo.png",
+        # El Capitan Hinge Pin
+        "dssh-el-capitan-hinge-el-capitan-1926-hinged-pin": "images/dssh/El_Capitan_100th/1926_hinged_closed.png",
+        # El Capitan Characters
+        "dssh-el-capitan-characters-mickey": "images/dssh/El_Capitan_100th/Mickey.png",
+        "dssh-el-capitan-characters-minnie": "images/dssh/El_Capitan_100th/Minnie.png",
+        "dssh-el-capitan-characters-oswald-the-lucky-rabbit": "images/dssh/El_Capitan_100th/Oswald_the_Lucky_Rabbit.png",
+        "dssh-el-capitan-characters-donald": "images/dssh/El_Capitan_100th/Donald.png",
+        "dssh-el-capitan-characters-daisy": "images/dssh/El_Capitan_100th/Daisy.png",
+        "dssh-el-capitan-characters-judy-hopps": "images/dssh/El_Capitan_100th/Judy_Hopps.png",
+        "dssh-el-capitan-characters-nick-wilde": "images/dssh/El_Capitan_100th/Nick_Wilde.png",
+        # Tapestry
+        "dssh-tapestry-miguel": "images/dssh/Tapestry/Miguel.png",
+        "dssh-tapestry-alice": "images/dssh/Tapestry/Alice.png",
+        "dssh-tapestry-jasmine": "images/dssh/Tapestry/Jasmine.png",
+        "dssh-tapestry-jack-and-sally": "images/dssh/Tapestry/Jack_and_Sally.png",
+        "dssh-tapestry-elsa": "images/dssh/Tapestry/Elsa.png",
+        "dssh-tapestry-merida": "images/dssh/Tapestry/Merida.png",
+        "dssh-tapestry-rapunzel": "images/dssh/Tapestry/Rapunzel.png",
+        "dssh-tapestry-briar-rose": "images/dssh/Tapestry/Briar_Rose.png",
+        "dssh-tapestry-yzma": "images/dssh/Tapestry/Yzma.png",
+        "dssh-tapestry-maleficent": "images/dssh/Tapestry/Maleficent.png",
+        "dssh-tapestry-ursula": "images/dssh/Tapestry/Ursula.png",
+        "dssh-tapestry-mirabel": "images/dssh/Tapestry/Mirabel.png",
+        # Duck Series
+        "dssh-duck-series-stitch": "images/dssh/Duck/Stitch.png",
+        "dssh-duck-series-lilo": "images/dssh/Duck/Lilo.png",
+        "dssh-duck-series-maleficent": "images/dssh/Duck/Maleficent.png",
+        "dssh-duck-series-cruella": "images/dssh/Duck/Cruella.png",
+        "dssh-duck-series-hades": "images/dssh/Duck/Hades.png",
+        "dssh-duck-series-jiminy-cricket": "images/dssh/Duck/Jiminy_Cricket.png",
+        "dssh-duck-series-fairy-godmother": "images/dssh/Duck/Fairy_Godmother.png",
+        "dssh-duck-series-flora": "images/dssh/Duck/Flora.png",
+        "dssh-duck-series-fauna": "images/dssh/Duck/Fauna.png",
+        "dssh-duck-series-merryweather": "images/dssh/Duck/Merryweather.png",
+        "dssh-duck-series-mad-hatter": "images/dssh/Duck/Mad_Hatter.png",
+        "dssh-duck-series-panda-mei": "images/dssh/Duck/Panda_Mei.png",
+        # Cursive Cuties
+        "dssh-cursive-cuties-baymax": "images/dssh/Cursive_Cuties/Baymax.png",
+        "dssh-cursive-cuties-bing-bong": "images/dssh/Cursive_Cuties/Bing_Bong.png",
+        "dssh-cursive-cuties-bolt": "images/dssh/Cursive_Cuties/Bolt.png",
+        "dssh-cursive-cuties-cheshire-cat": "images/dssh/Cursive_Cuties/Cheshire_Cat.png",
+        "dssh-cursive-cuties-merryweather": "images/dssh/Cursive_Cuties/Merryweather.png",
+        "dssh-cursive-cuties-grumpy": "images/dssh/Cursive_Cuties/Grumpy.png",
+        "dssh-cursive-cuties-louis": "images/dssh/Cursive_Cuties/Louis.png",
+        "dssh-cursive-cuties-meeko": "images/dssh/Cursive_Cuties/Meeko.png",
+        "dssh-cursive-cuties-flora": "images/dssh/Cursive_Cuties/Flora.png",
+        "dssh-cursive-cuties-cri-kee": "images/dssh/Cursive_Cuties/Cri_Kee.png",
+        "dssh-cursive-cuties-mushu": "images/dssh/Cursive_Cuties/Mushu.png",
+        "dssh-cursive-cuties-oswald-the-lucky-rabbit": "images/dssh/Cursive_Cuties/Oswald_the_Lucky_Rabbit.png",
+        "dssh-cursive-cuties-scrump": "images/dssh/Cursive_Cuties/Scrump.png",
+        "dssh-cursive-cuties-fauna": "images/dssh/Cursive_Cuties/Fauna.png",
+        # A Goofy Movie Cuties
+        "dssh-goofy-movie-cuties-goofy": "images/dssh/A_Goofy_Movie_Cuties/Goofy.png",
+        "dssh-goofy-movie-cuties-max": "images/dssh/A_Goofy_Movie_Cuties/Max.png",
+        "dssh-goofy-movie-cuties-pj-pete": "images/dssh/A_Goofy_Movie_Cuties/PJ_Pete.png",
+        "dssh-goofy-movie-cuties-powerline": "images/dssh/A_Goofy_Movie_Cuties/Powerline.png",
+        "dssh-goofy-movie-cuties-pete": "images/dssh/A_Goofy_Movie_Cuties/Pete.png",
+        "dssh-goofy-movie-cuties-bobby-zimuruski": "images/dssh/A_Goofy_Movie_Cuties/Bobby_Zimuruski.png",
+        "dssh-goofy-movie-cuties-roxanne": "images/dssh/A_Goofy_Movie_Cuties/Roxanne.png",
+        "dssh-goofy-movie-cuties-stacey": "images/dssh/A_Goofy_Movie_Cuties/Stacey.png",
 
         # =====================================================================
         # TWDC FRIDAY
@@ -1610,6 +1785,33 @@ def apply_image_mappings(all_sets):
             for pin in s["pins"]:
                 pin["box_image_path"] = "images/mog/fri/mog_p15_0839.png"
 
+    # Assign open images as secondary for Unlocking the Magic (hinged pins)
+    unlocking_open = {
+        "dssh-unlocking-magic-the-little-mermaid": "images/dssh/Unlocking_The_Magic/The_Little_Mermaid_open.png",
+        "dssh-unlocking-magic-lilo-stitch": "images/dssh/Unlocking_The_Magic/Lilo_and_Stitch_open.png",
+        "dssh-unlocking-magic-mulan": "images/dssh/Unlocking_The_Magic/Mulan_open.png",
+        "dssh-unlocking-magic-sleeping-beauty": "images/dssh/Unlocking_The_Magic/Sleeping_Beauty_open.png",
+        "dssh-unlocking-magic-aladdin": "images/dssh/Unlocking_The_Magic/Aladdin_open.png",
+        "dssh-unlocking-magic-rapunzel": "images/dssh/Unlocking_The_Magic/Rapunzel_open.png",
+        "dssh-unlocking-magic-big-hero-6": "images/dssh/Unlocking_The_Magic/Big_Hero_6_open.png",
+        "dssh-unlocking-magic-frozen": "images/dssh/Unlocking_The_Magic/Frozen_open.png",
+        "dssh-unlocking-magic-pinocchio": "images/dssh/Unlocking_The_Magic/Pinocchio_open.png",
+        "dssh-unlocking-magic-moana": "images/dssh/Unlocking_The_Magic/Moana_open.png",
+        "dssh-unlocking-magic-dumbo": "images/dssh/Unlocking_The_Magic/Dumbo_open.png",
+        "dssh-unlocking-magic-cinderella": "images/dssh/Unlocking_The_Magic/Cinderella_open.png",
+    }
+    for s in all_sets:
+        if s["id"] == "dssh-unlocking-magic":
+            for pin in s["pins"]:
+                if pin["id"] in unlocking_open:
+                    pin["box_image_path"] = unlocking_open[pin["id"]]
+
+    # Assign El Capitan hinge open images as secondary
+    for s in all_sets:
+        if s["id"] == "dssh-el-capitan-hinge":
+            for pin in s["pins"]:
+                pin["box_image_path"] = "images/dssh/El_Capitan_100th/1926_hinged_open_reveal.png"
+
     # Assign box set image as secondary to all Carousel Horses individual pins
     for s in all_sets:
         if s["id"] == "mog-carousel-horses":
@@ -1622,6 +1824,24 @@ def apply_image_mappings(all_sets):
                 for pin in s["pins"]:
                     if pin["name"] != "Box Set":
                         pin["box_image_path"] = box_img
+
+    # Assign pins_per_box for cost splitting in ISO
+    # Mystery sets with "2 pins per box" or TWDC mysteries
+    for s in all_sets:
+        if s["set_type"] == "mystery":
+            s["pins_per_box"] = 2  # default: most mystery boxes contain 2 pins
+        elif s["id"] == "mog-carousel-horses":
+            s["pins_per_box"] = 6
+        elif s["id"] == "mog-guardians-boxset":
+            s["pins_per_box"] = 1
+        elif s["id"] == "mog-pixar-soul-boxset":
+            s["pins_per_box"] = 1
+    # Overrides for specific mystery sets
+    for s in all_sets:
+        if s["id"] == "dssh-throwback-mystery":
+            s["pins_per_box"] = 2
+        elif s["id"] in ["mog-sea-mystery"]:
+            s["pins_per_box"] = 2
 
     return mapped
 

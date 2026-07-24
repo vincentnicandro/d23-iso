@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T04:29:51.075928Z",
+  "generated_at": "2026-07-24T17:04:54.508564Z",
   "stores": [
     "TWDC",
     "MOG",
@@ -794,7 +794,8 @@
           "image_path": "images/twdc/fri/fri_disney_ds_08.png",
           "box_image_path": "images/twdc/fri/fri_disney_ds_box.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "twdc-princess-mystery",
@@ -895,7 +896,8 @@
           "image_path": "images/twdc/fri/fri_princess_mystery_08.png",
           "box_image_path": "images/twdc/fri/fri_princess_mystery_box.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "twdc-framed",
@@ -2008,7 +2010,8 @@
           "image_path": "images/twdc/sat/sat_villains_mystery_08.png",
           "box_image_path": "images/twdc/sat/sat_villains_mystery_card.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "twdc-muppet-babies-mystery",
@@ -2109,7 +2112,8 @@
           "image_path": "images/twdc/sat/sat_muppet_mystery_05.png",
           "box_image_path": "images/twdc/sat/sat_muppet_mystery_card.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "twdc-elements-fire",
@@ -2877,7 +2881,8 @@
           "image_path": "images/twdc/sun/winnie_pooh_08.png",
           "box_image_path": "images/twdc/sun/winnie_pooh_box.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "twdc-star-wars-galactic-mystery",
@@ -2987,7 +2992,8 @@
           "image_path": "images/twdc/sun/galactic_pals_09.png",
           "box_image_path": "images/twdc/sun/galactic_pals_box.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "mog-alice-mystery",
@@ -3112,7 +3118,8 @@
           "edition_notes": null,
           "image_path": "images/mog/fri/mog_p02_0130.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "mog-alice-75th",
@@ -3392,7 +3399,8 @@
           "edition_notes": null,
           "image_path": "images/mog/fri/mog_p06_adorbs_08.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "mog-treasure-seekers",
@@ -3959,7 +3967,8 @@
           "image_path": "images/mog/sat/mog_sea_mystery_14.png",
           "box_image_path": "images/mog/sat/mog_sea_card_969.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "mog-parks-to-ports",
@@ -4353,7 +4362,8 @@
           "image_path": "images/mog/sat/mog_p25_carousel_06.png",
           "box_image_path": "images/mog/sat/mog_p25_1357.png"
         }
-      ]
+      ],
+      "pins_per_box": 6
     },
     {
       "id": "mog-avengers-mystery",
@@ -4447,7 +4457,8 @@
           "edition_notes": null,
           "image_path": "images/mog/sun/mog_p28_avengers_08.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "mog-guardians-boxset",
@@ -4476,7 +4487,8 @@
           "edition_notes": null,
           "image_path": "images/mog/sun/mog_p28_1397.png"
         }
-      ]
+      ],
+      "pins_per_box": 1
     },
     {
       "id": "mog-kingdom-hearts-mystery",
@@ -4570,7 +4582,8 @@
           "edition_notes": null,
           "image_path": "images/mog/sun/mog_adorbs_ind_1579.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "mog-pixar-soul-mystery",
@@ -4664,7 +4677,8 @@
           "edition_notes": null,
           "image_path": "images/mog/sun/mog_adorbs_ind_1565.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "mog-pixar-soul-boxset",
@@ -4693,7 +4707,8 @@
           "edition_notes": null,
           "image_path": "images/mog/sun/mog_adorbs_strip_01.png"
         }
-      ]
+      ],
+      "pins_per_box": 1
     },
     {
       "id": "mog-muppet-show-50th",
@@ -4948,7 +4963,8 @@
           "edition_notes": null,
           "image_path": "images/mog/sun/mog_p34_1844.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "dssh-premiere-el-capitan",
@@ -4975,7 +4991,7 @@
           "name": "El Capitan 100 Years",
           "edition_size": 200,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Premiere_Collection/Premiere_Collection_pin_only.png"
         }
       ]
     },
@@ -5004,7 +5020,7 @@
           "name": "Ant-Man",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Artist_Series_Avengers/Ant_Man.png"
         },
         {
           "id": "dssh-artist-avengers-iron-man",
@@ -5012,7 +5028,7 @@
           "name": "Iron Man",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Artist_Series_Avengers/Iron_Man.png"
         },
         {
           "id": "dssh-artist-avengers-thanos",
@@ -5020,7 +5036,7 @@
           "name": "Thanos",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Artist_Series_Avengers/Thanos.png"
         },
         {
           "id": "dssh-artist-avengers-captain-america",
@@ -5028,7 +5044,7 @@
           "name": "Captain America",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Artist_Series_Avengers/Captain_America.png"
         },
         {
           "id": "dssh-artist-avengers-thor",
@@ -5036,7 +5052,7 @@
           "name": "Thor",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Artist_Series_Avengers/Thor.png"
         }
       ]
     },
@@ -5045,7 +5061,7 @@
       "store": "DSSH",
       "drop_date": "2026-08-14",
       "drop_day_label": "Friday, August 14",
-      "set_name": "It's All in a Name Series",
+      "set_name": "It's All in a Name",
       "set_description": null,
       "set_type": "individual",
       "features": "Pin on Pin, Translucent, Jumbo, Custom Backing Card",
@@ -5065,7 +5081,7 @@
           "name": "Ariel",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Ariel.png"
         },
         {
           "id": "dssh-all-in-a-name-belle",
@@ -5073,7 +5089,7 @@
           "name": "Belle",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Belle.png"
         },
         {
           "id": "dssh-all-in-a-name-marie",
@@ -5081,7 +5097,7 @@
           "name": "Marie",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Marie.png"
         },
         {
           "id": "dssh-all-in-a-name-ursula",
@@ -5089,7 +5105,7 @@
           "name": "Ursula",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Ursula.png"
         },
         {
           "id": "dssh-all-in-a-name-stitch",
@@ -5097,7 +5113,7 @@
           "name": "Stitch",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Stitch.png"
         },
         {
           "id": "dssh-all-in-a-name-maleficent",
@@ -5105,7 +5121,7 @@
           "name": "Maleficent",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Maleficent.png"
         },
         {
           "id": "dssh-all-in-a-name-dumbo",
@@ -5113,7 +5129,7 @@
           "name": "Dumbo",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Dumbo.png"
         },
         {
           "id": "dssh-all-in-a-name-kuzco",
@@ -5121,7 +5137,7 @@
           "name": "Kuzco",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Kuzco.png"
         },
         {
           "id": "dssh-all-in-a-name-alice",
@@ -5129,7 +5145,7 @@
           "name": "Alice",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Alice.png"
         },
         {
           "id": "dssh-all-in-a-name-aurora",
@@ -5137,7 +5153,7 @@
           "name": "Aurora",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Aurora.png"
         },
         {
           "id": "dssh-all-in-a-name-hades",
@@ -5145,7 +5161,7 @@
           "name": "Hades",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Hades.png"
         },
         {
           "id": "dssh-all-in-a-name-eeyore",
@@ -5153,7 +5169,7 @@
           "name": "Eeyore",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Eeyore.png"
         },
         {
           "id": "dssh-all-in-a-name-goofy",
@@ -5161,7 +5177,7 @@
           "name": "Goofy",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Goofy.png"
         },
         {
           "id": "dssh-all-in-a-name-moana",
@@ -5169,7 +5185,7 @@
           "name": "Moana",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Its_All_In_A_Name/Moana.png"
         }
       ]
     },
@@ -5178,7 +5194,7 @@
       "store": "DSSH",
       "drop_date": "2026-08-14",
       "drop_day_label": "Friday, August 14",
-      "set_name": "Disney Dragons Cuties Series",
+      "set_name": "Disney Dragons Cuties",
       "set_description": null,
       "set_type": "individual",
       "features": "Custom Backing Card",
@@ -5198,7 +5214,7 @@
           "name": "Elliott",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Disney_Dragons_Cuties/Elliott.png"
         },
         {
           "id": "dssh-dragons-cuties-madam-mim",
@@ -5206,7 +5222,7 @@
           "name": "Madam Mim",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Disney_Dragons_Cuties/Madam_Mim.png"
         },
         {
           "id": "dssh-dragons-cuties-maleficent",
@@ -5214,7 +5230,7 @@
           "name": "Maleficent",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Disney_Dragons_Cuties/Maleficent.png"
         },
         {
           "id": "dssh-dragons-cuties-sisu",
@@ -5222,7 +5238,7 @@
           "name": "Sisu",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Disney_Dragons_Cuties/Sisu.png"
         },
         {
           "id": "dssh-dragons-cuties-the-reluctant-dragon",
@@ -5230,7 +5246,7 @@
           "name": "The Reluctant Dragon",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Disney_Dragons_Cuties/The_Reluctant_Dragon.png"
         },
         {
           "id": "dssh-dragons-cuties-queen-narissa",
@@ -5238,7 +5254,7 @@
           "name": "Queen Narissa",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Disney_Dragons_Cuties/Queen_Narissa.png"
         },
         {
           "id": "dssh-dragons-cuties-hydra",
@@ -5246,7 +5262,7 @@
           "name": "Hydra",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Disney_Dragons_Cuties/Hydra.png"
         },
         {
           "id": "dssh-dragons-cuties-the-gwythaints",
@@ -5254,7 +5270,7 @@
           "name": "The Gwythaints",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Disney_Dragons_Cuties/The_Gwythaints.png"
         },
         {
           "id": "dssh-dragons-cuties-blazey",
@@ -5262,7 +5278,7 @@
           "name": "Blazey",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Disney_Dragons_Cuties/Blazey.png"
         },
         {
           "id": "dssh-dragons-cuties-mushu",
@@ -5270,7 +5286,7 @@
           "name": "Mushu",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Disney_Dragons_Cuties/Mushu.png"
         }
       ]
     },
@@ -5279,7 +5295,7 @@
       "store": "DSSH",
       "drop_date": "2026-08-14",
       "drop_day_label": "Friday, August 14",
-      "set_name": "Best in Show Series",
+      "set_name": "Best in Show",
       "set_description": null,
       "set_type": "individual",
       "features": "Pin on Pin",
@@ -5299,7 +5315,7 @@
           "name": "Marie",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Marie.png"
         },
         {
           "id": "dssh-best-in-show-lucifer",
@@ -5307,7 +5323,7 @@
           "name": "Lucifer",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Lucifer.png"
         },
         {
           "id": "dssh-best-in-show-cheshire-cat",
@@ -5315,7 +5331,7 @@
           "name": "Cheshire Cat",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Cheshire_Cat.png"
         },
         {
           "id": "dssh-best-in-show-fifi-the-peke",
@@ -5323,7 +5339,7 @@
           "name": "Fifi the Peke",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Fifi_the_Peke.png"
         },
         {
           "id": "dssh-best-in-show-dinah",
@@ -5331,7 +5347,7 @@
           "name": "Dinah",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Dinah.png"
         },
         {
           "id": "dssh-best-in-show-max",
@@ -5339,7 +5355,7 @@
           "name": "Max",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Max.png"
         },
         {
           "id": "dssh-best-in-show-nana",
@@ -5347,7 +5363,7 @@
           "name": "Nana",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Nana.png"
         },
         {
           "id": "dssh-best-in-show-dodger",
@@ -5355,7 +5371,7 @@
           "name": "Dodger",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Dodger.png"
         },
         {
           "id": "dssh-best-in-show-little-brother",
@@ -5363,7 +5379,7 @@
           "name": "Little Brother",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Little_Brother.png"
         },
         {
           "id": "dssh-best-in-show-pongo",
@@ -5371,7 +5387,7 @@
           "name": "Pongo",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Pongo.png"
         },
         {
           "id": "dssh-best-in-show-pluto",
@@ -5379,7 +5395,7 @@
           "name": "Pluto",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Pluto.png"
         },
         {
           "id": "dssh-best-in-show-berlioz",
@@ -5387,7 +5403,7 @@
           "name": "Berlioz",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Berlioz.png"
         },
         {
           "id": "dssh-best-in-show-toulouse",
@@ -5395,7 +5411,7 @@
           "name": "Toulouse",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Toulouse.png"
         },
         {
           "id": "dssh-best-in-show-mochi",
@@ -5403,7 +5419,7 @@
           "name": "Mochi",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Best_In_Show/Mochi.png"
         }
       ]
     },
@@ -5412,7 +5428,7 @@
       "store": "DSSH",
       "drop_date": "2026-08-14",
       "drop_day_label": "Friday, August 14",
-      "set_name": "Throwback Mystery Series",
+      "set_name": "Throwback Mystery",
       "set_description": null,
       "set_type": "mystery",
       "features": null,
@@ -5427,12 +5443,20 @@
       ],
       "pins": [
         {
+          "id": "dssh-throwback-mystery-mystery-box",
+          "catalog_number": null,
+          "name": "Mystery Box",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/placeholder.png"
+        },
+        {
           "id": "dssh-throwback-mystery-kim-possible-cheer",
           "catalog_number": null,
           "name": "Kim Possible Cheer",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/Kim_Possible_Cheer.png"
         },
         {
           "id": "dssh-throwback-mystery-ron-and-rufus",
@@ -5440,7 +5464,7 @@
           "name": "Ron and Rufus",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/Ron_and_Rufus.png"
         },
         {
           "id": "dssh-throwback-mystery-lizzie-on-scooter",
@@ -5448,7 +5472,7 @@
           "name": "Lizzie on Scooter",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/Lizzie_on_Scooter.png"
         },
         {
           "id": "dssh-throwback-mystery-lizzie-frame",
@@ -5456,7 +5480,7 @@
           "name": "Lizzie Frame",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/Lizzie_Frame.png"
         },
         {
           "id": "dssh-throwback-mystery-lizzie-heart",
@@ -5464,7 +5488,7 @@
           "name": "Lizzie Heart",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/Lizzie_Heart.png"
         },
         {
           "id": "dssh-throwback-mystery-east-high-school",
@@ -5472,7 +5496,7 @@
           "name": "East High School",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/East_High_School.png"
         },
         {
           "id": "dssh-throwback-mystery-troy-and-gabriella",
@@ -5480,7 +5504,7 @@
           "name": "Troy and Gabriella",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/Troy_and_Gabriella.png"
         },
         {
           "id": "dssh-throwback-mystery-rufus",
@@ -5488,7 +5512,7 @@
           "name": "Rufus",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/Rufus.png"
         },
         {
           "id": "dssh-throwback-mystery-kim-possible",
@@ -5496,7 +5520,7 @@
           "name": "Kim Possible",
           "edition_size": 300,
           "edition_notes": "chaser",
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/Kim_Possible.png"
         },
         {
           "id": "dssh-throwback-mystery-lizzie-hooray",
@@ -5504,7 +5528,7 @@
           "name": "Lizzie Hooray",
           "edition_size": 300,
           "edition_notes": "chaser",
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/Lizzie_Hooray.png"
         },
         {
           "id": "dssh-throwback-mystery-lizzie-flower-crown",
@@ -5512,7 +5536,7 @@
           "name": "Lizzie Flower Crown",
           "edition_size": 300,
           "edition_notes": "chaser",
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/Lizzie_Flower_Crown.png"
         },
         {
           "id": "dssh-throwback-mystery-ehs-megaphone",
@@ -5520,7 +5544,7 @@
           "name": "EHS Megaphone",
           "edition_size": 300,
           "edition_notes": "chaser",
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/EHS_Megaphone.png"
         },
         {
           "id": "dssh-throwback-mystery-so-not-the-drama",
@@ -5528,7 +5552,7 @@
           "name": "So Not the Drama",
           "edition_size": 150,
           "edition_notes": "super chaser",
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/So_Not_the_Drama.png"
         },
         {
           "id": "dssh-throwback-mystery-lizzie-in-heels",
@@ -5536,9 +5560,10 @@
           "name": "Lizzie in Heels",
           "edition_size": 150,
           "edition_notes": "super chaser",
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Throwback_Mystery/Lizzie_in_Heels.png"
         }
-      ]
+      ],
+      "pins_per_box": 2
     },
     {
       "id": "dssh-vinyl-starter",
@@ -5565,7 +5590,7 @@
           "name": "Record Player + Sleeping Beauty + Pinocchio",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Vinyl_Records_Starter_Set/Starter_Set_pair.png"
         }
       ]
     },
@@ -5594,7 +5619,7 @@
           "name": "Tangled",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Vinyl_Records/Tangled.png"
         },
         {
           "id": "dssh-vinyl-records-hoppers",
@@ -5602,7 +5627,7 @@
           "name": "Hoppers",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Vinyl_Records/Hoppers.png"
         },
         {
           "id": "dssh-vinyl-records-pocahontas",
@@ -5610,7 +5635,7 @@
           "name": "Pocahontas",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Vinyl_Records/Pocahontas.png"
         },
         {
           "id": "dssh-vinyl-records-big-hero-6",
@@ -5618,7 +5643,7 @@
           "name": "Big Hero 6",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Vinyl_Records/Big_Hero_6.png"
         },
         {
           "id": "dssh-vinyl-records-snow-white-the-seven-dwarfs",
@@ -5626,7 +5651,7 @@
           "name": "Snow White & the Seven Dwarfs",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Vinyl_Records/Snow_White_and_the_Seven_Dwarfs.png"
         },
         {
           "id": "dssh-vinyl-records-mulan",
@@ -5634,7 +5659,7 @@
           "name": "Mulan",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Vinyl_Records/Mulan.png"
         },
         {
           "id": "dssh-vinyl-records-frozen",
@@ -5642,7 +5667,7 @@
           "name": "Frozen",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Vinyl_Records/Frozen.png"
         },
         {
           "id": "dssh-vinyl-records-cinderella",
@@ -5650,7 +5675,7 @@
           "name": "Cinderella",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Vinyl_Records/Cinderella.png"
         },
         {
           "id": "dssh-vinyl-records-dumbo",
@@ -5658,7 +5683,7 @@
           "name": "Dumbo",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Vinyl_Records/Dumbo.png"
         },
         {
           "id": "dssh-vinyl-records-fantasia",
@@ -5666,7 +5691,7 @@
           "name": "Fantasia",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Vinyl_Records/Fantasia.png"
         }
       ]
     },
@@ -5675,7 +5700,7 @@
       "store": "DSSH",
       "drop_date": "2026-08-15",
       "drop_day_label": "Saturday, August 15",
-      "set_name": "Unlocking the Magic Series",
+      "set_name": "Unlocking the Magic",
       "set_description": null,
       "set_type": "individual",
       "features": "Glitter, Hinged, Custom Backing Card",
@@ -5695,7 +5720,8 @@
           "name": "The Little Mermaid",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Unlocking_The_Magic/The_Little_Mermaid_closed.png",
+          "box_image_path": "images/dssh/Unlocking_The_Magic/The_Little_Mermaid_open.png"
         },
         {
           "id": "dssh-unlocking-magic-lilo-stitch",
@@ -5703,7 +5729,8 @@
           "name": "Lilo & Stitch",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Unlocking_The_Magic/Lilo_and_Stitch_closed.png",
+          "box_image_path": "images/dssh/Unlocking_The_Magic/Lilo_and_Stitch_open.png"
         },
         {
           "id": "dssh-unlocking-magic-mulan",
@@ -5711,7 +5738,8 @@
           "name": "Mulan",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Unlocking_The_Magic/Mulan_closed.png",
+          "box_image_path": "images/dssh/Unlocking_The_Magic/Mulan_open.png"
         },
         {
           "id": "dssh-unlocking-magic-sleeping-beauty",
@@ -5719,7 +5747,8 @@
           "name": "Sleeping Beauty",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Unlocking_The_Magic/Sleeping_Beauty_closed.png",
+          "box_image_path": "images/dssh/Unlocking_The_Magic/Sleeping_Beauty_open.png"
         },
         {
           "id": "dssh-unlocking-magic-aladdin",
@@ -5727,7 +5756,8 @@
           "name": "Aladdin",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Unlocking_The_Magic/Aladdin_closed.png",
+          "box_image_path": "images/dssh/Unlocking_The_Magic/Aladdin_open.png"
         },
         {
           "id": "dssh-unlocking-magic-rapunzel",
@@ -5735,7 +5765,8 @@
           "name": "Rapunzel",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Unlocking_The_Magic/Rapunzel_closed.png",
+          "box_image_path": "images/dssh/Unlocking_The_Magic/Rapunzel_open.png"
         },
         {
           "id": "dssh-unlocking-magic-big-hero-6",
@@ -5743,7 +5774,8 @@
           "name": "Big Hero 6",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Unlocking_The_Magic/Big_Hero_6_closed.png",
+          "box_image_path": "images/dssh/Unlocking_The_Magic/Big_Hero_6_open.png"
         },
         {
           "id": "dssh-unlocking-magic-frozen",
@@ -5751,7 +5783,8 @@
           "name": "Frozen",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Unlocking_The_Magic/Frozen_closed.png",
+          "box_image_path": "images/dssh/Unlocking_The_Magic/Frozen_open.png"
         },
         {
           "id": "dssh-unlocking-magic-pinocchio",
@@ -5759,7 +5792,8 @@
           "name": "Pinocchio",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Unlocking_The_Magic/Pinocchio_closed.png",
+          "box_image_path": "images/dssh/Unlocking_The_Magic/Pinocchio_open.png"
         },
         {
           "id": "dssh-unlocking-magic-moana",
@@ -5767,7 +5801,8 @@
           "name": "Moana",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Unlocking_The_Magic/Moana_closed.png",
+          "box_image_path": "images/dssh/Unlocking_The_Magic/Moana_open.png"
         },
         {
           "id": "dssh-unlocking-magic-dumbo",
@@ -5775,7 +5810,8 @@
           "name": "Dumbo",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Unlocking_The_Magic/Dumbo_closed.png",
+          "box_image_path": "images/dssh/Unlocking_The_Magic/Dumbo_open.png"
         },
         {
           "id": "dssh-unlocking-magic-cinderella",
@@ -5783,7 +5819,8 @@
           "name": "Cinderella",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Unlocking_The_Magic/Cinderella_closed.png",
+          "box_image_path": "images/dssh/Unlocking_The_Magic/Cinderella_open.png"
         }
       ]
     },
@@ -5792,7 +5829,7 @@
       "store": "DSSH",
       "drop_date": "2026-08-15",
       "drop_day_label": "Saturday, August 15",
-      "set_name": "Duos Series",
+      "set_name": "Duos",
       "set_description": null,
       "set_type": "individual",
       "features": "Stained Glass, Custom Backing Card",
@@ -5812,7 +5849,7 @@
           "name": "Anna & Elsa",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duos/Anna_and_Elsa.png"
         },
         {
           "id": "dssh-duos-the-mandalorian-grogu",
@@ -5820,7 +5857,7 @@
           "name": "The Mandalorian & Grogu",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duos/The_Mandalorian_and_Grogu.png"
         },
         {
           "id": "dssh-duos-goofy-max",
@@ -5828,7 +5865,7 @@
           "name": "Goofy & Max",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duos/Goofy_and_Max.png"
         },
         {
           "id": "dssh-duos-maui-moana",
@@ -5836,7 +5873,7 @@
           "name": "Maui & Moana",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duos/Maui_and_Moana.png"
         },
         {
           "id": "dssh-duos-deadpool-wolverine",
@@ -5844,7 +5881,7 @@
           "name": "Deadpool & Wolverine",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duos/Deadpool_and_Wolverine.png"
         },
         {
           "id": "dssh-duos-mr-mrs-incredible",
@@ -5852,7 +5889,7 @@
           "name": "Mr. & Mrs. Incredible",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duos/Mr_and_Mrs_Incredible.png"
         },
         {
           "id": "dssh-duos-robin-hood-little-john",
@@ -5860,7 +5897,7 @@
           "name": "Robin Hood & Little John",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duos/Robin_Hood_and_Little_John.png"
         },
         {
           "id": "dssh-duos-hercules-megara",
@@ -5868,7 +5905,7 @@
           "name": "Hercules & Megara",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duos/Hercules_and_Megara.png"
         },
         {
           "id": "dssh-duos-baymax-hiro",
@@ -5876,7 +5913,7 @@
           "name": "Baymax & Hiro",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duos/Baymax_and_Hiro.png"
         },
         {
           "id": "dssh-duos-ariel-prince-eric",
@@ -5884,7 +5921,7 @@
           "name": "Ariel & Prince Eric",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duos/Ariel_and_Prince_Eric.png"
         },
         {
           "id": "dssh-duos-nick-wilde-judy-hopps",
@@ -5892,7 +5929,7 @@
           "name": "Nick Wilde & Judy Hopps",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duos/Nick_Wilde_and_Judy_Hopps.png"
         },
         {
           "id": "dssh-duos-lilo-stitch",
@@ -5900,7 +5937,7 @@
           "name": "Lilo & Stitch",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duos/Lilo_and_Stitch.png"
         }
       ]
     },
@@ -5909,7 +5946,7 @@
       "store": "DSSH",
       "drop_date": "2026-08-15",
       "drop_day_label": "Saturday, August 15",
-      "set_name": "Zootopia 10th Anniversary Car Series",
+      "set_name": "Zootopia 10th Anniversary Cars",
       "set_description": null,
       "set_type": "individual",
       "features": "Characters driving cars",
@@ -5929,7 +5966,7 @@
           "name": "Judy Hopps",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Zootopia_Cars/Judy_Hopps.png"
         },
         {
           "id": "dssh-zootopia-cars-flash",
@@ -5937,7 +5974,7 @@
           "name": "Flash",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Zootopia_Cars/Flash.png"
         },
         {
           "id": "dssh-zootopia-cars-finnick",
@@ -5945,7 +5982,7 @@
           "name": "Finnick",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Zootopia_Cars/Finnick.png"
         },
         {
           "id": "dssh-zootopia-cars-nick-wilde",
@@ -5953,7 +5990,7 @@
           "name": "Nick Wilde",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Zootopia_Cars/Nick_Wilde.png"
         },
         {
           "id": "dssh-zootopia-cars-dawn-bellwether",
@@ -5961,7 +5998,7 @@
           "name": "Dawn Bellwether",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Zootopia_Cars/Dawn_Bellwether.png"
         },
         {
           "id": "dssh-zootopia-cars-chief-bogo",
@@ -5969,7 +6006,7 @@
           "name": "Chief Bogo",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Zootopia_Cars/Chief_Bogo.png"
         }
       ]
     },
@@ -5998,7 +6035,8 @@
           "name": "El Capitan 1926 Hinged Pin",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/El_Capitan_100th/1926_hinged_closed.png",
+          "box_image_path": "images/dssh/El_Capitan_100th/1926_hinged_open_reveal.png"
         }
       ]
     },
@@ -6027,7 +6065,7 @@
           "name": "Mickey",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/El_Capitan_100th/Mickey.png"
         },
         {
           "id": "dssh-el-capitan-characters-minnie",
@@ -6035,7 +6073,7 @@
           "name": "Minnie",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/El_Capitan_100th/Minnie.png"
         },
         {
           "id": "dssh-el-capitan-characters-oswald-the-lucky-rabbit",
@@ -6043,7 +6081,7 @@
           "name": "Oswald the Lucky Rabbit",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/El_Capitan_100th/Oswald_the_Lucky_Rabbit.png"
         },
         {
           "id": "dssh-el-capitan-characters-donald",
@@ -6051,7 +6089,7 @@
           "name": "Donald",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/El_Capitan_100th/Donald.png"
         },
         {
           "id": "dssh-el-capitan-characters-daisy",
@@ -6059,7 +6097,7 @@
           "name": "Daisy",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/El_Capitan_100th/Daisy.png"
         },
         {
           "id": "dssh-el-capitan-characters-judy-hopps",
@@ -6067,7 +6105,7 @@
           "name": "Judy Hopps",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/El_Capitan_100th/Judy_Hopps.png"
         },
         {
           "id": "dssh-el-capitan-characters-nick-wilde",
@@ -6075,7 +6113,7 @@
           "name": "Nick Wilde",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/El_Capitan_100th/Nick_Wilde.png"
         }
       ]
     },
@@ -6084,7 +6122,7 @@
       "store": "DSSH",
       "drop_date": "2026-08-16",
       "drop_day_label": "Sunday, August 16",
-      "set_name": "Tapestry Series",
+      "set_name": "Tapestry",
       "set_description": null,
       "set_type": "individual",
       "features": "Pin on Pin",
@@ -6104,7 +6142,7 @@
           "name": "Miguel",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Tapestry/Miguel.png"
         },
         {
           "id": "dssh-tapestry-alice",
@@ -6112,7 +6150,7 @@
           "name": "Alice",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Tapestry/Alice.png"
         },
         {
           "id": "dssh-tapestry-jasmine",
@@ -6120,7 +6158,7 @@
           "name": "Jasmine",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Tapestry/Jasmine.png"
         },
         {
           "id": "dssh-tapestry-jack-and-sally",
@@ -6128,7 +6166,7 @@
           "name": "Jack and Sally",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Tapestry/Jack_and_Sally.png"
         },
         {
           "id": "dssh-tapestry-elsa",
@@ -6136,7 +6174,7 @@
           "name": "Elsa",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Tapestry/Elsa.png"
         },
         {
           "id": "dssh-tapestry-merida",
@@ -6144,7 +6182,7 @@
           "name": "Merida",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Tapestry/Merida.png"
         },
         {
           "id": "dssh-tapestry-rapunzel",
@@ -6152,7 +6190,7 @@
           "name": "Rapunzel",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Tapestry/Rapunzel.png"
         },
         {
           "id": "dssh-tapestry-briar-rose",
@@ -6160,7 +6198,7 @@
           "name": "Briar Rose",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Tapestry/Briar_Rose.png"
         },
         {
           "id": "dssh-tapestry-yzma",
@@ -6168,7 +6206,7 @@
           "name": "Yzma",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Tapestry/Yzma.png"
         },
         {
           "id": "dssh-tapestry-maleficent",
@@ -6176,7 +6214,7 @@
           "name": "Maleficent",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Tapestry/Maleficent.png"
         },
         {
           "id": "dssh-tapestry-ursula",
@@ -6184,7 +6222,7 @@
           "name": "Ursula",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Tapestry/Ursula.png"
         },
         {
           "id": "dssh-tapestry-mirabel",
@@ -6192,7 +6230,7 @@
           "name": "Mirabel",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Tapestry/Mirabel.png"
         }
       ]
     },
@@ -6201,7 +6239,7 @@
       "store": "DSSH",
       "drop_date": "2026-08-16",
       "drop_day_label": "Sunday, August 16",
-      "set_name": "Duck Series",
+      "set_name": "Duck",
       "set_description": null,
       "set_type": "individual",
       "features": "Pin on Pin",
@@ -6221,7 +6259,7 @@
           "name": "Stitch",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duck/Stitch.png"
         },
         {
           "id": "dssh-duck-series-lilo",
@@ -6229,7 +6267,7 @@
           "name": "Lilo",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duck/Lilo.png"
         },
         {
           "id": "dssh-duck-series-maleficent",
@@ -6237,7 +6275,7 @@
           "name": "Maleficent",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duck/Maleficent.png"
         },
         {
           "id": "dssh-duck-series-cruella",
@@ -6245,7 +6283,7 @@
           "name": "Cruella",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duck/Cruella.png"
         },
         {
           "id": "dssh-duck-series-hades",
@@ -6253,7 +6291,7 @@
           "name": "Hades",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duck/Hades.png"
         },
         {
           "id": "dssh-duck-series-jiminy-cricket",
@@ -6261,7 +6299,7 @@
           "name": "Jiminy Cricket",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duck/Jiminy_Cricket.png"
         },
         {
           "id": "dssh-duck-series-fairy-godmother",
@@ -6269,7 +6307,7 @@
           "name": "Fairy Godmother",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duck/Fairy_Godmother.png"
         },
         {
           "id": "dssh-duck-series-flora",
@@ -6277,7 +6315,7 @@
           "name": "Flora",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duck/Flora.png"
         },
         {
           "id": "dssh-duck-series-fauna",
@@ -6285,7 +6323,7 @@
           "name": "Fauna",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duck/Fauna.png"
         },
         {
           "id": "dssh-duck-series-merryweather",
@@ -6293,7 +6331,7 @@
           "name": "Merryweather",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duck/Merryweather.png"
         },
         {
           "id": "dssh-duck-series-mad-hatter",
@@ -6301,7 +6339,7 @@
           "name": "Mad Hatter",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duck/Mad_Hatter.png"
         },
         {
           "id": "dssh-duck-series-panda-mei",
@@ -6309,7 +6347,7 @@
           "name": "Panda Mei",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Duck/Panda_Mei.png"
         }
       ]
     },
@@ -6318,7 +6356,7 @@
       "store": "DSSH",
       "drop_date": "2026-08-16",
       "drop_day_label": "Sunday, August 16",
-      "set_name": "Cursive Cuties Series",
+      "set_name": "Cursive Cuties",
       "set_description": null,
       "set_type": "individual",
       "features": "Pin on Pin, Translucent",
@@ -6338,7 +6376,7 @@
           "name": "Baymax",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Baymax.png"
         },
         {
           "id": "dssh-cursive-cuties-bing-bong",
@@ -6346,7 +6384,7 @@
           "name": "Bing Bong",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Bing_Bong.png"
         },
         {
           "id": "dssh-cursive-cuties-bolt",
@@ -6354,7 +6392,7 @@
           "name": "Bolt",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Bolt.png"
         },
         {
           "id": "dssh-cursive-cuties-cheshire-cat",
@@ -6362,7 +6400,7 @@
           "name": "Cheshire Cat",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Cheshire_Cat.png"
         },
         {
           "id": "dssh-cursive-cuties-merryweather",
@@ -6370,7 +6408,7 @@
           "name": "Merryweather",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Merryweather.png"
         },
         {
           "id": "dssh-cursive-cuties-grumpy",
@@ -6378,7 +6416,7 @@
           "name": "Grumpy",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Grumpy.png"
         },
         {
           "id": "dssh-cursive-cuties-louis",
@@ -6386,7 +6424,7 @@
           "name": "Louis",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Louis.png"
         },
         {
           "id": "dssh-cursive-cuties-meeko",
@@ -6394,7 +6432,7 @@
           "name": "Meeko",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Meeko.png"
         },
         {
           "id": "dssh-cursive-cuties-flora",
@@ -6402,7 +6440,7 @@
           "name": "Flora",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Flora.png"
         },
         {
           "id": "dssh-cursive-cuties-cri-kee",
@@ -6410,7 +6448,7 @@
           "name": "Cri-Kee",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Cri_Kee.png"
         },
         {
           "id": "dssh-cursive-cuties-mushu",
@@ -6418,7 +6456,7 @@
           "name": "Mushu",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Mushu.png"
         },
         {
           "id": "dssh-cursive-cuties-oswald-the-lucky-rabbit",
@@ -6426,7 +6464,7 @@
           "name": "Oswald the Lucky Rabbit",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Oswald_the_Lucky_Rabbit.png"
         },
         {
           "id": "dssh-cursive-cuties-scrump",
@@ -6434,7 +6472,7 @@
           "name": "Scrump",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Scrump.png"
         },
         {
           "id": "dssh-cursive-cuties-fauna",
@@ -6442,7 +6480,7 @@
           "name": "Fauna",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/Cursive_Cuties/Fauna.png"
         }
       ]
     },
@@ -6451,7 +6489,7 @@
       "store": "DSSH",
       "drop_date": "2026-08-16",
       "drop_day_label": "Sunday, August 16",
-      "set_name": "A Goofy Movie Cuties Series",
+      "set_name": "A Goofy Movie Cuties",
       "set_description": null,
       "set_type": "individual",
       "features": "Custom Backing Card",
@@ -6471,7 +6509,7 @@
           "name": "Goofy",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/A_Goofy_Movie_Cuties/Goofy.png"
         },
         {
           "id": "dssh-goofy-movie-cuties-max",
@@ -6479,7 +6517,7 @@
           "name": "Max",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/A_Goofy_Movie_Cuties/Max.png"
         },
         {
           "id": "dssh-goofy-movie-cuties-pj-pete",
@@ -6487,7 +6525,7 @@
           "name": "P.J. Pete",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/A_Goofy_Movie_Cuties/PJ_Pete.png"
         },
         {
           "id": "dssh-goofy-movie-cuties-powerline",
@@ -6495,7 +6533,7 @@
           "name": "Powerline",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/A_Goofy_Movie_Cuties/Powerline.png"
         },
         {
           "id": "dssh-goofy-movie-cuties-pete",
@@ -6503,7 +6541,7 @@
           "name": "Pete",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/A_Goofy_Movie_Cuties/Pete.png"
         },
         {
           "id": "dssh-goofy-movie-cuties-bobby-zimuruski",
@@ -6511,7 +6549,7 @@
           "name": "Bobby Zimuruski",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/A_Goofy_Movie_Cuties/Bobby_Zimuruski.png"
         },
         {
           "id": "dssh-goofy-movie-cuties-roxanne",
@@ -6519,7 +6557,7 @@
           "name": "Roxanne",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/A_Goofy_Movie_Cuties/Roxanne.png"
         },
         {
           "id": "dssh-goofy-movie-cuties-stacey",
@@ -6527,7 +6565,7 @@
           "name": "Stacey",
           "edition_size": 300,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/dssh/A_Goofy_Movie_Cuties/Stacey.png"
         }
       ]
     }

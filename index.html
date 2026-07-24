@@ -348,13 +348,47 @@ img { display: block; max-width: 100%; }
 .remove-btn-sm { width: 24px; height: 24px; }
 
 /* ISO FOOTER */
+.iso-bar {
+  display: flex; align-items: center; gap: 10px; padding: 16px;
+  background: #fff; border-bottom: 1px solid var(--color-border);
+  position: sticky; top: 0; z-index: 50;
+}
+.iso-bar-title { font-weight: 700; font-size: 18px; display: none; }
+@media (min-width: 768px) { .iso-bar-title { display: block; } }
 .iso-footer {
   position: fixed; bottom: 64px; left: 0; right: 0; background: #fff;
-  border-top: 1px solid var(--color-border); padding: 12px 16px;
-  display: flex; justify-content: space-between; align-items: center; z-index: 50;
+  border-top: 1px solid var(--color-border); z-index: 50;
 }
-.iso-footer-left { font-size: 13px; color: var(--color-text-secondary); }
+.iso-footer-bar {
+  padding: 12px 16px; display: flex; justify-content: space-between;
+  align-items: center; cursor: pointer;
+}
+.iso-footer-left { font-size: 13px; color: var(--color-text-secondary); display: flex; align-items: center; }
 .iso-footer-right { font-size: 16px; font-weight: 700; color: var(--color-navy); }
+
+/* RECEIPT DRAWER */
+.receipt-sheet { padding: 0; display: flex; flex-direction: column; }
+.receipt-sheet-header { padding: 24px 20px 12px; position: sticky; top: 0; background: #fff; z-index: 5; border-radius: 20px 20px 0 0; }
+.receipt { padding: 0 20px 32px; overflow-y: auto; flex: 1; }
+.receipt-day { margin-bottom: 8px; }
+.receipt-day-header {
+  display: flex; align-items: center; padding: 10px 0; font-size: 14px; font-weight: 700;
+  color: var(--color-navy); cursor: pointer; border-bottom: 1px solid var(--color-border);
+  position: sticky; top: 0; background: #fff; z-index: 3;
+}
+.receipt-day-total { margin-left: auto; font-size: 14px; }
+.receipt-store { margin-left: 12px; }
+.receipt-store-header {
+  display: flex; align-items: center; padding: 8px 0; font-size: 13px; font-weight: 600;
+  color: var(--color-text-primary); cursor: pointer;
+  position: sticky; top: 37px; background: #fff; z-index: 2;
+}
+.receipt-store-total { margin-left: auto; font-size: 13px; color: var(--color-text-secondary); }
+.receipt-items { margin-left: 16px; }
+.receipt-line { display: flex; align-items: baseline; padding: 4px 0; font-size: 12px; gap: 8px; }
+.receipt-name { color: var(--color-text-primary); white-space: nowrap; }
+.receipt-set { color: var(--color-text-secondary); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.receipt-price { color: var(--color-text-primary); font-weight: 600; white-space: nowrap; margin-left: auto; }
 
 /* SEARCH */
 .search-bar {
@@ -413,6 +447,7 @@ img { display: block; max-width: 100%; }
   .pin-grid { grid-template-columns: repeat(4, 1fr); }
   .iso-footer { bottom: 0; }
   .filter-bar { top: 59px; }
+  .iso-bar { top: 59px; }
 }
 @media (min-width: 1200px) {
   .pin-grid { grid-template-columns: repeat(6, 1fr); }
@@ -454,6 +489,7 @@ const app = createApp({
     const copyMsg = ref('');
     const isoFilter = ref('all'); // 'all' or 'diso'
     const showExportMenu = ref(false);
+    const showReceipt = ref(false);
     const storyImages = ref([]);
 
     // Load data
@@ -639,7 +675,10 @@ const app = createApp({
       isoList.value.forEach(item => {
         const found = findPin(item.pinId);
         if (!found) return;
-        total += (found.set.retail_price || 0) * item.qty;
+        const price = found.pin.retail_price || found.set.retail_price || 0;
+        const perBox = found.set.pins_per_box || 1;
+        const pinPrice = found.pin.name === 'Mystery Box' || found.pin.name === 'Box Set' ? price : price / perBox;
+        total += pinPrice * item.qty;
         count += item.qty;
         setIds.add(found.set.id);
         if (found.set.set_type === 'mystery') hasMystery = true;
@@ -650,6 +689,54 @@ const app = createApp({
     const disoCount = computed(() => {
       return isoList.value.filter(i => (i.priority || 'iso') === 'diso').length;
     });
+
+    const receiptData = computed(() => {
+      const dayLbl = { '2026-08-14': 'Friday, August 14', '2026-08-15': 'Saturday, August 15', '2026-08-16': 'Sunday, August 16' };
+      const storeNames = { 'TWDC': 'The Walt Disney Company Store', 'MOG': "Mickey's of Glendale", 'DSSH': 'Disney Studio Store Hollywood' };
+      const result = {};
+      isoList.value.forEach(item => {
+        const found = findPin(item.pinId);
+        if (!found) return;
+        const pinDate = found.pin.drop_date || found.set.drop_date;
+        const dateLabel = dayLbl[pinDate] || pinDate;
+        const storeName = storeNames[found.set.store] || found.set.store;
+        const price = found.pin.retail_price || found.set.retail_price || 0;
+        const perBox = found.set.pins_per_box || 1;
+        const pinPrice = (found.pin.name === 'Mystery Box' || found.pin.name === 'Box Set') ? price : price / perBox;
+        const lineTotal = pinPrice * item.qty;
+        const lineItem = { name: found.pin.name, set: found.set.set_name, qty: item.qty, lineTotal };
+
+        if (receiptGroupBy.value === 'day') {
+          if (!result[pinDate]) result[pinDate] = { label: dateLabel, children: {}, subtotal: 0 };
+          if (!result[pinDate].children[found.set.store]) result[pinDate].children[found.set.store] = { label: storeName, items: [], subtotal: 0 };
+          result[pinDate].children[found.set.store].items.push(lineItem);
+          result[pinDate].children[found.set.store].subtotal += lineTotal;
+          result[pinDate].subtotal += lineTotal;
+        } else {
+          if (!result[found.set.store]) result[found.set.store] = { label: storeName, children: {}, subtotal: 0 };
+          if (!result[found.set.store].children[pinDate]) result[found.set.store].children[pinDate] = { label: dateLabel, items: [], subtotal: 0 };
+          result[found.set.store].children[pinDate].items.push(lineItem);
+          result[found.set.store].children[pinDate].subtotal += lineTotal;
+          result[found.set.store].subtotal += lineTotal;
+        }
+      });
+      return Object.entries(result).sort(([a],[b]) => a.localeCompare(b)).map(([k, v]) => ({
+        key: k, label: v.label, subtotal: v.subtotal,
+        children: Object.entries(v.children).sort(([a],[b]) => a.localeCompare(b)).map(([ck, cv]) => ({
+          key: ck, label: cv.label, subtotal: cv.subtotal, items: cv.items
+        }))
+      }));
+    });
+
+    const receiptGroupBy = ref('day'); // 'day' or 'store'
+    const expandedReceiptDays = ref({});
+    const expandedReceiptStores = ref({});
+    function toggleReceiptDay(key) { expandedReceiptDays.value[key] = !expandedReceiptDays.value[key]; }
+    function toggleReceiptStore(key) { expandedReceiptStores.value[key] = !expandedReceiptStores.value[key]; }
+    function expandAllReceipt() {
+      receiptData.value.forEach(g => { expandedReceiptDays.value[g.key] = true; g.children.forEach(c => { expandedReceiptStores.value[g.key + c.key] = true; }); });
+    }
+    function collapseAllReceipt() { expandedReceiptDays.value = {}; expandedReceiptStores.value = {}; }
 
     function copyAsText() {
       let text = '';
@@ -1088,6 +1175,16 @@ const app = createApp({
 
     function badgeClass(type) { return `badge badge-${type}`; }
     function storeName(store) { return { 'TWDC': 'The Walt Disney Company Store', 'MOG': "Mickey's of Glendale", 'DSSH': 'Disney Studio Store Hollywood' }[store] || store; }
+
+    function pinPriceDisplay(pin, set) {
+      const price = pin.retail_price || set.retail_price;
+      if (!price) return null;
+      const perBox = set.pins_per_box || 1;
+      if (pin.name === 'Mystery Box' || pin.name === 'Box Set' || perBox === 1) {
+        return '\$' + price.toFixed(2);
+      }
+      return '\$' + (price / perBox).toFixed(2);
+    }
     function badgeLabel(type) {
       return { individual: 'Individual', mystery: 'Mystery', box_set: 'Box Set',
                ultra_jumbo: 'Individual', framed_set: 'Framed' }[type] || type;
@@ -1095,11 +1192,11 @@ const app = createApp({
 
     return {
       catalog, error, view, storeFilter, dateFilter, typeFilter, attrFilter, showFilters, searchQuery,
-      isoList, selectedPin, copyMsg, isoFilter, showExportMenu, storyImages, stores, dates, dateLabels,
-      filteredSets, searchResults, isoGroups, isoTotal, disoCount, filterCount, typeOptions, attrOptions,
+      isoList, selectedPin, copyMsg, isoFilter, showExportMenu, showReceipt, storyImages, stores, dates, dateLabels,
+      filteredSets, searchResults, isoGroups, isoTotal, disoCount, receiptData, receiptGroupBy, expandedReceiptDays, expandedReceiptStores, toggleReceiptDay, toggleReceiptStore, expandAllReceipt, collapseAllReceipt, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
       updateQty, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory,
-      featureTags, filteredPins, displayDates, badgeClass, storeName, badgeLabel,
+      featureTags, filteredPins, displayDates, badgeClass, storeName, pinPriceDisplay, badgeLabel,
       onTouchStart, onTouchEnd, isSwiped, PLACEHOLDER_IMG
     };
   },
@@ -1217,9 +1314,9 @@ const app = createApp({
 </div>
 
 <!-- ISO VIEW -->
-<div v-if="view==='iso'" style="padding: 16px; padding-bottom: 80px;">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-    <h2 style="font-weight:700;font-size:20px;">My ISOs</h2>
+<div v-if="view==='iso'" style="padding-bottom: 80px;">
+  <div class="iso-bar">
+    <h2 class="iso-bar-title">My ISOs</h2>
     <div v-if="isoList.length" style="display:flex;gap:6px;">
       <button class="filter-chip" :class="{ active: isoFilter==='all' }" @click="isoFilter='all'">All ({{ isoTotal.count }})</button>
       <button class="filter-chip" :class="{ active: isoFilter==='diso' }" @click="isoFilter='diso'">♥ DISO ({{ disoCount }})</button>
@@ -1233,6 +1330,7 @@ const app = createApp({
       <span v-if="copyMsg" style="margin-left:6px;color:var(--color-green);font-size:12px;">{{ copyMsg }}</span>
     </div>
   </div>
+  <div style="padding: 0 16px; padding-top: 12px;">
 
   <div v-if="isoList.length===0" class="empty-state">
     <p>Your ISO list is empty.</p>
@@ -1254,6 +1352,7 @@ const app = createApp({
           <div class="pin-card-meta">
             <span v-if="item.pin.retail_display">{{ item.pin.retail_display }}</span>
             <span v-else-if="item.set.retail_display">{{ item.set.retail_display }}</span>
+            <span v-if="item.set.retail_note">&nbsp;{{ item.set.retail_note }}</span>
             <span v-if="item.pin.edition_size"> · LE {{ item.pin.edition_size }}</span>
           </div>
           <div class="iso-card-footer">
@@ -1269,15 +1368,63 @@ const app = createApp({
     </div>
   </div>
 
-  <div v-if="isoTotal.hasMystery && isoList.length" style="font-size:11px;color:var(--color-text-secondary);text-align:center;margin-top:12px;font-style:italic;">
-    * Mystery box prices are per box. Actual pin received may vary.
   </div>
 </div>
 
 <!-- ISO FOOTER -->
 <div v-if="view==='iso' && isoList.length" class="iso-footer">
-  <span class="iso-footer-left">{{ isoTotal.count }} item{{ isoTotal.count!==1?'s':'' }} across {{ isoTotal.sets }} set{{ isoTotal.sets!==1?'s':'' }}</span>
-  <span class="iso-footer-right">Est. Total: \${{ isoTotal.total.toFixed(2) }}</span>
+  <div class="iso-footer-bar" @click="showReceipt=true">
+    <span class="iso-footer-left">
+      <svg width="14" height="14" viewBox="0 0 14 14" style="margin-right:6px;vertical-align:middle;"><path d="M3 9l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      {{ isoTotal.count }} item{{ isoTotal.count!==1?'s':'' }} across {{ isoTotal.sets }} set{{ isoTotal.sets!==1?'s':'' }}
+    </span>
+    <span class="iso-footer-right">Est. Total: \${{ isoTotal.total.toFixed(2) }}</span>
+  </div>
+</div>
+
+<!-- RECEIPT DRAWER -->
+<div v-if="showReceipt" class="overlay" @click.self="showReceipt=false"></div>
+<div v-if="showReceipt" class="sheet receipt-sheet">
+  <div class="receipt-sheet-header">
+    <button class="sheet-close" @click="showReceipt=false"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <h2 style="font-weight:700;font-size:20px;text-align:center;margin-bottom:4px;">Cost Breakdown</h2>
+    <p style="font-size:13px;color:var(--color-text-secondary);text-align:center;margin-bottom:12px;">{{ isoTotal.count }} item{{ isoTotal.count!==1?'s':'' }} · Est. Total: \${{ isoTotal.total.toFixed(2) }}</p>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="display:flex;gap:6px;">
+        <button class="filter-chip" :class="{ active: receiptGroupBy==='day' }" @click="receiptGroupBy='day'">By Day</button>
+        <button class="filter-chip" :class="{ active: receiptGroupBy==='store' }" @click="receiptGroupBy='store'">By Store</button>
+      </div>
+      <div style="display:flex;gap:8px;font-size:12px;">
+        <button style="color:var(--color-accent);font-weight:600;background:none;border:none;cursor:pointer;" @click="expandAllReceipt">Expand All</button>
+        <button style="color:var(--color-text-secondary);font-weight:600;background:none;border:none;cursor:pointer;" @click="collapseAllReceipt">Collapse</button>
+      </div>
+    </div>
+  </div>
+  <div class="receipt">
+    <div v-for="group in receiptData" :key="group.key" class="receipt-day">
+      <div class="receipt-day-header" @click="toggleReceiptDay(group.key)">
+        <svg :style="{ transform: expandedReceiptDays[group.key] ? 'rotate(180deg)' : 'rotate(0)' }" width="12" height="12" viewBox="0 0 14 14" style="transition:transform 0.2s;margin-right:6px;"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span>{{ group.label }}</span>
+        <span class="receipt-day-total">\${{ group.subtotal.toFixed(2) }}</span>
+      </div>
+      <div v-if="expandedReceiptDays[group.key]">
+        <div v-for="child in group.children" :key="child.key" class="receipt-store">
+          <div class="receipt-store-header" @click="toggleReceiptStore(group.key + child.key)">
+            <svg :style="{ transform: expandedReceiptStores[group.key + child.key] ? 'rotate(180deg)' : 'rotate(0)' }" width="10" height="10" viewBox="0 0 14 14" style="transition:transform 0.2s;margin-right:4px;"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>{{ child.label }}</span>
+            <span class="receipt-store-total">\${{ child.subtotal.toFixed(2) }}</span>
+          </div>
+          <div v-if="expandedReceiptStores[group.key + child.key]" class="receipt-items">
+            <div v-for="item in child.items" :key="item.name + item.set" class="receipt-line">
+              <span class="receipt-name">{{ item.name }}<span v-if="item.qty > 1"> ×{{ item.qty }}</span></span>
+              <span class="receipt-set">{{ item.set }}</span>
+              <span class="receipt-price">\${{ item.lineTotal.toFixed(2) }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- SEARCH VIEW -->
