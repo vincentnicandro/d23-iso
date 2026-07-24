@@ -318,6 +318,21 @@ img { display: block; max-width: 100%; }
 .search-bar-inner svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--color-text-secondary); }
 .search-count { font-size: 13px; color: var(--color-text-secondary); padding: 12px 16px 0; margin-bottom: 8px; }
 
+/* EXPORT MENU */
+.export-menu {
+  position: absolute; top: 100%; right: 0; margin-top: 6px;
+  background: #fff; border: 1px solid var(--color-border); border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,38,76,0.12); overflow: hidden; z-index: 100;
+  min-width: 180px;
+}
+.export-menu button {
+  display: block; width: 100%; text-align: left; padding: 12px 16px;
+  font-size: 14px; font-weight: 500; color: var(--color-text-primary);
+  border: none; background: none; cursor: pointer;
+}
+.export-menu button:hover { background: #f0f4f8; }
+.export-menu button + button { border-top: 1px solid var(--color-border); }
+
 /* EMPTY STATE */
 .empty-state { text-align: center; padding: 48px 24px; color: var(--color-text-secondary); }
 .empty-state p { margin-bottom: 16px; }
@@ -382,6 +397,8 @@ const app = createApp({
     const sheetActiveImg = ref(0);
     const copyMsg = ref('');
     const isoFilter = ref('all'); // 'all' or 'diso'
+    const showExportMenu = ref(false);
+    const storyImages = ref([]);
 
     // Load data
     onMounted(async () => {
@@ -928,17 +945,22 @@ const app = createApp({
         drawFooter();
       }
 
-      // Download each page with delay to avoid browser blocking
-      for (let i = 0; i < pages.length; i++) {
-        await new Promise(resolve => setTimeout(resolve, i * 500));
-        const link = document.createElement('a');
-        link.download = `d23-iso-story${pages.length > 1 ? '-' + (i + 1) : ''}.png`;
-        link.href = pages[i].toDataURL('image/png');
-        link.click();
+      // On mobile: show images in a modal for long-press save
+      // On desktop: download directly
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        storyImages.value = pages.map(c => c.toDataURL('image/png'));
+      } else {
+        for (let i = 0; i < pages.length; i++) {
+          await new Promise(resolve => setTimeout(resolve, i * 500));
+          const link = document.createElement('a');
+          link.download = `d23-iso-story${pages.length > 1 ? '-' + (i + 1) : ''}.png`;
+          link.href = pages[i].toDataURL('image/png');
+          link.click();
+        }
+        copyMsg.value = `${pages.length} image${pages.length > 1 ? 's' : ''} saved!`;
+        setTimeout(() => { copyMsg.value = ''; }, 3000);
       }
-
-      copyMsg.value = `${pages.length} image${pages.length > 1 ? 's' : ''} saved!`;
-      setTimeout(() => { copyMsg.value = ''; }, 3000);
     }
 
     function featureTags(features) {
@@ -998,7 +1020,7 @@ const app = createApp({
 
     return {
       catalog, error, view, storeFilter, dateFilter, typeFilter, attrFilter, showFilters, searchQuery,
-      isoList, selectedPin, copyMsg, isoFilter, stores, dates, dateLabels,
+      isoList, selectedPin, copyMsg, isoFilter, showExportMenu, storyImages, stores, dates, dateLabels,
       filteredSets, searchResults, isoGroups, isoTotal, disoCount, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
       updateQty, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory,
@@ -1112,9 +1134,12 @@ const app = createApp({
       <button class="filter-chip" :class="{ active: isoFilter==='all' }" @click="isoFilter='all'">All ({{ isoTotal.count }})</button>
       <button class="filter-chip" :class="{ active: isoFilter==='diso' }" @click="isoFilter='diso'">♥ DISO ({{ disoCount }})</button>
     </div>
-    <div v-if="isoList.length" style="margin-left:auto;display:flex;gap:6px;align-items:center;">
-      <button class="btn-secondary" style="padding:8px 14px;font-size:12px;" @click="copyAsText">📋 Text</button>
-      <button class="btn-primary" style="padding:8px 14px;font-size:12px;" @click="exportStory">📸 Story</button>
+    <div v-if="isoList.length" style="margin-left:auto;position:relative;">
+      <button class="btn-secondary" style="padding:8px 14px;font-size:12px;display:inline-flex;align-items:center;gap:4px;" @click="showExportMenu=!showExportMenu">Share <svg width="10" height="10" viewBox="0 0 14 14" style="margin-top:1px;"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button>
+      <div v-if="showExportMenu" class="export-menu">
+        <button @click="copyAsText(); showExportMenu=false">Copy to Clipboard</button>
+        <button @click="exportStory(); showExportMenu=false">Export as Story</button>
+      </div>
       <span v-if="copyMsg" style="margin-left:6px;color:var(--color-green);font-size:12px;">{{ copyMsg }}</span>
     </div>
   </div>
@@ -1227,6 +1252,17 @@ const app = createApp({
     <button v-if="!isInIso(selectedPin.pin.id)" class="btn-primary" @click="cyclePin(selectedPin.pin, selectedPin.set)">+ Add to ISO</button>
     <button v-else-if="getPriority(selectedPin.pin.id)==='iso'" class="btn-primary" style="background:var(--color-green);" @click="cyclePin(selectedPin.pin, selectedPin.set)">✓ ISO — Upgrade to DISO</button>
     <button v-else class="btn-primary" style="background:#E91E63;" @click="cyclePin(selectedPin.pin, selectedPin.set)">♥ DISO — Remove</button>
+  </div>
+</div>
+
+<!-- STORY IMAGES MODAL (mobile save) -->
+<div v-if="storyImages.length" class="overlay" @click.self="storyImages=[]"></div>
+<div v-if="storyImages.length" class="sheet" style="padding:20px;text-align:center;">
+  <button class="sheet-close" @click="storyImages=[]"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  <p style="font-weight:600;font-size:16px;margin-bottom:4px;">Your Story Images</p>
+  <p style="font-size:13px;color:var(--color-text-secondary);margin-bottom:16px;">Long-press each image to save to Photos</p>
+  <div v-for="(img, idx) in storyImages" :key="idx" style="margin-bottom:16px;">
+    <img :src="img" style="width:100%;max-width:360px;border-radius:12px;border:1px solid var(--color-border);" :alt="'Story ' + (idx+1)">
   </div>
 </div>
 
