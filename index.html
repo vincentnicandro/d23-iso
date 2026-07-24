@@ -529,11 +529,28 @@ img { display: block; max-width: 100%; }
   .help-fab.has-footer { bottom: 66px; }
 }
 .help-fab:hover { background: #1a3a6b; }
-.help-sheet { padding: 24px 20px 32px; max-height: 80vh; overflow-y: auto; }
-.help-content h3 { font-size: 15px; font-weight: 700; margin: 16px 0 8px; }
+.help-sheet { padding: 0; display: flex; flex-direction: column; height: 85vh; }
+.help-sheet-header {
+  padding: 24px 20px 12px; position: sticky; top: 0; background: #fff;
+  border-radius: 20px 20px 0 0; flex-shrink: 0; z-index: 5; text-align: center;
+}
+.help-sheet-header h2 { font-weight: 700; font-size: 20px; }
+.help-content { flex: 1; overflow-y: auto; padding: 12px 20px 32px; }
+.help-content h3 { font-size: 17px; font-weight: 700; margin: 24px 0 10px; color: var(--color-navy); }
 .help-content h3:first-child { margin-top: 0; }
-.help-content ul { margin: 0; padding-left: 20px; }
+.help-content h4 { font-size: 14px; font-weight: 600; margin: 14px 0 6px; }
+.help-section-header {
+  display: flex; align-items: center; padding: 14px 0;
+  cursor: pointer; border-bottom: 1px solid var(--color-border);
+  font-size: 17px; font-weight: 700; color: var(--color-navy);
+}
+.help-section-body { padding: 12px 0 8px; padding-left: 20px; }
+.help-content ul { margin: 0 0 8px; padding-left: 20px; }
 .help-content li { font-size: 14px; line-height: 1.8; color: var(--color-text-primary); }
+.help-content p { font-size: 14px; line-height: 1.6; color: var(--color-text-primary); }
+.help-sources li { list-style: none; margin-bottom: 4px; }
+.help-sources a { color: var(--color-accent); text-decoration: none; font-weight: 500; }
+.help-sources a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -562,6 +579,7 @@ const app = createApp({
     const isoFilter = ref('all'); // 'all' or 'diso'
     const showExportMenu = ref(false);
     const showHelp = ref(false);
+    const helpExpanded = ref({ about: true, howto: false, sources: false });
     const showReceipt = ref(false);
     const storyImages = ref([]);
     const storyImageTitle = ref('Your Story Images');
@@ -1477,7 +1495,7 @@ const app = createApp({
 
     return {
       catalog, error, view, storeFilter, dateFilter, typeFilter, attrFilter, showFilters, searchQuery,
-      isoList, selectedPin, copyMsg, isoFilter, showExportMenu, showReceipt, showHelp, storyImages, storyImageTitle, stores, dates, dateLabels,
+      isoList, selectedPin, copyMsg, isoFilter, showExportMenu, showReceipt, showHelp, helpExpanded, storyImages, storyImageTitle, stores, dates, dateLabels,
       filteredSets, searchResults, isoGroups, isoTotal, disoCount, receiptData, receiptGroupBy, expandedReceiptDays, expandedReceiptStores, toggleReceiptDay, toggleReceiptStore, expandAllReceipt, collapseAllReceipt, allReceiptExpanded, toggleAllReceipt, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
       updateQty, updateNote, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory, exportImage,
@@ -1817,33 +1835,61 @@ const app = createApp({
 <!-- HELP MODAL -->
 <div v-if="showHelp" class="overlay" @click.self="showHelp=false"></div>
 <div v-if="showHelp" class="sheet help-sheet">
-  <button class="sheet-close" @click="showHelp=false"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-  <h2 style="font-weight:700;font-size:20px;text-align:center;margin-bottom:16px;">How to Use</h2>
-  <div class="help-content">
-    <h3>Catalog</h3>
-    <ul>
-      <li>Tap a pin card to view details</li>
-      <li>Tap the <strong>+</strong> icon to add to your ISO list</li>
-      <li>Tap again to mark as <strong>DISO</strong> (♥)</li>
-      <li>Tap a third time to remove</li>
-      <li>Use Filters to narrow by store, day, type, or features</li>
-    </ul>
-    <h3>My ISOs</h3>
-    <ul>
-      <li>View all your ISO and DISO pins grouped by store and day</li>
-      <li>Use the <strong>–</strong> / <strong>+</strong> stepper to adjust quantity</li>
-      <li>Add notes for trade details or reminders</li>
-      <li>Tap the status icon to toggle between ISO ✓ and DISO ♥</li>
-      <li>Tap <strong>✕</strong> to remove a pin</li>
-      <li>Use <strong>Share</strong> to copy your list, export as image, or export as IG story</li>
-    </ul>
-    <h3>Search</h3>
-    <ul>
-      <li>Search by pin name, character, or series</li>
-      <li>Tap a result to view details or add to your ISO</li>
-    </ul>
+  <div class="help-sheet-header">
+    <button class="sheet-close" @click="showHelp=false"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <h2>D23 Pin Catalog</h2>
   </div>
-  <p style="font-size:11px;color:var(--color-text-secondary);text-align:center;margin-top:20px;">Images belong to their respective owners. Not affiliated with The Walt Disney Company.</p>
+  <div class="help-content">
+    <div class="help-section-header" @click="helpExpanded.about = !helpExpanded.about">
+      <svg :style="{ transform: helpExpanded.about ? 'rotate(180deg)' : 'rotate(0)' }" width="12" height="12" viewBox="0 0 14 14" style="transition:transform 0.2s;margin-right:8px;"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span>About</span>
+    </div>
+    <div v-if="helpExpanded.about" class="help-section-body">
+      <p>An interactive pin catalog for D23 2026. Browse all pin releases across The Walt Disney Company Store, Mickey's of Glendale, and Disney Studio Store Hollywood. Build your ISO list, track priorities, and share with fellow collectors.</p>
+      <p style="font-size:11px;color:var(--color-text-secondary);margin-top:16px;">Made with magic in Glendale, CA. Images belong to their respective owners. Not affiliated with The Walt Disney Company.</p>
+    </div>
+    <div class="help-section-header" @click="helpExpanded.howto = !helpExpanded.howto">
+      <svg :style="{ transform: helpExpanded.howto ? 'rotate(180deg)' : 'rotate(0)' }" width="12" height="12" viewBox="0 0 14 14" style="transition:transform 0.2s;margin-right:8px;"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span>How to Use</span>
+    </div>
+    <div v-if="helpExpanded.howto" class="help-section-body">
+      <h4>Catalog</h4>
+      <ul>
+        <li>Tap a pin card to view details</li>
+        <li>Tap the <strong>+</strong> icon to add to your ISO list</li>
+        <li>Tap again to mark as <strong>DISO</strong> (♥)</li>
+        <li>Tap a third time to remove</li>
+        <li>Use Filters to narrow by store, day, type, or features</li>
+      </ul>
+      <h4>My ISOs</h4>
+      <ul>
+        <li>View all your ISO and DISO pins grouped by store and day</li>
+        <li>Use the <strong>–</strong> / <strong>+</strong> stepper to adjust quantity</li>
+        <li>Add notes for trade details or reminders</li>
+        <li>Tap the status icon to toggle between ISO ✓ and DISO ♥</li>
+        <li>Tap <strong>✕</strong> to remove a pin</li>
+        <li>Use <strong>Share</strong> to copy your list, export as image, or export as IG story</li>
+      </ul>
+      <h4>Search</h4>
+      <ul>
+        <li>Search by pin name, character, or series</li>
+        <li>Tap a result to view details or add to your ISO</li>
+      </ul>
+    </div>
+    <div class="help-section-header" @click="helpExpanded.sources = !helpExpanded.sources">
+      <svg :style="{ transform: helpExpanded.sources ? 'rotate(180deg)' : 'rotate(0)' }" width="12" height="12" viewBox="0 0 14 14" style="transition:transform 0.2s;margin-right:8px;"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span>Sources</span>
+    </div>
+    <div v-if="helpExpanded.sources" class="help-section-body">
+      <ul class="help-sources">
+        <li><a href="catalogs/twdc/twdc_fri.pdf" target="_blank">TWDC Store — Friday</a></li>
+        <li><a href="catalogs/twdc/twdc_sat.pdf" target="_blank">TWDC Store — Saturday</a></li>
+        <li><a href="catalogs/twdc/twdc_sun.pdf" target="_blank">TWDC Store — Sunday</a></li>
+        <li><a href="catalogs/mog/mog.pdf" target="_blank">Mickey's of Glendale</a></li>
+        <li><a href="catalogs/dssh/dssh.pdf" target="_blank">Disney Studio Store Hollywood</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 `
 });
