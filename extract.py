@@ -139,14 +139,18 @@ def build_mog_sets():
     sid = "mog-ducktales-mystery"
     s = make_set(
         sid, MOG, FRI, FRI_L,
-        "DuckTales the Movie: Treasure of the Lost Lamp Mystery Set", None, "mystery",
+        "DuckTales the Movie: Treasure of the Lost Lamp aDorbs! Mystery Set", None, "mystery",
         None, '1.2″–1.8″H', 34.95, "per box", "Limit eight (8) boxes per guest", False, [],
     )
     s["pins"] = [
-        make_pin(sid, 20, "Mystery Box (Regular)", 400),
-        {**make_pin(sid, None, "Mystery Box (Chaser)", 300), "edition_notes": "chaser",
-         "id": f"{sid}-chaser"},
+        make_pin(sid, 20, "Mystery Box", 400),
     ]
+    s["pins"][0]["edition_notes"] = "LE 300 (5 chaser)"
+    s["pins"][0]["edition_size"] = None
+    s["pins"][0]["edition_display"] = "LE 400 (8)"
+    s["pins"].extend([make_pin(sid, None, n, 400) for n in [
+        "Scrooge McDuck", "Launchpad McQuack", "Webby Vanderquack", "Dewey",
+        "Huey", "Louie", "Gene the Genie", "Merlock"]])
     sets.append(s)
 
     sid = "mog-treasure-seekers"
@@ -242,16 +246,16 @@ def build_mog_sets():
     sid = "mog-sea-mystery"
     s = make_set(
         sid, MOG, SAT, SAT_L,
-        "S.E.A. Mystery Set",
+        "S.E.A. aDorbs! Mystery Set",
         "Collect all 15 pins plus trading cards to reveal a hidden image.",
         "mystery", None, None, 39.95, "per box", None, False,
         [make_pin(sid, 58, "Mystery Box", 500)],
     )
     s["pins"].extend([make_pin(sid, None, n, 500) for n in [
         "Mary Oceaneer", "Duncan the Parrot", "Alberta Falls", "Albert Falls",
-        "Pin 5", "Dr. Kon Chunosuke", "Camellia Falco", "S.E.A. Member",
+        "Aya Kouame-Beauciel", "Dr. Kon Chunosuke", "Camellia Falco", "S.E.A. Member",
         "Harrison Hightower III", "Barnabas T. Bullion", "Lord Henry Mystic", "Albert",
-        "Pin 13", "Shiriki Utundu"]])
+        "Madame Zarkov", "Shiriki Utundu"]])
     sets.append(s)
 
     sid = "mog-parks-to-ports"
@@ -330,63 +334,67 @@ def build_mog_sets():
     sid = "mog-avengers-mystery"
     s = make_set(
         sid, MOG, SUN, SUN_L,
-        "The Avengers Mystery Set", None, "mystery",
+        "The Avengers aDorbs! Mystery Set", None, "mystery",
         None, '1.3″–1.7″H', 34.95, "per box", "Limit eight (8) boxes per guest", False, [],
     )
     s["pins"] = [
-        make_pin(sid, None, "Mystery Box (Regular)", 400),
-        {**make_pin(sid, None, "Mystery Box (Chaser)", 300), "edition_notes": "chaser",
-         "id": f"{sid}-chaser"},
-        {**make_pin(sid, None, "Mystery Box (Super Chaser)", 200), "edition_notes": "super chaser",
-         "id": f"{sid}-super-chaser"},
+        make_pin(sid, None, "Mystery Box", 400),
     ]
+    s["pins"][0]["edition_notes"] = "LE 300 (4 chaser)|LE 200 (2 super chaser)"
+    s["pins"][0]["edition_size"] = None
+    s["pins"][0]["edition_display"] = "LE 400 (8)"
+    s["pins"].extend([make_pin(sid, None, n, 400) for n in [
+        "Thor", "Nick Fury", "Iron Man", "Hulk", "Hawkeye", "Captain Marvel", "Black Widow", "Captain America"]])
     sets.append(s)
 
     sid = "mog-guardians-boxset"
     sets.append(make_set(
         sid, MOG, SUN, SUN_L,
-        "Guardians of the Galaxy Box Set",
+        "Guardians of the Galaxy aDorbs! Box Set",
         "Each box contains one mystery pin under the tray.", "box_set",
         None, '1″–1.7″H', 74.95, None, None, False,
-        [make_pin(sid, 91, "Guardians of the Galaxy Box Set", 400)],
+        [make_pin(sid, 91, "Guardians of the Galaxy aDorbs! Box Set", 400)],
     ))
 
     sid = "mog-kingdom-hearts-mystery"
     s = make_set(
         sid, MOG, SUN, SUN_L,
-        "Kingdom Hearts Mystery Set", None, "mystery",
+        "Kingdom Hearts aDorbs! Mystery Set", None, "mystery",
         None, None, 34.95, "per box", "Limit eight (8) boxes per guest", False, [],
     )
     s["pins"] = [
-        make_pin(sid, None, "Mystery Box (Regular)", 500),
-        {**make_pin(sid, None, "Mystery Box (Chaser)", 400), "edition_notes": "chaser",
-         "id": f"{sid}-chaser"},
-        {**make_pin(sid, None, "Mystery Box (Super Chaser)", 300), "edition_notes": "super chaser",
-         "id": f"{sid}-super-chaser"},
+        make_pin(sid, None, "Mystery Box", 500),
     ]
+    s["pins"][0]["edition_notes"] = "LE 400 (4 chaser)|LE 300 (2 super chaser)"
+    s["pins"][0]["edition_size"] = None
+    s["pins"][0]["edition_display"] = "LE 500 (8)"
+    s["pins"].extend([make_pin(sid, None, n, 500) for n in [
+        "Donald", "Goofy", "Mickey", "Minnie", "Daisy", "Riku", "Kairi", "Sora"]])
     sets.append(s)
 
     sid = "mog-pixar-soul-mystery"
     s = make_set(
         sid, MOG, SUN, SUN_L,
-        "Pixar Soul Mystery Set", None, "mystery",
+        "Pixar Soul aDorbs! Mystery Set", None, "mystery",
         None, None, 34.95, "per box", "Limit eight (8) boxes per guest", False, [],
     )
     s["pins"] = [
-        make_pin(sid, None, "Mystery Box (Regular)", 400),
-        {**make_pin(sid, None, "Mystery Box (Chaser)", 300), "edition_notes": "chaser",
-         "id": f"{sid}-chaser"},
-        {**make_pin(sid, None, "Mystery Box (Super Chaser)", 200), "edition_notes": "super chaser",
-         "id": f"{sid}-super-chaser"},
+        make_pin(sid, None, "Mystery Box", 400),
     ]
+    s["pins"][0]["edition_notes"] = "LE 300 (4 chaser)|LE 200 (3 super chaser)"
+    s["pins"][0]["edition_size"] = None
+    s["pins"][0]["edition_display"] = "LE 400 (8)"
+    s["pins"].extend([make_pin(sid, None, n, 400) for n in [
+        "Joe Gardner", "Curley", "Mr. Mittens", "Dorothea Williams",
+        "Libba", "Connie", "Dez", "Miho"]])
     sets.append(s)
 
     sid = "mog-pixar-soul-boxset"
     sets.append(make_set(
         sid, MOG, SUN, SUN_L,
-        "Pixar Soul Box Set", None, "box_set",
+        "Pixar Soul aDorbs! Box Set", None, "box_set",
         None, None, 49.95, None, None, False,
-        [make_pin(sid, 94, "Pixar Soul Box Set", 400)],
+        [make_pin(sid, 94, "Pixar Soul aDorbs! Box Set", 400)],
     ))
 
     sid = "mog-muppet-show-50th"
@@ -1058,6 +1066,15 @@ def apply_image_mappings(all_sets):
         "mog-dining-character-56": "images/mog/fri/mog_p14_0824.png",
         # World Princess Week Ultra Jumbo (p15)
         "mog-world-princess-ultra-57": "images/mog/fri/mog_p15_0837.png",
+        # DuckTales Adorbs Mystery (p06)
+        "mog-ducktales-mystery-scrooge-mcduck": "images/mog/fri/mog_p06_adorbs_01.png",
+        "mog-ducktales-mystery-launchpad-mcquack": "images/mog/fri/mog_p06_adorbs_02.png",
+        "mog-ducktales-mystery-webby-vanderquack": "images/mog/fri/mog_p06_adorbs_03.png",
+        "mog-ducktales-mystery-dewey": "images/mog/fri/mog_p06_adorbs_04.png",
+        "mog-ducktales-mystery-huey": "images/mog/fri/mog_p06_adorbs_05.png",
+        "mog-ducktales-mystery-louie": "images/mog/fri/mog_p06_adorbs_06.png",
+        "mog-ducktales-mystery-gene-the-genie": "images/mog/fri/mog_p06_adorbs_07.png",
+        "mog-ducktales-mystery-merlock": "images/mog/fri/mog_p06_adorbs_08.png",
 
         # =====================================================================
         # MOG SATURDAY
@@ -1067,7 +1084,7 @@ def apply_image_mappings(all_sets):
         "mog-sea-mystery-duncan-the-parrot": "images/mog/sat/mog_sea_mystery_02.png",
         "mog-sea-mystery-alberta-falls": "images/mog/sat/mog_sea_mystery_03.png",
         "mog-sea-mystery-albert-falls": "images/mog/sat/mog_sea_mystery_04.png",
-        "mog-sea-mystery-pin-5": "images/mog/sat/mog_sea_mystery_05.png",
+        "mog-sea-mystery-aya-kouame-beauciel": "images/mog/sat/mog_sea_mystery_05.png",
         "mog-sea-mystery-dr-kon-chunosuke": "images/mog/sat/mog_sea_mystery_06.png",
         "mog-sea-mystery-camellia-falco": "images/mog/sat/mog_sea_mystery_07.png",
         "mog-sea-mystery-sea-member": "images/mog/sat/mog_sea_mystery_08.png",
@@ -1075,7 +1092,7 @@ def apply_image_mappings(all_sets):
         "mog-sea-mystery-barnabas-t-bullion": "images/mog/sat/mog_sea_mystery_10.png",
         "mog-sea-mystery-lord-henry-mystic": "images/mog/sat/mog_sea_mystery_11.png",
         "mog-sea-mystery-albert": "images/mog/sat/mog_sea_mystery_12.png",
-        "mog-sea-mystery-pin-13": "images/mog/sat/mog_sea_mystery_13.png",
+        "mog-sea-mystery-madame-zarkov": "images/mog/sat/mog_sea_mystery_13.png",
         "mog-sea-mystery-shiriki-utundu": "images/mog/sat/mog_sea_mystery_14.png",
         # Parks to Ports (p19-p20 — 7 pins)
         "mog-parks-to-ports-59": "images/mog/sat/mog_p19_1010.png",
@@ -1118,6 +1135,68 @@ def apply_image_mappings(all_sets):
         "mog-carousel-horses-goofy": "images/mog/sat/mog_p25_carousel_04.png",
         "mog-carousel-horses-clarabelle": "images/mog/sat/mog_p25_carousel_05.png",
         "mog-carousel-horses-daisy": "images/mog/sat/mog_p25_carousel_06.png",
+
+        # =====================================================================
+        # MOG SUNDAY
+        # =====================================================================
+        # Avengers individual pulls
+        "mog-avengers-mystery-thor": "images/mog/sun/mog_p28_avengers_01.png",
+        "mog-avengers-mystery-nick-fury": "images/mog/sun/mog_p28_avengers_02.png",
+        "mog-avengers-mystery-iron-man": "images/mog/sun/mog_p28_avengers_03.png",
+        "mog-avengers-mystery-hulk": "images/mog/sun/mog_p28_avengers_04.png",
+        "mog-avengers-mystery-hawkeye": "images/mog/sun/mog_p28_avengers_05.png",
+        "mog-avengers-mystery-captain-marvel": "images/mog/sun/mog_p28_avengers_06.png",
+        "mog-avengers-mystery-black-widow": "images/mog/sun/mog_p28_avengers_07.png",
+        "mog-avengers-mystery-captain-america": "images/mog/sun/mog_p28_avengers_08.png",
+        # Guardians Box Set
+        "mog-guardians-boxset-91": "images/mog/sun/mog_p28_1397.png",
+        # Pixar Soul Box Set
+        "mog-pixar-soul-boxset-94": "images/mog/sun/mog_adorbs_strip_01.png",
+        # Kingdom Hearts Mystery individual pulls (adorbs_ind — 8 pins)
+        "mog-kingdom-hearts-mystery-donald": "images/mog/sun/mog_adorbs_ind_1551.png",
+        "mog-kingdom-hearts-mystery-goofy": "images/mog/sun/mog_adorbs_ind_1553.png",
+        "mog-kingdom-hearts-mystery-mickey": "images/mog/sun/mog_adorbs_ind_1555.png",
+        "mog-kingdom-hearts-mystery-minnie": "images/mog/sun/mog_adorbs_ind_1557.png",
+        "mog-kingdom-hearts-mystery-daisy": "images/mog/sun/mog_adorbs_ind_1559.png",
+        "mog-kingdom-hearts-mystery-riku": "images/mog/sun/mog_adorbs_ind_1561.png",
+        "mog-kingdom-hearts-mystery-kairi": "images/mog/sun/mog_adorbs_ind_1563.png",
+        "mog-kingdom-hearts-mystery-sora": "images/mog/sun/mog_adorbs_ind_1579.png",
+        # Pixar Soul Mystery individual pulls (adorbs_ind — 8 pins)
+        "mog-pixar-soul-mystery-joe-gardner": "images/mog/sun/mog_adorbs_ind_1549.png",
+        "mog-pixar-soul-mystery-curley": "images/mog/sun/mog_adorbs_ind_1569.png",
+        "mog-pixar-soul-mystery-mr-mittens": "images/mog/sun/mog_adorbs_ind_1567.png",
+        "mog-pixar-soul-mystery-dorothea-williams": "images/mog/sun/mog_adorbs_ind_1573.png",
+        "mog-pixar-soul-mystery-libba": "images/mog/sun/mog_adorbs_ind_1571.png",
+        "mog-pixar-soul-mystery-connie": "images/mog/sun/mog_adorbs_ind_1577.png",
+        "mog-pixar-soul-mystery-dez": "images/mog/sun/mog_adorbs_ind_1575.png",
+        "mog-pixar-soul-mystery-miho": "images/mog/sun/mog_adorbs_ind_1565.png",
+        # Muppet Show 50th (p30-p31 — 10 pins)
+        "mog-muppet-show-50th-95": "images/mog/sun/mog_p30_1624.png",
+        "mog-muppet-show-50th-96": "images/mog/sun/mog_p30_1626.png",
+        "mog-muppet-show-50th-97": "images/mog/sun/mog_p30_1628.png",
+        "mog-muppet-show-50th-98": "images/mog/sun/mog_p30_1630.png",
+        "mog-muppet-show-50th-99": "images/mog/sun/mog_p30_1632.png",
+        "mog-muppet-show-50th-100": "images/mog/sun/mog_p31_1677.png",
+        "mog-muppet-show-50th-101": "images/mog/sun/mog_p31_1679.png",
+        "mog-muppet-show-50th-102": "images/mog/sun/mog_p31_1681.png",
+        "mog-muppet-show-50th-103": "images/mog/sun/mog_p31_1683.png",
+        "mog-muppet-show-50th-104": "images/mog/sun/mog_p31_1685.png",
+        # Portraits of Evil (p32-p33 — 13 pins)
+        "mog-portraits-of-evil-105": "images/mog/sun/mog_p32_1741.png",
+        "mog-portraits-of-evil-106": "images/mog/sun/mog_p32_1749.png",
+        "mog-portraits-of-evil-107": "images/mog/sun/mog_p32_1745.png",
+        "mog-portraits-of-evil-108": "images/mog/sun/mog_p32_1753.png",
+        "mog-portraits-of-evil-109": "images/mog/sun/mog_p32_1743.png",
+        "mog-portraits-of-evil-110": "images/mog/sun/mog_p32_1751.png",
+        "mog-portraits-of-evil-111": "images/mog/sun/mog_p32_1747.png",
+        "mog-portraits-of-evil-112": "images/mog/sun/mog_p33_1802.png",
+        "mog-portraits-of-evil-113": "images/mog/sun/mog_p33_1808.png",
+        "mog-portraits-of-evil-114": "images/mog/sun/mog_p33_1806.png",
+        "mog-portraits-of-evil-115": "images/mog/sun/mog_p33_1812.png",
+        "mog-portraits-of-evil-116": "images/mog/sun/mog_p33_1804.png",
+        "mog-portraits-of-evil-117": "images/mog/sun/mog_p33_1810.png",
+        # Colorful World Mystery (p34)
+        "mog-colorful-world-mystery-118": "images/mog/sun/mog_p34_1844.png",
 
         # =====================================================================
         # TWDC FRIDAY
@@ -1524,6 +1603,25 @@ def apply_image_mappings(all_sets):
         if s["id"] == "twdc-epic-rivals":
             for pin in s["pins"]:
                 pin["box_image_path"] = epic_rivals_box
+
+    # Assign secondary image to World Princess Week Ultra Jumbo
+    for s in all_sets:
+        if s["id"] == "mog-world-princess-ultra":
+            for pin in s["pins"]:
+                pin["box_image_path"] = "images/mog/fri/mog_p15_0839.png"
+
+    # Assign box set image as secondary to all Carousel Horses individual pins
+    for s in all_sets:
+        if s["id"] == "mog-carousel-horses":
+            box_img = None
+            for pin in s["pins"]:
+                if pin["name"] == "Box Set":
+                    box_img = pin.get("image_path")
+                    break
+            if box_img and box_img != PLACEHOLDER:
+                for pin in s["pins"]:
+                    if pin["name"] != "Box Set":
+                        pin["box_image_path"] = box_img
 
     return mapped
 

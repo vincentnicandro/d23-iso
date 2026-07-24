@@ -202,6 +202,7 @@ img { display: block; max-width: 100%; }
   will-change: transform;
 }
 .pin-card:hover .pin-card-flip-inner { transform: rotateY(180deg); }
+.pin-card-flip.swiped .pin-card-flip-inner { transform: rotateY(180deg); }
 .pin-card-flip-front, .pin-card-flip-back {
   position: absolute; inset: 0; backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -239,10 +240,15 @@ img { display: block; max-width: 100%; }
 }
 .pin-card:hover .gatefold-left { transform: rotateY(-160deg); }
 .pin-card:hover .gatefold-right { transform: rotateY(160deg); }
+.pin-card-gatefold.swiped .gatefold-left { transform: rotateY(-160deg); }
+.pin-card-gatefold.swiped .gatefold-right { transform: rotateY(160deg); }
+.pin-card:hover .gatefold-back { opacity: 1; }
+.pin-card-gatefold.swiped .gatefold-back { opacity: 1; }
 .pin-card-body { padding: 6px 8px 8px; display: flex; flex-direction: column; gap: 1px; }
 .pin-card-name { font-weight: 600; font-size: 11px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .pin-card-meta { font-size: 10px; color: var(--color-text-secondary); margin-top: 1px; }
 .pin-card-tier { color: var(--color-gold); font-weight: 600; }
+.pin-card-super-tier { color: #DC143C; font-weight: 600; }
 .pin-card-added { font-size: 10px; color: var(--color-green); font-weight: 600; margin-top: 4px; cursor: pointer; }
 
 /* BUTTONS */
@@ -444,6 +450,7 @@ const app = createApp({
     const isoList = ref([]);
     const selectedPin = ref(null);
     const sheetActiveImg = ref(0);
+    const swipedPins = ref(new Set());
     const copyMsg = ref('');
     const isoFilter = ref('all'); // 'all' or 'diso'
     const showExportMenu = ref(false);
@@ -1013,6 +1020,23 @@ const app = createApp({
       }
     }
 
+    // Swipe handling for mobile flip/gatefold
+    let touchStartX = 0;
+    function onTouchStart(e) { touchStartX = e.touches[0].clientX; }
+    function onTouchEnd(e, pinId) {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 30) {
+        if (swipedPins.value.has(pinId)) {
+          swipedPins.value.delete(pinId);
+        } else {
+          swipedPins.value.add(pinId);
+        }
+        // Force reactivity
+        swipedPins.value = new Set(swipedPins.value);
+      }
+    }
+    function isSwiped(pinId) { return swipedPins.value.has(pinId); }
+
     function featureTags(features) {
       if (!features) return [];
       return features.split(',').map(f => f.trim()).filter(f => f.length > 0 && f.length < 30);
@@ -1075,7 +1099,8 @@ const app = createApp({
       filteredSets, searchResults, isoGroups, isoTotal, disoCount, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
       updateQty, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory,
-      featureTags, filteredPins, displayDates, badgeClass, storeName, badgeLabel, PLACEHOLDER_IMG
+      featureTags, filteredPins, displayDates, badgeClass, storeName, badgeLabel,
+      onTouchStart, onTouchEnd, isSwiped, PLACEHOLDER_IMG
     };
   },
   template: `
@@ -1159,13 +1184,13 @@ const app = createApp({
         <button v-if="!isInIso(pin.id)" class="icon-add pin-add-btn" @click.stop="cyclePin(pin, set)" title="Add to ISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
         <span v-else-if="getPriority(pin.id)==='iso'" class="icon-added pin-add-btn" @click.stop="cyclePin(pin, set)" title="ISO — click for DISO"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 7.5l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
         <span v-else class="icon-diso pin-add-btn" @click.stop="cyclePin(pin, set)" title="DISO — click to remove"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 12.5s-5.5-3.2-5.5-6.5c0-2 1.3-3.5 3-3.5 1 0 1.9.5 2.5 1.3C7.6 3 8.5 2.5 9.5 2.5c1.7 0 3 1.5 3 3.5 0 3.3-5.5 6.5-5.5 6.5z" fill="currentColor" stroke="none"/></svg></span>
-        <div v-if="pin.box_image_path && set.id==='mog-pov'" class="pin-card-flip">
+        <div v-if="pin.box_image_path && set.id==='mog-pov'" class="pin-card-flip" :class="{ swiped: isSwiped(pin.id) }" @touchstart="onTouchStart" @touchend="(e) => onTouchEnd(e, pin.id)">
           <div class="pin-card-flip-inner">
             <div class="pin-card-flip-front"><img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy"></div>
             <div class="pin-card-flip-back"><img :src="pin.box_image_path" :alt="pin.name + ' (back)'" loading="lazy"></div>
           </div>
         </div>
-        <div v-else-if="pin.box_image_path && set.id==='mog-panoramas'" class="pin-card-gatefold">
+        <div v-else-if="pin.box_image_path && set.id==='mog-panoramas'" class="pin-card-gatefold" :class="{ swiped: isSwiped(pin.id) }" @touchstart="onTouchStart" @touchend="(e) => onTouchEnd(e, pin.id)">
           <div class="gatefold-back"><img :src="pin.box_image_path" :alt="pin.name + ' (inside)'" loading="lazy"></div>
           <div class="gatefold-left"><img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy"></div>
           <div class="gatefold-right"><img :src="getImgSrc(pin)" :alt="pin.name" loading="lazy"></div>
@@ -1179,8 +1204,11 @@ const app = createApp({
             <span v-if="pin.retail_display">{{ pin.retail_display }}</span>
             <span v-else-if="set.retail_display">{{ set.retail_display }}</span>
             <span v-if="set.retail_note">&nbsp;{{ set.retail_note }}</span>
-            <span v-if="pin.edition_size"> · LE {{ pin.edition_size }}</span>
-            <span v-if="pin.edition_notes" class="pin-card-tier"> · {{ pin.edition_notes }}</span>
+            <span v-if="pin.edition_display"> · {{ pin.edition_display }}</span>
+            <span v-else-if="pin.edition_size"> · LE {{ pin.edition_size }}</span>
+            <span v-if="pin.edition_notes && pin.edition_notes.includes('|')" class="pin-card-tier"> · {{ pin.edition_notes.split('|')[0] }}</span>
+            <span v-if="pin.edition_notes && pin.edition_notes.includes('|')" class="pin-card-super-tier"> · {{ pin.edition_notes.split('|')[1] }}</span>
+            <span v-else-if="pin.edition_notes" class="pin-card-tier"> · {{ pin.edition_notes }}</span>
           </div>
         </div>
       </div>

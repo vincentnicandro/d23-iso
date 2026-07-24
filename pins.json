@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T03:29:38.001443Z",
+  "generated_at": "2026-07-24T04:29:51.075928Z",
   "stores": [
     "TWDC",
     "MOG",
@@ -3305,7 +3305,7 @@
       "store": "MOG",
       "drop_date": "2026-08-14",
       "drop_day_label": "Friday, August 14",
-      "set_name": "DuckTales the Movie: Treasure of the Lost Lamp Mystery Set",
+      "set_name": "DuckTales the Movie: Treasure of the Lost Lamp aDorbs! Mystery Set",
       "set_description": null,
       "set_type": "mystery",
       "features": null,
@@ -3322,18 +3322,75 @@
         {
           "id": "mog-ducktales-mystery-20",
           "catalog_number": 20,
-          "name": "Mystery Box (Regular)",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "name": "Mystery Box",
+          "edition_size": null,
+          "edition_notes": "LE 300 (5 chaser)",
+          "image_path": "images/placeholder.png",
+          "edition_display": "LE 400 (8)"
         },
         {
-          "id": "mog-ducktales-mystery-chaser",
+          "id": "mog-ducktales-mystery-scrooge-mcduck",
           "catalog_number": null,
-          "name": "Mystery Box (Chaser)",
-          "edition_size": 300,
-          "edition_notes": "chaser",
-          "image_path": "images/placeholder.png"
+          "name": "Scrooge McDuck",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/fri/mog_p06_adorbs_01.png"
+        },
+        {
+          "id": "mog-ducktales-mystery-launchpad-mcquack",
+          "catalog_number": null,
+          "name": "Launchpad McQuack",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/fri/mog_p06_adorbs_02.png"
+        },
+        {
+          "id": "mog-ducktales-mystery-webby-vanderquack",
+          "catalog_number": null,
+          "name": "Webby Vanderquack",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/fri/mog_p06_adorbs_03.png"
+        },
+        {
+          "id": "mog-ducktales-mystery-dewey",
+          "catalog_number": null,
+          "name": "Dewey",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/fri/mog_p06_adorbs_04.png"
+        },
+        {
+          "id": "mog-ducktales-mystery-huey",
+          "catalog_number": null,
+          "name": "Huey",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/fri/mog_p06_adorbs_05.png"
+        },
+        {
+          "id": "mog-ducktales-mystery-louie",
+          "catalog_number": null,
+          "name": "Louie",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/fri/mog_p06_adorbs_06.png"
+        },
+        {
+          "id": "mog-ducktales-mystery-gene-the-genie",
+          "catalog_number": null,
+          "name": "Gene the Genie",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/fri/mog_p06_adorbs_07.png"
+        },
+        {
+          "id": "mog-ducktales-mystery-merlock",
+          "catalog_number": null,
+          "name": "Merlock",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/fri/mog_p06_adorbs_08.png"
         }
       ]
     },
@@ -3744,7 +3801,8 @@
           "name": "World Princess Week",
           "edition_size": 150,
           "edition_notes": null,
-          "image_path": "images/mog/fri/mog_p15_0837.png"
+          "image_path": "images/mog/fri/mog_p15_0837.png",
+          "box_image_path": "images/mog/fri/mog_p15_0839.png"
         }
       ]
     },
@@ -3753,7 +3811,7 @@
       "store": "MOG",
       "drop_date": "2026-08-15",
       "drop_day_label": "Saturday, August 15",
-      "set_name": "S.E.A. Mystery Set",
+      "set_name": "S.E.A. aDorbs! Mystery Set",
       "set_description": "Collect all 15 pins plus trading cards to reveal a hidden image.",
       "set_type": "mystery",
       "features": null,
@@ -3812,9 +3870,9 @@
           "box_image_path": "images/mog/sat/mog_sea_card_969.png"
         },
         {
-          "id": "mog-sea-mystery-pin-5",
+          "id": "mog-sea-mystery-aya-kouame-beauciel",
           "catalog_number": null,
-          "name": "Pin 5",
+          "name": "Aya Kouame-Beauciel",
           "edition_size": 500,
           "edition_notes": null,
           "image_path": "images/mog/sat/mog_sea_mystery_05.png",
@@ -3884,9 +3942,9 @@
           "box_image_path": "images/mog/sat/mog_sea_card_965.png"
         },
         {
-          "id": "mog-sea-mystery-pin-13",
+          "id": "mog-sea-mystery-madame-zarkov",
           "catalog_number": null,
-          "name": "Pin 13",
+          "name": "Madame Zarkov",
           "edition_size": 500,
           "edition_notes": null,
           "image_path": "images/mog/sat/mog_sea_mystery_13.png",
@@ -4247,7 +4305,8 @@
           "name": "Mickey",
           "edition_size": 250,
           "edition_notes": null,
-          "image_path": "images/mog/sat/mog_p25_carousel_01.png"
+          "image_path": "images/mog/sat/mog_p25_carousel_01.png",
+          "box_image_path": "images/mog/sat/mog_p25_1357.png"
         },
         {
           "id": "mog-carousel-horses-minnie",
@@ -4255,7 +4314,8 @@
           "name": "Minnie",
           "edition_size": 250,
           "edition_notes": null,
-          "image_path": "images/mog/sat/mog_p25_carousel_02.png"
+          "image_path": "images/mog/sat/mog_p25_carousel_02.png",
+          "box_image_path": "images/mog/sat/mog_p25_1357.png"
         },
         {
           "id": "mog-carousel-horses-donald",
@@ -4263,7 +4323,8 @@
           "name": "Donald",
           "edition_size": 250,
           "edition_notes": null,
-          "image_path": "images/mog/sat/mog_p25_carousel_03.png"
+          "image_path": "images/mog/sat/mog_p25_carousel_03.png",
+          "box_image_path": "images/mog/sat/mog_p25_1357.png"
         },
         {
           "id": "mog-carousel-horses-goofy",
@@ -4271,7 +4332,8 @@
           "name": "Goofy",
           "edition_size": 250,
           "edition_notes": null,
-          "image_path": "images/mog/sat/mog_p25_carousel_04.png"
+          "image_path": "images/mog/sat/mog_p25_carousel_04.png",
+          "box_image_path": "images/mog/sat/mog_p25_1357.png"
         },
         {
           "id": "mog-carousel-horses-clarabelle",
@@ -4279,7 +4341,8 @@
           "name": "Clarabelle",
           "edition_size": 250,
           "edition_notes": null,
-          "image_path": "images/mog/sat/mog_p25_carousel_05.png"
+          "image_path": "images/mog/sat/mog_p25_carousel_05.png",
+          "box_image_path": "images/mog/sat/mog_p25_1357.png"
         },
         {
           "id": "mog-carousel-horses-daisy",
@@ -4287,7 +4350,8 @@
           "name": "Daisy",
           "edition_size": 250,
           "edition_notes": null,
-          "image_path": "images/mog/sat/mog_p25_carousel_06.png"
+          "image_path": "images/mog/sat/mog_p25_carousel_06.png",
+          "box_image_path": "images/mog/sat/mog_p25_1357.png"
         }
       ]
     },
@@ -4296,7 +4360,7 @@
       "store": "MOG",
       "drop_date": "2026-08-16",
       "drop_day_label": "Sunday, August 16",
-      "set_name": "The Avengers Mystery Set",
+      "set_name": "The Avengers aDorbs! Mystery Set",
       "set_description": null,
       "set_type": "mystery",
       "features": null,
@@ -4311,28 +4375,77 @@
       ],
       "pins": [
         {
-          "id": "mog-avengers-mystery-mystery-box-regular",
+          "id": "mog-avengers-mystery-mystery-box",
           "catalog_number": null,
-          "name": "Mystery Box (Regular)",
+          "name": "Mystery Box",
+          "edition_size": null,
+          "edition_notes": "LE 300 (4 chaser)|LE 200 (2 super chaser)",
+          "image_path": "images/placeholder.png",
+          "edition_display": "LE 400 (8)"
+        },
+        {
+          "id": "mog-avengers-mystery-thor",
+          "catalog_number": null,
+          "name": "Thor",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p28_avengers_01.png"
         },
         {
-          "id": "mog-avengers-mystery-chaser",
+          "id": "mog-avengers-mystery-nick-fury",
           "catalog_number": null,
-          "name": "Mystery Box (Chaser)",
-          "edition_size": 300,
-          "edition_notes": "chaser",
-          "image_path": "images/placeholder.png"
+          "name": "Nick Fury",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_p28_avengers_02.png"
         },
         {
-          "id": "mog-avengers-mystery-super-chaser",
+          "id": "mog-avengers-mystery-iron-man",
           "catalog_number": null,
-          "name": "Mystery Box (Super Chaser)",
-          "edition_size": 200,
-          "edition_notes": "super chaser",
-          "image_path": "images/placeholder.png"
+          "name": "Iron Man",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_p28_avengers_03.png"
+        },
+        {
+          "id": "mog-avengers-mystery-hulk",
+          "catalog_number": null,
+          "name": "Hulk",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_p28_avengers_04.png"
+        },
+        {
+          "id": "mog-avengers-mystery-hawkeye",
+          "catalog_number": null,
+          "name": "Hawkeye",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_p28_avengers_05.png"
+        },
+        {
+          "id": "mog-avengers-mystery-captain-marvel",
+          "catalog_number": null,
+          "name": "Captain Marvel",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_p28_avengers_06.png"
+        },
+        {
+          "id": "mog-avengers-mystery-black-widow",
+          "catalog_number": null,
+          "name": "Black Widow",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_p28_avengers_07.png"
+        },
+        {
+          "id": "mog-avengers-mystery-captain-america",
+          "catalog_number": null,
+          "name": "Captain America",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_p28_avengers_08.png"
         }
       ]
     },
@@ -4341,7 +4454,7 @@
       "store": "MOG",
       "drop_date": "2026-08-16",
       "drop_day_label": "Sunday, August 16",
-      "set_name": "Guardians of the Galaxy Box Set",
+      "set_name": "Guardians of the Galaxy aDorbs! Box Set",
       "set_description": "Each box contains one mystery pin under the tray.",
       "set_type": "box_set",
       "features": null,
@@ -4358,10 +4471,10 @@
         {
           "id": "mog-guardians-boxset-91",
           "catalog_number": 91,
-          "name": "Guardians of the Galaxy Box Set",
+          "name": "Guardians of the Galaxy aDorbs! Box Set",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p28_1397.png"
         }
       ]
     },
@@ -4370,7 +4483,7 @@
       "store": "MOG",
       "drop_date": "2026-08-16",
       "drop_day_label": "Sunday, August 16",
-      "set_name": "Kingdom Hearts Mystery Set",
+      "set_name": "Kingdom Hearts aDorbs! Mystery Set",
       "set_description": null,
       "set_type": "mystery",
       "features": null,
@@ -4385,28 +4498,77 @@
       ],
       "pins": [
         {
-          "id": "mog-kingdom-hearts-mystery-mystery-box-regular",
+          "id": "mog-kingdom-hearts-mystery-mystery-box",
           "catalog_number": null,
-          "name": "Mystery Box (Regular)",
+          "name": "Mystery Box",
+          "edition_size": null,
+          "edition_notes": "LE 400 (4 chaser)|LE 300 (2 super chaser)",
+          "image_path": "images/placeholder.png",
+          "edition_display": "LE 500 (8)"
+        },
+        {
+          "id": "mog-kingdom-hearts-mystery-donald",
+          "catalog_number": null,
+          "name": "Donald",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_adorbs_ind_1551.png"
         },
         {
-          "id": "mog-kingdom-hearts-mystery-chaser",
+          "id": "mog-kingdom-hearts-mystery-goofy",
           "catalog_number": null,
-          "name": "Mystery Box (Chaser)",
-          "edition_size": 400,
-          "edition_notes": "chaser",
-          "image_path": "images/placeholder.png"
+          "name": "Goofy",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1553.png"
         },
         {
-          "id": "mog-kingdom-hearts-mystery-super-chaser",
+          "id": "mog-kingdom-hearts-mystery-mickey",
           "catalog_number": null,
-          "name": "Mystery Box (Super Chaser)",
-          "edition_size": 300,
-          "edition_notes": "super chaser",
-          "image_path": "images/placeholder.png"
+          "name": "Mickey",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1555.png"
+        },
+        {
+          "id": "mog-kingdom-hearts-mystery-minnie",
+          "catalog_number": null,
+          "name": "Minnie",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1557.png"
+        },
+        {
+          "id": "mog-kingdom-hearts-mystery-daisy",
+          "catalog_number": null,
+          "name": "Daisy",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1559.png"
+        },
+        {
+          "id": "mog-kingdom-hearts-mystery-riku",
+          "catalog_number": null,
+          "name": "Riku",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1561.png"
+        },
+        {
+          "id": "mog-kingdom-hearts-mystery-kairi",
+          "catalog_number": null,
+          "name": "Kairi",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1563.png"
+        },
+        {
+          "id": "mog-kingdom-hearts-mystery-sora",
+          "catalog_number": null,
+          "name": "Sora",
+          "edition_size": 500,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1579.png"
         }
       ]
     },
@@ -4415,7 +4577,7 @@
       "store": "MOG",
       "drop_date": "2026-08-16",
       "drop_day_label": "Sunday, August 16",
-      "set_name": "Pixar Soul Mystery Set",
+      "set_name": "Pixar Soul aDorbs! Mystery Set",
       "set_description": null,
       "set_type": "mystery",
       "features": null,
@@ -4430,28 +4592,77 @@
       ],
       "pins": [
         {
-          "id": "mog-pixar-soul-mystery-mystery-box-regular",
+          "id": "mog-pixar-soul-mystery-mystery-box",
           "catalog_number": null,
-          "name": "Mystery Box (Regular)",
+          "name": "Mystery Box",
+          "edition_size": null,
+          "edition_notes": "LE 300 (4 chaser)|LE 200 (3 super chaser)",
+          "image_path": "images/placeholder.png",
+          "edition_display": "LE 400 (8)"
+        },
+        {
+          "id": "mog-pixar-soul-mystery-joe-gardner",
+          "catalog_number": null,
+          "name": "Joe Gardner",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_adorbs_ind_1549.png"
         },
         {
-          "id": "mog-pixar-soul-mystery-chaser",
+          "id": "mog-pixar-soul-mystery-curley",
           "catalog_number": null,
-          "name": "Mystery Box (Chaser)",
-          "edition_size": 300,
-          "edition_notes": "chaser",
-          "image_path": "images/placeholder.png"
+          "name": "Curley",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1569.png"
         },
         {
-          "id": "mog-pixar-soul-mystery-super-chaser",
+          "id": "mog-pixar-soul-mystery-mr-mittens",
           "catalog_number": null,
-          "name": "Mystery Box (Super Chaser)",
-          "edition_size": 200,
-          "edition_notes": "super chaser",
-          "image_path": "images/placeholder.png"
+          "name": "Mr. Mittens",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1567.png"
+        },
+        {
+          "id": "mog-pixar-soul-mystery-dorothea-williams",
+          "catalog_number": null,
+          "name": "Dorothea Williams",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1573.png"
+        },
+        {
+          "id": "mog-pixar-soul-mystery-libba",
+          "catalog_number": null,
+          "name": "Libba",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1571.png"
+        },
+        {
+          "id": "mog-pixar-soul-mystery-connie",
+          "catalog_number": null,
+          "name": "Connie",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1577.png"
+        },
+        {
+          "id": "mog-pixar-soul-mystery-dez",
+          "catalog_number": null,
+          "name": "Dez",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1575.png"
+        },
+        {
+          "id": "mog-pixar-soul-mystery-miho",
+          "catalog_number": null,
+          "name": "Miho",
+          "edition_size": 400,
+          "edition_notes": null,
+          "image_path": "images/mog/sun/mog_adorbs_ind_1565.png"
         }
       ]
     },
@@ -4460,7 +4671,7 @@
       "store": "MOG",
       "drop_date": "2026-08-16",
       "drop_day_label": "Sunday, August 16",
-      "set_name": "Pixar Soul Box Set",
+      "set_name": "Pixar Soul aDorbs! Box Set",
       "set_description": null,
       "set_type": "box_set",
       "features": null,
@@ -4477,10 +4688,10 @@
         {
           "id": "mog-pixar-soul-boxset-94",
           "catalog_number": 94,
-          "name": "Pixar Soul Box Set",
+          "name": "Pixar Soul aDorbs! Box Set",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_adorbs_strip_01.png"
         }
       ]
     },
@@ -4509,7 +4720,7 @@
           "name": "Kermit",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p30_1624.png"
         },
         {
           "id": "mog-muppet-show-50th-96",
@@ -4517,7 +4728,7 @@
           "name": "Veterinarian's Hospital",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p30_1626.png"
         },
         {
           "id": "mog-muppet-show-50th-97",
@@ -4525,7 +4736,7 @@
           "name": "At the Dance",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p30_1628.png"
         },
         {
           "id": "mog-muppet-show-50th-98",
@@ -4533,7 +4744,7 @@
           "name": "Swedish Chef",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p30_1630.png"
         },
         {
           "id": "mog-muppet-show-50th-99",
@@ -4541,7 +4752,7 @@
           "name": "Great Gonzo",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p30_1632.png"
         },
         {
           "id": "mog-muppet-show-50th-100",
@@ -4549,7 +4760,7 @@
           "name": "Fozzie's Stand-Up",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p31_1677.png"
         },
         {
           "id": "mog-muppet-show-50th-101",
@@ -4557,7 +4768,7 @@
           "name": "Pigs in Space",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p31_1679.png"
         },
         {
           "id": "mog-muppet-show-50th-102",
@@ -4565,7 +4776,7 @@
           "name": "The Electric Mayhem",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p31_1681.png"
         },
         {
           "id": "mog-muppet-show-50th-103",
@@ -4573,7 +4784,7 @@
           "name": "Muppet Labs",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p31_1683.png"
         },
         {
           "id": "mog-muppet-show-50th-104",
@@ -4581,7 +4792,7 @@
           "name": "Statler and Waldorf",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p31_1685.png"
         }
       ]
     },
@@ -4610,7 +4821,7 @@
           "name": "Evil Queen",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p32_1741.png"
         },
         {
           "id": "mog-portraits-of-evil-106",
@@ -4618,7 +4829,7 @@
           "name": "Chernabog",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p32_1749.png"
         },
         {
           "id": "mog-portraits-of-evil-107",
@@ -4626,7 +4837,7 @@
           "name": "Queen of Hearts",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p32_1745.png"
         },
         {
           "id": "mog-portraits-of-evil-108",
@@ -4634,7 +4845,7 @@
           "name": "Maleficent",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p32_1753.png"
         },
         {
           "id": "mog-portraits-of-evil-109",
@@ -4642,7 +4853,7 @@
           "name": "Cruella De Vil",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p32_1743.png"
         },
         {
           "id": "mog-portraits-of-evil-110",
@@ -4650,7 +4861,7 @@
           "name": "Horned King",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p32_1751.png"
         },
         {
           "id": "mog-portraits-of-evil-111",
@@ -4658,7 +4869,7 @@
           "name": "Ursula",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p32_1747.png"
         },
         {
           "id": "mog-portraits-of-evil-112",
@@ -4666,7 +4877,7 @@
           "name": "Gaston",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p33_1802.png"
         },
         {
           "id": "mog-portraits-of-evil-113",
@@ -4674,7 +4885,7 @@
           "name": "Jafar",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p33_1808.png"
         },
         {
           "id": "mog-portraits-of-evil-114",
@@ -4682,7 +4893,7 @@
           "name": "Scar",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p33_1806.png"
         },
         {
           "id": "mog-portraits-of-evil-115",
@@ -4690,7 +4901,7 @@
           "name": "Hades",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p33_1812.png"
         },
         {
           "id": "mog-portraits-of-evil-116",
@@ -4698,7 +4909,7 @@
           "name": "Yzma",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p33_1804.png"
         },
         {
           "id": "mog-portraits-of-evil-117",
@@ -4706,7 +4917,7 @@
           "name": "Mother Gothel",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p33_1810.png"
         }
       ]
     },
@@ -4735,7 +4946,7 @@
           "name": "Mystery Box",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/placeholder.png"
+          "image_path": "images/mog/sun/mog_p34_1844.png"
         }
       ]
     },
