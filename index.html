@@ -8,6 +8,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
+@font-face { font-family: 'InspireTWDC'; src: url('fonts/InspireTWDC-Light.otf') format('opentype'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'InspireTWDC'; src: url('fonts/InspireTWDC-LightItalic.otf') format('opentype'); font-weight: 300; font-style: italic; }
+@font-face { font-family: 'InspireTWDC'; src: url('fonts/InspireTWDC-Roman.otf') format('opentype'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'InspireTWDC'; src: url('fonts/InspireTWDC-Italic.otf') format('opentype'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'InspireTWDC'; src: url('fonts/InspireTWDC-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'InspireTWDC'; src: url('fonts/InspireTWDC-MediumItalic.otf') format('opentype'); font-weight: 500; font-style: italic; }
+@font-face { font-family: 'InspireTWDC'; src: url('fonts/InspireTWDC-Heavy.otf') format('opentype'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'InspireTWDC'; src: url('fonts/InspireTWDC-HeavyItalic.otf') format('opentype'); font-weight: 700; font-style: italic; }
+@font-face { font-family: 'InspireTWDC'; src: url('fonts/InspireTWDC-Black.otf') format('opentype'); font-weight: 900; font-style: normal; }
+@font-face { font-family: 'InspireTWDC'; src: url('fonts/InspireTWDC-BlackItalic.otf') format('opentype'); font-weight: 900; font-style: italic; }
 :root {
   --color-bg: #EDF2F8;
   --color-surface: #FFFFFF;
@@ -23,10 +33,88 @@
   --color-hero-gradient-end: #EDF2F8;
   --color-teal: #0097A7;
 }
+.dark {
+  --color-bg: #1C1A24;
+  --color-surface: #24222E;
+  --color-navy: #CCCCCC;
+  --color-navy-light: #999999;
+  --color-accent: #B0B0B0;
+  --color-green: #66BB6A;
+  --color-gold: #FFD54F;
+  --color-text-primary: #E0E0E0;
+  --color-text-secondary: #8A8A8A;
+  --color-border: #302E40;
+  --color-hero-gradient-start: #1C1A24;
+  --color-hero-gradient-end: #1C1A24;
+  --color-teal: #4DD0E1;
+}
+.dark .sheet, .dark .overlay + .sheet { background: #24222E; }
+.dark .filter-pill { background: #302E40; color: var(--color-text-primary); border-color: #3D3A4D; }
+.dark .filter-pill.active { background: #E0E0E0; color: #1C1A24; border-color: #E0E0E0; }
+.dark .filter-chip { background: #302E40; color: var(--color-text-primary); border-color: #3D3A4D; }
+.dark .filter-chip.active { background: #E0E0E0; color: #1C1A24; }
+.dark .pin-card { background: #1C1A24; border-color: var(--color-border); }
+.dark .pin-card-img, .dark .pin-card-flip, .dark .pin-card-gatefold, .dark .pin-card-book { background: #302E40; }
+.dark .search-bar { background: #1C1A24; border-color: var(--color-border); }
+.dark .search-bar input { background: #24222E; color: var(--color-text-primary); border-color: var(--color-border); }
+.dark .bottom-nav { background: #24222E; border-color: var(--color-border); }
+.dark .top-nav { background: #24222E; border-color: var(--color-border); }
+.dark .iso-footer { background: #24222E; border-color: var(--color-border); }
+.dark .iso-bar { background: #1C1A24; border-color: var(--color-border); }
+.dark .filter-bar { background: #1C1A24; border-color: var(--color-border); }
+.dark .export-menu { background: #24222E; border-color: var(--color-border); }
+.dark .export-menu button { color: var(--color-text-primary); }
+.dark .export-menu button:hover { background: #302E40; }
+.dark .btn-primary { background: #E0E0E0; color: #1C1A24; }
+.dark .btn-secondary { background: #302E40; color: var(--color-text-primary); border-color: var(--color-border); }
+.dark .iso-note-input { background: #302E40; border-color: var(--color-border); color: var(--color-text-primary); }
+.dark .iso-note-input:focus { background: #302E40; border-color: #8A7FBF; }
+.dark .receipt-sheet-header { background: #24222E; }
+.dark .filter-sheet-header { background: #24222E; }
+.dark .help-sheet-header { background: #24222E; }
+.dark .search-clear { background: #302E40; color: var(--color-text-secondary); }
+.dark .help-fab { background: #302E40; color: #E0E0E0; }
+.dark .badge { color: var(--color-text-primary); }
+.dark .badge-store { background: #3D3A4D; color: #E0E0E0; }
+.dark .badge-date { background: transparent; color: var(--color-text-secondary); border: 1px solid #3D3A4D; }
+.dark .badge-individual { background: var(--color-navy); color: #1C1A24; }
+.dark .badge-mystery { background: var(--color-gold); color: #1a1a00; }
+.dark .badge-box_set { background: var(--color-teal); color: #1C1A24; }
+.dark .badge-framed_set { background: #9B59B6; color: #fff; }
+.dark .set-name { color: var(--color-text-primary); }
+.dark .popular-search-item { color: var(--color-accent); }
+.dark .filter-icon-btn { background: #302E40; border-color: #3D3A4D; color: var(--color-text-primary); }
+.dark .filter-icon-btn:hover { background: #3D3A4D; }
+.dark .filter-icon-count { background: #E0E0E0; color: #1C1A24; }
+.dark .pin-card-img { background: #302E40; }
+.dark .pin-card-flip, .dark .pin-card-flip-front, .dark .pin-card-flip-back { background: #302E40; }
+.dark .pin-card-gatefold { background: #302E40; }
+.dark .pin-card-book, .dark .book-cover { background: #302E40; }
+.dark .icon-add { background: #E0E0E0; color: #1C1A24; }
+.dark .icon-add:hover { background: #CCCCCC; }
+.dark .pin-card:hover { background: #24222E; }
+.dark .pin-grid { background: #1C1A24; }
+.dark .pin-card-name { color: var(--color-text-primary); }
+.dark .pin-card-meta { color: var(--color-text-secondary); }
+.dark .sheet-close { background: #302E40; color: var(--color-text-secondary); }
+.dark .sheet-close:hover { background: #3D3A4D; color: var(--color-text-primary); }
+.dark .stepper-btn { background: #302E40; }
+.dark .stepper-btn:hover { background: #3D3A4D; }
+.dark .pin-thumb { background: #302E40; }
+.dark .iso-thumb { background: #302E40; }
+.dark .btn-secondary:hover { background: #3D3A4D; }
+.dark .filter-sheet-footer { background: #24222E; border-color: var(--color-border); }
+.dark .receipt-day-header { background: #24222E; border-color: var(--color-border); }
+.dark .receipt-store-header { background: #24222E; border-color: var(--color-border); }
+.dark .receipt-line { border-color: var(--color-border); }
+.dark .remove-btn { background: #1C1A24; border-color: #c00; }
+.dark .remove-btn:hover { background: #3D2030; }
+.dark .sheet-img { background: #302E40; }
+.dark .sheet-thumb { background: #302E40; }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; }
 body {
-  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-family: 'InspireTWDC', -apple-system, sans-serif;
   background: var(--color-bg);
   color: var(--color-text-primary);
   font-size: 15px;
@@ -535,6 +623,15 @@ img { display: block; max-width: 100%; }
   border-radius: 20px 20px 0 0; flex-shrink: 0; z-index: 5; text-align: center;
 }
 .help-sheet-header h2 { font-weight: 700; font-size: 20px; }
+.dark-mode-toggle {
+  position: absolute; top: 16px; left: 16px; width: 32px; height: 32px;
+  border-radius: 50%; background: #f0f4f8; border: none; display: flex;
+  align-items: center; justify-content: center; cursor: pointer;
+  color: var(--color-text-secondary);
+}
+.dark-mode-toggle:hover { background: #e3ecf5; color: var(--color-navy); }
+.dark .dark-mode-toggle { background: #302E40; color: var(--color-text-secondary); }
+.dark .dark-mode-toggle:hover { background: #3D3A4D; color: var(--color-navy); }
 .help-content { flex: 1; overflow-y: auto; padding: 12px 20px 32px; }
 .help-content h3 { font-size: 17px; font-weight: 700; margin: 24px 0 10px; color: var(--color-navy); }
 .help-content h3:first-child { margin-top: 0; }
@@ -558,6 +655,7 @@ img { display: block; max-width: 100%; }
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script>
 const PLACEHOLDER_IMG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='200' height='200' fill='%23E8EDF3'/%3E%3Ctext x='100' y='106' text-anchor='middle' font-family='sans-serif' font-size='12' fill='%239BA8B8'%3EPin Image%3C/text%3E%3C/svg%3E`;
+const PLACEHOLDER_IMG_DARK = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='200' height='200' fill='%23302E40'/%3E%3Ctext x='100' y='106' text-anchor='middle' font-family='sans-serif' font-size='12' fill='%238A8A8A'%3EPin Image%3C/text%3E%3C/svg%3E`;
 
 const { createApp, ref, computed, onMounted, watch, nextTick } = Vue;
 
@@ -580,6 +678,14 @@ const app = createApp({
     const showExportMenu = ref(false);
     const showHelp = ref(false);
     const helpExpanded = ref({ about: true, howto: false, sources: false });
+    const darkMode = ref(localStorage.getItem('d23_dark_mode') === 'true');
+    function toggleDarkMode() {
+      darkMode.value = !darkMode.value;
+      document.documentElement.classList.toggle('dark', darkMode.value);
+      localStorage.setItem('d23_dark_mode', darkMode.value);
+    }
+    // Apply on load
+    if (darkMode.value) document.documentElement.classList.add('dark');
     const showReceipt = ref(false);
     const storyImages = ref([]);
     const storyImageTitle = ref('Your Story Images');
@@ -644,7 +750,7 @@ const app = createApp({
     });
 
     function getImgSrc(pin) {
-      if (!pin.image_path || pin.image_path === 'images/placeholder.png') return PLACEHOLDER_IMG;
+      if (!pin.image_path || pin.image_path === 'images/placeholder.png') return darkMode.value ? PLACEHOLDER_IMG_DARK : PLACEHOLDER_IMG;
       return pin.image_path;
     }
 
@@ -886,6 +992,18 @@ const app = createApp({
       const groups = isoGroups.value;
       if (!groups.length) return;
 
+      const dm = darkMode.value;
+      const C = {
+        bg: dm ? '#1C1A24' : '#EDF2F8',
+        card: dm ? '#24222E' : '#FFFFFF',
+        cardBorder: dm ? '#302E40' : '#D8E3EE',
+        title: dm ? '#E0E0E0' : '#00264C',
+        header: dm ? '#E0E0E0' : '#00264C',
+        pinName: dm ? '#E0E0E0' : '#0A1929',
+        meta: dm ? '#8A8A8A' : '#5A6A7A',
+        legendText: dm ? '#E0E0E0' : '#0A1929',
+      };
+
       const W = 1080, H = 1920;
       const pages = [];
       const padX = 40, gap = 16;
@@ -963,11 +1081,11 @@ const app = createApp({
         canvas.width = W;
         canvas.height = H;
         ctx = canvas.getContext('2d');
-        ctx.fillStyle = '#EDF2F8';
+        ctx.fillStyle = C.bg;
         ctx.fillRect(0, 0, W, H);
         // Title
-        ctx.fillStyle = '#00264C';
-        ctx.font = '700 48px Plus Jakarta Sans, sans-serif';
+        ctx.fillStyle = C.title;
+        ctx.font = '700 48px InspireTWDC, sans-serif';
         ctx.textAlign = 'center';
         ctx.fillText(isoFilter.value === 'diso' ? 'My DISOs' : 'My D23 ISOs', W / 2, 90);
         yPos = 130;
@@ -980,8 +1098,8 @@ const app = createApp({
         const lx = W - padX;
         // DISO label
         ctx.textAlign = 'right';
-        ctx.fillStyle = '#0A1929';
-        ctx.font = '600 28px Plus Jakarta Sans, sans-serif';
+        ctx.fillStyle = C.legendText;
+        ctx.font = '600 28px InspireTWDC, sans-serif';
         ctx.fillText('DISO', lx, ly);
         const disoW = ctx.measureText('DISO').width;
         ctx.fillStyle = '#E91E63';
@@ -1003,8 +1121,8 @@ const app = createApp({
 
         // ISO label
         const isoRightX = lx - disoW - 80;
-        ctx.fillStyle = '#0A1929';
-        ctx.font = '600 28px Plus Jakarta Sans, sans-serif';
+        ctx.fillStyle = C.legendText;
+        ctx.font = '600 28px InspireTWDC, sans-serif';
         ctx.textAlign = 'right';
         ctx.fillText('ISO', isoRightX, ly);
         const isoW = ctx.measureText('ISO').width;
@@ -1065,11 +1183,11 @@ const app = createApp({
         canvas.width = W;
         canvas.height = H;
         ctx = canvas.getContext('2d');
-        ctx.fillStyle = '#EDF2F8';
+        ctx.fillStyle = C.bg;
         ctx.fillRect(0, 0, W, H);
         // Title
-        ctx.fillStyle = '#00264C';
-        ctx.font = '700 48px Plus Jakarta Sans, sans-serif';
+        ctx.fillStyle = C.title;
+        ctx.font = '700 48px InspireTWDC, sans-serif';
         ctx.textAlign = 'center';
         ctx.fillText(isoFilter.value === 'diso' ? 'My DISOs' : 'My D23 ISOs', W / 2, 90);
 
@@ -1081,8 +1199,8 @@ const app = createApp({
 
         for (const entry of layout) {
           if (entry.type === 'header') {
-            ctx.fillStyle = '#00264C';
-            ctx.font = '700 30px Plus Jakarta Sans, sans-serif';
+            ctx.fillStyle = C.header;
+            ctx.font = '700 30px InspireTWDC, sans-serif';
             ctx.textAlign = 'left';
             ctx.fillText(entry.label, padX, yPos + 40);
             yPos += headerH;
@@ -1095,11 +1213,11 @@ const app = createApp({
             const y = yPos;
 
             // Card bg
-            ctx.fillStyle = '#FFFFFF';
+            ctx.fillStyle = C.card;
             ctx.beginPath();
             ctx.roundRect(x, y, cellW, cellH, 14);
             ctx.fill();
-            ctx.strokeStyle = '#D8E3EE';
+            ctx.strokeStyle = C.cardBorder;
             ctx.lineWidth = 1;
             ctx.stroke();
 
@@ -1167,8 +1285,8 @@ const app = createApp({
 
             // Pin name (1 line, truncate with ellipsis)
             const textTop = y + cellW - 10;
-            ctx.fillStyle = '#0A1929';
-            ctx.font = '600 20px Plus Jakarta Sans, sans-serif';
+            ctx.fillStyle = C.pinName;
+            ctx.font = '600 20px InspireTWDC, sans-serif';
             ctx.textAlign = 'center';
             let pinName = item.pin.name + (item.qty > 1 ? ' ×' + item.qty : '');
             while (ctx.measureText(pinName).width > cellW - 20 && pinName.length > 3) {
@@ -1178,8 +1296,8 @@ const app = createApp({
 
             // Set name (1 line, truncate with ellipsis)
             const setTop = textTop + 22;
-            ctx.fillStyle = '#5A6A7A';
-            ctx.font = '400 17px Plus Jakarta Sans, sans-serif';
+            ctx.fillStyle = C.meta;
+            ctx.font = '400 17px InspireTWDC, sans-serif';
             let setName = item.set.set_name;
             while (ctx.measureText(setName).width > cellW - 16 && setName.length > 3) {
               setName = setName.slice(0, -2) + '…';
@@ -1189,8 +1307,8 @@ const app = createApp({
             // Price · LE size
             const metaTop = setTop + 22;
             if (metaTop < y + cellH - 10) {
-              ctx.fillStyle = '#5A6A7A';
-              ctx.font = '600 17px Plus Jakarta Sans, sans-serif';
+              ctx.fillStyle = C.meta;
+              ctx.font = '600 17px InspireTWDC, sans-serif';
               let metaText = '';
               const price = item.pin.retail_price || item.set.retail_price;
               if (price) metaText += '\$' + price.toFixed(2);
@@ -1235,6 +1353,19 @@ const app = createApp({
       const groups = isoGroups.value;
       if (!groups.length) return;
 
+      const dm = darkMode.value;
+      const C = {
+        bg: dm ? '#1C1A24' : '#EDF2F8',
+        card: dm ? '#24222E' : '#FFFFFF',
+        cardBorder: dm ? '#302E40' : '#D8E3EE',
+        title: dm ? '#E0E0E0' : '#00264C',
+        header: dm ? '#E0E0E0' : '#00264C',
+        pinName: dm ? '#E0E0E0' : '#0A1929',
+        meta: dm ? '#8A8A8A' : '#5A6A7A',
+        note: dm ? '#9A8ABF' : '#7A8A9A',
+        legendText: dm ? '#E0E0E0' : '#0A1929',
+      };
+
       const cols = 6;
       const W = 2160;
       const padX = 60, gap = 16;
@@ -1259,12 +1390,12 @@ const app = createApp({
       const ctx = canvas.getContext('2d');
 
       // Background
-      ctx.fillStyle = '#EDF2F8';
+      ctx.fillStyle = C.bg;
       ctx.fillRect(0, 0, W, totalH);
 
       // Title
-      ctx.fillStyle = '#00264C';
-      ctx.font = '700 48px Plus Jakarta Sans, sans-serif';
+      ctx.fillStyle = C.title;
+      ctx.font = '700 48px InspireTWDC, sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText(isoFilter.value === 'diso' ? 'My DISOs' : 'My D23 ISOs', W / 2, 80);
 
@@ -1273,8 +1404,8 @@ const app = createApp({
       for (const group of groups) {
         // Group header
         const sn = ({'TWDC':'The Walt Disney Company Store','MOG':"Mickey's of Glendale",'DSSH':'Disney Studio Store Hollywood'}[group.store] || group.store);
-        ctx.fillStyle = '#00264C';
-        ctx.font = '700 30px Plus Jakarta Sans, sans-serif';
+        ctx.fillStyle = C.header;
+        ctx.font = '700 30px InspireTWDC, sans-serif';
         ctx.textAlign = 'left';
         ctx.fillText(`${sn} — ${group.date}`, padX, yPos + 40);
         yPos += headerH;
@@ -1288,13 +1419,13 @@ const app = createApp({
             const y = yPos;
 
             // Card bg
-            ctx.fillStyle = '#FFFFFF';
+            ctx.fillStyle = C.card;
             ctx.beginPath(); ctx.roundRect(x, y, cellW, cellH, 14); ctx.fill();
-            ctx.strokeStyle = '#D8E3EE'; ctx.lineWidth = 1; ctx.stroke();
+            ctx.strokeStyle = C.cardBorder; ctx.lineWidth = 1; ctx.stroke();
 
             // Pin image
             const imgSrc = getImgSrc(item.pin);
-            if (imgSrc !== PLACEHOLDER_IMG) {
+            if (imgSrc !== PLACEHOLDER_IMG && imgSrc !== PLACEHOLDER_IMG_DARK) {
               try {
                 const img = new Image();
                 img.crossOrigin = 'anonymous';
@@ -1335,13 +1466,13 @@ const app = createApp({
 
             // Pin name + qty
             const textTop = y + cellW - 10;
-            ctx.fillStyle = '#0A1929'; ctx.font = '600 20px Plus Jakarta Sans, sans-serif'; ctx.textAlign = 'center';
+            ctx.fillStyle = C.pinName; ctx.font = '600 20px InspireTWDC, sans-serif'; ctx.textAlign = 'center';
             let pinName = item.pin.name + (item.qty > 1 ? ' ×' + item.qty : '');
             while (ctx.measureText(pinName).width > cellW - 20 && pinName.length > 3) pinName = pinName.slice(0,-2) + '…';
             ctx.fillText(pinName, x + cellW/2, textTop);
 
             // Set name
-            ctx.fillStyle = '#5A6A7A'; ctx.font = '400 17px Plus Jakarta Sans, sans-serif';
+            ctx.fillStyle = C.meta; ctx.font = '400 17px InspireTWDC, sans-serif';
             let setName = item.set.set_name;
             while (ctx.measureText(setName).width > cellW - 16 && setName.length > 3) setName = setName.slice(0,-2) + '…';
             ctx.fillText(setName, x + cellW/2, textTop + 22);
@@ -1349,7 +1480,7 @@ const app = createApp({
             // Price · LE
             const metaTop = textTop + 44;
             if (metaTop < y + cellH - 10) {
-              ctx.fillStyle = '#5A6A7A'; ctx.font = '600 17px Plus Jakarta Sans, sans-serif';
+              ctx.fillStyle = C.meta; ctx.font = '600 17px InspireTWDC, sans-serif';
               let metaText = '';
               const price = item.pin.retail_price || item.set.retail_price;
               if (price) metaText += '\$' + price.toFixed(2);
@@ -1362,7 +1493,7 @@ const app = createApp({
             if (item.note) {
               const noteTop = metaTop + 22;
               if (noteTop < y + cellH - 10) {
-                ctx.fillStyle = '#7A8A9A'; ctx.font = 'italic 400 15px Plus Jakarta Sans, sans-serif';
+                ctx.fillStyle = C.note; ctx.font = 'italic 400 15px InspireTWDC, sans-serif';
                 let noteText = item.note;
                 while (ctx.measureText(noteText).width > cellW - 16 && noteText.length > 3) noteText = noteText.slice(0,-2) + '…';
                 ctx.fillText(noteText, x + cellW/2, noteTop);
@@ -1378,8 +1509,8 @@ const app = createApp({
       const lx = W - padX;
       // DISO label
       ctx.textAlign = 'right';
-      ctx.fillStyle = '#0A1929';
-      ctx.font = '600 28px Plus Jakarta Sans, sans-serif';
+      ctx.fillStyle = C.legendText;
+      ctx.font = '600 28px InspireTWDC, sans-serif';
       ctx.fillText('DISO', lx, ly);
       const disoW = ctx.measureText('DISO').width;
       ctx.fillStyle = '#E91E63';
@@ -1398,7 +1529,7 @@ const app = createApp({
       ctx.closePath(); ctx.fill();
       // ISO label
       const isoRightX = lx - disoW - 80;
-      ctx.fillStyle = '#0A1929'; ctx.font = '600 28px Plus Jakarta Sans, sans-serif'; ctx.textAlign = 'right';
+      ctx.fillStyle = C.legendText; ctx.font = '600 28px InspireTWDC, sans-serif'; ctx.textAlign = 'right';
       ctx.fillText('ISO', isoRightX, ly);
       const isoW = ctx.measureText('ISO').width;
       ctx.fillStyle = '#2D7A47';
@@ -1409,7 +1540,7 @@ const app = createApp({
       ctx.beginPath(); ctx.moveTo(clx-7,cly); ctx.lineTo(clx-2,cly+6); ctx.lineTo(clx+8,cly-5); ctx.stroke();
 
       // Total on the left
-      ctx.fillStyle = '#00264C'; ctx.font = '700 28px Plus Jakarta Sans, sans-serif'; ctx.textAlign = 'left';
+      ctx.fillStyle = C.title; ctx.font = '700 28px InspireTWDC, sans-serif'; ctx.textAlign = 'left';
       ctx.fillText(`Est. Total: \$${isoTotal.value.total.toFixed(2)}`, padX, ly);
 
       // Download / display
@@ -1495,7 +1626,7 @@ const app = createApp({
 
     return {
       catalog, error, view, storeFilter, dateFilter, typeFilter, attrFilter, showFilters, searchQuery,
-      isoList, selectedPin, copyMsg, isoFilter, showExportMenu, showReceipt, showHelp, helpExpanded, storyImages, storyImageTitle, stores, dates, dateLabels,
+      isoList, selectedPin, copyMsg, isoFilter, showExportMenu, showReceipt, showHelp, helpExpanded, darkMode, toggleDarkMode, storyImages, storyImageTitle, stores, dates, dateLabels,
       filteredSets, searchResults, isoGroups, isoTotal, disoCount, receiptData, receiptGroupBy, expandedReceiptDays, expandedReceiptStores, toggleReceiptDay, toggleReceiptStore, expandAllReceipt, collapseAllReceipt, allReceiptExpanded, toggleAllReceipt, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
       updateQty, updateNote, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory, exportImage,
@@ -1695,8 +1826,8 @@ const app = createApp({
 <div v-if="showReceipt" class="sheet receipt-sheet">
   <div class="receipt-sheet-header">
     <button class="sheet-close" @click="showReceipt=false"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-    <h2 style="font-weight:700;font-size:20px;text-align:center;margin-bottom:4px;">Cost Breakdown</h2>
-    <p style="font-size:13px;color:var(--color-text-secondary);text-align:center;margin-bottom:12px;">{{ isoTotal.count }} item{{ isoTotal.count!==1?'s':'' }} · Est. Total: \${{ isoTotal.total.toFixed(2) }}</p>
+    <h2 style="font-weight:700;font-size:20px;text-align:center;margin-bottom:4px;">Est. Total: \${{ isoTotal.total.toFixed(2) }}</h2>
+    <p style="font-size:13px;color:var(--color-text-secondary);text-align:center;margin-bottom:12px;">{{ isoTotal.count }} item{{ isoTotal.count!==1?'s':'' }} across {{ isoTotal.sets }} set{{ isoTotal.sets!==1?'s':'' }}</p>
     <div style="display:flex;justify-content:space-between;align-items:center;">
       <div style="display:flex;gap:6px;">
         <button class="filter-chip" :class="{ active: receiptGroupBy==='day' }" @click="receiptGroupBy='day'">By Day</button>
@@ -1838,6 +1969,10 @@ const app = createApp({
   <div class="help-sheet-header">
     <button class="sheet-close" @click="showHelp=false"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     <h2>D23 Pin Catalog</h2>
+    <button class="dark-mode-toggle" @click="toggleDarkMode" :title="darkMode ? 'Switch to light mode' : 'Switch to dark mode'">
+      <svg v-if="!darkMode" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg v-else width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
   </div>
   <div class="help-content">
     <div class="help-section-header" @click="helpExpanded.about = !helpExpanded.about">
