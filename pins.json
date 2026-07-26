@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T22:45:38.036542Z",
+  "generated_at": "2026-07-26T04:10:00.654079Z",
   "stores": [
     "TWDC",
     "MOG",
@@ -31,7 +31,8 @@
           "name": "Yensid & Sorcerer Mickey",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p2_019.png"
+          "image_path": "images/twdc/fri/fri_stamp_p2_019.png",
+          "dimensions": "2.75″×2.71″"
         },
         {
           "id": "twdc-disney-stamp-classic-blue-fairy-jiminy",
@@ -39,7 +40,8 @@
           "name": "Blue Fairy & Jiminy",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p2_017.png"
+          "image_path": "images/twdc/fri/fri_stamp_p2_017.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-classic-dumbo-timothy",
@@ -47,7 +49,8 @@
           "name": "Dumbo & Timothy",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p2_007.png"
+          "image_path": "images/twdc/fri/fri_stamp_p2_007.png",
+          "dimensions": "2.75″×2.54″"
         },
         {
           "id": "twdc-disney-stamp-classic-donald-aracuan-bird",
@@ -55,7 +58,8 @@
           "name": "Donald & Aracuan Bird",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p2_011.png"
+          "image_path": "images/twdc/fri/fri_stamp_p2_011.png",
+          "dimensions": "2.75″×2.95″"
         },
         {
           "id": "twdc-disney-stamp-classic-alice-white-rabbit",
@@ -63,7 +67,8 @@
           "name": "Alice & White Rabbit",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p2_013.png"
+          "image_path": "images/twdc/fri/fri_stamp_p2_013.png",
+          "dimensions": "3″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-classic-chip-dale",
@@ -71,7 +76,8 @@
           "name": "Chip & Dale",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p2_015.png"
+          "image_path": "images/twdc/fri/fri_stamp_p2_015.png",
+          "dimensions": "2.75″×2.77″"
         },
         {
           "id": "twdc-disney-stamp-classic-maleficent-dragon-prince-phillip",
@@ -79,7 +85,8 @@
           "name": "Maleficent Dragon & Prince Phillip",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p2_021.png"
+          "image_path": "images/twdc/fri/fri_stamp_p2_021.png",
+          "dimensions": "2.75″×2.71″"
         },
         {
           "id": "twdc-disney-stamp-classic-merlin-archimedes",
@@ -87,7 +94,8 @@
           "name": "Merlin & Archimedes",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p2_023.png"
+          "image_path": "images/twdc/fri/fri_stamp_p2_023.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-classic-robin-hood-little-john",
@@ -95,7 +103,8 @@
           "name": "Robin Hood & Little John",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p2_025.png"
+          "image_path": "images/twdc/fri/fri_stamp_p2_025.png",
+          "dimensions": "2.86″×2.7″"
         },
         {
           "id": "twdc-disney-stamp-classic-pooh-piglet",
@@ -103,7 +112,8 @@
           "name": "Pooh & Piglet",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p2_009.png"
+          "image_path": "images/twdc/fri/fri_stamp_p2_009.png",
+          "dimensions": "2.75″×2.64″"
         }
       ]
     },
@@ -132,7 +142,8 @@
           "name": "Todd & Copper",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p3_042.png"
+          "image_path": "images/twdc/fri/fri_stamp_p3_042.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-renaissance-dodger-oliver",
@@ -140,7 +151,8 @@
           "name": "Dodger & Oliver",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p3_040.png"
+          "image_path": "images/twdc/fri/fri_stamp_p3_040.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-renaissance-ariel-scuttle",
@@ -148,7 +160,8 @@
           "name": "Ariel & Scuttle",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p3_030.png"
+          "image_path": "images/twdc/fri/fri_stamp_p3_030.png",
+          "dimensions": "2.75″×2.65″"
         },
         {
           "id": "twdc-disney-stamp-renaissance-bernard-bianca",
@@ -156,7 +169,8 @@
           "name": "Bernard & Bianca",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p3_034.png"
+          "image_path": "images/twdc/fri/fri_stamp_p3_034.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-renaissance-belle-maurice",
@@ -164,7 +178,8 @@
           "name": "Belle & Maurice",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p3_036.png"
+          "image_path": "images/twdc/fri/fri_stamp_p3_036.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-renaissance-hercules-phil",
@@ -172,7 +187,8 @@
           "name": "Hercules & Phil",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p3_038.png"
+          "image_path": "images/twdc/fri/fri_stamp_p3_038.png",
+          "dimensions": "2.75″×2.68″"
         },
         {
           "id": "twdc-disney-stamp-renaissance-mulan-mushu",
@@ -180,7 +196,8 @@
           "name": "Mulan & Mushu",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p3_044.png"
+          "image_path": "images/twdc/fri/fri_stamp_p3_044.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-renaissance-kronk-yzma",
@@ -188,7 +205,8 @@
           "name": "Kronk & Yzma",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p3_046.png"
+          "image_path": "images/twdc/fri/fri_stamp_p3_046.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-renaissance-lilo-stitch",
@@ -196,7 +214,8 @@
           "name": "Lilo & Stitch",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p3_048.png"
+          "image_path": "images/twdc/fri/fri_stamp_p3_048.png",
+          "dimensions": "2.75″×3.05″"
         },
         {
           "id": "twdc-disney-stamp-renaissance-tiana-charlotte",
@@ -204,7 +223,8 @@
           "name": "Tiana & Charlotte",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p3_032.png"
+          "image_path": "images/twdc/fri/fri_stamp_p3_032.png",
+          "dimensions": "2.92″×2.78″"
         }
       ]
     },
@@ -233,7 +253,8 @@
           "name": "Rapunzel & Pascal",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p4_063.png"
+          "image_path": "images/twdc/fri/fri_stamp_p4_063.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-modern-wreck-it-ralph-vanellope",
@@ -241,7 +262,8 @@
           "name": "Wreck-It Ralph & Vanellope",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p4_065.png"
+          "image_path": "images/twdc/fri/fri_stamp_p4_065.png",
+          "dimensions": "3″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-modern-anna-olaf",
@@ -249,7 +271,8 @@
           "name": "Anna & Olaf",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p4_053.png"
+          "image_path": "images/twdc/fri/fri_stamp_p4_053.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-modern-baymax-hiro",
@@ -257,7 +280,8 @@
           "name": "Baymax & Hiro",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p4_057.png"
+          "image_path": "images/twdc/fri/fri_stamp_p4_057.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-modern-judy-nick",
@@ -265,7 +289,8 @@
           "name": "Judy & Nick",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p4_059.png"
+          "image_path": "images/twdc/fri/fri_stamp_p4_059.png",
+          "dimensions": "2.93″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-modern-moana-hei-hei",
@@ -273,7 +298,8 @@
           "name": "Moana & Hei Hei",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p4_061.png"
+          "image_path": "images/twdc/fri/fri_stamp_p4_061.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-modern-elsa-bruni",
@@ -281,7 +307,8 @@
           "name": "Elsa & Bruni",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p4_067.png"
+          "image_path": "images/twdc/fri/fri_stamp_p4_067.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-modern-raya-tuk-tuk",
@@ -289,7 +316,8 @@
           "name": "Raya & Tuk Tuk",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p4_069.png"
+          "image_path": "images/twdc/fri/fri_stamp_p4_069.png",
+          "dimensions": "2.75″×3.11″"
         },
         {
           "id": "twdc-disney-stamp-modern-valentino-star",
@@ -297,7 +325,8 @@
           "name": "Valentino & Star",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p4_071.png"
+          "image_path": "images/twdc/fri/fri_stamp_p4_071.png",
+          "dimensions": "2.75″×2.5″"
         },
         {
           "id": "twdc-disney-stamp-modern-gazelle-tiger",
@@ -305,7 +334,8 @@
           "name": "Gazelle & Tiger",
           "edition_size": 500,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_stamp_p4_055.png"
+          "image_path": "images/twdc/fri/fri_stamp_p4_055.png",
+          "dimensions": "3.02″×2.5″"
         }
       ]
     },
@@ -454,7 +484,8 @@
           "name": "Evil Queen",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_089.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_089.png",
+          "dimensions": "2.5″×1.71″"
         },
         {
           "id": "twdc-royal-chambers-prince-charming",
@@ -462,7 +493,8 @@
           "name": "Prince Charming",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_101.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_101.png",
+          "dimensions": "2.5″×2.14″"
         },
         {
           "id": "twdc-royal-chambers-queen-of-hearts",
@@ -470,7 +502,8 @@
           "name": "Queen of Hearts",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_103.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_103.png",
+          "dimensions": "2.5″×2.12″"
         },
         {
           "id": "twdc-royal-chambers-king-stefan-queen-leah",
@@ -478,7 +511,8 @@
           "name": "King Stefan & Queen Leah",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_105.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_105.png",
+          "dimensions": "2.46″×2.5″"
         },
         {
           "id": "twdc-royal-chambers-king-arthur",
@@ -486,7 +520,8 @@
           "name": "King Arthur",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_107.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_107.png",
+          "dimensions": "2.5″×2.08″"
         },
         {
           "id": "twdc-royal-chambers-triton",
@@ -494,7 +529,8 @@
           "name": "Triton",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_109.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_109.png",
+          "dimensions": "2.5″×2.45″"
         },
         {
           "id": "twdc-royal-chambers-gaston",
@@ -502,7 +538,8 @@
           "name": "Gaston",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_111.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_111.png",
+          "dimensions": "2.5″×1.93″"
         },
         {
           "id": "twdc-royal-chambers-sultan",
@@ -510,7 +547,8 @@
           "name": "Sultan",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_113.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_113.png",
+          "dimensions": "2.5″×1.88″"
         },
         {
           "id": "twdc-royal-chambers-zeus",
@@ -518,7 +556,8 @@
           "name": "Zeus",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_115.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_115.png",
+          "dimensions": "2.5″×2.31″"
         },
         {
           "id": "twdc-royal-chambers-emperor",
@@ -526,7 +565,8 @@
           "name": "Emperor",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_091.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_091.png",
+          "dimensions": "2.5″×2.19″"
         },
         {
           "id": "twdc-royal-chambers-kuzco",
@@ -534,7 +574,8 @@
           "name": "Kuzco",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_093.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_093.png",
+          "dimensions": "2.5″×2.33″"
         },
         {
           "id": "twdc-royal-chambers-king-magnifico",
@@ -542,7 +583,8 @@
           "name": "King Magnifico",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_095.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_095.png",
+          "dimensions": "2.5″×1.98″"
         },
         {
           "id": "twdc-royal-chambers-king-candy",
@@ -550,7 +592,8 @@
           "name": "King Candy",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_097.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_097.png",
+          "dimensions": "2.5″×1.96″"
         },
         {
           "id": "twdc-royal-chambers-elsa",
@@ -558,7 +601,8 @@
           "name": "Elsa",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p6_099.png"
+          "image_path": "images/twdc/fri/fri_royal_p6_099.png",
+          "dimensions": "2.5″×2.4″"
         }
       ]
     },
@@ -587,7 +631,8 @@
           "name": "Rafiki & Simba",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_120.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_120.png",
+          "dimensions": "2.5″×2.37″"
         },
         {
           "id": "twdc-role-models-jiminy-pinocchio",
@@ -595,7 +640,8 @@
           "name": "Jiminy & Pinocchio",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_132.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_132.png",
+          "dimensions": "2.5″×2.35″"
         },
         {
           "id": "twdc-role-models-tala-moana",
@@ -603,7 +649,8 @@
           "name": "Tala & Moana",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_134.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_134.png",
+          "dimensions": "2.5″×2.5″"
         },
         {
           "id": "twdc-role-models-mei-mei-ming",
@@ -611,7 +658,8 @@
           "name": "Mei Mei & Ming",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_122.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_122.png",
+          "dimensions": "2.5″×2.05″"
         },
         {
           "id": "twdc-role-models-merlin-arthur",
@@ -619,7 +667,8 @@
           "name": "Merlin & Arthur",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_138.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_138.png",
+          "dimensions": "2.5″×2.20″"
         },
         {
           "id": "twdc-role-models-grandmother-willow-pocahontas",
@@ -627,7 +676,8 @@
           "name": "Grandmother Willow & Pocahontas",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_140.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_140.png",
+          "dimensions": "2.5″×2.34″"
         },
         {
           "id": "twdc-role-models-phil-hercules",
@@ -635,7 +685,8 @@
           "name": "Phil & Hercules",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_142.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_142.png",
+          "dimensions": "2.5″×2.02″"
         },
         {
           "id": "twdc-role-models-fairy-godmother-cinderella",
@@ -643,7 +694,8 @@
           "name": "Fairy Godmother & Cinderella",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_144.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_144.png",
+          "dimensions": "2.5″×2.46″"
         },
         {
           "id": "twdc-role-models-timothy-mouse-dumbo",
@@ -651,7 +703,8 @@
           "name": "Timothy Mouse & Dumbo",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_146.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_146.png",
+          "dimensions": "2.5″×2.10″"
         },
         {
           "id": "twdc-role-models-ancestor-mulan",
@@ -659,7 +712,8 @@
           "name": "Ancestor & Mulan",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_126.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_126.png",
+          "dimensions": "2.5″×2.48″"
         },
         {
           "id": "twdc-role-models-auguste-gusteau-remy",
@@ -667,7 +721,8 @@
           "name": "Auguste Gusteau & Remy",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_124.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_124.png",
+          "dimensions": "2.41″×2.74″"
         },
         {
           "id": "twdc-role-models-hector-miguel",
@@ -675,7 +730,8 @@
           "name": "Hector & Miguel",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_128.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_128.png",
+          "dimensions": "2.5″×2.11″"
         },
         {
           "id": "twdc-role-models-tadashi-hiro",
@@ -683,7 +739,8 @@
           "name": "Tadashi & Hiro",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_136.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_136.png",
+          "dimensions": "2.5″×2.23″"
         },
         {
           "id": "twdc-role-models-carl-russel",
@@ -691,7 +748,8 @@
           "name": "Carl & Russel",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_royal_p7_130.png"
+          "image_path": "images/twdc/fri/fri_royal_p7_130.png",
+          "dimensions": "2.5″×2.85″"
         }
       ]
     },
@@ -714,14 +772,6 @@
         "2026-08-14"
       ],
       "pins": [
-        {
-          "id": "twdc-disney-d-mystery-mystery-box",
-          "catalog_number": null,
-          "name": "Mystery Box",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_disney_ds_box.png"
-        },
         {
           "id": "twdc-disney-d-mystery-mickey",
           "catalog_number": null,
@@ -816,14 +866,6 @@
         "2026-08-14"
       ],
       "pins": [
-        {
-          "id": "twdc-princess-mystery-mystery-box",
-          "catalog_number": null,
-          "name": "Mystery Box",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/twdc/fri/fri_princess_mystery_box.png"
-        },
         {
           "id": "twdc-princess-mystery-ariel",
           "catalog_number": null,
@@ -1931,14 +1973,6 @@
       ],
       "pins": [
         {
-          "id": "twdc-villains-sidekicks-mystery-mystery-box",
-          "catalog_number": null,
-          "name": "Mystery Box",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/twdc/sat/sat_villains_mystery_card.png"
-        },
-        {
           "id": "twdc-villains-sidekicks-mystery-hades-pain-panic",
           "catalog_number": null,
           "name": "Hades, Pain, & Panic",
@@ -2032,14 +2066,6 @@
         "2026-08-15"
       ],
       "pins": [
-        {
-          "id": "twdc-muppet-babies-mystery-mystery-box",
-          "catalog_number": null,
-          "name": "Mystery Box",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/twdc/sat/sat_muppet_mystery_card.png"
-        },
         {
           "id": "twdc-muppet-babies-mystery-baby-kermit",
           "catalog_number": null,
@@ -2448,7 +2474,7 @@
           "name": "Oliver",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/catastrophe_06.png"
+          "image_path": "images/twdc/sun/catastrophe_08.png"
         },
         {
           "id": "twdc-cat-astrophe-mr-mittens",
@@ -2456,7 +2482,7 @@
           "name": "Mr. Mittens",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/catastrophe_07.png"
+          "image_path": "images/twdc/sun/catastrophe_05.png"
         },
         {
           "id": "twdc-cat-astrophe-marie-berlioz",
@@ -2464,7 +2490,7 @@
           "name": "Marie & Berlioz",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/catastrophe_08.png"
+          "image_path": "images/twdc/sun/catastrophe_06.png"
         },
         {
           "id": "twdc-cat-astrophe-madam-mim",
@@ -2472,7 +2498,7 @@
           "name": "Madam Mim",
           "edition_size": 400,
           "edition_notes": null,
-          "image_path": "images/twdc/sun/catastrophe_05.png"
+          "image_path": "images/twdc/sun/catastrophe_07.png"
         },
         {
           "id": "twdc-cat-astrophe-machiavelli",
@@ -2802,14 +2828,6 @@
       ],
       "pins": [
         {
-          "id": "twdc-pooh-mystery-mystery-box",
-          "catalog_number": null,
-          "name": "Mystery Box",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/twdc/sun/winnie_pooh_box.png"
-        },
-        {
           "id": "twdc-pooh-mystery-pooh-with-flowers",
           "catalog_number": null,
           "name": "Pooh with Flowers",
@@ -2903,14 +2921,6 @@
         "2026-08-16"
       ],
       "pins": [
-        {
-          "id": "twdc-star-wars-galactic-mystery-mystery-box",
-          "catalog_number": null,
-          "name": "Mystery Box",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/twdc/sun/galactic_pals_box.png"
-        },
         {
           "id": "twdc-star-wars-galactic-mystery-porg",
           "catalog_number": null,
@@ -3014,14 +3024,6 @@
         "2026-08-14"
       ],
       "pins": [
-        {
-          "id": "mog-alice-mystery-1",
-          "catalog_number": 1,
-          "name": "Mystery Box",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
         {
           "id": "mog-alice-mystery-doorknob",
           "catalog_number": null,
@@ -3326,15 +3328,6 @@
         "2026-08-14"
       ],
       "pins": [
-        {
-          "id": "mog-ducktales-mystery-20",
-          "catalog_number": 20,
-          "name": "Mystery Box",
-          "edition_size": null,
-          "edition_notes": "LE 300 (5 chaser)",
-          "image_path": "images/placeholder.png",
-          "edition_display": "LE 400 (8)"
-        },
         {
           "id": "mog-ducktales-mystery-scrooge-mcduck",
           "catalog_number": null,
@@ -3833,14 +3826,6 @@
         "2026-08-15"
       ],
       "pins": [
-        {
-          "id": "mog-sea-mystery-58",
-          "catalog_number": 58,
-          "name": "Mystery Box",
-          "edition_size": 500,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
         {
           "id": "mog-sea-mystery-mary-oceaneer",
           "catalog_number": null,
@@ -4385,15 +4370,6 @@
       ],
       "pins": [
         {
-          "id": "mog-avengers-mystery-mystery-box",
-          "catalog_number": null,
-          "name": "Mystery Box",
-          "edition_size": null,
-          "edition_notes": "LE 300 (4 chaser)|LE 200 (2 super chaser)",
-          "image_path": "images/placeholder.png",
-          "edition_display": "LE 400 (8)"
-        },
-        {
           "id": "mog-avengers-mystery-thor",
           "catalog_number": null,
           "name": "Thor",
@@ -4510,15 +4486,6 @@
       ],
       "pins": [
         {
-          "id": "mog-kingdom-hearts-mystery-mystery-box",
-          "catalog_number": null,
-          "name": "Mystery Box",
-          "edition_size": null,
-          "edition_notes": "LE 400 (4 chaser)|LE 300 (2 super chaser)",
-          "image_path": "images/placeholder.png",
-          "edition_display": "LE 500 (8)"
-        },
-        {
           "id": "mog-kingdom-hearts-mystery-donald",
           "catalog_number": null,
           "name": "Donald",
@@ -4604,15 +4571,6 @@
         "2026-08-16"
       ],
       "pins": [
-        {
-          "id": "mog-pixar-soul-mystery-mystery-box",
-          "catalog_number": null,
-          "name": "Mystery Box",
-          "edition_size": null,
-          "edition_notes": "LE 300 (4 chaser)|LE 200 (3 super chaser)",
-          "image_path": "images/placeholder.png",
-          "edition_display": "LE 400 (8)"
-        },
         {
           "id": "mog-pixar-soul-mystery-joe-gardner",
           "catalog_number": null,
@@ -4958,7 +4916,7 @@
         {
           "id": "mog-colorful-world-mystery-118",
           "catalog_number": 118,
-          "name": "Mystery Box",
+          "name": "Mystery Pin",
           "edition_size": 500,
           "edition_notes": null,
           "image_path": "images/mog/sun/mog_p34_1844.png"
@@ -5443,14 +5401,6 @@
         "2026-08-14"
       ],
       "pins": [
-        {
-          "id": "dssh-throwback-mystery-mystery-box",
-          "catalog_number": null,
-          "name": "Mystery Box",
-          "edition_size": 400,
-          "edition_notes": null,
-          "image_path": "images/placeholder.png"
-        },
         {
           "id": "dssh-throwback-mystery-kim-possible-cheer",
           "catalog_number": null,

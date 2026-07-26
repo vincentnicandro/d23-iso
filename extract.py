@@ -445,7 +445,7 @@ def build_mog_sets():
         "The Colorful World of Disney Mystery Set",
         "23 color-changing UV-reactive pins.", "mystery",
         "UV Reactive Color-Changing", None, 34.95, "per box", None, False,
-        [make_pin(sid, 118, "Mystery Box", 500)],
+        [make_pin(sid, 118, "Mystery Pin", 500)],
     ))
 
     return sets
@@ -1627,10 +1627,10 @@ def apply_image_mappings(all_sets):
         "twdc-cat-astrophe-toulouse": f"{twdc_sun_dir}/catastrophe_02.png",
         "twdc-cat-astrophe-sergeant-tibbs": f"{twdc_sun_dir}/catastrophe_03.png",
         "twdc-cat-astrophe-snowball": f"{twdc_sun_dir}/catastrophe_04.png",
-        "twdc-cat-astrophe-oliver": f"{twdc_sun_dir}/catastrophe_06.png",
-        "twdc-cat-astrophe-mr-mittens": f"{twdc_sun_dir}/catastrophe_07.png",
-        "twdc-cat-astrophe-marie-berlioz": f"{twdc_sun_dir}/catastrophe_08.png",
-        "twdc-cat-astrophe-madam-mim": f"{twdc_sun_dir}/catastrophe_05.png",
+        "twdc-cat-astrophe-oliver": f"{twdc_sun_dir}/catastrophe_08.png",
+        "twdc-cat-astrophe-mr-mittens": f"{twdc_sun_dir}/catastrophe_05.png",
+        "twdc-cat-astrophe-marie-berlioz": f"{twdc_sun_dir}/catastrophe_06.png",
+        "twdc-cat-astrophe-madam-mim": f"{twdc_sun_dir}/catastrophe_07.png",
         "twdc-cat-astrophe-machiavelli": f"{twdc_sun_dir}/catastrophe_09.png",
         "twdc-cat-astrophe-lucifer": f"{twdc_sun_dir}/catastrophe_10.png",
         "twdc-cat-astrophe-figaro": f"{twdc_sun_dir}/catastrophe_11.png",
@@ -1869,6 +1869,77 @@ def apply_image_mappings(all_sets):
         elif s["id"] in ["mog-sea-mystery"]:
             s["pins_per_box"] = 2
 
+    # Assign per-pin dimensions to Disney/Pixar stamp sets
+    stamp_dims = {
+        # Classic Era
+        "twdc-disney-stamp-classic-yensid-sorcerer-mickey": '2.75″×2.71″',
+        "twdc-disney-stamp-classic-blue-fairy-jiminy": '2.75″×2.5″',
+        "twdc-disney-stamp-classic-dumbo-timothy": '2.75″×2.54″',
+        "twdc-disney-stamp-classic-donald-aracuan-bird": '2.75″×2.95″',
+        "twdc-disney-stamp-classic-alice-white-rabbit": '3″×2.5″',
+        "twdc-disney-stamp-classic-chip-dale": '2.75″×2.77″',
+        "twdc-disney-stamp-classic-maleficent-dragon-prince-phillip": '2.75″×2.71″',
+        "twdc-disney-stamp-classic-merlin-archimedes": '2.75″×2.5″',
+        "twdc-disney-stamp-classic-robin-hood-little-john": '2.86″×2.7″',
+        "twdc-disney-stamp-classic-pooh-piglet": '2.75″×2.64″',
+        # Renaissance Era
+        "twdc-disney-stamp-renaissance-todd-copper": '2.75″×2.5″',
+        "twdc-disney-stamp-renaissance-dodger-oliver": '2.75″×2.5″',
+        "twdc-disney-stamp-renaissance-ariel-scuttle": '2.75″×2.65″',
+        "twdc-disney-stamp-renaissance-bernard-bianca": '2.75″×2.5″',
+        "twdc-disney-stamp-renaissance-belle-maurice": '2.75″×2.5″',
+        "twdc-disney-stamp-renaissance-hercules-phil": '2.75″×2.68″',
+        "twdc-disney-stamp-renaissance-mulan-mushu": '2.75″×2.5″',
+        "twdc-disney-stamp-renaissance-kronk-yzma": '2.75″×2.5″',
+        "twdc-disney-stamp-renaissance-lilo-stitch": '2.75″×3.05″',
+        "twdc-disney-stamp-renaissance-tiana-charlotte": '2.92″×2.78″',
+        # Modern Era
+        "twdc-disney-stamp-modern-rapunzel-pascal": '2.75″×2.5″',
+        "twdc-disney-stamp-modern-wreck-it-ralph-vanellope": '3″×2.5″',
+        "twdc-disney-stamp-modern-anna-olaf": '2.75″×2.5″',
+        "twdc-disney-stamp-modern-baymax-hiro": '2.75″×2.5″',
+        "twdc-disney-stamp-modern-judy-nick": '2.93″×2.5″',
+        "twdc-disney-stamp-modern-moana-hei-hei": '2.75″×2.5″',
+        "twdc-disney-stamp-modern-elsa-bruni": '2.75″×2.5″',
+        "twdc-disney-stamp-modern-raya-tuk-tuk": '2.75″×3.11″',
+        "twdc-disney-stamp-modern-valentino-star": '2.75″×2.5″',
+        "twdc-disney-stamp-modern-gazelle-tiger": '3.02″×2.5″',
+        # Royal Chambers (Thrones)
+        "twdc-royal-chambers-evil-queen": '2.5″×1.71″',
+        "twdc-royal-chambers-prince-charming": '2.5″×2.14″',
+        "twdc-royal-chambers-queen-of-hearts": '2.5″×2.12″',
+        "twdc-royal-chambers-king-stefan-queen-leah": '2.46″×2.5″',
+        "twdc-royal-chambers-king-arthur": '2.5″×2.08″',
+        "twdc-royal-chambers-triton": '2.5″×2.45″',
+        "twdc-royal-chambers-gaston": '2.5″×1.93″',
+        "twdc-royal-chambers-sultan": '2.5″×1.88″',
+        "twdc-royal-chambers-zeus": '2.5″×2.31″',
+        "twdc-royal-chambers-emperor": '2.5″×2.19″',
+        "twdc-royal-chambers-kuzco": '2.5″×2.33″',
+        "twdc-royal-chambers-king-magnifico": '2.5″×1.98″',
+        "twdc-royal-chambers-king-candy": '2.5″×1.96″',
+        "twdc-royal-chambers-elsa": '2.5″×2.4″',
+        # Role Models
+        "twdc-role-models-rafiki-simba": '2.5″×2.37″',
+        "twdc-role-models-jiminy-pinocchio": '2.5″×2.35″',
+        "twdc-role-models-tala-moana": '2.5″×2.5″',
+        "twdc-role-models-mei-mei-ming": '2.5″×2.05″',
+        "twdc-role-models-merlin-arthur": '2.5″×2.20″',
+        "twdc-role-models-grandmother-willow-pocahontas": '2.5″×2.34″',
+        "twdc-role-models-phil-hercules": '2.5″×2.02″',
+        "twdc-role-models-fairy-godmother-cinderella": '2.5″×2.46″',
+        "twdc-role-models-timothy-mouse-dumbo": '2.5″×2.10″',
+        "twdc-role-models-ancestor-mulan": '2.5″×2.48″',
+        "twdc-role-models-auguste-gusteau-remy": '2.41″×2.74″',
+        "twdc-role-models-hector-miguel": '2.5″×2.11″',
+        "twdc-role-models-tadashi-hiro": '2.5″×2.23″',
+        "twdc-role-models-carl-russel": '2.5″×2.85″',
+    }
+    for s in all_sets:
+        for pin in s["pins"]:
+            if pin["id"] in stamp_dims:
+                pin["dimensions"] = stamp_dims[pin["id"]]
+
     return mapped
 
 
@@ -1940,6 +2011,11 @@ def main():
     standardize_features(all_sets)
 
     total_pins = sum(len(s["pins"]) for s in all_sets)
+
+    # Remove "Mystery Box" listing from each mystery set (keep individual pulls only)
+    for s in all_sets:
+        if s["set_type"] == "mystery":
+            s["pins"] = [p for p in s["pins"] if p["name"] != "Mystery Box"]
 
     output = {
         "generated_at": datetime.utcnow().isoformat() + "Z",

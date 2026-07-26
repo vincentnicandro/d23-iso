@@ -396,12 +396,20 @@ img { display: block; max-width: 100%; }
 .nav-tab svg { width: 24px; height: 24px; }
 
 /* BOTTOM SHEET / MODAL */
-.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 200; }
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 200; animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 .sheet {
   position: fixed; bottom: 0; left: 0; right: 0; max-height: 85vh;
   background: #fff; border-radius: 20px 20px 0 0; padding: 24px 20px 32px;
-  overflow-y: auto; z-index: 201; transform: translateY(0);
-  transition: transform 0.2s ease-out;
+  overflow-y: auto; z-index: 201;
+  animation: slideUp 0.3s ease-out;
+}
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.sheet-dismissing { animation: slideDown 0.25s ease-in forwards; }
+@keyframes slideDown { from { transform: translateY(0); } to { transform: translateY(100%); } }
+.sheet-drag-handle {
+  width: 36px; height: 4px; border-radius: 2px; background: var(--color-border);
+  margin: 0 auto 12px; cursor: grab;
 }
 .filter-sheet.sheet { padding: 0; overflow: hidden; }
 .sheet-img { width: 200px; height: 200px; object-fit: contain; margin: 0 auto 12px; background: #f5f7fa; border-radius: 12px; display: block; }
@@ -601,7 +609,7 @@ img { display: block; max-width: 100%; }
 .top-nav button { font-size: 14px; font-weight: 600; color: var(--color-text-secondary); padding: 8px 16px; border-radius: 999px; }
 .top-nav button.active { color: var(--color-navy); background: #edf2f8; }
 
-@media (prefers-reduced-motion: reduce) { .sheet { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .sheet { animation: none; } }
 
 /* HELP FAB */
 .help-fab {
@@ -848,6 +856,32 @@ const app = createApp({
     function openPin(pin, set) { selectedPin.value = { pin, set }; sheetActiveImg.value = 0; }
     function closeSheet() { selectedPin.value = null; }
 
+    // Swipe-to-dismiss state
+    const sheetDrag = ref({ startY: 0, dy: 0, dragging: false, target: null });
+    function onSheetTouchStart(e, target) {
+      sheetDrag.value = { startY: e.touches[0].clientY, dy: 0, dragging: true, target };
+    }
+    function onSheetTouchMove(e) {
+      if (!sheetDrag.value.dragging) return;
+      const dy = Math.max(0, e.touches[0].clientY - sheetDrag.value.startY);
+      sheetDrag.value.dy = dy;
+      const sheet = e.currentTarget.closest('.sheet') || e.currentTarget.parentElement.closest('.sheet');
+      if (sheet) { sheet.style.transition = 'none'; sheet.style.transform = `translateY(${dy}px)`; }
+    }
+    function onSheetTouchEnd(e, dismissFn) {
+      if (!sheetDrag.value.dragging) return;
+      const dy = sheetDrag.value.dy;
+      sheetDrag.value.dragging = false;
+      const sheet = e.currentTarget.closest('.sheet') || e.currentTarget.parentElement.closest('.sheet');
+      if (sheet) sheet.style.transition = 'transform 0.25s ease';
+      if (dy > 80) {
+        if (sheet) sheet.style.transform = 'translateY(100%)';
+        setTimeout(dismissFn, 250);
+      } else {
+        if (sheet) sheet.style.transform = 'translateY(0)';
+      }
+    }
+
     function sheetImages() {
       if (!selectedPin.value) return [];
       const imgs = [getImgSrc(selectedPin.value.pin)];
@@ -892,17 +926,36 @@ const app = createApp({
       let count = 0;
       let setIds = new Set();
       let hasMystery = false;
+
+      // Group mystery pins by set to calculate box cost
+      const mysteryGroups = {};
       isoList.value.forEach(item => {
         const found = findPin(item.pinId);
         if (!found) return;
-        const price = found.pin.retail_price || found.set.retail_price || 0;
-        const perBox = found.set.pins_per_box || 1;
-        const pinPrice = (found.pin.name === 'Mystery Box' || found.pin.name === 'Box Set' || found.pin.name === 'Starter Set') ? price : price / perBox;
-        total += pinPrice * item.qty;
         count += item.qty;
         setIds.add(found.set.id);
-        if (found.set.set_type === 'mystery') hasMystery = true;
+        if (found.set.set_type === 'mystery') {
+          hasMystery = true;
+          if (!mysteryGroups[found.set.id]) mysteryGroups[found.set.id] = { set: found.set, items: [] };
+          mysteryGroups[found.set.id].items.push(item);
+        } else {
+          const price = found.pin.retail_price || found.set.retail_price || 0;
+          const perBox = found.set.pins_per_box || 1;
+          const pinPrice = (found.pin.name === 'Box Set' || found.pin.name === 'Starter Set') ? price : price / perBox;
+          total += pinPrice * item.qty;
+        }
       });
+
+      // Calculate mystery costs: min boxes needed × box price
+      for (const g of Object.values(mysteryGroups)) {
+        const boxPrice = g.set.retail_price || 0;
+        const pinsPerBox = g.set.pins_per_box || 1;
+        const totalPins = g.items.reduce((sum, i) => sum + i.qty, 0);
+        const maxQty = Math.max(...g.items.map(i => i.qty));
+        const boxesNeeded = Math.max(maxQty, Math.ceil(totalPins / pinsPerBox));
+        total += boxesNeeded * boxPrice;
+      }
+
       return { total, count, sets: setIds.size, hasMystery };
     });
 
@@ -914,16 +967,45 @@ const app = createApp({
       const dayLbl = { '2026-08-14': 'Friday, August 14', '2026-08-15': 'Saturday, August 15', '2026-08-16': 'Sunday, August 16' };
       const storeNames = { 'TWDC': 'The Walt Disney Company Store', 'MOG': "Mickey's of Glendale", 'DSSH': 'Disney Studio Store Hollywood' };
       const result = {};
+
+      // Pre-calculate mystery box costs per set
+      const mysteryBoxCost = {};
+      const mysteryGroups = {};
+      isoList.value.forEach(item => {
+        const found = findPin(item.pinId);
+        if (!found || found.set.set_type !== 'mystery') return;
+        const sid = found.set.id;
+        if (!mysteryGroups[sid]) mysteryGroups[sid] = { set: found.set, items: [] };
+        mysteryGroups[sid].items.push(item);
+      });
+      for (const [sid, g] of Object.entries(mysteryGroups)) {
+        const boxPrice = g.set.retail_price || 0;
+        const pinsPerBox = g.set.pins_per_box || 1;
+        const totalPins = g.items.reduce((sum, i) => sum + i.qty, 0);
+        const maxQty = Math.max(...g.items.map(i => i.qty));
+        const boxesNeeded = Math.max(maxQty, Math.ceil(totalPins / pinsPerBox));
+        const totalCost = boxesNeeded * boxPrice;
+        mysteryBoxCost[sid] = { totalCost, totalPins };
+      }
+
       isoList.value.forEach(item => {
         const found = findPin(item.pinId);
         if (!found) return;
         const pinDate = found.pin.drop_date || found.set.drop_date;
         const dateLabel = dayLbl[pinDate] || pinDate;
         const storeName = storeNames[found.set.store] || found.set.store;
-        const price = found.pin.retail_price || found.set.retail_price || 0;
-        const perBox = found.set.pins_per_box || 1;
-        const pinPrice = (found.pin.name === 'Mystery Box' || found.pin.name === 'Box Set' || found.pin.name === 'Starter Set') ? price : price / perBox;
-        const lineTotal = pinPrice * item.qty;
+
+        let lineTotal;
+        if (found.set.set_type === 'mystery') {
+          // Proportional share of total mystery set cost
+          const mc = mysteryBoxCost[found.set.id];
+          lineTotal = mc ? (mc.totalCost * item.qty / mc.totalPins) : 0;
+        } else {
+          const price = found.pin.retail_price || found.set.retail_price || 0;
+          const perBox = found.set.pins_per_box || 1;
+          const pinPrice = (found.pin.name === 'Box Set' || found.pin.name === 'Starter Set') ? price : price / perBox;
+          lineTotal = pinPrice * item.qty;
+        }
         const lineItem = { name: found.pin.name, set: found.set.set_name, qty: item.qty, lineTotal };
 
         if (receiptGroupBy.value === 'day') {
@@ -1615,8 +1697,9 @@ const app = createApp({
     function pinPriceDisplay(pin, set) {
       const price = pin.retail_price || set.retail_price;
       if (!price) return null;
+      if (set.set_type === 'mystery') return '\$' + price.toFixed(2);
       const perBox = set.pins_per_box || 1;
-      if (pin.name === 'Mystery Box' || pin.name === 'Box Set' || pin.name === 'Starter Set' || perBox === 1) {
+      if (pin.name === 'Box Set' || pin.name === 'Starter Set' || perBox === 1) {
         return '\$' + price.toFixed(2);
       }
       return '\$' + (price / perBox).toFixed(2);
@@ -1632,6 +1715,7 @@ const app = createApp({
       filteredSets, searchResults, isoGroups, isoTotal, disoCount, receiptData, receiptGroupBy, expandedReceiptDays, expandedReceiptStores, toggleReceiptDay, toggleReceiptStore, expandAllReceipt, collapseAllReceipt, allReceiptExpanded, toggleAllReceipt, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
       updateQty, updateNote, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory, exportImage,
+      onSheetTouchStart, onSheetTouchMove, onSheetTouchEnd,
       featureTags, filteredPins, displayDates, badgeClass, storeName, pinPriceDisplay, badgeLabel,
       PLACEHOLDER_IMG
     };
@@ -1664,7 +1748,8 @@ const app = createApp({
   <!-- FILTER SHEET -->
   <div v-if="showFilters" class="overlay" @click.self="showFilters=false"></div>
   <div v-if="showFilters" class="sheet filter-sheet">
-    <div class="filter-sheet-header">
+    <div class="filter-sheet-header" @touchstart="onSheetTouchStart($event, 'filters')" @touchmove="onSheetTouchMove($event)" @touchend="onSheetTouchEnd($event, () => showFilters=false)">
+      <div class="sheet-drag-handle"></div>
       <button class="filter-reset" @click="resetFilters">Reset All Filters</button>
       <h2>Filters</h2>
       <p class="filter-sheet-count">{{ filterCount }} selected</p>
@@ -1826,7 +1911,8 @@ const app = createApp({
 <!-- RECEIPT DRAWER -->
 <div v-if="showReceipt" class="overlay" @click.self="showReceipt=false"></div>
 <div v-if="showReceipt" class="sheet receipt-sheet">
-  <div class="receipt-sheet-header">
+  <div class="receipt-sheet-header" @touchstart="onSheetTouchStart($event, 'receipt')" @touchmove="onSheetTouchMove($event)" @touchend="onSheetTouchEnd($event, () => showReceipt=false)">
+    <div class="sheet-drag-handle"></div>
     <button class="sheet-close" @click="showReceipt=false"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     <h2 style="font-weight:700;font-size:20px;text-align:center;margin-bottom:4px;">Est. Total: \${{ isoTotal.total.toFixed(2) }}</h2>
     <p style="font-size:13px;color:var(--color-text-secondary);text-align:center;margin-bottom:12px;">{{ isoTotal.count }} item{{ isoTotal.count!==1?'s':'' }} across {{ isoTotal.sets }} set{{ isoTotal.sets!==1?'s':'' }}</p>
@@ -1907,7 +1993,8 @@ const app = createApp({
 
 <!-- PIN DETAIL SHEET -->
 <div v-if="selectedPin" class="overlay" @click.self="closeSheet"></div>
-<div v-if="selectedPin" class="sheet">
+<div v-if="selectedPin" class="sheet" @touchstart="onSheetTouchStart($event, 'pin')" @touchmove="onSheetTouchMove($event)" @touchend="onSheetTouchEnd($event, closeSheet)">
+  <div class="sheet-drag-handle"></div>
   <button class="sheet-close" @click="closeSheet"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
   <img :src="sheetImages()[sheetActiveImg]" :alt="selectedPin.pin.name" class="sheet-img">
   <div class="sheet-thumbs">
@@ -1920,7 +2007,7 @@ const app = createApp({
     <div><strong>Store:</strong> {{ storeName(selectedPin.set.store) }}</div>
     <div><strong>Drop:</strong> {{ selectedPin.pin.drop_date ? ({'2026-08-14':'Friday, August 14','2026-08-15':'Saturday, August 15','2026-08-16':'Sunday, August 16'}[selectedPin.pin.drop_date] || selectedPin.pin.drop_date) : selectedPin.set.drop_day_label }}</div>
     <div v-if="selectedPin.set.features"><strong>Features:</strong> {{ selectedPin.set.features }}</div>
-    <div v-if="selectedPin.set.dimensions"><strong>Dimensions:</strong> {{ selectedPin.set.dimensions }}</div>
+    <div v-if="selectedPin.pin.dimensions || selectedPin.set.dimensions"><strong>Dimensions:</strong> {{ selectedPin.pin.dimensions || selectedPin.set.dimensions }}</div>
     <div><strong>Retail:</strong> {{ selectedPin.pin.retail_display || selectedPin.set.retail_display }} {{ selectedPin.set.retail_note || '' }}</div>
     <div v-if="selectedPin.pin.edition_size"><strong>Edition:</strong> LE {{ selectedPin.pin.edition_size }} {{ selectedPin.pin.edition_notes || '' }}</div>
     <div v-if="selectedPin.set.purchase_limit"><strong>Limit:</strong> {{ selectedPin.set.purchase_limit }}</div>
@@ -1937,7 +2024,8 @@ const app = createApp({
 
 <!-- STORY IMAGES MODAL (mobile save) -->
 <div v-if="storyImages.length" class="overlay" @click.self="storyImages=[]"></div>
-<div v-if="storyImages.length" class="sheet" style="padding:20px;text-align:center;">
+<div v-if="storyImages.length" class="sheet" style="padding:20px;text-align:center;" @touchstart="onSheetTouchStart($event, 'story')" @touchmove="onSheetTouchMove($event)" @touchend="onSheetTouchEnd($event, () => storyImages=[])">
+  <div class="sheet-drag-handle"></div>
   <button class="sheet-close" @click="storyImages=[]"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
   <p style="font-weight:600;font-size:16px;margin-bottom:4px;">{{ storyImageTitle }}</p>
   <p style="font-size:13px;color:var(--color-text-secondary);margin-bottom:16px;">Long-press each image to save to Photos</p>
@@ -1968,7 +2056,8 @@ const app = createApp({
 <!-- HELP MODAL -->
 <div v-if="showHelp" class="overlay" @click.self="showHelp=false"></div>
 <div v-if="showHelp" class="sheet help-sheet">
-  <div class="help-sheet-header">
+  <div class="help-sheet-header" @touchstart="onSheetTouchStart($event, 'help')" @touchmove="onSheetTouchMove($event)" @touchend="onSheetTouchEnd($event, () => showHelp=false)">
+    <div class="sheet-drag-handle"></div>
     <button class="sheet-close" @click="showHelp=false"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     <h2>D23 Pin Catalog</h2>
     <button class="dark-mode-toggle" @click="toggleDarkMode" :title="darkMode ? 'Switch to light mode' : 'Switch to dark mode'">
