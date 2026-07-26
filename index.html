@@ -412,6 +412,9 @@ img { display: block; max-width: 100%; }
   width: 36px; height: 4px; border-radius: 2px; background: var(--color-border);
   margin: 0 auto 12px; cursor: grab;
 }
+.sheet-drag-area {
+  padding: 12px 0 0; cursor: grab; touch-action: none;
+}
 .filter-sheet.sheet { padding: 0; overflow: hidden; }
 .sheet-img { width: 200px; height: 200px; object-fit: contain; margin: 0 auto 12px; background: #f5f7fa; border-radius: 12px; display: block; }
 .sheet-thumbs { display: flex; justify-content: center; gap: 8px; margin-bottom: 16px; }
@@ -2007,8 +2010,10 @@ const app = createApp({
 
 <!-- PIN DETAIL SHEET -->
 <div v-if="selectedPin" class="overlay" @click.self="closeSheet"></div>
-<div v-if="selectedPin" class="sheet" @touchstart="onSheetTouchStart($event, 'pin')" @touchmove="onSheetTouchMove($event)" @touchend="onSheetTouchEnd($event, closeSheet)">
-  <div class="sheet-drag-handle"></div>
+<div v-if="selectedPin" class="sheet">
+  <div class="sheet-drag-area" @touchstart="onSheetTouchStart($event, 'pin')" @touchmove="onSheetTouchMove($event)" @touchend="onSheetTouchEnd($event, closeSheet)">
+    <div class="sheet-drag-handle"></div>
+  </div>
   <button class="sheet-close" @click="closeSheet"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
   <img :src="sheetImages()[sheetActiveImg]" :alt="selectedPin.pin.name" class="sheet-img">
   <div class="sheet-thumbs">
@@ -2038,8 +2043,10 @@ const app = createApp({
 
 <!-- STORY IMAGES MODAL (mobile save) -->
 <div v-if="storyImages.length" class="overlay" @click.self="storyImages=[]"></div>
-<div v-if="storyImages.length" class="sheet" style="padding:20px;text-align:center;" @touchstart="onSheetTouchStart($event, 'story')" @touchmove="onSheetTouchMove($event)" @touchend="onSheetTouchEnd($event, () => storyImages=[])">
-  <div class="sheet-drag-handle"></div>
+<div v-if="storyImages.length" class="sheet" style="padding:20px;text-align:center;">
+  <div class="sheet-drag-area" @touchstart="onSheetTouchStart($event, 'story')" @touchmove="onSheetTouchMove($event)" @touchend="onSheetTouchEnd($event, () => storyImages=[])">
+    <div class="sheet-drag-handle"></div>
+  </div>
   <button class="sheet-close" @click="storyImages=[]"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
   <p style="font-weight:600;font-size:16px;margin-bottom:4px;">{{ storyImageTitle }}</p>
   <p style="font-size:13px;color:var(--color-text-secondary);margin-bottom:16px;">Long-press each image to save to Photos</p>
