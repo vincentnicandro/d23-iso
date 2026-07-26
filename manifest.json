@@ -1,0 +1,16 @@
+{
+  "name": "D23 Pin Catalog",
+  "short_name": "D23 Pins",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F0F3F8",
+  "theme_color": "#AB21A9",
+  "icons": [
+    {
+      "src": "Frame 3.png",
+      "sizes": "400x400",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
