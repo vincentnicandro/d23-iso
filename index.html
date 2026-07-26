@@ -403,6 +403,7 @@ img { display: block; max-width: 100%; }
   background: #fff; border-radius: 20px 20px 0 0; padding: 24px 20px 32px;
   overflow-y: auto; z-index: 201;
   animation: slideUp 0.3s ease-out;
+  overscroll-behavior: none; touch-action: pan-y;
 }
 @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
 .sheet-dismissing { animation: slideDown 0.25s ease-in forwards; }
@@ -858,21 +859,33 @@ const app = createApp({
 
     // Swipe-to-dismiss state
     const sheetDrag = ref({ startY: 0, dy: 0, dragging: false, target: null });
+    let sheetMoveHandler = null;
     function onSheetTouchStart(e, target) {
       sheetDrag.value = { startY: e.touches[0].clientY, dy: 0, dragging: true, target };
+      const el = e.currentTarget;
+      const sheet = el.closest('.sheet') || el.parentElement.closest('.sheet');
+      sheetMoveHandler = (ev) => {
+        if (!sheetDrag.value.dragging) return;
+        const dy = Math.max(0, ev.touches[0].clientY - sheetDrag.value.startY);
+        if (dy > 0) ev.preventDefault();
+        sheetDrag.value.dy = dy;
+        if (sheet) { sheet.style.transition = 'none'; sheet.style.transform = `translateY(${dy}px)`; }
+      };
+      el.addEventListener('touchmove', sheetMoveHandler, { passive: false });
     }
     function onSheetTouchMove(e) {
-      if (!sheetDrag.value.dragging) return;
-      const dy = Math.max(0, e.touches[0].clientY - sheetDrag.value.startY);
-      sheetDrag.value.dy = dy;
-      const sheet = e.currentTarget.closest('.sheet') || e.currentTarget.parentElement.closest('.sheet');
-      if (sheet) { sheet.style.transition = 'none'; sheet.style.transform = `translateY(${dy}px)`; }
+      // handled by non-passive listener added in touchstart
     }
     function onSheetTouchEnd(e, dismissFn) {
       if (!sheetDrag.value.dragging) return;
       const dy = sheetDrag.value.dy;
       sheetDrag.value.dragging = false;
-      const sheet = e.currentTarget.closest('.sheet') || e.currentTarget.parentElement.closest('.sheet');
+      const el = e.currentTarget;
+      if (sheetMoveHandler) {
+        el.removeEventListener('touchmove', sheetMoveHandler);
+        sheetMoveHandler = null;
+      }
+      const sheet = el.closest('.sheet') || el.parentElement.closest('.sheet');
       if (sheet) sheet.style.transition = 'transform 0.25s ease';
       if (dy > 80) {
         if (sheet) sheet.style.transform = 'translateY(100%)';
