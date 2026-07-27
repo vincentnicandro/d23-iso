@@ -668,7 +668,8 @@ img { display: block; max-width: 100%; }
 .help-content ul { margin: 0 0 8px; padding-left: 20px; }
 .help-content li { font-size: 14px; line-height: 1.8; color: var(--color-text-primary); }
 .help-content p { font-size: 14px; line-height: 1.6; color: var(--color-text-primary); }
-.help-sources li { list-style: none; margin-bottom: 4px; }
+.help-sources { padding-left: 0 !important; margin: 0; }
+.help-sources li { list-style: none; margin-bottom: 4px; padding: 0; }
 .help-sources a { color: var(--color-accent); text-decoration: none; font-weight: 500; }
 .help-sources a:hover { text-decoration: underline; }
 </style>
@@ -1103,14 +1104,16 @@ const app = createApp({
 
       const dm = darkMode.value;
       const C = {
-        bg: dm ? '#1C1A24' : '#EDF2F8',
+        bg: dm ? '#1C1A24' : '#F0F3F8',
         card: dm ? '#24222E' : '#FFFFFF',
-        cardBorder: dm ? '#302E40' : '#D8E3EE',
-        title: dm ? '#E0E0E0' : '#00264C',
-        header: dm ? '#E0E0E0' : '#00264C',
-        pinName: dm ? '#E0E0E0' : '#0A1929',
-        meta: dm ? '#8A8A8A' : '#5A6A7A',
-        legendText: dm ? '#E0E0E0' : '#0A1929',
+        cardBorder: dm ? '#302E40' : '#DDE2EE',
+        title: '#FFFFFF',
+        header: dm ? '#E0E0E0' : '#1B1464',
+        pinName: dm ? '#E0E0E0' : '#1B1464',
+        meta: dm ? '#8A8A8A' : '#5A6078',
+        legendText: dm ? '#E0E0E0' : '#1B1464',
+        gradStart: '#AB21A9',
+        gradEnd: '#0069B7',
       };
 
       const W = 1080, H = 1920;
@@ -1192,11 +1195,17 @@ const app = createApp({
         ctx = canvas.getContext('2d');
         ctx.fillStyle = C.bg;
         ctx.fillRect(0, 0, W, H);
+        // Gradient header bar
+        const npGrad = ctx.createLinearGradient(0, 0, W, 0);
+        npGrad.addColorStop(0, C.gradStart);
+        npGrad.addColorStop(1, C.gradEnd);
+        ctx.fillStyle = npGrad;
+        ctx.fillRect(0, 0, W, 120);
         // Title
         ctx.fillStyle = C.title;
         ctx.font = '700 48px InspireTWDC, sans-serif';
         ctx.textAlign = 'center';
-        ctx.fillText(isoFilter.value === 'diso' ? 'My DISOs' : 'My D23 ISOs', W / 2, 90);
+        ctx.fillText(isoFilter.value === 'diso' ? 'My DISOs' : 'My D23 ISOs', W / 2, 78);
         yPos = 130;
         pages.push(canvas);
       }
@@ -1294,11 +1303,17 @@ const app = createApp({
         ctx = canvas.getContext('2d');
         ctx.fillStyle = C.bg;
         ctx.fillRect(0, 0, W, H);
+        // Gradient header bar
+        const hGrad = ctx.createLinearGradient(0, 0, W, 0);
+        hGrad.addColorStop(0, C.gradStart);
+        hGrad.addColorStop(1, C.gradEnd);
+        ctx.fillStyle = hGrad;
+        ctx.fillRect(0, 0, W, 120);
         // Title
         ctx.fillStyle = C.title;
         ctx.font = '700 48px InspireTWDC, sans-serif';
         ctx.textAlign = 'center';
-        ctx.fillText(isoFilter.value === 'diso' ? 'My DISOs' : 'My D23 ISOs', W / 2, 90);
+        ctx.fillText(isoFilter.value === 'diso' ? 'My DISOs' : 'My D23 ISOs', W / 2, 78);
 
         // Center content vertically between title (110) and footer (H-100)
         const availTop = 120;
@@ -1464,15 +1479,17 @@ const app = createApp({
 
       const dm = darkMode.value;
       const C = {
-        bg: dm ? '#1C1A24' : '#EDF2F8',
+        bg: dm ? '#1C1A24' : '#F0F3F8',
         card: dm ? '#24222E' : '#FFFFFF',
-        cardBorder: dm ? '#302E40' : '#D8E3EE',
-        title: dm ? '#E0E0E0' : '#00264C',
-        header: dm ? '#E0E0E0' : '#00264C',
-        pinName: dm ? '#E0E0E0' : '#0A1929',
-        meta: dm ? '#8A8A8A' : '#5A6A7A',
+        cardBorder: dm ? '#302E40' : '#DDE2EE',
+        title: '#FFFFFF',
+        header: dm ? '#E0E0E0' : '#1B1464',
+        pinName: dm ? '#E0E0E0' : '#1B1464',
+        meta: dm ? '#8A8A8A' : '#5A6078',
         note: dm ? '#9A8ABF' : '#7A8A9A',
-        legendText: dm ? '#E0E0E0' : '#0A1929',
+        legendText: dm ? '#E0E0E0' : '#1B1464',
+        gradStart: '#AB21A9',
+        gradEnd: '#0069B7',
       };
 
       const cols = 6;
@@ -1480,7 +1497,7 @@ const app = createApp({
       const padX = 60, gap = 16;
       const cellW = (W - padX * 2 - gap * (cols - 1)) / cols;
       const headerH = 70;
-      const cellH = 380;
+      const cellH = 410;
       const titleH = 140;
       const footerH = 120;
 
@@ -1502,11 +1519,18 @@ const app = createApp({
       ctx.fillStyle = C.bg;
       ctx.fillRect(0, 0, W, totalH);
 
+      // Gradient header bar
+      const imgGrad = ctx.createLinearGradient(0, 0, W, 0);
+      imgGrad.addColorStop(0, C.gradStart);
+      imgGrad.addColorStop(1, C.gradEnd);
+      ctx.fillStyle = imgGrad;
+      ctx.fillRect(0, 0, W, 120);
+
       // Title
       ctx.fillStyle = C.title;
       ctx.font = '700 48px InspireTWDC, sans-serif';
       ctx.textAlign = 'center';
-      ctx.fillText(isoFilter.value === 'diso' ? 'My DISOs' : 'My D23 ISOs', W / 2, 80);
+      ctx.fillText(isoFilter.value === 'diso' ? 'My DISOs' : 'My D23 ISOs', W / 2, 78);
 
       let yPos = titleH;
 
@@ -1649,7 +1673,7 @@ const app = createApp({
       ctx.beginPath(); ctx.moveTo(clx-7,cly); ctx.lineTo(clx-2,cly+6); ctx.lineTo(clx+8,cly-5); ctx.stroke();
 
       // Total on the left
-      ctx.fillStyle = C.title; ctx.font = '700 28px InspireTWDC, sans-serif'; ctx.textAlign = 'left';
+      ctx.fillStyle = C.header; ctx.font = '700 28px InspireTWDC, sans-serif'; ctx.textAlign = 'left';
       ctx.fillText(`Est. Total: \$${isoTotal.value.total.toFixed(2)}`, padX, ly);
 
       // Download / display
