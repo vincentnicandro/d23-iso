@@ -59,9 +59,9 @@
 }
 .dark .sheet, .dark .overlay + .sheet { background: #24222E; }
 .dark .filter-pill { background: #302E40; color: var(--color-text-primary); border-color: #3D3A4D; }
-.dark .filter-pill.active { background: #E0E0E0; color: #1C1A24; border-color: #E0E0E0; }
+.dark .filter-pill.active { background: linear-gradient(135deg, #AB21A9, #0069B7); color: #fff; border-color: transparent; }
 .dark .filter-chip { background: #302E40; color: var(--color-text-primary); border-color: #3D3A4D; }
-.dark .filter-chip.active { background: #E0E0E0; color: #1C1A24; }
+.dark .filter-chip.active { background: linear-gradient(135deg, #AB21A9, #0069B7); color: #fff; border-color: transparent; }
 .dark .pin-card { background: #1C1A24; border-color: var(--color-border); }
 .dark .pin-card-img, .dark .pin-card-flip, .dark .pin-card-gatefold, .dark .pin-card-book { background: #302E40; }
 .dark .search-bar { background: #1C1A24; border-color: var(--color-border); }
@@ -76,7 +76,7 @@
 .dark .export-menu { background: #24222E; border-color: var(--color-border); }
 .dark .export-menu button { color: var(--color-text-primary); }
 .dark .export-menu button:hover { background: #302E40; }
-.dark .btn-primary { background: #E0E0E0; color: #1C1A24; }
+.dark .btn-primary { background: linear-gradient(135deg, #AB21A9, #0069B7); color: #fff; }
 .dark .btn-secondary { background: #302E40; color: var(--color-text-primary); border-color: var(--color-border); }
 .dark .iso-note-input { background: #302E40; border-color: var(--color-border); color: var(--color-text-primary); }
 .dark .iso-note-input:focus { background: #302E40; border-color: #8A7FBF; }
@@ -96,13 +96,13 @@
 .dark .popular-search-item { color: var(--color-accent); }
 .dark .filter-icon-btn { background: #302E40; border-color: #3D3A4D; color: var(--color-text-primary); }
 .dark .filter-icon-btn:hover { background: #3D3A4D; }
-.dark .filter-icon-count { background: #E0E0E0; color: #1C1A24; }
+.dark .filter-icon-count { background: linear-gradient(135deg, #AB21A9, #0069B7); color: #fff; }
 .dark .pin-card-img { background: #302E40; }
 .dark .pin-card-flip, .dark .pin-card-flip-front, .dark .pin-card-flip-back { background: #302E40; }
 .dark .pin-card-gatefold { background: #302E40; }
 .dark .pin-card-book, .dark .book-cover { background: #302E40; }
-.dark .icon-add { background: #E0E0E0; color: #1C1A24; }
-.dark .icon-add:hover { background: #CCCCCC; }
+.dark .icon-add { background: linear-gradient(135deg, #AB21A9, #0069B7); color: #fff; }
+.dark .icon-add:hover { background: linear-gradient(135deg, #9A1D98, #0058A0); }
 .dark .pin-card:hover { background: #24222E; }
 .dark .pin-grid { background: #1C1A24; }
 .dark .pin-card-name { color: var(--color-text-primary); }
@@ -676,6 +676,14 @@ img { display: block; max-width: 100%; }
 .help-sources li { list-style: none; margin-bottom: 4px; padding: 0; }
 .help-sources a { color: var(--color-accent); text-decoration: none; font-weight: 500; }
 .help-sources a:hover { text-decoration: underline; }
+.import-textarea {
+  width: 100%; min-height: 160px; padding: 12px; border-radius: 12px;
+  border: 1.5px solid var(--color-border); font-family: inherit; font-size: 13px;
+  resize: vertical; outline: none; color: var(--color-text-primary); background: var(--color-bg);
+}
+.import-textarea:focus { border-color: var(--color-accent); }
+.dark .import-textarea { background: #302E40; border-color: var(--color-border); color: var(--color-text-primary); }
+.dark .import-textarea:focus { border-color: #8A7FBF; }
 </style>
 </head>
 <body>
@@ -960,6 +968,7 @@ const app = createApp({
       // Group mystery pins by set to calculate box cost
       const mysteryGroups = {};
       isoList.value.forEach(item => {
+        if (isoFilter.value === 'diso' && (item.priority || 'iso') !== 'diso') return;
         const found = findPin(item.pinId);
         if (!found) return;
         count += item.qty;
@@ -1091,7 +1100,8 @@ const app = createApp({
           const qty = item.qty > 1 ? ` ×${item.qty}` : '';
           const price = item.set.retail_price ? ` · \$${item.set.retail_price.toFixed(2)}` : '';
           const note = item.note ? ` — ${item.note}` : '';
-          text += `• ${item.pin.name} · ${series}${qty}${price}${note}\n`;
+          const icon = (item.priority || 'iso') === 'diso' ? '♥' : '✓';
+          text += `${icon} ${item.pin.name} · ${series}${qty}${price}${note}\n`;
         });
         text += '\n';
       });
@@ -1100,6 +1110,53 @@ const app = createApp({
         copyMsg.value = 'Copied!';
         setTimeout(() => { copyMsg.value = ''; }, 2000);
       });
+    }
+
+    const showImportModal = ref(false);
+    const importText = ref('');
+
+    async function openImportModal() {
+      importText.value = '';
+      try {
+        const clip = await navigator.clipboard.readText();
+        if (clip) importText.value = clip;
+      } catch (e) {}
+      showImportModal.value = true;
+    }
+
+    function doImport() {
+      const text = importText.value;
+      if (!text) { copyMsg.value = 'Nothing to import'; setTimeout(() => { copyMsg.value = ''; }, 2000); showImportModal.value = false; return; }
+      const lines = text.split('\n');
+      let imported = 0;
+      for (const line of lines) {
+        const match = line.match(/^([✓♥])\s+(.+?)\s+·\s+(.+?)(?:\s+×(\d+))?(?:\s+·\s+\$[\d\.]+)?(?:\s+—\s+(.*))?$/);
+        if (!match) continue;
+        const [, icon, pinName, setName, qtyStr, note] = match;
+        const priority = icon === '♥' ? 'diso' : 'iso';
+        const qty = qtyStr ? parseInt(qtyStr) : 1;
+        let found = null;
+        if (catalog.value) {
+          for (const s of catalog.value.sets) {
+            if (s.set_name !== setName) continue;
+            for (const p of s.pins) {
+              if (p.name === pinName) { found = { pin: p, set: s }; break; }
+            }
+            if (found) break;
+          }
+        }
+        if (!found) continue;
+        if (isInIso(found.pin.id)) continue;
+        isoList.value.push({ pinId: found.pin.id, qty, priority, note: note || '' });
+        imported++;
+      }
+      showImportModal.value = false;
+      if (imported > 0) {
+        copyMsg.value = `Imported ${imported} pin${imported > 1 ? 's' : ''}!`;
+      } else {
+        copyMsg.value = 'No pins found to import';
+      }
+      setTimeout(() => { copyMsg.value = ''; }, 3000);
     }
 
     async function exportStory() {
@@ -1767,7 +1824,7 @@ const app = createApp({
       isoList, selectedPin, copyMsg, isoFilter, showExportMenu, showReceipt, showHelp, helpExpanded, darkMode, toggleDarkMode, storyImages, storyImageTitle, stores, dates, dateLabels,
       filteredSets, searchResults, isoGroups, isoTotal, disoCount, receiptData, receiptGroupBy, expandedReceiptDays, expandedReceiptStores, toggleReceiptDay, toggleReceiptStore, expandAllReceipt, collapseAllReceipt, allReceiptExpanded, toggleAllReceipt, filterCount, typeOptions, attrOptions,
       getImgSrc, isInIso, addToIso, removeFromIso, addAllToIso, allInIso, allDiso, toggleAllIso, cyclePin, getPriority, togglePriority, resetFilters, toggleFilter,
-      updateQty, updateNote, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, exportStory, exportImage,
+      updateQty, updateNote, findPin, openPin, closeSheet, sheetImages, sheetActiveImg, copyAsText, showImportModal, importText, openImportModal, doImport, exportStory, exportImage,
       onSheetTouchStart, onSheetTouchMove, onSheetTouchEnd,
       featureTags, filteredPins, displayDates, badgeClass, storeName, pinPriceDisplay, badgeLabel,
       PLACEHOLDER_IMG
@@ -1903,6 +1960,7 @@ const app = createApp({
       <button class="btn-secondary" style="padding:8px 14px;font-size:12px;display:inline-flex;align-items:center;gap:4px;" @click="showExportMenu=!showExportMenu">Share <svg width="10" height="10" viewBox="0 0 14 14" style="margin-top:1px;"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button>
       <div v-if="showExportMenu" class="export-menu">
         <button @click="copyAsText(); showExportMenu=false">Copy to Clipboard</button>
+        <button @click="openImportModal(); showExportMenu=false">Import from Clipboard</button>
         <button @click="exportImage(); showExportMenu=false">Export as Image</button>
         <button @click="exportStory(); showExportMenu=false">Export as Story</button>
       </div>
@@ -2109,6 +2167,19 @@ const app = createApp({
 
 <!-- HELP BUTTON -->
 <button class="help-fab" :class="{ 'has-footer': view==='iso' && isoList.length }" @click="showHelp=true" title="How to use">?</button>
+
+<!-- IMPORT MODAL -->
+<div v-if="showImportModal" class="overlay" @click.self="showImportModal=false"></div>
+<div v-if="showImportModal" class="sheet" style="padding:24px 20px 32px;max-height:70vh;">
+  <div class="sheet-drag-area" @touchstart="onSheetTouchStart($event, 'import')" @touchmove="onSheetTouchMove($event)" @touchend="onSheetTouchEnd($event, () => showImportModal=false)">
+    <div class="sheet-drag-handle"></div>
+  </div>
+  <button class="sheet-close" @click="showImportModal=false"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  <h2 style="font-weight:700;font-size:18px;text-align:center;margin-bottom:4px;">Import ISOs</h2>
+  <p style="font-size:13px;color:var(--color-text-secondary);text-align:center;margin-bottom:16px;">Paste a shared ISO list below</p>
+  <textarea v-model="importText" class="import-textarea" placeholder="✓ Pin Name · Series Name ×1 · $34.95&#10;♥ Pin Name · Series Name · $49.95 — note"></textarea>
+  <button class="btn-primary" style="width:100%;justify-content:center;margin-top:12px;" @click="doImport">Import</button>
+</div>
 
 <!-- HELP MODAL -->
 <div v-if="showHelp" class="overlay" @click.self="showHelp=false"></div>
